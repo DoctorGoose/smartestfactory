@@ -1,0 +1,1167 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="table-of-contents--right" style="clear:right;">
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Running_as_a_Service">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Running as a Service
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#Linux">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Linux
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-3">
+         <a href="#Systemd">
+          <span class="tocnumber">
+           1.1.1
+          </span>
+          <span class="toctext">
+           Systemd
+          </span>
+         </a>
+         <ul>
+          <li class="toclevel-4 tocsection-4">
+           <a href="#NixOS_(and_other_Atomic_distros)_Systemd_Quirks">
+            <span class="tocnumber">
+             1.1.1.1
+            </span>
+            <span class="toctext">
+             NixOS (and other Atomic distros) Systemd Quirks
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-5">
+           <a href="#Experimental_Branch">
+            <span class="tocnumber">
+             1.1.1.2
+            </span>
+            <span class="toctext">
+             Experimental Branch
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-6">
+           <a href="#Planned_graceful_Restart">
+            <span class="tocnumber">
+             1.1.1.3
+            </span>
+            <span class="toctext">
+             Planned graceful Restart
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="toclevel-3 tocsection-7">
+         <a href="#OpenRC">
+          <span class="tocnumber">
+           1.1.2
+          </span>
+          <span class="toctext">
+           OpenRC
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-8">
+       <a href="#Windows">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Windows
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-9">
+         <a href="#NSSM">
+          <span class="tocnumber">
+           1.2.1
+          </span>
+          <span class="toctext">
+           NSSM
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-10">
+         <a href="#NSSM_to_update_your_server">
+          <span class="tocnumber">
+           1.2.2
+          </span>
+          <span class="toctext">
+           NSSM to update your server
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-11">
+         <a href="#Automating_Server_Updates_With_Task_Scheduler">
+          <span class="tocnumber">
+           1.2.3
+          </span>
+          <span class="toctext">
+           Automating Server Updates With Task Scheduler
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-12">
+       <a href="#Docker">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         Docker
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-13">
+     <a href="#See_also">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       See also
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <p>
+  This page describes how to set up the Satisfactory
+  <a class="mw-redirect" href="/wiki/Dedicated_server" title="Dedicated server">
+   dedicated server
+  </a>
+  as a service.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Running_as_a_Service">
+   Running as a Service
+  </span>
+ </h2>
+ <p>
+  Running the dedicated server as a service allows the game server to automatically restart in the event of a crash, as well as to automatically start after system boot. How this is handled depends on the operating system used.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Linux">
+   Linux
+  </span>
+ </h3>
+ <h4>
+  <span class="mw-headline" id="Systemd">
+   Systemd
+  </span>
+ </h4>
+ <p>
+  Systemd is the default service management system for many Linux distributions.
+ </p>
+ <p>
+  The following is an
+  <b>
+   example
+  </b>
+  systemd unit file for the Satisfactory service. It uses SteamCMD to check for updates any time the server is started or restarted. It will also start the server after the host is booted.
+ </p>
+ <p>
+  Edit the user and path to reflect the location and owner of the Satisfactory installation. The unit file should be placed at
+  <code>
+   /etc/systemd/system/satisfactory.service
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Satisfactory dedicated server</span>
+<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+<span class="na">After</span><span class="o">=</span><span class="s">syslog.target network.target nss-lookup.target network-online.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">ExecStartPre</span><span class="o">=</span><span class="s">/usr/games/steamcmd +force_install_dir "/home/your_user/SatisfactoryDedicatedServer" +login anonymous +app_update 1690800 validate +quit</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/home/your_user/SatisfactoryDedicatedServer/FactoryServer.sh</span>
+<span class="na">User</span><span class="o">=</span><span class="s">your_user</span>
+<span class="na">Group</span><span class="o">=</span><span class="s">your_user</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+<span class="na">RestartSec</span><span class="o">=</span><span class="s">60</span>
+<span class="na">KillSignal</span><span class="o">=</span><span class="s">SIGINT</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/your_user/SatisfactoryDedicatedServer</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</pre>
+ </div>
+ <p>
+  Besides logging to the journal (by default), the server also writes its logs to
+  <code>
+   &lt;satisfactory_install_dir&gt;/FactoryGame/Saved/Logs
+  </code>
+  . Log files are rotated automatically when the server process is restarted. See
+  <a href="/wiki/Dedicated_servers#Logs_and_crash_dumps" title="Dedicated servers">
+   Dedicated_servers#Logs_and_crash_dumps
+  </a>
+  for more.
+ </p>
+ <p>
+  Note that
+  <code>
+   KillSignal=SIGINT
+  </code>
+  should be set in the Service block of the service file, and
+  <code>
+   SIGTERM
+  </code>
+  is the default if not set.
+  <sup class="reference" id="cite_ref-1">
+   <a href="#cite_note-1">
+    <span class="cite-bracket">
+     [
+    </span>
+    1
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+  Sending SIGTERM to the process kills the process immediately and does not process or log any exit behavior. The server process does not automatically save the game even on graceful shutdown, so when stopping the service, ensure that players are not connected, or if they are, manually run a save command before stopping. Enabling the "Auto-Save on Player Disconnect" server option is recommended.
+ </p>
+ <p>
+  After creating the service, systemd will need to be reloaded to load the new service:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell-session mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</pre>
+ </div>
+ <p>
+  To enable and start the service, use the following two commands respectively:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell-session mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>satisfactory
+<span class="gp">$ </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>satisfactory
+</pre>
+ </div>
+ <p>
+  Service status can be checked with
+  <code>
+   sudo systemctl status satisfactory
+  </code>
+  . If configured correctly, the output should look like:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>*<span class="w"> </span>satisfactory.service<span class="w"> </span>-<span class="w"> </span>Satisfactory<span class="w"> </span>dedicated<span class="w"> </span>server
+<span class="w">     </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/etc/systemd/system/satisfactory.service<span class="p">;</span><span class="w"> </span>linked<span class="p">;</span><span class="w"> </span>preset:<span class="w"> </span>enabled<span class="o">)</span>
+<span class="w">     </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>running<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>Wed<span class="w"> </span><span class="m">2024</span>-09-11<span class="w"> </span><span class="m">23</span>:01:03<span class="w"> </span>UTC<span class="p">;</span><span class="w"> </span>1s<span class="w"> </span>ago
+<span class="w">   </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">7813</span><span class="w"> </span><span class="o">(</span>FactoryServer.s<span class="o">)</span>
+<span class="w">      </span>Tasks:<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="o">(</span>limit:<span class="w"> </span><span class="m">18998</span><span class="o">)</span>
+<span class="w">     </span>Memory:<span class="w"> </span><span class="m">151</span>.3M
+<span class="w">        </span>CPU:<span class="w"> </span><span class="m">1</span>.632s
+<span class="w">     </span>CGroup:<span class="w"> </span>/system.slice/satisfactory.service
+<span class="w">             </span><span class="p">|</span>-7813<span class="w"> </span>/bin/sh<span class="w"> </span>/home/steam/Steam/SatisfactoryDedicatedServer/FactoryServer.sh
+<span class="w">             </span><span class="sb">`</span>-7820<span class="w"> </span>/home/steam/Steam/SatisfactoryDedicatedServer/Engine/Binaries/Linux/FactoryServer-Linux-Shipping<span class="w"> </span>FactoryGame
+</pre>
+ </div>
+ <p>
+  If the service times out before it is loaded, it may restart in a loop. This may happpen if older hardware that doesn't meet the minimum requirements for the server hardware is being used. To prevent this, the following line can be added to the [Service] section:
+  <code>
+   TimeoutSec=XXX
+  </code>
+  . Replace the XXX with a numerical value in seconds. On most distros services timeout after 90 seconds by default.
+ </p>
+ <h5>
+  <span id="NixOS_.28and_other_Atomic_distros.29_Systemd_Quirks">
+  </span>
+  <span class="mw-headline" id="NixOS_(and_other_Atomic_distros)_Systemd_Quirks">
+   NixOS (and other Atomic distros) Systemd Quirks
+  </span>
+ </h5>
+ <p>
+  If you are creating a Service using steam-run on NixOS with Systemd, ensure you are calling for the steam-run binary via the source binary, with
+  <code>
+   ${pkgs.steam-run}/bin/steam-run
+  </code>
+  . Attempting to use the binary atomically linked inside
+  <code>
+   /run/current-system/sw/bin/steam-run
+  </code>
+  will make the service not start correctly. For an example of the design of the Service unit inside Nix, see this:
+  <a class="external text" href="https://gitlab.kuca.cz/tom-kuca/nix-config/-/blob/a11e73470c4f9a151afe67c7fa3a960b838d0d98/modules/nixos/satisfactory.nix" rel="nofollow">
+   Satisfactory Service Nix
+  </a>
+  . See Systemd bug reported here for more information:
+  <a class="external text" href="https://github.com/systemd/systemd/issues/31941" rel="nofollow">
+   Systemd issue 31941
+  </a>
+  for further information and monitoring progress.
+ </p>
+ <h5>
+  <span class="mw-headline" id="Experimental_Branch">
+   Experimental Branch
+  </span>
+ </h5>
+ <p>
+  To have
+  <code>
+   systemd
+  </code>
+  pre-fetch the Experimental branch of the Dedicated Server upon restart, adjust the
+  <code>
+   ExecStartPre
+  </code>
+  directive to tell SteamCMD to use the
+  <code>
+   experimental
+  </code>
+  branch, as follows (truncated for brevity):
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[Service]</span>
+<span class="c1">#...</span>
+<span class="na">ExecStartPre</span><span class="o">=</span><span class="s">/usr/games/steamcmd +force_install_dir "/home/your_user/SatisfactoryDedicatedServer" +login anonymous +app_update 1690800 -beta experimental validate +quit</span>
+<span class="c1">#...</span>
+</pre>
+ </div>
+ <h5>
+  <span class="mw-headline" id="Planned_graceful_Restart">
+   Planned graceful Restart
+  </span>
+ </h5>
+ <p>
+  Together with the
+  <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+   HTTPS API
+  </a>
+  the Service can be configured to save, update and restart automaticaly. Here is an example using a
+  <a class="external text" href="https://www.adminschoice.com/crontab-quick-reference" rel="nofollow">
+   cron job
+  </a>
+  and curl.
+ </p>
+ <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="c1">##Example cron tab config</span>
+<span class="c1"># m h  dom mon dow   command</span>
+<span class="m">00</span><span class="w"> </span>&lt;RESTART_TIME&gt;<span class="w">  </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/curl<span class="w"> </span>-s<span class="w"> </span>--location<span class="w"> </span><span class="s1">'https://&lt;IP_ADDRESS&gt;:7777/api/v1'</span><span class="w"> </span>--insecure<span class="w"> </span>--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span>--data<span class="w"> </span><span class="s1">'{"function" :"PasswordLogin","data": {"Password": "&lt;PASSWORD&gt;","MinimumPrivilegeLevel": "Administrator"}}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>/usr/bin/jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.data.authenticationToken'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-I<span class="o">{}</span><span class="w"> </span>/usr/bin/curl<span class="w"> </span>-s<span class="w"> </span>--location<span class="w"> </span><span class="s1">'https://&lt;IP_ADDRESS&gt;:&lt;PORT&gt;/api/v1'</span><span class="w"> </span>--insecure<span class="w"> </span>--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span>--header<span class="w"> </span><span class="s2">"Authorization: Bearer {}"</span><span class="w"> </span>--data<span class="w"> </span><span class="s1">'{"function" :"SaveGame","data": {"SaveName": "main"}}'</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>/usr/sbin/service<span class="w"> </span>satisfactory<span class="w"> </span>restart
+
+<span class="c1">##Restart Command Step-by-Step (without absolut paths)</span>
+<span class="c1">#Get authenticationToken</span>
+<span class="nv">token</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>--location<span class="w"> </span><span class="s1">'https://&lt;IP_ADDRESS&gt;:7777/api/v1'</span><span class="w"> </span>--insecure<span class="w"> </span>--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span>--data
+<span class="s1">'{</span>
+<span class="s1">"function" :"PasswordLogin"</span>
+<span class="s1">"data": {"Password": "&lt;PASSWORD&gt;","MinimumPrivilegeLevel": "Administrator"}</span>
+<span class="s1">}'</span>
+<span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.data.authenticationToken'</span><span class="k">)</span>
+<span class="c1">#Save Game </span>
+<span class="o">&amp;&amp;</span>
+curl<span class="w"> </span>-s<span class="w"> </span>--location<span class="w"> </span><span class="s1">'https://&lt;IP_ADDRESS&gt;:7777/api/v1'</span><span class="w"> </span>--insecure<span class="w"> </span>--header<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span>--header<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">token</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>--data
+<span class="s1">'{</span>
+<span class="s1">"function" :"SaveGame",</span>
+<span class="s1">"data": {"SaveName": "&lt;SAVE_GAME_NAME&gt;"}</span>
+<span class="s1">}'</span>
+<span class="c1">#Wait 15 seconds (unknow if SaveGame function is synchronous)</span>
+<span class="o">&amp;&amp;</span>
+sleep<span class="w"> </span><span class="m">15</span>
+<span class="c1">#Restart Service (also updates the server)</span>
+<span class="o">&amp;&amp;</span>
+service<span class="w"> </span>satisfactory<span class="w"> </span>restart
+</pre>
+ </div>
+ <h4>
+  <span class="mw-headline" id="OpenRC">
+   OpenRC
+  </span>
+ </h4>
+ <p>
+  OpenRC is a service management system for
+  <a class="external text" href="https://gentoo.org" rel="nofollow">
+   Gentoo Linux
+  </a>
+  .
+ </p>
+ <p>
+  Install SteamCMD using Portage, and accept its license. Its installation directory by default is
+  <code>
+   /opt/steamcmd
+  </code>
+  .
+ </p>
+ <p>
+  The recommended way to get it set up is to link to the already existing SteamCMD init file with
+  <code>
+   ln -s /etc/init.d/steamcmd /etc/init.d/steamcmd.satisfactory
+  </code>
+  and then copying the default config from
+  <code>
+   /etc/conf.d/steamcmd
+  </code>
+  to
+  <code>
+   /etc/conf.d/steamcmd.satisfactory
+  </code>
+  .
+ </p>
+ <p>
+  The completed
+  <code>
+   /etc/conf.d/steamcmd.satisfactory
+  </code>
+  would look something like this:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="c1"># Copyright 1999-2020 Gentoo Authors </span>
+<span class="c1"># Distributed under the terms of the GNU General Public License v2 </span>
+
+<span class="c1"># Dtach options, which will used, when the `attach` extra command is called. </span>
+<span class="c1"># By default, CTRL+D is used, and no signal is send, </span>
+<span class="c1"># when you want to detach from the attached console. </span>
+<span class="nv">DTACH_OPTS</span><span class="o">=</span><span class="s2">"-e '^D' -r none"</span><span class="w"> </span>
+<span class="c1"># Specifies, which server binary is used. </span>
+<span class="c1"># This could be 'hlds_run' or 'srcds_run', depending on your game. </span>
+<span class="nv">STEAMCMD_BINARY</span><span class="o">=</span><span class="s2">"FactoryServer.sh"</span><span class="w"> </span>
+<span class="c1"># Path to the files of your started server. </span>
+<span class="nv">STEAMCMD_PATH</span><span class="o">=</span><span class="s2">"/opt/steamcmd/sf"</span><span class="w"> </span>
+<span class="c1"># Options for your server binary. </span>
+<span class="nv">STEAMCMD_OPTS</span><span class="o">=</span><span class="s2">""</span>
+</pre>
+ </div>
+ <h3>
+  <span class="mw-headline" id="Windows">
+   Windows
+  </span>
+ </h3>
+ <h4>
+  <span class="mw-headline" id="NSSM">
+   NSSM
+  </span>
+ </h4>
+ <p>
+  You can use
+  <a class="external text" href="https://nssm.cc/" rel="nofollow">
+   Non-Sucking Service Manager
+  </a>
+  to easily set up auto-restart for the dedicated server.
+ </p>
+ <p>
+  Once you've downloaded and installed NSSM, navigate to the directory containing nssm.exe and run the below command:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>install<span class="w"> </span>SatisfactoryServerService
+</pre>
+ </div>
+ <p>
+  This will pull up a GUI for configuration. Set the "
+  <b>
+   Path
+  </b>
+  " to the location of FactoryServer.exe, Set the "
+  <b>
+   Arguments
+  </b>
+  " to "-unattended". You can modify other settings if you want, but that's the only required step. Click "install", then run this command.
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>start<span class="w"> </span>SatisfactoryServerService
+</pre>
+ </div>
+ <p>
+  Other useful
+  <code>
+   nssm
+  </code>
+  commands:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>status<span class="w"> </span>SatisfactoryServerService<span class="w"> </span><span class="c1"># Checks the status of the Service</span>
+nssm.exe<span class="w"> </span>stop<span class="w"> </span>SatisfactoryServerService<span class="w"> </span><span class="c1"># Stops the service, and prevents it from auto-restarting</span>
+</pre>
+ </div>
+ <h4>
+  <span class="mw-headline" id="NSSM_to_update_your_server">
+   NSSM to update your server
+  </span>
+ </h4>
+ <p>
+  First create a batch file with the following text and save it as Update.bat in the same directory as Factory.exe.  Remember to put the directory on your server for where the Steamcmd.exe and Factory.exe files are.  For this example they reside in the C:\Gameservers directory.
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="s2">"C:\GameServers\SteamCMD\steamcmd.exe"</span><span class="w"> </span>+force_install_dir<span class="w"> </span><span class="s2">"C:\GameServers\SatisfactoryServer"</span><span class="w"> </span>+login<span class="w"> </span>anonymous<span class="w"> </span>+app_update<span class="w"> </span><span class="m">1690800</span><span class="w"> </span>-beta<span class="w"> </span>public<span class="w"> </span>validate<span class="w"> </span>+quit
+<span class="s2">"C:\GameServers\nssm.exe"</span><span class="w"> </span>start<span class="w"> </span>SatisfactoryServerService
+<span class="s2">"C:\GameServers\nssm.exe"</span><span class="w"> </span>stop<span class="w"> </span>SatisfactoryServerUpdate
+</pre>
+ </div>
+ <p>
+  Next open up your command prompt and change directories to where nssm.exe and run the command below:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>install<span class="w"> </span>SatisfactoryServerUpdate
+</pre>
+ </div>
+ <p>
+  Set the "Path" to the location of Update.bat. Set the startup type to Automatic. Under the Exit Actions tab and restart area select: Stop service (oneshot mode). Click "install"
+Run the command below:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>edit<span class="w"> </span>SatisfactoryServerService
+</pre>
+ </div>
+ <p>
+  Under the Details tab change the Startup type to "Manual" then Click "Edit service." Now run the following command:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>nssm.exe<span class="w"> </span>start<span class="w"> </span>SatisfactoryServerUpdate
+</pre>
+ </div>
+ <p>
+  This will have steamcmd look for any update, download, install, and verify it.  Then it will quit and start your Satisfactory server.  This will also stop the update service.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Automating_Server_Updates_With_Task_Scheduler">
+   Automating Server Updates With Task Scheduler
+  </span>
+ </h4>
+ <p>
+  You can further automate this function by using the Windows Task Scheduler.
+ </p>
+ <p>
+  Run the task scheduler and open up the library.  Right click in the big window and click "Create New Task..." In the General tab under account ensure you put an administrative service account to run the task. On the triggers tab you can set an option to have it run.  If you would like to have the server check every day 2am you can set a new trigger.  Have the task begin on a schedule.  Run it daily at 2:00am.  Set the task to enabled and click "Ok."  Go to the Actions tab.  You're going to want to start the next two programs:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-shell mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span>NET<span class="w"> </span>STOP<span class="w"> </span><span class="s2">"SatisfactoryServerService"</span>
+NET<span class="w"> </span>START<span class="w"> </span><span class="s2">"SatisfactoryServerUpdate"</span>
+</pre>
+ </div>
+ <p>
+  Click "OK" to save.  Now your server will automatically shutdown at 2am, search for an update, install it if found, and restart without any human interaction.  You can check to see if this is running in the task scheduler window or within the event viewer under the application tab.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Docker">
+   Docker
+  </span>
+ </h3>
+ <div style="margin-left: 30px;">
+  <i>
+   See:
+  </i>
+  <a href="/wiki/Dedicated_servers#Docker" title="Dedicated servers">
+   Dedicated_servers#Docker
+  </a>
+  ,
+  <a href="/wiki/Dedicated_servers#Docker_Images" title="Dedicated servers">
+   Dedicated_servers#Docker_Images
+  </a>
+ </div>
+ <p>
+  <br/>
+ </p>
+ <h2>
+  <span class="mw-headline" id="See_also">
+   See also
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+    Dedicated Servers - Main Page
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+    Dedicated Servers - Configuration Files
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+    Dedicated Servers - Automatic Updates
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+    Dedicated Servers -  HTTPS API
+   </a>
+  </li>
+ </ul>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="mw-references-wrap">
+  <ol class="references">
+   <li id="cite_note-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-1">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external free" href="https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html" rel="nofollow">
+      https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html
+     </a>
+     systemd.kill
+    </span>
+   </li>
+  </ol>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251016035806
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.107 seconds
+Real time usage: 1.981 seconds
+Preprocessor visited node count: 362/1000000
+Revision size: 12199/4194304 bytes
+Post‐expand include size: 26903/4194304 bytes
+Template argument size: 279/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 15/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14334/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 812610/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1890.447      1 -total
+  1.39%   26.316      1 Template:PioneerNav
+  1.36%   25.688      2 Template:Navbox
+  0.42%    8.024      1 Template:See
+  0.39%    7.316      1 Template:Tocright
+  0.09%    1.734      1 Template:Hatnote
+  0.09%    1.678     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4558-0!canonical and timestamp 20251016035806 and revision id 55536. Rendering was triggered because: page_view
+ -->
+</div>

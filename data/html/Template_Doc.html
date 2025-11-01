@@ -1,0 +1,271 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <table class="plainlinks ambox ambox-red" style="">
+  <tbody>
+   <tr>
+    <td class="ambox-image">
+     <a class="new" href="/wiki/Special:Upload?wpDestFile=Icon-warning-red.svg" title="File:Icon-warning-red.svg">
+      File:Icon-warning-red.svg
+     </a>
+    </td>
+    <td class="ambox-text">
+     Deprecated
+     <div class="amsmalltext">
+      <p>
+       This template is deprecated in favour of
+       <code data-t-mode="transclusion" data-t-role="wrapper" style="all:unset;font-family:monospace">
+        <span data-t-role="opener">
+         {{
+         <a href="/wiki/Template:Documentation" title="Template:Documentation">
+          Documentation
+         </a>
+        </span>
+        <span data-t-role="closer">
+         }}
+        </span>
+       </code>
+       , which doesn't rely on unbalanced templates.
+      </p>
+     </div>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <div style="height: 1em; clear: both; margin-top: 5px;">
+ </div>
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   To use, create a sub-page from the template called
+   <b>
+    doc
+   </b>
+   , put
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    }}
+   </code>
+   at the start of your documentation, and
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/end" title="Template:Doc/end">
+     doc/end
+    </a>
+    }}
+   </code>
+   at the end.
+  </p>
+  <p>
+   Go back to your main template page and put &lt;noinclude&gt;
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     doc
+    </a>
+    }}
+   </code>
+   &lt;/noinclude&gt; on a newline after the end of the template. /doc pages will automatically be added to
+   <a href="/wiki/Category:Template_documentation" title="Category:Template documentation">
+    Category:Template documentation
+   </a>
+   .
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Optional_parameters">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Optional parameters
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#clear">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         clear
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#nodoc=1">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         nodoc=1
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-4">
+       <a href="#baddoc=1">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         baddoc=1
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Optional_parameters">
+    Optional parameters
+   </span>
+  </h2>
+  <h3>
+   <span class="mw-headline" id="clear">
+    clear
+   </span>
+  </h3>
+  <p>
+   If your main template page has floating content and you would like to stop it going over the documentation, put
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    |clear}}
+   </code>
+   instead of
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    }}
+   </code>
+   on your documentation page.
+   <br/>
+   This is also useful for templates not using &lt;includeonly&gt;, as it will put some space between the template and the documentation box.
+  </p>
+  <h3>
+   <span id="nodoc.3D1">
+   </span>
+   <span class="mw-headline" id="nodoc=1">
+    nodoc=1
+   </span>
+  </h3>
+  <p>
+   If a template has no documentation and you don't know how to use it, put
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    |nodoc=1}}
+   </code>
+   (or if the template needs clear as well,
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    |clear|nodoc=1}}
+   </code>
+   ) instead of
+   <code>
+    {{
+    <a href="/wiki/Template:Doc/start" title="Template:Doc/start">
+     doc/start
+    </a>
+    }}
+   </code>
+   on your documentation page.
+   <br/>
+   The documentation's background will become red to make it more noticeable, and the page will be added to
+   <a href="/wiki/Category:Templates_with_no_documentation" title="Category:Templates with no documentation">
+    Category:Templates with no documentation
+   </a>
+   .
+  </p>
+  <h3>
+   <span id="baddoc.3D1">
+   </span>
+   <span class="mw-headline" id="baddoc=1">
+    baddoc=1
+   </span>
+  </h3>
+  <p>
+   Similar to nodoc, this is used to mark templates that
+   <b>
+    do
+   </b>
+   have documentation, but it isn't very good. This can mean it doesn't have enough examples, doesn't explain all the functions properly, or doesn't explain the point of the template properly.
+   <br/>
+   The documentation's background will become yellow to make it more noticeable, and the page will be added to
+   <a href="/wiki/Category:Templates_with_bad_documentation" title="Category:Templates with bad documentation">
+    Category:Templates with bad documentation
+   </a>
+   .
+  </p>
+  <p>
+   If both nodoc and baddoc are specified, baddoc will be ignored.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251021090800
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.042 seconds
+Real time usage: 0.258 seconds
+Preprocessor visited node count: 273/1000000
+Revision size: 2025/4194304 bytes
+Post‐expand include size: 3016/4194304 bytes
+Template argument size: 856/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 12/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.010/15.000 seconds
+Lua memory usage: 694163/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  232.096      1 -total
+ 80.80%  187.538      1 Template:Ambox
+ 79.83%  185.290      1 Template:T
+ 16.73%   38.821      5 Template:Tl
+  1.18%    2.744      3 Template:Tlx
+  0.95%    2.208      1 Template:Doc/start
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3231-0!canonical and timestamp 20251021090800 and revision id 20722. Rendering was triggered because: page_view
+ -->
+</div>

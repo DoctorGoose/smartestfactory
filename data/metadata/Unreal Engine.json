@@ -1,0 +1,43 @@
+{
+  "title": "Unreal Engine",
+  "pageid": 6662,
+  "categories": [
+    "Pages_with_syntax_highlighting_errors",
+    "Cleanup",
+    "Satisfactory"
+  ],
+  "sections": [
+    "Unreal Engine features",
+    "Nanite",
+    "Usage",
+    "Examples",
+    "Global Illumination (Lumen)",
+    "Usage",
+    "Examples",
+    "Virtual Shadow Maps (VSM)",
+    "World Partitioning System (WPS)",
+    "Usage",
+    "Temporal Super Resolution (TSR)",
+    "Fast Approximate Anti-Aliasing (FXAA)",
+    "Nvidia DLSS, Intel ExSS, AMD FSR",
+    "Chaos Physics System",
+    "Usage",
+    "Enhanced Input System (EIS)",
+    "Game audio",
+    "Unreal Engine UObject Limit",
+    "Abstract Instances",
+    "Lightweight Actors",
+    "UObject Game Crash",
+    "UObject Limit Increase",
+    "Engine usage history",
+    "Trivia",
+    "Current issues",
+    "See also",
+    "Gallery",
+    "History",
+    "References",
+    "Unreal Engine Chaos Physics",
+    "Unreal Engine Documentation"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Unreal_Engine"
+}

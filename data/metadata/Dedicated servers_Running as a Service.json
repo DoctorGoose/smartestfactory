@@ -1,0 +1,23 @@
+{
+  "title": "Dedicated servers/Running as a Service",
+  "pageid": 4558,
+  "categories": [
+    "Tutorials"
+  ],
+  "sections": [
+    "Running as a Service",
+    "Linux",
+    "Systemd",
+    "NixOS (and other Atomic distros) Systemd Quirks",
+    "Experimental Branch",
+    "Planned graceful Restart",
+    "OpenRC",
+    "Windows",
+    "NSSM",
+    "NSSM to update your server",
+    "Automating Server Updates With Task Scheduler",
+    "Docker",
+    "See also"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Dedicated_servers/Running_as_a_Service"
+}

@@ -1,0 +1,1273 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/es?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   Infobox Simple es una infobox de todo uso para las páginas de edificio, objeto, fluido y vehículo.
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1">
+     <a href="#Parametros">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Parametros
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2">
+       <a href="#Común">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Común
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Invisible">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Invisible
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Edificio">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         Edificio
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Vehículo">
+        <span class="tocnumber">
+         1.4
+        </span>
+        <span class="toctext">
+         Vehículo
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Dimensiones">
+        <span class="tocnumber">
+         1.5
+        </span>
+        <span class="toctext">
+         Dimensiones
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Objeto">
+        <span class="tocnumber">
+         1.6
+        </span>
+        <span class="toctext">
+         Objeto
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Equipamiento">
+        <span class="tocnumber">
+         1.7
+        </span>
+        <span class="toctext">
+         Equipamiento
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Combustible">
+        <span class="tocnumber">
+         1.8
+        </span>
+        <span class="toctext">
+         Combustible
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Componentes">
+        <span class="tocnumber">
+         1.9
+        </span>
+        <span class="toctext">
+         Componentes
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1">
+     <a href="#Ejemplo">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Ejemplo
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Parametros">
+    Parametros
+   </span>
+  </h2>
+  <h3>
+   <span id="Com.C3.BAn">
+   </span>
+   <span class="mw-headline" id="Común">
+    Común
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      Parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      name
+     </td>
+     <td>
+      Nombre
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      Titulo de la infobox, usada para cargo; PAGENAME por defecto
+     </td>
+    </tr>
+    <tr>
+     <td>
+      displayName
+     </td>
+     <td>
+      Nombre para mostrar
+     </td>
+     <td>
+      Strings
+     </td>
+     <td>
+      Anula el "nombre", pero solo para el título de la infobox (visualmente)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      image
+     </td>
+     <td>
+      Imagen
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      "nombre" .PNG por defecto
+     </td>
+    </tr>
+    <tr>
+     <td>
+      description
+     </td>
+     <td>
+      Descripción
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Descripción de la infobox
+     </td>
+    </tr>
+    <tr>
+     <td>
+      researchTier
+     </td>
+     <td>
+      Nivel de Investigación
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      El nivel y el hito, la investigación MAM u otra fuente que desbloquea el edificio.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      category
+     </td>
+     <td>
+      Categoría
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Pestaña menú de construcción (la categorización Wiki se puede deshabilitar con "Sin Categorías")
+     </td>
+    </tr>
+    <tr>
+     <td>
+      subCategory
+     </td>
+     <td>
+      Sub categoría
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Categoría menú de contrucción
+     </td>
+    </tr>
+    <tr>
+     <td>
+      blueprintPath
+     </td>
+     <td>
+      Ruta del blueprint
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Ruta del blueprint
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span class="mw-headline" id="Invisible">
+    Invisible
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      noCategories
+     </td>
+     <td>
+      sin Categorías
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Desactiva toda la categorización si es verdad
+     </td>
+    </tr>
+    <tr>
+     <td>
+      noCargo
+     </td>
+     <td>
+      sin Cargo
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Desactiva todo el almacenamiento de cargo si es verdad
+     </td>
+    </tr>
+    <tr>
+     <td>
+      recipeName
+     </td>
+     <td>
+      Nombre de la receta
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      PAGENAME por defecto, nombre de la receta (epónimo para edificios)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      experimental
+     </td>
+     <td>
+      Experimental
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Si la receta está disponible solo en la rama Experimental
+     </td>
+    </tr>
+    <tr>
+     <td>
+      unreleased
+     </td>
+     <td>
+      Inedito
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Si la receta no se ha publicado o no está disponible.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      alternateRecipe
+     </td>
+     <td>
+      Receta alternativa
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Si la receta es una receta alternativa (rara vez se usa)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      mainRecipe
+     </td>
+     <td>
+      Receta principal
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Si la receta es la receta principal (rara vez se usa)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      product
+     </td>
+     <td>
+      Producto
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      PAGENAME por defecto, el producto real (rara vez se usa)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      productCount
+     </td>
+     <td>
+      Recuento de producto
+     </td>
+     <td>
+      Intger
+     </td>
+     <td>
+      1 por defecto, el recuento real de productos (rara vez se usa)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      bioFuel
+     </td>
+     <td>
+      biocombustible
+     </td>
+     <td>
+      Booleano
+     </td>
+     <td>
+      Si el combustible es un combustible válido para el Quemador de biomasa
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span class="mw-headline" id="Edificio">
+    Edificio
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      inventorySize
+     </td>
+     <td>
+      Tamaño del inventario
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Tamaño del inventario del edificio, en pilas o m
+      <sup>
+       3
+      </sup>
+      ; también aparece en la sección vehículo.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      powerUsage
+     </td>
+     <td>
+      Consumo de Electricidad
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Consumo de electricidad en MW
+     </td>
+    </tr>
+    <tr>
+     <td>
+      powerGenerated
+     </td>
+     <td>
+      Electricidad generada
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      Electricidad generada en MW
+     </td>
+    </tr>
+    <tr>
+     <td>
+      fuel
+     </td>
+     <td>
+      combustible
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      Combustible aceptado; también aparece en la sección Vehículo
+     </td>
+    </tr>
+    <tr>
+     <td>
+      overclockable
+     </td>
+     <td>
+      overclockable
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Sí el edificio es overclockeable
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inputs
+     </td>
+     <td>
+      entradas
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      Cantidad de entradas
+     </td>
+    </tr>
+    <tr>
+     <td>
+      outputs
+     </td>
+     <td>
+      salidas
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      Cantidad de salidas
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id="Veh.C3.ADculo">
+   </span>
+   <span class="mw-headline" id="Vehículo">
+    Vehículo
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      maxSpeed
+     </td>
+     <td>
+      Velocidad maxima
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      Parámetro importante, determina si el vehículo o el grupo de edificios se utiliza para parametros de colisión
+      <br/>
+      Velocidad máxima del vehículo en una trayectoria recta y plana
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inventorySize
+     </td>
+     <td>
+      Tamaño del inventario
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Tamaño del inventario de vehículos, en pilas; también aparece en la sección Edificio
+     </td>
+    </tr>
+    <tr>
+     <td>
+      time0_50
+     </td>
+     <td>
+      Tiempo0_50
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      Tiempo en alcanzar 50 km/h en segundos
+     </td>
+    </tr>
+    <tr>
+     <td>
+      power
+     </td>
+     <td>
+      Energía
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      Tasa de quema de combustible
+     </td>
+    </tr>
+    <tr>
+     <td>
+      fuel
+     </td>
+     <td>
+      Combustible
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      Combustible aceptado; también aparece en la sección Edificio
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <br/>
+  </p>
+  <h3>
+   <span class="mw-headline" id="Dimensiones">
+    Dimensiones
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      size_width
+     </td>
+     <td>
+      Tamaño del ancho
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Ancho en metros
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_length
+     </td>
+     <td>
+      Tamaño del largo
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Largo en metros
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_height
+     </td>
+     <td>
+      Tamaño de la altura
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Alto en metros
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_note
+     </td>
+     <td>
+      Notas del tamaño
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Información adicional del tamaño, por ejemplo si el edificio es apilable
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <br/>
+  </p>
+  <h3>
+   <span class="mw-headline" id="Objeto">
+    Objeto
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      stackSize
+     </td>
+     <td>
+      Tamaño de apilado
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      Tamaño de apilado
+     </td>
+    </tr>
+    <tr>
+     <td>
+      isRadioactive
+     </td>
+     <td>
+      Radioactividad
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      Valor de desintegración radiactiva (adquirido de Docs.json)
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span class="mw-headline" id="Equipamiento">
+    Equipamiento
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      ammo
+     </td>
+     <td>
+      Munición
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      Objeto usado como munición (o como consumible, como los Filtros de gas para las Máscaras antigás
+     </td>
+    </tr>
+    <tr>
+     <td>
+      magSize
+     </td>
+     <td>
+      Tamaño del cargador
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Tamaño del cargador por recarga
+     </td>
+    </tr>
+    <tr>
+     <td>
+      damage
+     </td>
+     <td>
+      Daño
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Daño por golpe
+     </td>
+    </tr>
+    <tr>
+     <td>
+      rateOfFire
+     </td>
+     <td>
+      Cadencia de fuego
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Cadencia de fueg
+     </td>
+    </tr>
+    <tr>
+     <td>
+      reloadTime
+     </td>
+     <td>
+      Tiempo de recarga
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Tiempo de recarga en segundos
+     </td>
+    </tr>
+    <tr>
+     <td>
+      damagePerSecond
+     </td>
+     <td>
+      Daño por segundo
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Damage per second
+     </td>
+    </tr>
+    <tr>
+     <td>
+      range
+     </td>
+     <td>
+      Rango
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Rango efectivo en metros
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span class="mw-headline" id="Combustible">
+    Combustible
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      energy
+     </td>
+     <td>
+      Energía
+     </td>
+     <td>
+      Integer OR "N/A"
+     </td>
+     <td>
+      Energía por objeto o m
+      <sup>
+       3
+      </sup>
+      en MJ
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span class="mw-headline" id="Componentes">
+    Componentes
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th colspan="2">
+      parametro
+     </th>
+     <th>
+      Tipo
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      craftedIn
+     </td>
+     <td>
+      Fabricado en
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      Edificio o herramienta usada para fabricar el producto
+     </td>
+    </tr>
+    <tr>
+     <td>
+      ingredientX
+     </td>
+     <td>
+      Componente x
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      Recuento de ingrediente X (X rangos del 1 al 10)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      quantityX
+     </td>
+     <td>
+      Cantidad x
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      X ingrediente, ordenado de la misma forma que en el juego
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   <span class="mw-headline" id="Ejemplo">
+    Ejemplo
+   </span>
+  </h2>
+  <pre>{{Infobox simple/es
+| description = Fabrica una pieza a partir de dos piezas. &lt;br/&gt; Se puede automatizar al surtirlo de piezas con una cinta transportadora conectada a la entrada. Las piezas producidas se pueden extraer automáticamente al conectar una cinta transportadora a la salida.
+ | category = Producción
+ | subCategory = Productores
+ | researchTier = [[Nivel 2]] - Montaje de piezas
+ | powerUsage = 15
+ | overclockable = Si
+ | craftedIn = Build Gun
+ | inputs = 2
+ | outputs = 1
+ | quantity1 = 8
+ | ingredient1 = Lámina de hierro reforzada
+ | quantity2 = 4
+ | ingredient2 = Rotor
+ | quantity3 = 10
+ | ingredient3 = Cable
+ | size_width = 10
+ | size_length = 15
+ | size_height = 10
+ |image=File:Generador de carbón.png
+ }}
+</pre>
+  <p class="mw-empty-elt">
+  </p>
+  <aside class="portable-infobox noexcerpt searchaux pi-background pi-theme-default pi-layout-default">
+   <h2 class="pi-item pi-item-spacing pi-title" data-source="displayName">
+    Infobox simple/es
+   </h2>
+   <figure class="pi-item pi-media pi-image" data-source="image">
+    <a class="image image-thumbnail" href="/wiki/File:Generador_de_carb%C3%B3n.png" title="Generador de carbón.png">
+     <img alt="Generador de carbón.png" class="pi-image-thumbnail" height="270" src="/images/thumb/Coal-Powered_Generator.png/300px-Coal-Powered_Generator.png?564e1e" srcset="/images/thumb/Coal-Powered_Generator.png/300px-Coal-Powered_Generator.png?564e1e 1x, /images/Coal-Powered_Generator.png?564e1e 2x" width="270"/>
+    </a>
+   </figure>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="description">
+    <div class="pi-data-value pi-font">
+     <i>
+      Fabrica una pieza a partir de dos piezas.
+      <br/>
+      Se puede automatizar al surtirlo de piezas con una cinta transportadora conectada a la entrada. Las piezas producidas se pueden extraer automáticamente al conectar una cinta transportadora a la salida.
+     </i>
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="researchTier">
+    <h3 class="pi-data-label pi-secondary-font">
+     Desbloqueado en
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="new" href="/wiki/Nivel_2?action=edit&amp;redlink=1" rel="nofollow" title="Nivel 2 (page does not exist)">
+      Nivel 2
+     </a>
+     - Montaje de piezas
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="category">
+    <h3 class="pi-data-label pi-secondary-font">
+     Categoría
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="new" href="/wiki/Category:Producci%C3%B3n_buildings?action=edit&amp;redlink=1" rel="nofollow" title="Category:Producción buildings (page does not exist)">
+      Producción
+     </a>
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="subCategory">
+    <h3 class="pi-data-label pi-secondary-font">
+     Subcategoría
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="new" href="/wiki/Category:Productores?action=edit&amp;redlink=1" rel="nofollow" title="Category:Productores (page does not exist)">
+      Productores
+     </a>
+    </div>
+   </div>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     Edificio
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="powerUsage">
+     <h3 class="pi-data-label pi-secondary-font">
+      <a class="new" href="/wiki/Energ%C3%ADa?action=edit&amp;redlink=1" rel="nofollow" title="Energía (page does not exist)">
+       Energía usada
+      </a>
+     </h3>
+     <div class="pi-data-value pi-font">
+      15 MW
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="overclockable">
+     <h3 class="pi-data-label pi-secondary-font">
+      <a class="mw-redirect" href="/wiki/Overclock" title="Overclock">
+       Overclockeable
+      </a>
+     </h3>
+     <div class="pi-data-value pi-font">
+      Si
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="inputs">
+     <h3 class="pi-data-label pi-secondary-font">
+      Entradas
+     </h3>
+     <div class="pi-data-value pi-font">
+      2
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="outputs">
+     <h3 class="pi-data-label pi-secondary-font">
+      Salidas
+     </h3>
+     <div class="pi-data-value pi-font">
+      1
+     </div>
+    </div>
+   </section>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     Dimensiones
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_width">
+     <h3 class="pi-data-label pi-secondary-font">
+      Ancho
+     </h3>
+     <div class="pi-data-value pi-font">
+      10 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_length">
+     <h3 class="pi-data-label pi-secondary-font">
+      Largo
+     </h3>
+     <div class="pi-data-value pi-font">
+      15 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_height">
+     <h3 class="pi-data-label pi-secondary-font">
+      Alto
+     </h3>
+     <div class="pi-data-value pi-font">
+      10 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color">
+     <h3 class="pi-data-label pi-secondary-font">
+      Área
+     </h3>
+     <div class="pi-data-value pi-font">
+      150 m
+      <sup>
+       2
+      </sup>
+     </div>
+    </div>
+   </section>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     Componentes
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="craftedIn">
+     <h3 class="pi-data-label pi-secondary-font">
+      Hecho con
+     </h3>
+     <div class="pi-data-value pi-font">
+      Build Gun
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient1">
+     <div class="pi-data-value pi-font">
+      <b>
+       8×
+      </b>
+      <a class="image" href="/wiki/File:Reinforced_Iron_Plate.png">
+       <img alt="Reinforced Iron Plate.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+      </a>
+      Lámina de hierro reforzada
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient2">
+     <div class="pi-data-value pi-font">
+      <b>
+       4×
+      </b>
+      <a class="image" href="/wiki/File:Rotor.png">
+       <img alt="Rotor.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rotor.png/20px-Rotor.png?2616b2" width="20"/>
+      </a>
+      Rotor
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient3">
+     <div class="pi-data-value pi-font">
+      <b>
+       10×
+      </b>
+      <a class="image" href="/wiki/File:Cable.png">
+       <img alt="Cable.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Cable.png/20px-Cable.png?c87492" width="20"/>
+      </a>
+      Cable
+     </div>
+    </div>
+   </section>
+  </aside>
+  <p class="mw-empty-elt">
+  </p>
+  <div style="clear:both">
+  </div>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:Infobox_simple/es/doc" title="Template:Infobox simple/es/doc">
+    Template:Infobox simple/es/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/es/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/es/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215213
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.096 seconds
+Real time usage: 0.124 seconds
+Preprocessor visited node count: 233/1000000
+Revision size: 6447/4194304 bytes
+Post‐expand include size: 15361/4194304 bytes
+Template argument size: 500/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6707/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   97.706      1 Template:Doc
+100.00%   97.706      1 -total
+ 98.11%   95.858      1 Template:Infobox_simple/es/doc
+ 82.66%   80.764      1 Template:Infobox_simple/es
+  2.39%    2.336      1 Template:Doc/start
+  2.00%    1.958      1 Template:Doc/end
+  1.75%    1.708      2 Template:Tooltip
+  1.55%    1.517      1 Template:Clear
+  1.39%    1.355      2 Template:Cubic
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4713-0!canonical and timestamp 20251101215213 and revision id 52374. Rendering was triggered because: api-parse
+ -->
+</div>

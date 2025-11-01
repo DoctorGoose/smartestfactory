@@ -1,0 +1,4135 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  Blueprints are made using one of the three
+  <a href="/wiki/Blueprint_Designer" title="Blueprint Designer">
+   Blueprint Designers
+  </a>
+  .
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Usage">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Usage
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Construction">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Construction
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-3">
+        <a href="#Hotbar_assignment">
+         <span class="tocnumber">
+          1.1.1
+         </span>
+         <span class="toctext">
+          Hotbar assignment
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-4">
+        <a href="#Auto-connect">
+         <span class="tocnumber">
+          1.1.2
+         </span>
+         <span class="toctext">
+          Auto-connect
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-5">
+        <a href="#Hologram_lock_and_nudge_mode">
+         <span class="tocnumber">
+          1.1.3
+         </span>
+         <span class="toctext">
+          Hologram lock and nudge mode
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-6">
+        <a href="#Dismantle_mode">
+         <span class="tocnumber">
+          1.1.4
+         </span>
+         <span class="toctext">
+          Dismantle mode
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-7">
+      <a href="#Snapping">
+       <span class="tocnumber">
+        1.2
+       </span>
+       <span class="toctext">
+        Snapping
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-8">
+        <a href="#Designing">
+         <span class="tocnumber">
+          1.2.1
+         </span>
+         <span class="toctext">
+          Designing
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-9">
+        <a href="#Snapping_point">
+         <span class="tocnumber">
+          1.2.2
+         </span>
+         <span class="toctext">
+          Snapping point
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-10">
+        <a href="#Blueprint_snapping">
+         <span class="tocnumber">
+          1.2.3
+         </span>
+         <span class="toctext">
+          Blueprint snapping
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-11">
+        <a href="#World_grid">
+         <span class="tocnumber">
+          1.2.4
+         </span>
+         <span class="toctext">
+          World grid
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-12">
+    <a href="#Designing_2">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Designing
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-13">
+    <a href="#Categories">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Categories
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-14">
+      <a href="#Adding">
+       <span class="tocnumber">
+        3.1
+       </span>
+       <span class="toctext">
+        Adding
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-15">
+      <a href="#Moving">
+       <span class="tocnumber">
+        3.2
+       </span>
+       <span class="toctext">
+        Moving
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-16">
+    <a href="#Blueprint_files">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Blueprint files
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-17">
+      <a href="#Naming">
+       <span class="tocnumber">
+        4.1
+       </span>
+       <span class="toctext">
+        Naming
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-18">
+      <a href="#Saving">
+       <span class="tocnumber">
+        4.2
+       </span>
+       <span class="toctext">
+        Saving
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-19">
+      <a href="#Save_Location">
+       <span class="tocnumber">
+        4.3
+       </span>
+       <span class="toctext">
+        Save Location
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-20">
+        <a href="#Single_Player">
+         <span class="tocnumber">
+          4.3.1
+         </span>
+         <span class="toctext">
+          Single Player
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-21">
+        <a href="#Dedicated_Server">
+         <span class="tocnumber">
+          4.3.2
+         </span>
+         <span class="toctext">
+          Dedicated Server
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-22">
+      <a href="#Types">
+       <span class="tocnumber">
+        4.4
+       </span>
+       <span class="toctext">
+        Types
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-23">
+      <a href="#Sharing">
+       <span class="tocnumber">
+        4.5
+       </span>
+       <span class="toctext">
+        Sharing
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-24">
+      <a href="#Removal">
+       <span class="tocnumber">
+        4.6
+       </span>
+       <span class="toctext">
+        Removal
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-25">
+      <a href="#Transfer_to_new_game_save">
+       <span class="tocnumber">
+        4.7
+       </span>
+       <span class="toctext">
+        Transfer to new game save
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-26">
+    <a href="#Blueprint_file_format">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      Blueprint file format
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-27">
+      <a href="#Blueprint_File_Header">
+       <span class="tocnumber">
+        5.1
+       </span>
+       <span class="toctext">
+        Blueprint File Header
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-28">
+      <a href="#Blueprint_File_Body">
+       <span class="tocnumber">
+        5.2
+       </span>
+       <span class="toctext">
+        Blueprint File Body
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-29">
+    <a href="#To-Do_List">
+     <span class="tocnumber">
+      6
+     </span>
+     <span class="toctext">
+      To-Do List
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-30">
+    <a href="#Tips">
+     <span class="tocnumber">
+      7
+     </span>
+     <span class="toctext">
+      Tips
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-31">
+    <a href="#Narrative">
+     <span class="tocnumber">
+      8
+     </span>
+     <span class="toctext">
+      Narrative
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-32">
+    <a href="#Gallery">
+     <span class="tocnumber">
+      9
+     </span>
+     <span class="toctext">
+      Gallery
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-33">
+    <a href="#History">
+     <span class="tocnumber">
+      10
+     </span>
+     <span class="toctext">
+      History
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-34">
+    <a href="#References">
+     <span class="tocnumber">
+      11
+     </span>
+     <span class="toctext">
+      References
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Usage">
+   Usage
+  </span>
+ </h2>
+ <p>
+  Blueprints are placed using the
+  <a href="/wiki/Build_Gun" title="Build Gun">
+   Build Gun
+  </a>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Construction">
+   Construction
+  </span>
+ </h3>
+ <p>
+  Blueprints will have a "forward" direction, as indicated by a white arrow ▶ during placement, showing the "front" of the blueprint determined during the design of the blueprint
+  <i>
+   (see
+   <a href="/wiki/Blueprint_Designer#Blueprint_Designer_Control_Bench" title="Blueprint Designer">
+    Blueprint Designer Control Bench
+   </a>
+   ).
+  </i>
+  <sup class="reference" id="cite_ref-yt-ZDN_b6TX5gg@240_1-0">
+   <a href="#cite_note-yt-ZDN_b6TX5gg@240-1">
+    <span class="cite-bracket">
+     [
+    </span>
+    1
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+ </p>
+ <p>
+  Blueprints can be placed in the World by selecting blueprint from the
+  <a href="/wiki/Build_Gun#Build_menu" title="Build Gun">
+   Blueprint Build Menu
+  </a>
+  , or from a hotbar, then using mouse movements to align where you want blueprint to go, followed by use of
+  <a class="image" href="/wiki/File:Keyboard_White_Mouse_Left.png" title="Left">
+   <img alt="Left" data-file-height="100" data-file-width="100" decoding="async" height="28" loading="lazy" src="https://commons.wiki.gg/images/thumb/Keyboard_White_Mouse_Left.png/28px-Keyboard_White_Mouse_Left.png?c1a406" width="28"/>
+  </a>
+  (LMB) to place.
+ </p>
+ <p>
+  Once buildables have been placed they can edited individually just like normal buildings.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Hotbar_assignment">
+   Hotbar assignment
+  </span>
+ </h4>
+ <p>
+  Blueprints can be bound to a
+  <a class="mw-redirect" href="/wiki/Hotbar" title="Hotbar">
+   Hotbar
+  </a>
+  by hovering over them in the
+  <a href="/wiki/Build_Gun#Build_menu" title="Build Gun">
+   Blueprint Build Menu
+  </a>
+  and pressing the respective
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     0
+    </kbd>
+   </a>
+  </span>
+  –
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     9
+    </kbd>
+   </a>
+  </span>
+  key. Each blueprint can only be bound to each hotbar once, but the same blueprint can be bound to multiple hotbars.
+ </p>
+ <p>
+  Once a blueprint has been bound to a hotbar, it can be overwritten anytime, but a hotbar can never be cleared once anything has been bound to it.
+ </p>
+ <p>
+  Blueprints already bound to hotbars at the bottom of the screen can be then selected with the respective key. There are ten hotbars in total, which can be cycled through by
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Alt
+    </kbd>
+   </a>
+  </span>
+  +
+  <a class="image" href="/wiki/File:Keyboard_White_Mouse_Middle.png" title="Middle">
+   <img alt="Middle" data-file-height="100" data-file-width="100" decoding="async" height="28" loading="lazy" src="https://commons.wiki.gg/images/thumb/Keyboard_White_Mouse_Middle.png/28px-Keyboard_White_Mouse_Middle.png?6ca49a" width="28"/>
+  </a>
+  scrolling.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Auto-connect">
+   Auto-connect
+  </span>
+ </h4>
+ <p>
+  Pressing
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     R
+    </kbd>
+   </a>
+  </span>
+  when having a Blueprint Hologram out will activate the
+  <b>
+   Blueprint Auto-Connect Build Mode
+  </b>
+  , and any blueprint that contains
+  <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+   Conveyor Belts
+  </a>
+  ,
+  <a href="/wiki/Pipelines" title="Pipelines">
+   Pipelines
+  </a>
+  and
+  <a href="/wiki/Railway" title="Railway">
+   Railways
+  </a>
+  will try to automatically connect to any available inputs/outputs on the other end, which you can visually confirm before placing by hovering over with the blueprint hologram.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Hologram_lock_and_nudge_mode">
+   Hologram lock and nudge mode
+  </span>
+ </h4>
+ <p>
+  During placement, blueprints can make use of
+  <a href="/wiki/Build_Gun#Hologram_lock_and_nudge_mode" title="Build Gun">
+   Nudge Mode
+  </a>
+  to align blueprint in 1m (or 0.5m) steps in both the horizontal and vertical planes.
+  <sup class="reference" id="cite_ref-yt-ZDN_b6TX5gg@276_2-0">
+   <a href="#cite_note-yt-ZDN_b6TX5gg@276-2">
+    <span class="cite-bracket">
+     [
+    </span>
+    2
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+  <sup class="reference" id="cite_ref-yt-Ty7GdZvCETo@518_3-0">
+   <a href="#cite_note-yt-Ty7GdZvCETo@518-3">
+    <span class="cite-bracket">
+     [
+    </span>
+    3
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Dismantle_mode">
+   Dismantle mode
+  </span>
+ </h4>
+ <ul>
+  <li>
+   Once buildables are built using the blueprint function, by using
+   <a href="/wiki/Build_Gun#Dismantle_mode" title="Build Gun">
+    Blueprint Dismantle Mode
+   </a>
+   all blueprint buildables can be dismantled either individually, or by buildable type, or by dismantling the entire blueprint.
+   <sup class="reference" id="cite_ref-yt-ZDN_b6TX5gg@399_4-0">
+    <a href="#cite_note-yt-ZDN_b6TX5gg@399-4">
+     <span class="cite-bracket">
+      [
+     </span>
+     4
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <sup class="reference" id="cite_ref-yt-9jDBEpAlS2s@352_5-0">
+    <a href="#cite_note-yt-9jDBEpAlS2s@352-5">
+     <span class="cite-bracket">
+      [
+     </span>
+     5
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <sup class="reference" id="cite_ref-yt-9jDBEpAlS2s@400_6-0">
+    <a href="#cite_note-yt-9jDBEpAlS2s@400-6">
+     <span class="cite-bracket">
+      [
+     </span>
+     6
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+  </li>
+  <li>
+   When in blueprint dismantle mode, clicking on any buildable in a blueprint will automatically select the entire blueprint and not just the buildable selected.
+  </li>
+  <li>
+   Blueprints are given unique id's when placed, and all buildables in the placed blueprint are linked together. What this means is that if you dismantle some of a blueprint you can still select and dismantle the remainder.
+   <sup class="reference" id="cite_ref-yt-ZDN_b6TX5gg@460_7-0">
+    <a href="#cite_note-yt-ZDN_b6TX5gg@460-7">
+     <span class="cite-bracket">
+      [
+     </span>
+     7
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+  </li>
+  <li>
+   Buildables that are not part of a blueprint added later, like conveyor belts, will not be dismantled when using blueprint dismantle mode, but will have to be dismantled separately.
+  </li>
+  <li>
+   TIP: By using the
+   <a href="/wiki/Build_Gun#Building_eyedropper" title="Build Gun">
+    Building Eyedropper Function
+   </a>
+   you can sample blueprints using dismantle mode.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Snapping">
+   Snapping
+  </span>
+ </h3>
+ <h4>
+  <span class="mw-headline" id="Designing">
+   Designing
+  </span>
+ </h4>
+ <p>
+  On the platform of the Designer, buildables are snapped to 1 x 1 meter grids as on normal Foundations.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Snapping_point">
+   Snapping point
+  </span>
+ </h4>
+ <p>
+  The Snapping point of the blueprint is always at the center of the blueprinted buildables.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Blueprint_snapping">
+   Blueprint snapping
+  </span>
+ </h4>
+ <p>
+  When on default build mode, blueprints can be snapped to 'loose foundations' - foundations not built using blueprints - at 1 meter in horizontal or 0.5 meter in vertical. This requires careful manual alignment.
+ </p>
+ <p>
+  When using 'Blueprint' build mode, blueprints snap to each other based on the center of blueprinted buildables, barring encroachments.
+ </p>
+ <p>
+  When using 'Auto Connect' build mode, any blueprint that contains Conveyor, Pipes or Railways will try to automatically connect to any available inputs/outputs on the other end up to 16m (2 foundations away), which you can visually confirm before placing by hovering over with the blueprint hologram.
+ </p>
+ <ul>
+  <li>
+   Blueprint auto connections for
+   <a href="/wiki/Pipelines" title="Pipelines">
+    Pipeliness
+   </a>
+   and
+   <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+    Conveyor Beltss
+   </a>
+   now detect connections that are on top of themselves (Just like train tracks), and additionally prioritize the connection that is most aligned with themselves, instead of the closest connection.
+  </li>
+ </ul>
+ <p>
+  An already built blueprint preserves its snapping point for the other blueprints to snap to.
+ </p>
+ <h4>
+  <span class="mw-headline" id="World_grid">
+   World grid
+  </span>
+ </h4>
+ <p>
+  Blueprints have difficulty aligning to the
+  <a class="mw-redirect" href="/wiki/World_grid" title="World grid">
+   world grid
+  </a>
+  when built on the ground. It is advisable to create 'base' foundations using the world grid, then build blueprinted foundations above or beside it. Once done, the 'loose' foundations can be dismantled.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Designing_2">
+   Designing
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Blueprints are linked to the Mark Level Blueprint Designer in which they are designed, and cannot be individually edited using a different Mark Level Blueprint Designer.
+   <ul>
+    <li>
+     This means, for example, that a blueprint created in a Mk.1 Blueprint Designer cannot be individually edited in a Mk.2 or Mk.3 Blueprint Designer.
+     <i>
+      This is by design to prevent issues
+     </i>
+     .
+    </li>
+   </ul>
+  </li>
+  <li>
+   Blueprints made in a
+   <b>
+    lower
+   </b>
+   Mark Level Blueprint Designer can be
+   <b>
+    added
+   </b>
+   to a new blueprint in an upper Mark Level Blueprint Designer, however Blueprints made in a
+   <b>
+    higher
+   </b>
+   Mark Level Blueprint Designer cannot be added.
+   <i>
+    Again, this is by design to prevent issues
+   </i>
+   .
+   <ul>
+    <li>
+     This means, for example, that a blueprint created in a Mk.1 Blueprint Designer can be added to a Mk.2 or Mk.3 Blueprint Designer
+     <i>
+      (since it will fit)
+     </i>
+     . Additionally, for example, a blueprint created in a Mk.2 Blueprint Designer can be added to a Mk.3 Blueprint Designer, but cannot be added to a Mk.1 Blueprint Designer.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Categories">
+   Categories
+  </span>
+ </h2>
+ <p>
+  Blueprint categories and sub-categories are part of the
+  <a href="/wiki/Save_files" title="Save files">
+   save game file
+  </a>
+  , and if a blueprint is shared, or moved from a different directory, the category information will not show up, and the added blueprints will show up in the
+  <b>
+   Undefined Category
+  </b>
+  .
+  <sup class="reference" id="cite_ref-yt-9KBQyjy-a6g-3@5375_8-0">
+   <a href="#cite_note-yt-9KBQyjy-a6g-3@5375-8">
+    <span class="cite-bracket">
+     [
+    </span>
+    8
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+ </p>
+ <p>
+  Once you see the Blueprint in the Undefined Category, you can move it to any category you wish.
+ </p>
+ <p>
+  ★ IMPORTANT: Additional categories and/or sub-categories
+  <b>
+   must be created first
+  </b>
+  before they can be used by a blueprint.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Adding">
+   Adding
+  </span>
+ </h3>
+ <p>
+  To add a Category or Sub-Category, in the
+  <a href="/wiki/Blueprint_Designer#User_Interface" title="Blueprint Designer">
+   Blueprint Designer User Interface
+  </a>
+  <i>
+   <u>
+    when there is no blueprint on Blueprint Designer Pad
+   </u>
+  </i>
+  , click on
+  <b>
+   Set Directory
+  </b>
+  , then
+  <b>
+   Add Category
+  </b>
+  or
+  <b>
+   Add Subcategory
+  </b>
+  , followed by completion of another Dialog, then
+  <b>
+   Apply Changes
+  </b>
+  , then click
+  <b>
+   [X] Button
+  </b>
+  <i>
+   (to close Directory Dialog).
+  </i>
+ </p>
+ <p>
+  After creation of a new category and/or sub-category , it is recommended you move one blueprint there to prevent issues.
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:38.5px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Menu_-_Undefined_Category.png" title="Blueprint Build Menu showing Default Undefined Category">
+       <img alt="Blueprint Build Menu showing Default Undefined Category" data-file-height="540" data-file-width="888" decoding="async" height="73" loading="lazy" src="/images/thumb/Blueprint_Menu_-_Undefined_Category.png/120px-Blueprint_Menu_-_Undefined_Category.png?2cab0f" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Blueprint Build Menu showing Default Undefined Category
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:38.5px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Menu_-_Defined_Category.png" title="Blueprint Build Menu showing some Defined Categories">
+       <img alt="Blueprint Build Menu showing some Defined Categories" data-file-height="540" data-file-width="888" decoding="async" height="73" loading="lazy" src="/images/thumb/Blueprint_Menu_-_Defined_Category.png/120px-Blueprint_Menu_-_Defined_Category.png?b3ec30" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Blueprint Build Menu showing some Defined Categories
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Moving">
+   Moving
+  </span>
+ </h3>
+ <p>
+  To move an
+  <i>
+   existing blueprint
+  </i>
+  to a new category and/or sub-category, in the Blueprint Designer User Interface
+  <i>
+   <u>
+    when there is no blueprint on Blueprint Designer Pad
+   </u>
+  </i>
+  , click on
+  <b>
+   Set Directory
+  </b>
+  and then
+  <b>
+   Edit
+  </b>
+  <i>
+   (you will see a white square surrounding Blueprints)
+  </i>
+  . You can then drag any desired Blueprints to whatever Category / Sub-Category you wish. When done click
+  <b>
+   Apply Changes
+  </b>
+  followed by clicking
+  <b>
+   [X] Button
+  </b>
+  <i>
+   (to close Directory Dialog).
+  </i>
+ </p>
+ <h2>
+  <span class="mw-headline" id="Blueprint_files">
+   Blueprint files
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Naming">
+   Naming
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Blueprint names can use most characters.
+   <i>
+    except as indicated below.
+   </i>
+  </li>
+  <li>
+   <b>
+    CAUTION
+   </b>
+   To avoid game issues, blueprint names should not start or end with a
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      Space
+     </kbd>
+    </a>
+   </span>
+   or a
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      .
+     </kbd>
+    </a>
+   </span>
+   (period). Additionally, blueprint names should not contain an
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      '
+     </kbd>
+    </a>
+   </span>
+   (apostrophe), or any of the following Windows Reserve Characters:
+   <ul>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        &lt;
+       </kbd>
+      </a>
+     </span>
+     (less than)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        &gt;
+       </kbd>
+      </a>
+     </span>
+     (greater than)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        :
+       </kbd>
+      </a>
+     </span>
+     (colon)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        "
+       </kbd>
+      </a>
+     </span>
+     (double quote)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        /
+       </kbd>
+      </a>
+     </span>
+     (forward slash)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        \
+       </kbd>
+      </a>
+     </span>
+     (backslash)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        Bar
+       </kbd>
+      </a>
+     </span>
+     (vertical bar or pipe "|")
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        ?
+       </kbd>
+      </a>
+     </span>
+     (question mark)
+    </li>
+    <li>
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        *
+       </kbd>
+      </a>
+     </span>
+     (asterisk)
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Saving">
+   Saving
+  </span>
+ </h3>
+ <ol>
+  <li>
+   Prior to saving, make sure you add any new Category and/or Subcategory if desired
+   <i>
+    (see above)
+   </i>
+   .
+  </li>
+  <li>
+   In Blueprint Designer Console UI enter:
+   <ul>
+    <li>
+     <b>
+      Blueprint Name
+     </b>
+     <ul>
+      <li>
+       The Blueprint Name character limit is designed to prevent issues when using the blueprint build menu.
+      </li>
+      <li>
+       Game does not use
+       <a class="external text" href="https://en.wikipedia.org/wiki/Natural_sort_order" rel="nofollow">
+        Natural Sorting Order
+       </a>
+       , but uses
+       <b>
+        Alphabetical Sorting
+       </b>
+       so Blueprints with names like z1, z2, z11, will be sorted like z1, z11, z2.
+      </li>
+      <li>
+       It is recommended, if desired, to use zeros "0" in your Blueprint Names like z001, z002, z011, which will then sort correctly using Alphabetical Sorting.
+      </li>
+     </ul>
+    </li>
+    <li>
+     <b>
+      Blueprint Description
+     </b>
+     <i>
+      (Optional)
+     </i>
+     <ul>
+      <li>
+       The use of the Blueprint Description allows more characters than the Blueprint Name, and provides more information about the use of the blueprint.
+      </li>
+     </ul>
+    </li>
+    <li>
+     Click on
+     <b>
+      Set Directory
+     </b>
+     and select the added Category
+     <i>
+      (you should see "+ Add Blueprint Here", and when clicked you will see the Blueprint Name you chose along with "New")
+     </i>
+     and then click
+     <b>
+      [X] Button
+     </b>
+     <i>
+      (to close Directory Dialog).
+     </i>
+    </li>
+   </ul>
+  </li>
+  <li>
+   In Blueprint Designer Console UI verify that correct Directory is shown, and when satisfied click on
+   <b>
+    Save Blueprint
+   </b>
+   .
+   <b>
+    You should now be able to find the New Blueprint in the Category / Sub-Category you chose.
+   </b>
+  </li>
+ </ol>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:39px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Designer_UI.png" title="Blueprint Designer User Interface">
+       <img alt="Blueprint Designer User Interface" data-file-height="530" data-file-width="888" decoding="async" height="72" loading="lazy" src="/images/thumb/Blueprint_Designer_UI.png/120px-Blueprint_Designer_UI.png?16ee34" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Blueprint Designer User Interface
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Save_Location">
+   Save Location
+  </span>
+ </h3>
+ <ol>
+  <li>
+   Blueprints are contained in their own Session Name Directory.
+   <sup class="reference" id="cite_ref-yt-9KBQyjy-a6g-3@856_9-0">
+    <a href="#cite_note-yt-9KBQyjy-a6g-3@856-9">
+     <span class="cite-bracket">
+      [
+     </span>
+     9
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <sup class="reference" id="cite_ref-yt-CREPrQ23Dt4-3_10-0">
+    <a href="#cite_note-yt-CREPrQ23Dt4-3-10">
+     <span class="cite-bracket">
+      [
+     </span>
+     10
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+  </li>
+  <li>
+   At least one Blueprint Module must be created and saved in order for the Blueprint Directory to be created.
+  </li>
+  <li>
+   ★
+   <b>
+    IMPORTANT: Blueprint Modules are NOT saved in the same location as the game save files and as such are not automatically cloud synced.
+   </b>
+   <sup class="reference" id="cite_ref-yt-9KBQyjy-a6g-4_11-0">
+    <a href="#cite_note-yt-9KBQyjy-a6g-4-11">
+     <span class="cite-bracket">
+      [
+     </span>
+     11
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <sup class="reference" id="cite_ref-yt-BLah06-wsGM_12-0">
+    <a href="#cite_note-yt-BLah06-wsGM-12">
+     <span class="cite-bracket">
+      [
+     </span>
+     12
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   This means you will manually have to back up your Blueprint Files periodically to a location not used by the game. This also means that blueprints will not persist between sessions on cloud gameplay services such as GeForce NOW.
+  </li>
+  <li>
+   Blueprints are not global to prevent players from starting a new game session with all previously made Blueprints already available.
+  </li>
+  <li>
+   Players can choose to move Blueprints over to new Game Session Directory if they want.
+  </li>
+ </ol>
+ <h4>
+  <span class="mw-headline" id="Single_Player">
+   Single Player
+  </span>
+ </h4>
+ <p>
+  Both Steam and Epic Games version use the same PATH depending on OS used.
+ </p>
+ <ol>
+  <li>
+   Linux:
+   <code>
+    ~/.steam/root/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/blueprints/{SESSION NAME}
+   </code>
+  </li>
+  <li>
+   Windows (either Path will work):
+   <ul>
+    <li>
+     Path 1:
+     <code>
+      %LOCALAPPDATA%\FactoryGame\Saved\SaveGames\blueprints\{SESSION NAME}
+     </code>
+    </li>
+    <li>
+     Path 2:
+     <code>
+      \Users\&lt;your Windows username&gt;\AppData\Local\FactoryGame\Saved\SaveGames\blueprints\{SESSION NAME}
+     </code>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Steam Deck:
+   <code>
+    /home/deck/.steam/root/steamapps/compatdata/526870/pfx/dosdevices/c:/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/blueprints/{SESSION NAME}
+   </code>
+   <ul>
+    <li>
+     <b>
+      ⭑ NOTE:
+     </b>
+     Steam Deck blueprints are within a
+     <i>
+      hidden
+     </i>
+     folder, and you must first
+     <b>
+      show hidden files
+     </b>
+     before you can view the folder via the Steam Deck File Explorer.
+     <sup class="reference" id="cite_ref-yt-zqYgPf4u2yc_13-0">
+      <a href="#cite_note-yt-zqYgPf4u2yc-13">
+       <span class="cite-bracket">
+        [
+       </span>
+       13
+       <span class="cite-bracket">
+        ]
+       </span>
+      </a>
+     </sup>
+     Files are contained in a
+     <i>
+      compacted data folder
+     </i>
+     with name of
+     <b>
+      526870
+     </b>
+     .
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <p>
+  <b>
+  </b>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Dedicated_Server">
+   Dedicated Server
+  </span>
+ </h4>
+ <p>
+  Both Steam and Epic Games versions of the game use the same blueprint directory.
+ </p>
+ <ol>
+  <li>
+   Linux:
+   <code>
+    ~/.config/Epic/FactoryGame/Saved/SaveGames/blueprints/{SESSION NAME}
+   </code>
+  </li>
+  <li>
+   Windows (User):
+   <code>
+    %LOCALAPPDATA%\FactoryGame\Saved\SaveGames\blueprints\{SESSION NAME}
+   </code>
+  </li>
+  <li>
+   Windows (NSSM):
+   <code>
+    %WINDIR%\System32\config\systemprofile\AppData\Local\FactoryGame\Saved\SaveGames\blueprints\{SESSION NAME}
+   </code>
+  </li>
+  <li>
+   Windows Server (Windows Service):
+   <code>
+    %WINDIR%\ServiceProfiles\NetworkService\AppData\Local\FactoryGame\Saved\SaveGames\blueprints\{SESSION NAME}
+   </code>
+   <ul>
+    <li>
+     Note: The first time the Windows Service paths are accessed (NSSM or Windows Server Service), it is necessary to manually navigate through the folder structure using File Explorer and grant access to each of the folders as they are opened, using a user account with administrative rights.
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <h3>
+  <span class="mw-headline" id="Types">
+   Types
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Blueprints consist of two separate files:
+   <sup class="reference" id="cite_ref-yt-CREPrQ23Dt4-4_14-0">
+    <a href="#cite_note-yt-CREPrQ23Dt4-4-14">
+     <span class="cite-bracket">
+      [
+     </span>
+     14
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <ul>
+    <li>
+     <b>
+      Blueprint Module
+     </b>
+     (.sbp) - This holds the Blueprint Layout / Design information.
+    </li>
+    <li>
+     <b>
+      Blueprint Config File
+     </b>
+     (.sbpcfg) - This holds the information about:
+     <ul>
+      <li>
+       Blueprint Description.
+      </li>
+      <li>
+       Icon used.
+      </li>
+      <li>
+       Icon Color used.
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Sharing">
+   Sharing
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Players only need to share the actual Blueprint Module (.sbp) and not the related Blueprint Config File (.sbpcfg).
+  </li>
+  <li>
+   These
+   <a href="/wiki/Online_tools#Downloadable_blueprints" title="Online tools">
+    websites
+   </a>
+   are dedicated to the sharing of Blueprints where the
+   <b>
+    .sbp
+   </b>
+   files
+   <i>
+    (and optionally the
+    <b>
+     .sbpcfg
+    </b>
+    files)
+   </i>
+   may be uploaded, or downloaded and placed in the appropriate Blueprint directory on the Player's PC.
+  </li>
+  <li>
+   ★ IMPORTANT: The game save
+   <b>
+    must be reloaded
+   </b>
+   before any shared blueprints that are downloaded will show up in the blueprint build menu.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Removal">
+   Removal
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Blueprint Modules can be removed at any time.
+  </li>
+  <li>
+   ❗
+   <b>
+    WARNING:
+   </b>
+   By removing a Blueprint it will be deleted from your computer. This cannot be undone, even if you load an older Game Save file.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Transfer_to_new_game_save">
+   Transfer to new game save
+  </span>
+ </h3>
+ <p>
+  Your blueprint files can be transferred from another game save session to a new game save session using the following steps:
+ </p>
+ <ol>
+  <li>
+   In the new game save session, you need unlock the blueprint designer in
+   <a href="/wiki/Milestones#Tier_4" title="Milestones">
+    Tier 4, Milestone 1
+   </a>
+   , FICSIT Blueprints.
+   <ul>
+    <li>
+     Complete
+     <a href="/wiki/Space_Elevator#Project_Assembly_phases" title="Space Elevator">
+      Space Elevator Phase 1
+     </a>
+     to unlock Tier 3 / Tier 4.
+    </li>
+    <li>
+     (OPTIONAL) You can use the
+     <a href="/wiki/AWESOME_Shop#Parts" title="AWESOME Shop">
+      Awesome Shop - Parts
+     </a>
+     to purchase the needed ingredients to make
+     <a href="/wiki/Smart_Plating" title="Smart Plating">
+      Smart Plating
+     </a>
+     needed to complete Space Elevator Phase 1.
+    </li>
+   </ul>
+  </li>
+  <li>
+   In the new game save session, once the blueprint designer is unlocked, you need to use it to
+   <b>
+    make one Blueprint
+   </b>
+   , say a 4x4 foundation blueprint, and save it.
+   <ul>
+    <li>
+     <i>
+      Doing this will create the Blueprint Save Location / Directory for
+      <b>
+       that game save session
+      </b>
+      on your PC.
+     </i>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Go to the blueprint save file location
+   <i>
+    (see above)
+   </i>
+   on your PC for the
+   <i>
+    other game save session
+   </i>
+   , and transfer any desired blueprints to the new game save session blueprint save file location.
+  </li>
+  <li>
+   ★ IMPORTANT: The game save
+   <b>
+    must be reloaded
+   </b>
+   before any blueprints that are transferred will show up in the blueprint build menu.
+  </li>
+ </ol>
+ <h2>
+  <span class="mw-headline" id="Blueprint_file_format">
+   Blueprint file format
+  </span>
+ </h2>
+ <p>
+  Blueprint Module (.sbp) files, which holds the blueprint layout / design information, have a format similar to
+  <a href="/wiki/Save_files#Save_file_format" title="Save files">
+   save files
+  </a>
+  . Below is a description of the format; it references elements from the save file format definition.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Blueprint_File_Header">
+   Blueprint File Header
+  </span>
+ </h3>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save header version
+    </td>
+    <td>
+     14
+    </td>
+    <td>
+     Same as SaveFileHeader.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save version
+    </td>
+    <td>
+     52
+    </td>
+    <td>
+     Same as SaveFileHeader.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     build version
+    </td>
+    <td>
+     418,783
+    </td>
+    <td>
+     Same as SaveFileHeader.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size (X)
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     Size of the blueprint, in 8-meter units.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size (Y)
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     Size of the blueprint, in 8-meter units.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size (Z)
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     Size of the blueprint, in 8-meter units.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     number of cost entries
+    </td>
+    <td>
+     11
+    </td>
+    <td>
+     Number of entries which describe the blueprint material costs.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     cost entries
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     Array of:
+     <ul>
+      <li>
+       String - item class name
+      </li>
+      <li>
+       Uint32 - quantity
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     number of contents entries
+    </td>
+    <td>
+     3
+    </td>
+    <td>
+     Number of entries which describe the blueprint contents.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     contents entries
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     Array of:
+     <ul>
+      <li>
+       String - building class name
+      </li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Following the header is a list of compressed chunks, juts like in a save file. Each chunk has the same compressed format (CompressedSaveFileBody). After decompression, the format is as follows:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Blueprint_File_Body">
+   Blueprint File Body
+  </span>
+ </h3>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     uncompressed size of the body
+    </td>
+    <td>
+     34,567
+    </td>
+    <td>
+     in number of bytes, for the whole body except this size field itself
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size of object headers
+    </td>
+    <td>
+     12,345
+    </td>
+    <td>
+     in number of bytes, including the count below but excluding this field
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     number of object headers
+    </td>
+    <td>
+     123
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     object headers
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     see ObjectHeader (in
+     <a href="/wiki/Save_files" title="Save files">
+      Save_files
+     </a>
+     ) for a description of the format.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size of objects
+    </td>
+    <td>
+     23,456
+    </td>
+    <td>
+     in number of bytes, including the count below but excluding this field
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     number of objects
+    </td>
+    <td>
+     123
+    </td>
+    <td>
+     same as number of object headers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     objects
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     see ActorObject or ComponentObject  (in
+     <a href="/wiki/Save_files" title="Save files">
+      Save_files
+     </a>
+     ) for a description of the format. Note that this is not a LevelObject.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="To-Do_List">
+   To-Do List
+  </span>
+ </h2>
+ <p>
+  Blueprints can be added at any time to the
+  <a href="/wiki/To-Do_List" title="To-Do List">
+   To-Do List
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Tips">
+   Tips
+  </span>
+ </h2>
+ <ul>
+  <li>
+   You can build already existing blueprints again in the blueprint designer. For example, if you create a 4 identical constructor levels inside the blueprint designer, you only have to build the first one manually. After you have finished level 1, save it as a new blueprint. Then select that blueprint and place it right above the existing buildings in the blueprint designer. You immediately have level 2. Then place it again for level 3 and for level 4. Now save the entire blueprint again and you have an 4 story constructor assembly with little more work than one story of it.
+  </li>
+  <li>
+   The default blueprint icon color (which is not available as a preset unless saved manually) is #5CAFC5.
+  </li>
+  <li>
+   For production buildings and power generators, any ingredients or fuel in the
+   <b>
+    Input Buffer
+   </b>
+   , or items in
+   <a href="/wiki/Storage_Container" title="Storage Container">
+    Storage Containers
+   </a>
+   , will be saved when the blueprint is saved and become immediately available when blueprint is placed
+   <i>
+    (CREDIT: Reddit Member
+   </i>
+   u/MatthewMMorrow
+   <sup class="reference" id="cite_ref-Reddit-1hpqelu_15-0">
+    <a href="#cite_note-Reddit-1hpqelu-15">
+     <span class="cite-bracket">
+      [
+     </span>
+     15
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <i>
+    ).
+   </i>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Narrative">
+   Narrative
+  </span>
+ </h2>
+ <div class="spoilerbox mw-collapsible mw-collapsed">
+  <b>
+   Expand to reveal spoiler
+  </b>
+  <div class="mw-collapsible-content">
+   When performing specific actions, the player will hear
+   <a href="/wiki/ADA" title="ADA">
+    ADA
+   </a>
+   speak.
+   <ul>
+    <li>
+     View
+     <a href="/wiki/Story#Player_Actions" title="Story">
+      Story Player Actions - Pioneer Constructs
+     </a>
+     to read and hear individual ADA messages related to making a Custom Blueprint.
+    </li>
+   </ul>
+  </div>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Gallery">
+   Gallery
+  </span>
+ </h2>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:39px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Designer_Control_Bench_With_Storage_Box.png" title="Blueprint Designer Control Bench With Storage Box">
+       <img alt="Blueprint Designer Control Bench With Storage Box" data-file-height="530" data-file-width="888" decoding="async" height="72" loading="lazy" src="/images/thumb/Blueprint_Designer_Control_Bench_With_Storage_Box.png/120px-Blueprint_Designer_Control_Bench_With_Storage_Box.png?96db43" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Blueprint Designer Control Bench With Storage Box
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:35.5px auto;">
+      <a class="image" href="/wiki/File:Todo_List_Blueprints_U7.png" title="Example of adding a Blueprint to the To-Do List">
+       <img alt="Example of adding a Blueprint to the To-Do List" data-file-height="846" data-file-width="1280" decoding="async" height="79" loading="lazy" src="/images/thumb/Todo_List_Blueprints_U7.png/120px-Todo_List_Blueprints_U7.png?45a61d" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Example of adding a Blueprint to the To-Do List
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Directional_Arrow.png" title="Example Blueprint Directional Arrow (on left)">
+       <img alt="Example Blueprint Directional Arrow (on left)" data-file-height="720" data-file-width="1280" decoding="async" height="68" loading="lazy" src="/images/thumb/Blueprint_Directional_Arrow.png/120px-Blueprint_Directional_Arrow.png?bb31f6" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Example Blueprint Directional Arrow (on left)
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Placement.png" title="Example of Blueprint placement">
+       <img alt="Example of Blueprint placement" data-file-height="720" data-file-width="1280" decoding="async" height="68" loading="lazy" src="/images/thumb/Blueprint_Placement.png/120px-Blueprint_Placement.png?ca1ba3" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Example of Blueprint placement
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Blueprint_Dismantle.png" title="Example use of Blueprint Dismantle Mode (note missing storage container in front / right)">
+       <img alt="Example use of Blueprint Dismantle Mode (note missing storage container in front / right)" data-file-height="720" data-file-width="1280" decoding="async" height="68" loading="lazy" src="/images/thumb/Blueprint_Dismantle.png/120px-Blueprint_Dismantle.png?e9c715" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Example use of Blueprint Dismantle Mode
+     <i>
+      (note missing storage container in front / right)
+     </i>
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="History">
+   History
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_1.1.1.5" title="Patch 1.1.1.5">
+    Patch 1.1.1.5
+   </a>
+   : Fix for a specific crash when loading saves that contain Conveyor Belts built by blueprint auto-connect during 1.1 Experimental when it was not working correctly and have not been resaved since
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.1.2" title="Patch 1.1.1.2">
+    Patch 1.1.1.2
+   </a>
+   : Fix for a Crash on specific
+   <a href="/wiki/Save_files" title="Save files">
+    saves
+   </a>
+   that had faulty Blueprints using auto connected
+   <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+    Conveyor Belts
+   </a>
+   during a previous update during experimental
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+    Patch 1.1.1.1
+   </a>
+   <ul>
+    <li>
+     Fix for
+     <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+      Conveyor Belts
+     </a>
+     built using Blueprint Auto Connections not working after saving and reloading
+     <ul>
+      <li>
+       Existing Conveyor Belts that are affected by this issue will have to be rebuilt to work properly after this fix
+      </li>
+     </ul>
+    </li>
+    <li>
+     Fixed Blueprint Auto Connect sometimes flipping the direction of the hologram when building a Blueprint that contained
+     <a href="/wiki/Railway" title="Railway">
+      Railways
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.6" title="Patch 1.1.0.6">
+    Patch 1.1.0.6
+   </a>
+   <ul>
+    <li>
+     Fixed Blueprints exiting
+     <a href="/wiki/Build_Gun#Hologram_lock_and_nudge_mode" title="Build Gun">
+      Nudge Mode
+     </a>
+     when confirming auto connections
+    </li>
+    <li>
+     Fixed Blueprint auto connections not appearing for connections behind the Blueprint
+    </li>
+    <li>
+     Fixed Blueprint auto connections incorrectly confirming connections that aren’t valid (Without the link icon in the hologram)
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.5" title="Patch 1.1.0.5">
+    Patch 1.1.0.5
+   </a>
+   <ul>
+    <li>
+     Fixed Blueprints not syncing correctly between players in
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+    </li>
+    <li>
+     Fixed
+     <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+      Conveyor Splitter
+     </a>
+     /
+     <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+      Conveyor Merger
+     </a>
+     attached to ends of
+     <a href="/wiki/Conveyor_Lifts" title="Conveyor Lifts">
+      Conveyor Lifts
+     </a>
+     not working when placed as part of a Blueprint
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.4" title="Patch 1.1.0.4">
+    Patch 1.1.0.4
+   </a>
+   : Fixed automatic blueprint connections not copying customizations applied to the building they are connecting to
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.3" title="Patch 1.1.0.3">
+    Patch 1.1.0.3
+   </a>
+   : Fixed Blueprint Auto Connect alignment so it also considers height differences between connections
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.2" title="Patch 1.1.0.2">
+    Patch 1.1.0.2
+   </a>
+   <ul>
+    <li>
+     Potential fix for scenarios where Blueprint Auto connections would sometimes not work in
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+    </li>
+    <li>
+     Fixed bug where blueprint auto connection were playing a lot of snapping sound effects when auto connecting to an open-ended Railway junction
+    </li>
+    <li>
+     Increased distance for Blueprint Auto Connection Detection from 10m to 16m (2 foundations)
+    </li>
+    <li>
+     Blueprint auto connections for
+     <a href="/wiki/Pipelines" title="Pipelines">
+      Pipeliness
+     </a>
+     and
+     <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+      Conveyor Beltss
+     </a>
+     now detect connections that are on top of themselves (Just like train tracks)
+    </li>
+    <li>
+     Blueprint auto connections now prioritize the connection that is most aligned with themselves, instead of the closest connection
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.0" title="Patch 1.1.0.0">
+    Patch 1.1.0.0
+   </a>
+   <ul>
+    <li>
+     There is now a new “Auto Connect” build mode for Blueprints that you can select by pressing
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        R
+       </kbd>
+      </a>
+     </span>
+     when having a Blueprint Hologram out
+     <ul>
+      <li>
+       When using this mode, any blueprint that contains
+       <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+        Conveyor Belts
+       </a>
+       ,
+       <a href="/wiki/Pipelines" title="Pipelines">
+        Pipelines
+       </a>
+       and
+       <a class="new" href="/wiki/Railways?action=edit&amp;redlink=1" rel="nofollow" title="Railways (page does not exist)">
+        Railways
+       </a>
+       will try to automatically connect to any available inputs/outputs on the other end, which you can visually confirm before placing by hovering over with the blueprint hologram
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.0" title="Patch 1.0.1.0">
+    Patch 1.0.1.0
+   </a>
+   <ul>
+    <li>
+     Fixed a Crash when there is a Failure to open
+     <a href="/wiki/Save_files" title="Save files">
+      Save game
+     </a>
+     and Blueprint files for reading
+    </li>
+    <li>
+     Fixed white boxes appearing in the compass when
+     <a href="/wiki/Train_Station" title="Train Station">
+      Train Stations
+     </a>
+     would be built from Blueprints in some scenarios
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.5" title="Patch 1.0.0.5">
+    Patch 1.0.0.5
+   </a>
+   <ul>
+    <li>
+     Optimized the
+     <a href="/wiki/Unreal_Engine#Lightweight_Actors" title="Unreal Engine">
+      Lightweight Subsystem
+     </a>
+     , this improves a bug where hovering over big Blueprint holograms over existing buildable's would drastically lower performance until the hologram was closed
+    </li>
+    <li>
+     Fixed crashes related to dismantling some parts of a Blueprint, mostly affecting
+     <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+      Conveyor Belts
+     </a>
+     ,
+     <a class="mw-redirect" href="/wiki/Pipeline" title="Pipeline">
+      Pipelines
+     </a>
+     and
+     <a href="/wiki/Railway" title="Railway">
+      Railways
+     </a>
+    </li>
+    <li>
+     Fixed a bug where loading a Blueprint in a designer would load it in all the previously interacted
+     <a href="/wiki/Blueprint_Designer" title="Blueprint Designer">
+      designers
+     </a>
+    </li>
+    <li>
+     Fixed a crash related to Blueprint connections when exiting or loading a save
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+    Patch 1.0.0.4
+   </a>
+   : Fix for Blueprints not showing up or being unusable in sessions that ended with a period/fullstop
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+    Patch 1.0.0.3
+   </a>
+   : Fixed Blueprints being slightly offset compared to previous updates
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0" title="Patch 1.0">
+    Patch 1.0
+   </a>
+   <ul>
+    <li>
+     Introduced Blueprint Designer Mk.2 and Mk.3
+    </li>
+    <li>
+     Renamed Blueprint Designer to Blueprint Designer Mk.1
+    </li>
+    <li>
+     While dismantling, you can also now change the build mode to completely dismantle all parts of a blueprint instead of only a single element from it at a time
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.0" title="Patch 0.8.2.0">
+    Patch 0.8.2.0
+   </a>
+   <ul>
+    <li>
+     You can now sample blueprints from dismantle mode
+    </li>
+    <li>
+     Pillars can partially intersect the edges of the Blueprint Designer again
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.0.5" title="Patch 0.8.0.5">
+    Patch 0.8.0.5
+   </a>
+   : Fixed Blueprints saved over old Update 7 Blueprints having weird issues and crashing when the Blueprint contained Pipelines
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.0.3" title="Patch 0.8.0.3">
+    Patch 0.8.0.3
+   </a>
+   <ul>
+    <li>
+     Fixed the Railways, Hypertubes and Pipelines visually having incorrect rotation when set via Blueprint
+     <ul>
+      <li>
+       This may also fix sinking/incorrectly rotated foundations in some scenarios
+      </li>
+     </ul>
+    </li>
+    <li>
+     Fixed the FICSIT Blueprints milestone not showing the Blueprint Designer in the unlock list
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.0.0" title="Patch 0.8.0.0">
+    Patch 0.8.0.0
+   </a>
+   <ul>
+    <li>
+     Added a directional indicator to the Blueprint hologram
+    </li>
+    <li>
+     Added a Blueprints Dismantle Mode that can be switched on in the regular Dismantle Mode, allowing an entire Blueprint to be dismantled at once
+    </li>
+    <li>
+     Added Quick Switch functionality to Blueprints, allowing the player to quickly switch between Blueprints in the same sub-category
+    </li>
+    <li>
+     Added Sample functionality to Blueprints (can only be sampled when in Blueprint Dismantle Mode)
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.1.1" title="Patch 0.7.1.1">
+    Patch 0.7.1.1
+   </a>
+   <ul>
+    <li>
+     Fixed a very rare crash related to the build effect while building Blueprints
+    </li>
+    <li>
+     Fixed being able to place
+     <a class="mw-redirect" href="/wiki/Coal_Generator" title="Coal Generator">
+      Coal generators
+     </a>
+     at the edge of Blueprints and still have them hook to power
+    </li>
+    <li>
+     Fixed
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     and
+     <a class="mw-redirect" href="/wiki/Dedicated_Server" title="Dedicated Server">
+      Dedicated Server
+     </a>
+     Clients not being able to place
+     <a href="/wiki/Power_Poles" title="Power Poles">
+      Power Poles
+     </a>
+     off a
+     <a href="/wiki/Power_Line" title="Power Line">
+      Power Cable
+     </a>
+     in the Blueprint Designer
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.8_(Experimental)" title="Patch 0.7.0.8 (Experimental)">
+    Patch 0.7.0.8
+   </a>
+   : Fixed hologram clearance showing up in the Blueprint build effect
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.7" title="Patch 0.7.0.7">
+    Patch 0.7.0.7
+   </a>
+   <ul>
+    <li>
+     Fixed being unable to save Blueprints in sessions with names with empty spaces
+    </li>
+    <li>
+     Temporary fixes to Blueprint snapping in Foundations, this should make it so Blueprints no longer sink in-between foundations
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.6" title="Patch 0.7.0.6">
+    Patch 0.7.0.6
+   </a>
+   <ul>
+    <li>
+     Fixed being able to build
+     <a href="/wiki/Geothermal_Generator" title="Geothermal Generator">
+      Geothermal Generators
+     </a>
+     in the Blueprint Designer
+    </li>
+    <li>
+     Fixed a duplication bug with the Blueprint Designer
+    </li>
+    <li>
+     Fixed being able to access the Blueprint Designer window while the image browser or color picker is open
+    </li>
+    <li>
+     Fixed
+     <a href="/wiki/Drone_Port" title="Drone Port">
+      Drone Stations
+     </a>
+     breaking when placing via Blueprint
+    </li>
+    <li>
+     Fixed an issue where the Blueprint info would still be shown in the info box after removing a Blueprint
+    </li>
+    <li>
+     Fixed newly created Blueprints not retaining their selected category/subcategory when saving for the first time
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.5" title="Patch 0.7.0.5">
+    Patch 0.7.0.5
+   </a>
+   <ul>
+    <li>
+     Fixed boomers clearance for Blueprint holograms
+    </li>
+    <li>
+     To-Do list now supports Blueprints
+    </li>
+    <li>
+     <a class="mw-redirect" href="/wiki/Walkway" title="Walkway">
+      Walkways
+     </a>
+     and
+     <a href="/wiki/Foundations" title="Foundations">
+      Pillar
+     </a>
+     should now affect Blueprint size
+    </li>
+    <li>
+     <a href="/wiki/Railway" title="Railway">
+      Railroad tracks
+     </a>
+     should now properly display when placing a Blueprint hologram
+    </li>
+    <li>
+     Blueprints should now snap to the sides of foundations when aiming close to the edge unless Snap To Guidelines is held
+    </li>
+    <li>
+     Fixed a crash caused by snapping Blueprints to walls
+    </li>
+    <li>
+     Fixed a crash when placing a Blueprint in the Blueprint Designer
+    </li>
+    <li>
+     Fixed deletion of Blueprints not properly propagating from Host to Clients
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.4" title="Patch 0.7.0.4">
+    Patch 0.7.0.4
+   </a>
+   <ul>
+    <li>
+     Fixed invisible buildings built from Blueprints when reconnecting to
+     <a class="mw-redirect" href="/wiki/Dedicated_Servers" title="Dedicated Servers">
+      Dedicated Servers
+     </a>
+    </li>
+    <li>
+     Fixed an issue where the center point of Blueprints was not perfectly aligned to gird
+    </li>
+    <li>
+     Fixed a rotation issue when snapping Blueprints in a certain way
+    </li>
+    <li>
+     More improvements to Blueprint snapping to
+     <a href="/wiki/Foundations" title="Foundations">
+      Foundations
+     </a>
+    </li>
+    <li>
+     Fixed a scenario where buildings could be placed half in, half out of a Blueprint designer when being placed as part of an existing blueprint
+    </li>
+    <li>
+     Fixed some Blueprint snapping issues when aiming at the ground
+    </li>
+    <li>
+     Added Blueprint snapping for
+     <a href="/wiki/Walls" title="Walls">
+      Walls
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.3" title="Patch 0.7.0.3">
+    Patch 0.7.0.3
+   </a>
+   <ul>
+    <li>
+     Fixed Double Wall Outlet allowing circuits from outside the Blueprint Designer to connect to those inside of it
+    </li>
+    <li>
+     Fixed issue with snapping Blueprints vertically when aiming on the side
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.2" title="Patch 0.7.0.2">
+    Patch 0.7.0.2
+   </a>
+   <ul>
+    <li>
+     Fixed a crash related to the build effect on Blueprints
+    </li>
+    <li>
+     Better fix for invalid character names in Blueprints
+    </li>
+    <li>
+     Fixed some scenarios where
+     <a href="/wiki/Railway" title="Railway">
+      Railways
+     </a>
+     ,
+     <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+      Conveyor Belts
+     </a>
+     and
+     <a href="/wiki/Pipelines" title="Pipelines">
+      Pipelines
+     </a>
+     could be placed through the floor of the Blueprint Designer
+    </li>
+    <li>
+     Fixed issues with holograms not detecting the edges of the Blueprint Designer
+    </li>
+    <li>
+     Fixed Blueprints Milestone being displayed incorrectly
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.1" title="Patch 0.7.0.1">
+    Patch 0.7.0.1
+   </a>
+   <ul>
+    <li>
+     Fixed Blueprints containing special buildable's that get auto created by other buildable's (Like
+     <a href="/wiki/Signs" title="Signs">
+      Sign
+     </a>
+     poles,
+     <a href="/wiki/Railroad_Switch_Control" title="Railroad Switch Control">
+      railroad track switches
+     </a>
+     , etc) not being able to be loaded
+    </li>
+    <li>
+     Assorted fixes to Blueprint Hologram snapping
+    </li>
+    <li>
+     Fixed being able to save Blueprints with invalid characters in the filename
+    </li>
+    <li>
+     Fixed crash for players who have invalid characters on their session names when attempting to save a blueprint
+    </li>
+    <li>
+     Fixed a crash for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or
+     <a class="mw-redirect" href="/wiki/Dedicated_Server" title="Dedicated Server">
+      Dedicated Server
+     </a>
+     Clients when placing a Blueprint that has the
+     <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+      AWESOME Sink
+     </a>
+    </li>
+    <li>
+     Fixed a crash for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or
+     <a class="mw-redirect" href="/wiki/Dedicated_Server" title="Dedicated Server">
+      Dedicated Server
+     </a>
+     Clients when loading a blueprint before data is properly synced with host
+    </li>
+    <li>
+     Fixed
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or
+     <a class="mw-redirect" href="/wiki/Dedicated_Server" title="Dedicated Server">
+      Dedicated Server
+     </a>
+     Clients Blueprints showing up in Blueprint selection when those Blueprints don’t exist on Server
+    </li>
+    <li>
+     Hopefully improved UX of what directory a Blueprint goes to when loading an old Blueprint or when saving a Blueprint with the same name
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.0" title="Patch 0.7.0.0">
+    Patch 0.7.0.0
+   </a>
+   : Introduced
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="References">
+   References
+  </span>
+ </h2>
+ <div class="mw-references-wrap mw-references-columns">
+  <ol class="references">
+   <li id="cite_note-yt-ZDN_b6TX5gg@240-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-ZDN_b6TX5gg@240_1-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=ZDN_b6TX5gg&amp;t=240s" rel="nofollow">
+      YouTube - NEW Blueprint features doctors dont want you to know about - Directional Arrow
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-ZDN_b6TX5gg@276-2">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-ZDN_b6TX5gg@276_2-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=ZDN_b6TX5gg&amp;t=276s" rel="nofollow">
+      YouTube - NEW Blueprint features doctors dont want you to know about - Use of Nudge Mode
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-Ty7GdZvCETo@518-3">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-Ty7GdZvCETo@518_3-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=Ty7GdZvCETo&amp;t=518s" rel="nofollow">
+      YouTube - What's in 1.1? - Vertical Nudge Mode
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-ZDN_b6TX5gg@399-4">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-ZDN_b6TX5gg@399_4-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=ZDN_b6TX5gg&amp;t=399s" rel="nofollow">
+      YouTube - NEW Blueprint features doctors dont want you to know about - Use of Blueprint Dismantle Mode #1
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-9jDBEpAlS2s@352-5">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-9jDBEpAlS2s@352_5-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=9jDBEpAlS2s&amp;t=352s" rel="nofollow">
+      YouTube - Update 8 Quality Of Life Features will blow your MIND - Dismantle Filter
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-9jDBEpAlS2s@400-6">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-9jDBEpAlS2s@400_6-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=9jDBEpAlS2s&amp;t=400s" rel="nofollow">
+      YouTube - Update 8 Quality Of Life Features will blow your MIND - Blueprint Dismantle Filter Type
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-ZDN_b6TX5gg@460-7">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-ZDN_b6TX5gg@460_7-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=ZDN_b6TX5gg&amp;t=460s" rel="nofollow">
+      YouTube - NEW Blueprint features doctors dont want you to know about - Use of Blueprint Dismantle Mode #2
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-9KBQyjy-a6g-3@5375-8">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-9KBQyjy-a6g-3@5375_8-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://youtu.be/CREPrQ23Dt4?t=5375" rel="nofollow">
+      YouTube - Update 7 Release Stream (Experimental) - Blueprint Categories and Sub-Categories
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-9KBQyjy-a6g-3@856-9">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-9KBQyjy-a6g-3@856_9-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://youtu.be/9KBQyjy-a6g?t=856" rel="nofollow">
+      YouTube - What does the NEW machine do in Satisfactory? - Blueprint Save File Locations
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-CREPrQ23Dt4-3-10">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-CREPrQ23Dt4-3_10-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://youtu.be/CREPrQ23Dt4?t=4900" rel="nofollow">
+      YouTube - Blueprint File Save Locations - Update 7 Experimental Release Live Stream - November 15, 2022
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-9KBQyjy-a6g-4-11">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-9KBQyjy-a6g-4_11-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://youtu.be/9KBQyjy-a6g?t=875" rel="nofollow">
+      YouTube - What does the NEW machine do in Satisfactory? - Blueprint Cloud Sync Info
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-BLah06-wsGM-12">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-BLah06-wsGM_12-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=BLah06-wsGM" rel="nofollow">
+      YouTube - February 21st, 2023 Livestream - Q&amp;A: Why aren't Blueprints being Cloud Synced?
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-zqYgPf4u2yc-13">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-zqYgPf4u2yc_13-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=zqYgPf4u2yc" rel="nofollow">
+      YouTube - How to find save game files on Steam Deck (2025)
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-CREPrQ23Dt4-4-14">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-CREPrQ23Dt4-4_14-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://youtu.be/CREPrQ23Dt4?t=6130" rel="nofollow">
+      YouTube - Blueprint File Types - Update 7 Experimental Release Live Stream - November 15, 2022
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-Reddit-1hpqelu-15">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-Reddit-1hpqelu_15-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.reddit.com/r/SatisfactoryGame/comments/1hpqelu/til_for_blueprints_items_in_a_building_input_or/" rel="nofollow">
+      Reddit - For blueprints, items in a building input or storage containers will be included when built.
+     </a>
+    </span>
+   </li>
+  </ol>
+ </div>
+ <div aria-labelledby="Buildings" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:BuildingNav" title="Template:BuildingNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Buildings">
+       <a href="/wiki/Buildings" title="Buildings">
+        Buildings
+       </a>
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Special
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <span style="white-space:nowrap;">
+        <a href="/wiki/The_HUB" title="The HUB">
+         <img alt="" data-file-height="1200" data-file-width="1200" decoding="async" height="48" loading="lazy" src="/images/thumb/The_HUB.png/48px-The_HUB.png?9d3cf6" width="48"/>
+        </a>
+        <a href="/wiki/The_HUB" title="The HUB">
+         The HUB
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/MAM" title="MAM">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/MAM.png/48px-MAM.png?c85e80" width="48"/>
+        </a>
+        <a href="/wiki/MAM" title="MAM">
+         MAM
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Space_Elevator" title="Space Elevator">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/Space_Elevator.png/48px-Space_Elevator.png?b12fda" width="48"/>
+        </a>
+        <a href="/wiki/Space_Elevator" title="Space Elevator">
+         Space Elevator
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/AWESOME_Sink.png/48px-AWESOME_Sink.png?7a526c" width="48"/>
+        </a>
+        <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+         AWESOME Sink
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/AWESOME_Shop.png/48px-AWESOME_Shop.png?4dcb88" width="48"/>
+        </a>
+        <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+         AWESOME Shop
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Blueprint_Designer" title="Blueprint Designer">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/Blueprint_Designer_Mk.1.png/48px-Blueprint_Designer_Mk.1.png?6fb932" width="48"/>
+        </a>
+        <a href="/wiki/Blueprint_Designer" title="Blueprint Designer">
+         Blueprint Designer
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Crafting_Bench" title="Crafting Bench">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/Crafting_Bench.png/48px-Crafting_Bench.png?8a3a12" width="48"/>
+        </a>
+        <a href="/wiki/Crafting_Bench" title="Crafting Bench">
+         Crafting Bench
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Equipment_Workshop" title="Equipment Workshop">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="48" loading="lazy" src="/images/thumb/Equipment_Workshop.png/48px-Equipment_Workshop.png?64adef" width="48"/>
+        </a>
+        <a href="/wiki/Equipment_Workshop" title="Equipment Workshop">
+         Equipment Workshop
+        </a>
+       </span>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Production
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Extractors
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Miner" title="Miner">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Miner_Mk.1.png/20px-Miner_Mk.1.png?baf89c" width="20"/>
+              </a>
+              <a href="/wiki/Miner" title="Miner">
+               Miner Mk.1
+              </a>
+             </span>
+             (
+             <a href="/wiki/Miner#Mk.2-0" title="Miner">
+              Mk.2
+             </a>
+             ,
+             <a href="/wiki/Miner#Mk.3-0" title="Miner">
+              Mk.3
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Water_Extractor" title="Water Extractor">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Water_Extractor.png/20px-Water_Extractor.png?7a0010" width="20"/>
+              </a>
+              <a href="/wiki/Water_Extractor" title="Water Extractor">
+               Water Extractor
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Oil_Extractor" title="Oil Extractor">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Oil_Extractor.png/20px-Oil_Extractor.png?cb942d" width="20"/>
+              </a>
+              <a href="/wiki/Oil_Extractor" title="Oil Extractor">
+               Oil Extractor
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Resource_Well_Pressurizer" title="Resource Well Pressurizer">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Resource_Well_Pressurizer.png/20px-Resource_Well_Pressurizer.png?678c79" width="20"/>
+              </a>
+              <a href="/wiki/Resource_Well_Pressurizer" title="Resource Well Pressurizer">
+               Resource Well Pressurizer
+              </a>
+             </span>
+             (
+             <a href="/wiki/Resource_Well_Pressurizer#Extractor" title="Resource Well Pressurizer">
+              Extractor
+             </a>
+             )
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Smelters
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Smelter" title="Smelter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Smelter.png/20px-Smelter.png?dd029f" width="20"/>
+              </a>
+              <a href="/wiki/Smelter" title="Smelter">
+               Smelter
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Foundry" title="Foundry">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Foundry.png/20px-Foundry.png?47f2ba" width="20"/>
+              </a>
+              <a href="/wiki/Foundry" title="Foundry">
+               Foundry
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Manufacturers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Constructor" title="Constructor">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Constructor.png/20px-Constructor.png?e11c2b" width="20"/>
+              </a>
+              <a href="/wiki/Constructor" title="Constructor">
+               Constructor
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Assembler" title="Assembler">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Assembler.png/20px-Assembler.png?38c7e9" width="20"/>
+              </a>
+              <a href="/wiki/Assembler" title="Assembler">
+               Assembler
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Manufacturer" title="Manufacturer">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Manufacturer.png/20px-Manufacturer.png?715e43" width="20"/>
+              </a>
+              <a href="/wiki/Manufacturer" title="Manufacturer">
+               Manufacturer
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Packager" title="Packager">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Packager.png/20px-Packager.png?4a357b" width="20"/>
+              </a>
+              <a href="/wiki/Packager" title="Packager">
+               Packager
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Refinery" title="Refinery">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Refinery.png/20px-Refinery.png?5aea78" width="20"/>
+              </a>
+              <a href="/wiki/Refinery" title="Refinery">
+               Refinery
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Blender" title="Blender">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Blender.png/20px-Blender.png?549f69" width="20"/>
+              </a>
+              <a href="/wiki/Blender" title="Blender">
+               Blender
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Particle_Accelerator" title="Particle Accelerator">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Particle_Accelerator.png/20px-Particle_Accelerator.png?16fe51" width="20"/>
+              </a>
+              <a href="/wiki/Particle_Accelerator" title="Particle Accelerator">
+               Particle Accelerator
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Quantum_Encoder" title="Quantum Encoder">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Quantum_Encoder.png/20px-Quantum_Encoder.png?f2bdbc" width="20"/>
+              </a>
+              <a href="/wiki/Quantum_Encoder" title="Quantum Encoder">
+               Quantum Encoder
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Converter" title="Converter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Converter.png/20px-Converter.png?6e934d" width="20"/>
+              </a>
+              <a href="/wiki/Converter" title="Converter">
+               Converter
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      <a href="/wiki/Power" title="Power">
+       Power
+      </a>
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Generators
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Biomass_Burner" title="Biomass Burner">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Biomass_Burner.png/20px-Biomass_Burner.png?57d94b" width="20"/>
+              </a>
+              <a href="/wiki/Biomass_Burner" title="Biomass Burner">
+               Biomass Burner
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Coal-Powered_Generator" title="Coal-Powered Generator">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Coal-Powered_Generator.png/20px-Coal-Powered_Generator.png?564e1e" width="20"/>
+              </a>
+              <a href="/wiki/Coal-Powered_Generator" title="Coal-Powered Generator">
+               Coal-Powered Generator
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Fuel-Powered_Generator" title="Fuel-Powered Generator">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Fuel-Powered_Generator.png/20px-Fuel-Powered_Generator.png?8ec9f3" width="20"/>
+              </a>
+              <a href="/wiki/Fuel-Powered_Generator" title="Fuel-Powered Generator">
+               Fuel-Powered Generator
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Geothermal_Generator" title="Geothermal Generator">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Geothermal_Generator.png/20px-Geothermal_Generator.png?8c96b5" width="20"/>
+              </a>
+              <a href="/wiki/Geothermal_Generator" title="Geothermal Generator">
+               Geothermal Generator
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Nuclear_Power_Plant" title="Nuclear Power Plant">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Nuclear_Power_Plant.png/20px-Nuclear_Power_Plant.png?3cc693" width="20"/>
+              </a>
+              <a href="/wiki/Nuclear_Power_Plant" title="Nuclear Power Plant">
+               Nuclear Power Plant
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Alien_Power_Augmenter" title="Alien Power Augmenter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Alien_Power_Augmenter.png/20px-Alien_Power_Augmenter.png?e6a3c2" width="20"/>
+              </a>
+              <a href="/wiki/Alien_Power_Augmenter" title="Alien Power Augmenter">
+               Alien Power Augmenter
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Power Grid
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Power_Poles" title="Power Poles">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Power_Pole_Mk.1.png/20px-Power_Pole_Mk.1.png?96f12d" width="20"/>
+              </a>
+              <a href="/wiki/Power_Poles" title="Power Poles">
+               Power Poles
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Wall_Outlets" title="Wall Outlets">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Wall_Outlet_Mk.1.png/20px-Wall_Outlet_Mk.1.png?e57e15" width="20"/>
+              </a>
+              <a href="/wiki/Wall_Outlets" title="Wall Outlets">
+               Wall Outlets
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Power_Tower" title="Power Tower">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Power_Tower.png/20px-Power_Tower.png?347ca9" width="20"/>
+              </a>
+              <a href="/wiki/Power_Tower" title="Power Tower">
+               Power Tower
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Power_Line" title="Power Line">
+               <img alt="" data-file-height="1073" data-file-width="1073" decoding="async" height="20" loading="lazy" src="/images/thumb/Power_Line.png/20px-Power_Line.png?d64b2c" width="20"/>
+              </a>
+              <a href="/wiki/Power_Line" title="Power Line">
+               Power Line
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Power_Switch" title="Power Switch">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Power_Switch.png/20px-Power_Switch.png?a6b27a" width="20"/>
+              </a>
+              <a href="/wiki/Power_Switch" title="Power Switch">
+               Power Switch
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Priority_Power_Switch" title="Priority Power Switch">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Priority_Power_Switch.png/20px-Priority_Power_Switch.png?ea0776" width="20"/>
+              </a>
+              <a href="/wiki/Priority_Power_Switch" title="Priority Power Switch">
+               Priority Power Switch
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Power_Storage" title="Power Storage">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Power_Storage.png/20px-Power_Storage.png?a55f70" width="20"/>
+              </a>
+              <a href="/wiki/Power_Storage" title="Power Storage">
+               Power Storage
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Logistics
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Conveyors
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Belt_Mk.1.png/20px-Conveyor_Belt_Mk.1.png?b2ac54" width="20"/>
+              </a>
+              <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+               Conveyor Belts
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Lift" title="Conveyor Lift">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Lift_Mk.1.png/20px-Conveyor_Lift_Mk.1.png?5ea9e9" width="20"/>
+              </a>
+              <a class="mw-redirect" href="/wiki/Conveyor_Lift" title="Conveyor Lift">
+               Conveyor Lifts
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Poles" title="Conveyor Poles">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Pole.png/20px-Conveyor_Pole.png?b9b801" width="20"/>
+              </a>
+              <a href="/wiki/Conveyor_Poles" title="Conveyor Poles">
+               Conveyor Poles
+              </a>
+             </span>
+             (
+             <a href="/wiki/Conveyor_Poles#Stackable" title="Conveyor Poles">
+              Stackable
+             </a>
+             ,
+             <a href="/wiki/Conveyor_Poles#Mount" title="Conveyor Poles">
+              Wall Mount
+             </a>
+             ,
+             <a href="/wiki/Conveyor_Poles#Ceiling" title="Conveyor Poles">
+              Ceiling Mount
+             </a>
+             , {
+             <a href="/wiki/Conveyor_Poles#Wall_Hole" title="Conveyor Poles">
+              Wall Hole
+             </a>
+             ,
+             <a href="/wiki/Conveyor_Poles#Floor_Hole" title="Conveyor Poles">
+              Floor Hole
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Throughput_Monitor" title="Conveyor Throughput Monitor">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Throughput_Monitor.png/20px-Conveyor_Throughput_Monitor.png?a13e78" width="20"/>
+              </a>
+              <a href="/wiki/Conveyor_Throughput_Monitor" title="Conveyor Throughput Monitor">
+               Conveyor Throughput Monitor
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Pipelines
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Pipelines" title="Pipelines">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Pipeline_Mk.1.png/20px-Pipeline_Mk.1.png?3f4c66" width="20"/>
+              </a>
+              <a href="/wiki/Pipelines" title="Pipelines">
+               Pipelines
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Pipeline_Supports" title="Pipeline Supports">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Pipeline_Support.png/20px-Pipeline_Support.png?7b7518" width="20"/>
+              </a>
+              <a href="/wiki/Pipeline_Supports" title="Pipeline Supports">
+               Pipeline Supports
+              </a>
+             </span>
+             (
+             <a href="/wiki/Pipeline_Supports#Stackable" title="Pipeline Supports">
+              Stackable
+             </a>
+             ,
+             <a href="/wiki/Pipeline_Supports#Wall" title="Pipeline Supports">
+              Wall Support
+             </a>
+             ,
+             <a href="/wiki/Pipeline_Supports#Hole" title="Pipeline Supports">
+              Wall Hole
+             </a>
+             ,
+             <a href="/wiki/Pipeline_Supports#Floor" title="Pipeline Supports">
+              Floor Hole
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Pipeline_Junction" title="Pipeline Junction">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Pipeline_Junction.png/20px-Pipeline_Junction.png?25d7ed" width="20"/>
+              </a>
+              <a href="/wiki/Pipeline_Junction" title="Pipeline Junction">
+               Pipeline Junction
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Pipeline_Pump" title="Pipeline Pump">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Pipeline_Pump_Mk.1.png/20px-Pipeline_Pump_Mk.1.png?3427d2" width="20"/>
+              </a>
+              <a href="/wiki/Pipeline_Pump" title="Pipeline Pump">
+               Pipeline Pumps
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Valve" title="Valve">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Valve.png/20px-Valve.png?9340bd" width="20"/>
+              </a>
+              <a href="/wiki/Valve" title="Valve">
+               Valve
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Sorting
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Merger.png/20px-Conveyor_Merger.png?c019d0" width="20"/>
+              </a>
+              <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+               Conveyor Merger
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Priority_Merger" title="Priority Merger">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Priority_Merger.png/20px-Priority_Merger.png?310cdf" width="20"/>
+              </a>
+              <a href="/wiki/Priority_Merger" title="Priority Merger">
+               Priority Merger
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Splitter.png/20px-Conveyor_Splitter.png?4061c2" width="20"/>
+              </a>
+              <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+               Conveyor Splitter
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Smart_Splitter" title="Smart Splitter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Smart_Splitter.png/20px-Smart_Splitter.png?f088eb" width="20"/>
+              </a>
+              <a href="/wiki/Smart_Splitter" title="Smart Splitter">
+               Smart Splitter
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Programmable_Splitter" title="Programmable Splitter">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Programmable_Splitter.png/20px-Programmable_Splitter.png?4bf15c" width="20"/>
+              </a>
+              <a href="/wiki/Programmable_Splitter" title="Programmable Splitter">
+               Programmable Splitter
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Transportation
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            <a href="/wiki/Vehicles" title="Vehicles">
+             Vehicle Transport
+            </a>
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Tractor" title="Tractor">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Tractor.png/20px-Tractor.png?13acd1" width="20"/>
+              </a>
+              <a href="/wiki/Tractor" title="Tractor">
+               Tractor
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Truck" title="Truck">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Truck.png/20px-Truck.png?a3a025" width="20"/>
+              </a>
+              <a href="/wiki/Truck" title="Truck">
+               Truck
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Cyber_Wagon" title="Cyber Wagon">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Cyber_Wagon.png/20px-Cyber_Wagon.png?7ae097" width="20"/>
+              </a>
+              <a href="/wiki/Cyber_Wagon" title="Cyber Wagon">
+               Cyber Wagon
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Explorer" title="Explorer">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Explorer.png/20px-Explorer.png?2de3a9" width="20"/>
+              </a>
+              <a href="/wiki/Explorer" title="Explorer">
+               Explorer
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Factory_Cart" title="Factory Cart">
+               <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Factory_Cart.png/20px-Factory_Cart.png?92227b" width="20"/>
+              </a>
+              <a href="/wiki/Factory_Cart" title="Factory Cart">
+               Factory Cart
+              </a>
+             </span>
+             (
+             <a class="mw-redirect" href="/wiki/Golden_Factory_Cart" title="Golden Factory Cart">
+              Golden
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Truck_Station" title="Truck Station">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Truck_Station.png/20px-Truck_Station.png?c8c4c0" width="20"/>
+              </a>
+              <a href="/wiki/Truck_Station" title="Truck Station">
+               Truck Station
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Drone_Port" title="Drone Port">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Drone_Port.png/20px-Drone_Port.png?b91901" width="20"/>
+              </a>
+              <a href="/wiki/Drone_Port" title="Drone Port">
+               Drone Port
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Drone" title="Drone">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Drone.png/20px-Drone.png?3b7b04" width="20"/>
+              </a>
+              <a href="/wiki/Drone" title="Drone">
+               Drone
+              </a>
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            <a class="mw-redirect" href="/wiki/Trains" title="Trains">
+             Railway Transport
+            </a>
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Electric_Locomotive.png/20px-Electric_Locomotive.png?e13850" width="20"/>
+              </a>
+              <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+               Electric Locomotive
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Freight_Car" title="Freight Car">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Freight_Car.png/20px-Freight_Car.png?e168f9" width="20"/>
+              </a>
+              <a href="/wiki/Freight_Car" title="Freight Car">
+               Freight Car
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Train_Station" title="Train Station">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Train_Station.png/20px-Train_Station.png?9a06ba" width="20"/>
+              </a>
+              <a href="/wiki/Train_Station" title="Train Station">
+               Train Station
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Freight_Platform" title="Freight Platform">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Freight_Platform.png/20px-Freight_Platform.png?27866a" width="20"/>
+              </a>
+              <a href="/wiki/Freight_Platform" title="Freight Platform">
+               Freight Platform
+              </a>
+             </span>
+             (
+             <a href="/wiki/Freight_Platform#Fluid" title="Freight Platform">
+              Fluid
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Empty_Platform" title="Empty Platform">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Empty_Platform.png/20px-Empty_Platform.png?7810cd" width="20"/>
+              </a>
+              <a href="/wiki/Empty_Platform" title="Empty Platform">
+               Empty Platform
+              </a>
+             </span>
+             (
+             <a class="mw-redirect" href="/wiki/Empty_Platform_With_Catwalk" title="Empty Platform With Catwalk">
+              With Catwalk
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Railway" title="Railway">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Railway.png/20px-Railway.png?13e1c3" width="20"/>
+              </a>
+              <a href="/wiki/Railway" title="Railway">
+               Railway
+              </a>
+             </span>
+             (
+             <a href="/wiki/Railroad_Switch_Control" title="Railroad Switch Control">
+              Railroad Switch Control
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Buffer_Stop" title="Buffer Stop">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Buffer_Stop.png/20px-Buffer_Stop.png?35aeba" width="20"/>
+              </a>
+              <a href="/wiki/Buffer_Stop" title="Buffer Stop">
+               Buffer Stop
+              </a>
+             </span>
+             •
+             <a href="/wiki/Train_Signals" title="Train Signals">
+              Train Signals
+             </a>
+             (
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Train_Signals#Block" title="Train Signals">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Block_Signal.png/20px-Block_Signal.png?48c89c" width="20"/>
+              </a>
+              <a href="/wiki/Train_Signals#Block" title="Train Signals">
+               Block
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Train_Signals#Path" title="Train Signals">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Path_Signal.png/20px-Path_Signal.png?556841" width="20"/>
+              </a>
+              <a href="/wiki/Train_Signals#Path" title="Train Signals">
+               Path
+              </a>
+             </span>
+             )
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Hypertubes
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Hypertube" title="Hypertube">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Hypertube.png/20px-Hypertube.png?930def" width="20"/>
+              </a>
+              <a href="/wiki/Hypertube" title="Hypertube">
+               Hypertube
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Hypertube_Entrance" title="Hypertube Entrance">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Hypertube_Entrance.png/20px-Hypertube_Entrance.png?9cfe41" width="20"/>
+              </a>
+              <a href="/wiki/Hypertube_Entrance" title="Hypertube Entrance">
+               Hypertube Entrance
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Hypertube_Supports" title="Hypertube Supports">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Hypertube_Support.png/20px-Hypertube_Support.png?4e9ae3" width="20"/>
+              </a>
+              <a href="/wiki/Hypertube_Supports" title="Hypertube Supports">
+               Hypertube Supports
+              </a>
+             </span>
+             (
+             <a href="/wiki/Hypertube_Supports#Stackable" title="Hypertube Supports">
+              Stackable
+             </a>
+             ,
+             <a href="/wiki/Hypertube_Supports#Wall" title="Hypertube Supports">
+              Wall Support
+             </a>
+             ,
+             <a href="/wiki/Hypertube_Supports#Hole" title="Hypertube Supports">
+              Wall Hole
+             </a>
+             ,
+             <a href="/wiki/Hypertube_Supports#Floor" title="Hypertube Supports">
+              Floor Hole
+             </a>
+             )  •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Hypertube_Junction" title="Hypertube Junction">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Hypertube_Junction.png/20px-Hypertube_Junction.png?71f93a" width="20"/>
+              </a>
+              <a href="/wiki/Hypertube_Junction" title="Hypertube Junction">
+               Hypertube Junction
+              </a>
+             </span>
+             (
+             <a class="mw-redirect" href="/wiki/Hypertube_Branch" title="Hypertube Branch">
+              Branch
+             </a>
+             )
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Pioneer Transport
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Jump_Pad" title="Jump Pad">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Jump_Pad.png/20px-Jump_Pad.png?5d87ce" width="20"/>
+              </a>
+              <a href="/wiki/Jump_Pad" title="Jump Pad">
+               Jump Pad
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/U-Jelly_Landing_Pad" title="U-Jelly Landing Pad">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/U-Jelly_Landing_Pad.png/20px-U-Jelly_Landing_Pad.png?ebae13" width="20"/>
+              </a>
+              <a href="/wiki/U-Jelly_Landing_Pad" title="U-Jelly Landing Pad">
+               U-Jelly Landing Pad
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Personnel_Elevator" title="Personnel Elevator">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Personnel_Elevator.png/20px-Personnel_Elevator.png?91ca6a" width="20"/>
+              </a>
+              <a href="/wiki/Personnel_Elevator" title="Personnel Elevator">
+               Personnel Elevator
+              </a>
+             </span>
+             •
+             <span style="white-space:nowrap;">
+              <a href="/wiki/Portal" title="Portal">
+               <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Main_Portal.png/20px-Main_Portal.png?7b582d" width="20"/>
+              </a>
+              <a href="/wiki/Portal" title="Portal">
+               Portal
+              </a>
+             </span>
+             (
+             <a class="mw-redirect" href="/wiki/Main_Portal" title="Main Portal">
+              Main
+             </a>
+             ,
+             <a class="mw-redirect" href="/wiki/Satellite_Portal" title="Satellite Portal">
+              Satellite
+             </a>
+             )
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Organization
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Lights" title="Lights">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Wall_Mounted_Flood_Light.png/20px-Wall_Mounted_Flood_Light.png?f93dcb" width="20"/>
+        </a>
+        <a href="/wiki/Lights" title="Lights">
+         Lights
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Signs" title="Signs">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Display_Sign.png/20px-Display_Sign.png?efecc1" width="20"/>
+        </a>
+        <a href="/wiki/Signs" title="Signs">
+         Signs
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Crate" title="Crate">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Crate.png/20px-Crate.png?912ba1" width="20"/>
+        </a>
+        <a href="/wiki/Crate" title="Crate">
+         Crate
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Personal_Storage_Box" title="Personal Storage Box">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Personal_Storage_Box.png/20px-Personal_Storage_Box.png?4055c3" width="20"/>
+        </a>
+        <a href="/wiki/Personal_Storage_Box" title="Personal Storage Box">
+         Personal Storage Box
+        </a>
+       </span>
+       (
+       <a href="/wiki/Personal_Storage_Box#Medical" title="Personal Storage Box">
+        Medical
+       </a>
+       ,
+       <a href="/wiki/Personal_Storage_Box#Hazard" title="Personal Storage Box">
+        Hazard
+       </a>
+       )  •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Basic_Shelf_Unit" title="Basic Shelf Unit">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Basic_Shelf_Unit.png/20px-Basic_Shelf_Unit.png?7c1dfc" width="20"/>
+        </a>
+        <a href="/wiki/Basic_Shelf_Unit" title="Basic Shelf Unit">
+         Basic Shelf Unit
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Storage_Container" title="Storage Container">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Storage_Container.png/20px-Storage_Container.png?ab0f64" width="20"/>
+        </a>
+        <a href="/wiki/Storage_Container" title="Storage Container">
+         Storage Container
+        </a>
+       </span>
+       (
+       <a href="/wiki/Storage_Container#Industrial" title="Storage Container">
+        Industrial
+       </a>
+       )  •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Dimensional_Depot_Uploader" title="Dimensional Depot Uploader">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Dimensional_Depot_Uploader.png/20px-Dimensional_Depot_Uploader.png?a74d11" width="20"/>
+        </a>
+        <a href="/wiki/Dimensional_Depot_Uploader" title="Dimensional Depot Uploader">
+         Dimensional Depot Uploader
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Fluid_Buffer" title="Fluid Buffer">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Fluid_Buffer.png/20px-Fluid_Buffer.png?72de99" width="20"/>
+        </a>
+        <a href="/wiki/Fluid_Buffer" title="Fluid Buffer">
+         Fluid Buffer
+        </a>
+       </span>
+       (
+       <a href="/wiki/Fluid_Buffer#Industrial" title="Fluid Buffer">
+        Industrial
+       </a>
+       )  •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Lookout_Tower" title="Lookout Tower">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Lookout_Tower.png/20px-Lookout_Tower.png?e5c026" width="20"/>
+        </a>
+        <a href="/wiki/Lookout_Tower" title="Lookout Tower">
+         Lookout Tower
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Radar_Tower" title="Radar Tower">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Radar_Tower.png/20px-Radar_Tower.png?2661b5" width="20"/>
+        </a>
+        <a href="/wiki/Radar_Tower" title="Radar Tower">
+         Radar Tower
+        </a>
+       </span>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Foundations
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Foundations" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Foundation_4m_%28FICSIT%29.png/20px-Foundation_4m_%28FICSIT%29.png?b523eb" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Foundations" title="Foundations">
+         Foundations
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Ramps" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Ramp_4m_%28FICSIT%29.png/20px-Ramp_4m_%28FICSIT%29.png?d6fbbc" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Ramps" title="Foundations">
+         Ramps
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Inverted_Ramps" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Inv._Ramp_4m_%28FICSIT%29.png/20px-Inv._Ramp_4m_%28FICSIT%29.png?453456" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Inverted_Ramps" title="Foundations">
+         Inverted Ramps
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Quarter-Pipes" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Quarter_Pipe_%28FICSIT%29.png/20px-Quarter_Pipe_%28FICSIT%29.png?4af496" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Quarter-Pipes" title="Foundations">
+         Quarter-Pipes
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Half_Foundations" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Half_4m_Foundation_%28FICSIT%29.png/20px-Half_4m_Foundation_%28FICSIT%29.png?ed84bd" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Half_Foundations" title="Foundations">
+         Half Foundations
+        </a>
+       </span>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Walls
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Basic" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Basic_Wall_4m_%28FICSIT%29.png/20px-Basic_Wall_4m_%28FICSIT%29.png?18ba10" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Basic" title="Walls">
+         Basic Walls
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Ramp" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Ramp_Wall_4m_%28FICSIT%29.png/20px-Ramp_Wall_4m_%28FICSIT%29.png?8bfce5" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Ramp" title="Walls">
+         Ramp Walls
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Inverted_Ramp" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Inv._Ramp_Wall_4m_%28FICSIT%29.png/20px-Inv._Ramp_Wall_4m_%28FICSIT%29.png?e30ff1" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Inverted_Ramp" title="Walls">
+         Inverted Ramp Walls
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Tilted" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Tilted_Wall_8m_%28FICSIT%29.png/20px-Tilted_Wall_8m_%28FICSIT%29.png?d9cc26" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Tilted" title="Walls">
+         Tilted Walls
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Windows" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Frame_Window_%28FICSIT%29.png/20px-Frame_Window_%28FICSIT%29.png?5bdbd2" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Windows" title="Walls">
+         Windows
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Doors" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Side_Door_Wall_%28FICSIT%29.png/20px-Side_Door_Wall_%28FICSIT%29.png?888721" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Doors" title="Walls">
+         Doors
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls#Conveyor" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Conveyor_Wall_x2_%28FICSIT%29.png/20px-Conveyor_Wall_x2_%28FICSIT%29.png?19cfce" width="20"/>
+        </a>
+        <a href="/wiki/Walls#Conveyor" title="Walls">
+         Conveyor Walls
+        </a>
+       </span>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 8em;">
+      Architecture
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Frame_Structures" title="Frame Structures">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Frame_Foundation.png/20px-Frame_Foundation.png?ca8c55" width="20"/>
+        </a>
+        <a href="/wiki/Frame_Structures" title="Frame Structures">
+         Frames
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Roofs" title="Roofs">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/FICSIT_Roof_4m.png/20px-FICSIT_Roof_4m.png?87f626" width="20"/>
+        </a>
+        <a href="/wiki/Roofs" title="Roofs">
+         Roofs
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Beams" title="Beams">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Metal_Beam.png/20px-Metal_Beam.png?da208d" width="20"/>
+        </a>
+        <a href="/wiki/Beams" title="Beams">
+         Beams
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Pillars" title="Pillars">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Big_Pillar_Support.png/20px-Big_Pillar_Support.png?c1d060" width="20"/>
+        </a>
+        <a href="/wiki/Pillars" title="Pillars">
+         Pillars
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walkways" title="Walkways">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Walkway_Straight.png/20px-Walkway_Straight.png?a12464" width="20"/>
+        </a>
+        <a href="/wiki/Walkways" title="Walkways">
+         Walkways
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Walls" title="Walls">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Modern_Railing.png/20px-Modern_Railing.png?60c686" width="20"/>
+        </a>
+        <a href="/wiki/Walls" title="Walls">
+         Railings
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Foundations#Stairs" title="Foundations">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Stairs_Left.png/20px-Stairs_Left.png?8455b2" width="20"/>
+        </a>
+        <a href="/wiki/Foundations#Stairs" title="Foundations">
+         Stairs
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Ladder" title="Ladder">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Ladder.png/20px-Ladder.png?6d708f" width="20"/>
+        </a>
+        <a href="/wiki/Ladder" title="Ladder">
+         Ladder
+        </a>
+       </span>
+       •
+       <span style="white-space:nowrap;">
+        <a href="/wiki/Large_Fan" title="Large Fan">
+         <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Large_Fan.png/20px-Large_Fan.png?7fc9f8" width="20"/>
+        </a>
+        <a href="/wiki/Large_Fan" title="Large Fan">
+         Large Fan
+        </a>
+       </span>
+       (
+       <a class="mw-redirect" href="/wiki/Large_Vent" title="Large Vent">
+        Vent
+       </a>
+       )
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251008152544
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.264 seconds
+Real time usage: 0.332 seconds
+Preprocessor visited node count: 4861/1000000
+Revision size: 30135/4194304 bytes
+Post‐expand include size: 115084/4194304 bytes
+Template argument size: 6153/4194304 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13762/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.012/15.000 seconds
+Lua memory usage: 976901/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   96.838      1 -total
+ 75.57%   73.181      5 Template:Navbox
+ 58.94%   57.079      1 Template:BuildingNav
+ 17.63%   17.071     19 Template:Key
+ 14.70%   14.235    106 Template:ItemLink
+  5.99%    5.797      2 Template:Mouse
+  5.35%    5.180      1 Template:Reflist
+  2.48%    2.397     89 Template:*
+  1.31%    1.270      1 Template:Spoilerbox
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3189-0!canonical and timestamp 20251008152609 and revision id 59878. Rendering was triggered because: edit-page
+ -->
+</div>

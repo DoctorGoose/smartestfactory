@@ -1,0 +1,1452 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  This page is dedicated to useful tips to help design production lines. This does not include item optimization information, as optimal production lines are covered on each items individual page.
+ </p>
+ <p>
+  A production line of
+  <a href="/wiki/Motor" title="Motor">
+   Motors
+  </a>
+  ,
+  <a href="/wiki/Rotor" title="Rotor">
+   Rotors
+  </a>
+  and
+  <a href="/wiki/Stator" title="Stator">
+   Stators
+  </a>
+  are commonly discussed as an example throughout this page. Consider reading up on these items before reading further.
+ </p>
+ <p>
+  <br/>
+  <i>
+   <b>
+    NOTE:
+   </b>
+  </i>
+  Per community guidelines do not add promotional material to this page.
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Research,_Progression_and_Alternate_Recipes">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Research, Progression and Alternate Recipes
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Late_Game_Items_and_Buildings">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Late Game Items and Buildings
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-3">
+      <a href="#Alternate_Recipes">
+       <span class="tocnumber">
+        1.2
+       </span>
+       <span class="toctext">
+        Alternate Recipes
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-4">
+        <a href="#Resource_Optimization">
+         <span class="tocnumber">
+          1.2.1
+         </span>
+         <span class="toctext">
+          Resource Optimization
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-5">
+        <a href="#Production_Simplification">
+         <span class="tocnumber">
+          1.2.2
+         </span>
+         <span class="toctext">
+          Production Simplification
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-6">
+        <a href="#Number_of_Unique_Items_and_Input_Simplification">
+         <span class="tocnumber">
+          1.2.3
+         </span>
+         <span class="toctext">
+          Number of Unique Items and Input Simplification
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Modularizing">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Modularizing
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-8">
+      <a href="#Limiting_Input_Rates">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Limiting Input Rates
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-9">
+      <a href="#Item_Compression">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Item Compression
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-10">
+      <a href="#Space_Compression">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Space Compression
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-11">
+      <a href="#Production_line_stages">
+       <span class="tocnumber">
+        2.4
+       </span>
+       <span class="toctext">
+        Production line stages
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-12">
+      <a href="#Working_with_Liquids">
+       <span class="tocnumber">
+        2.5
+       </span>
+       <span class="toctext">
+        Working with Liquids
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-13">
+    <a href="#Inputs,_Outputs,_and_Logistics">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Inputs, Outputs, and Logistics
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-14">
+      <a href="#Raw_Materials">
+       <span class="tocnumber">
+        3.1
+       </span>
+       <span class="toctext">
+        Raw Materials
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-15">
+      <a href="#Load_Balancing_vs_Manifold">
+       <span class="tocnumber">
+        3.2
+       </span>
+       <span class="toctext">
+        Load Balancing vs Manifold
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-16">
+        <a href="#Balancing">
+         <span class="tocnumber">
+          3.2.1
+         </span>
+         <span class="toctext">
+          <b>
+           Balancing
+          </b>
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-17">
+        <a href="#Manifold">
+         <span class="tocnumber">
+          3.2.2
+         </span>
+         <span class="toctext">
+          <b>
+           Manifold
+          </b>
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-18">
+        <a href="#Output_Merger_Balancing">
+         <span class="tocnumber">
+          3.2.3
+         </span>
+         <span class="toctext">
+          Output Merger Balancing
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span id="Research.2C_Progression_and_Alternate_Recipes">
+  </span>
+  <span class="mw-headline" id="Research,_Progression_and_Alternate_Recipes">
+   Research, Progression and Alternate Recipes
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Late_Game_Items_and_Buildings">
+   Late Game Items and Buildings
+  </span>
+ </h3>
+ <p>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Mk.6 Conveyor Belts
+  </a>
+  allow the maximum throughput of items attainable in game, which aids in delivering on a large scale. Because of this, scaling up to larger builds should wait until items can compactly transport the required inputs/outputs at that scale. Early game, consider building smaller factories to attain the required items for progression as soon as possible, and redesigning end-game factories at a larger scale once
+  <a href="/wiki/Milestones" title="Milestones">
+   Tier 7 / 8 or Tier 9
+  </a>
+  is unlocked.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Alternate_Recipes">
+   Alternate Recipes
+  </span>
+ </h3>
+ <p>
+  Utilizing
+  <a class="mw-redirect" href="/wiki/Alternate" title="Alternate">
+   alternate recipes
+  </a>
+  can have a large impact on designing a factory. As the player approaches mid-game it is advised
+  <a href="/wiki/Hard_Drive" title="Hard Drive">
+   Hard Drives
+  </a>
+  should be sought out to acquire these.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Resource_Optimization">
+   Resource Optimization
+  </span>
+ </h4>
+ <p>
+  Alternate recipes allow less valuable resources (Eg
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  into
+  <a href="/wiki/Wire" title="Wire">
+   Iron Wire
+  </a>
+  saving on
+  <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+   Copper
+  </a>
+  ), and/or better input to output ratios (
+  <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+   Solid Steel Ingots
+  </a>
+  have better resource efficiency than
+  <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+   Steel Ingots
+  </a>
+  ). Utilizing these, the maximum potential of all resources in the game can be reached to produce the maximum amount of throughput.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Production_Simplification">
+   Production Simplification
+  </span>
+ </h4>
+ <p>
+  Alternate recipes, especially those utilizing
+  <a href="/wiki/Crystal_Oscillator" title="Crystal Oscillator">
+   Crystal Oscillators
+  </a>
+  , can simplify production lines. (Eg
+  <a href="/wiki/Computer" title="Computer">
+   Computers
+  </a>
+  can go from 4 ingredients in a
+  <a href="/wiki/Manufacturer" title="Manufacturer">
+   Manufacturer
+  </a>
+  , to 2 ingredients in an
+  <a href="/wiki/Assembler" title="Assembler">
+   Assembler
+  </a>
+  )
+ </p>
+ <p>
+  Most recipes also deliver resource optimization, allowing a smaller number of buildings overall. Additionally they can use less complex components minimizing production lines leading up.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Number_of_Unique_Items_and_Input_Simplification">
+   Number of Unique Items and Input Simplification
+  </span>
+ </h4>
+ <p>
+  Alternate recipes allow less number of unique items required in a production line
+ </p>
+ <p>
+  For example,
+  <a href="/wiki/Rotor" title="Rotor">
+   Rotor
+  </a>
+  and
+  <a href="/wiki/Stator" title="Stator">
+   Stator
+  </a>
+  default recipes require 3 unique inputs and 5 unique manufactured items
+ </p>
+ <ul>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   into
+   <a href="/wiki/Iron_Rod" title="Iron Rod">
+    Iron Rod
+   </a>
+   into
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screws
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   and
+   <a href="/wiki/Coal" title="Coal">
+    Coal
+   </a>
+   into
+   <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+    Steel Ingot
+   </a>
+   into
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    Steel Pipes
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+    Copper Ingot
+   </a>
+   into
+   <a href="/wiki/Wire" title="Wire">
+    Wire
+   </a>
+  </li>
+ </ul>
+ <p>
+  Utilizing the
+  <a href="/wiki/Rotor" title="Rotor">
+   Steel Rotor
+  </a>
+  and
+  <a href="/wiki/Wire" title="Wire">
+   Iron Wire
+  </a>
+  alternate recipes, this can be simplified to 2 unique inputs, and 3 unique manufactures items
+ </p>
+ <ul>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   into
+   <a href="/wiki/Wire" title="Wire">
+    Iron Wire
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   and
+   <a href="/wiki/Coal" title="Coal">
+    Coal
+   </a>
+   into
+   <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+    Steel Ingot
+   </a>
+   into
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    Steel Pipes
+   </a>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Modularizing">
+   Modularizing
+  </span>
+ </h2>
+ <p>
+  Early game players can experience the temptation to build large scale factories to deliver early-game components en-masse. This should be avoided, and smaller, tileable production lines for mid-to-late game components should be used instead.
+ </p>
+ <p>
+  However, when building end-game factories from scratch for low-throughput goals, it is also acceptable to build each space elevator item from scratch, as it is sufficient to source resources from local nodes, at a smaller production scale. Exceptions to this rule are listed below. At higher production scales, it is equally advisable to create central factories or warehouses for products of spread-out resources, such as nitrogen.
+ </p>
+ <p>
+  When determining the size of a production line, consider the below:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Limiting_Input_Rates">
+   Limiting Input Rates
+  </span>
+ </h3>
+ <p>
+  Consider creating as few input belts as possible. A good starting place can be to limit any particular input to within 780 items/min (a
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Mk5 Conveyor Belt
+  </a>
+  ). However this doesn't necessarily mean a limit of 780/min of one item type.
+ </p>
+ <p>
+  For example, a module with the following recipes
+ </p>
+ <ul>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   into
+   <a href="/wiki/Wire" title="Wire">
+    Iron Wire
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   and
+   <a href="/wiki/Coal" title="Coal">
+    Coal
+   </a>
+   into
+   <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+    Steel Ingot
+   </a>
+   into
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    Steel Pipe
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    Steel Pipe
+   </a>
+   and
+   <a href="/wiki/Wire" title="Wire">
+    Iron Wire
+   </a>
+   into
+   <a href="/wiki/Rotor" title="Rotor">
+    Rotors
+   </a>
+  </li>
+ </ul>
+ <p>
+  This production line requires 2 inputs of
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  (1 for
+  <a href="/wiki/Wire" title="Wire">
+   Iron Wire
+  </a>
+  , 1 for
+  <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+   Steel Ingots
+  </a>
+  ) and
+  <a href="/wiki/Coal" title="Coal">
+   Coal
+  </a>
+  (dedicated to
+  <a href="/wiki/Steel_Ingot" title="Steel Ingot">
+   Steel Ingot
+  </a>
+  ), all accomplishable within three 780 items/min/belt.
+ </p>
+ <p>
+  Limiting inputs as much as possible helps when expanding. Building additional modules that require a large number of belts means acquiring a proportional number of resources before being effective.
+ </p>
+ <p>
+  Additionally, this helps finding space to get belts to the starting point of a production line. If a module requires a large number of belts, adding modules means finding space for these belts or start the production line elsewhere. A smaller number of belts can optimize any space between or within modules without 'only fitting in 9 out of the 10 belts needed'
+ </p>
+ <h3>
+  <span class="mw-headline" id="Item_Compression">
+   Item Compression
+  </span>
+ </h3>
+ <p>
+  As resources go through stages of production, they can be compressed into a smaller number of items.
+ </p>
+ <p>
+  For example
+ </p>
+ <ul>
+  <li>
+   15
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   /min into 15
+   <a href="/wiki/Iron_Rod" title="Iron Rod">
+    Iron Rod
+   </a>
+   /min: 1 : 1 (no compression)
+  </li>
+  <li>
+   10
+   <a href="/wiki/Iron_Rod" title="Iron Rod">
+    Iron Rod
+   </a>
+   /min into 40
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screw
+   </a>
+   /min: 1 : 4 inflation
+  </li>
+  <li>
+   20
+   <a href="/wiki/Iron_Rod" title="Iron Rod">
+    Iron Rod
+   </a>
+   (20
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   ) + 100
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screw
+   </a>
+   /min (25
+   <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+    Iron Ingot
+   </a>
+   ) into 4
+   <a href="/wiki/Rotor" title="Rotor">
+    Rotor
+   </a>
+   /min: 45 : 4 compression
+  </li>
+ </ul>
+ <p>
+  Producing a dedicated
+  <a href="/wiki/Rotor" title="Rotor">
+   Rotor
+  </a>
+  factory allows 45
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  to be compressed into 4
+  <a href="/wiki/Rotor" title="Rotor">
+   Rotors
+  </a>
+  for export. In comparison, a dedicated
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screw
+  </a>
+  factory causes larger strain on the logistic network by increasing the output ratio.
+ </p>
+ <p>
+  Once a production line with a fair compression ratio has been designed, consider exporting this onto a larger logistics network, such as
+  <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+   Trains
+  </a>
+  or
+  <a href="/wiki/Truck" title="Truck">
+   Trucks
+  </a>
+  . Compressed items generally have smaller item/min requirements proceeding recipes, making them easier to transport to meet the needs of other factories.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Space_Compression">
+   Space Compression
+  </span>
+ </h3>
+ <p>
+  Using standard recipes, a perfectly balanced
+  <a href="/wiki/Rotor" title="Rotor">
+   Rotor
+  </a>
+  production line requires
+ </p>
+ <ul>
+  <li>
+   18
+   <a href="/wiki/Iron_Rod" title="Iron Rod">
+    Iron Rod
+   </a>
+   <a href="/wiki/Constructor" title="Constructor">
+    Constructors
+   </a>
+  </li>
+  <li>
+   15
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screw
+   </a>
+   <a href="/wiki/Constructor" title="Constructor">
+    Constructors
+   </a>
+  </li>
+  <li>
+   6
+   <a href="/wiki/Rotor" title="Rotor">
+    Rotor
+   </a>
+   <a href="/wiki/Assembler" title="Assembler">
+    Assemblers
+   </a>
+  </li>
+ </ul>
+ <p>
+  Taking up 3,540m
+  <sup>
+   2
+  </sup>
+  for machinery to produce 4 items/min. Inserting this into a larger endgame factory can be difficult, while inserting a smaller
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screw
+  </a>
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  into other production lines would be less impactful.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Production_line_stages">
+   Production line stages
+  </span>
+ </h3>
+ <p>
+  Consider limiting the number of stages within a production line, eg
+  <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+   Copper Ingot
+  </a>
+  into
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  into
+  <a href="/wiki/Stator" title="Stator">
+   Stator
+  </a>
+  has 3 stages while turning
+  <a href="/wiki/Stator" title="Stator">
+   Stators
+  </a>
+  into
+  <a href="/wiki/Motor" title="Motor">
+   Motors
+  </a>
+  has 4 stages. Consider at which stage it would be best to send items to separate factories to continue processing.
+ </p>
+ <p>
+  Minimizing stages in a factory has the following benefits:
+ </p>
+ <ul>
+  <li>
+   Mid-production line items (eg
+   <a href="/wiki/Rotor" title="Rotor">
+    Rotors
+   </a>
+   and
+   <a href="/wiki/Stator" title="Stator">
+    Stators
+   </a>
+   ) can be expanded and tapped into directly for export.
+  </li>
+  <li>
+   End-of-line items are mutually exclusive to mid-line item production, allowing old production lines that now have better alternatives to be reconstructed, without needing to rebuild an end-to-end production line.
+  </li>
+  <li>
+   Additional required simple components (eg
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screws
+   </a>
+   ) can be easily inserted into detached production lines closer to their end-of-line machinery.
+  </li>
+ </ul>
+ <p>
+  It is strongly recommended that the following items not be produced in main production chains:
+ </p>
+ <ul>
+  <li>
+   Aluminum Ingots
+  </li>
+  <li>
+   Modular Frame "family" (Heavy, Fused, Pressure Conversion Cube)
+  </li>
+  <li>
+   Oil Products (Plastic, Rubber, Fuel, Coke)
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Working_with_Liquids">
+   Working with Liquids
+  </span>
+ </h3>
+ <p>
+  In a production chain that involves the use of refineries or blenders, it is recommended that those production stages flow downwards, with the final product being at the bottom floor of the factory, and the input at the very top, to remove the use of fluid pumps. This way, it is only required to use pumps to transport liquid to the top floor. Additionally, the use of fluid buffers and valves is heavily discouraged.
+ </p>
+ <h2>
+  <span id="Inputs.2C_Outputs.2C_and_Logistics">
+  </span>
+  <span class="mw-headline" id="Inputs,_Outputs,_and_Logistics">
+   Inputs, Outputs, and Logistics
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Raw_Materials">
+   Raw Materials
+  </span>
+ </h3>
+ <p>
+  Consider excluding raw material refinement (Eg.
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelters
+  </a>
+  or
+  <a href="/wiki/Refinery" title="Refinery">
+   Refineries
+  </a>
+  ) from production lines. Raw materials themselves have multiple methods of production including normal, alloy, and pure alternate recipes. Inserting an explicit type of raw material refinement into production lines can lock out better alternatives later in the game.
+ </p>
+ <p>
+  Process the materials needed in a dedicated, nearby factory out of the way from potential expansion. This will allow old raw material processing factories to be rebuilt, and send along the same belts without impacting the rest of the production line.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Load_Balancing_vs_Manifold">
+   Load Balancing vs Manifold
+  </span>
+ </h3>
+ <p>
+  <a href="/wiki/Balancer" title="Balancer">
+   Load Balancing
+  </a>
+  is the process of delivering exactly the number of items/min to the destination, eg splitting a Mk1 belt 3 ways will deliver 20 items/min/belt, merge 2 for 40/min, and so on.
+ </p>
+ <p>
+  <a href="/wiki/Manifold" title="Manifold">
+   Manifold
+  </a>
+  is using
+  <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+   Conveyor Splitters
+  </a>
+  and
+  <a href="/wiki/Smart_Splitter" title="Smart Splitter">
+   Smart Splitters
+  </a>
+  to send resources to a destination, and letting split-off lines backlog to supply additional resources further up.
+ </p>
+ <p>
+  Arguments can be made for either system, however here is a general breakdown of pros and cons:
+ </p>
+ <h4>
+  <span class="mw-headline" id="Balancing">
+   <b>
+    Balancing
+   </b>
+  </span>
+ </h4>
+ <ul>
+  <li>
+   Production can be run at 100% of the time. With each production stage receiving equal resources all the machinery can run at an equal capacity.
+  </li>
+  <li>
+   Balancing can be complicated to get specific values, as well as space consuming.
+  </li>
+  <li>
+   Minimal backlogging of resources, all items are consumed as soon as they are ready.
+  </li>
+ </ul>
+ <p>
+  <i>
+   There are very few uses of load balancing, avoid if possible.
+  </i>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Manifold">
+   <b>
+    Manifold
+   </b>
+  </span>
+ </h4>
+ <ul>
+  <li>
+   Extremely compact
+  </li>
+  <li>
+   First in - first served can cause factories to have a 'boot time' (especially with high-stack items, like
+   <a href="/wiki/Wire" title="Wire">
+    Wire
+   </a>
+   )
+  </li>
+  <li>
+   First in - first served can improve resource utilization (3
+   <a href="/wiki/Constructor" title="Constructor">
+    Constructors
+   </a>
+   with 1 item vs 1
+   <a href="/wiki/Constructor" title="Constructor">
+    Constructor
+   </a>
+   with 3 items and 2 empty)
+  </li>
+  <li>
+   Using
+   <a href="/wiki/Smart_Splitter" title="Smart Splitter">
+    Smart Splitter
+   </a>
+   Overflow can cause a large time invested into configuring Overflow and Any parameters (normal
+   <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+    Splitters
+   </a>
+   are advised)
+  </li>
+ </ul>
+ <p>
+  When designing, a combination of these can be most effective. For example, use a
+  <a href="/wiki/Manifold" title="Manifold">
+   manifold
+  </a>
+  on the main belt, splitting off into
+  <a href="/wiki/Balancer" title="Balancer">
+   balancers
+  </a>
+  , and resupply the main belt utilizing
+  <a href="/wiki/Balancer" title="Balancer">
+   belt compressors
+  </a>
+  from other adjacent belts.
+ </p>
+ <p>
+  <br/>
+  Generally, it is suggested that load balancers are only used to split items at quantities of 60/min and lower: these are usually end-game items such as nuclear rods, pressure conversion cubes, radio control units, etc., where filling it up via manifold would take a large amount of time.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Output_Merger_Balancing">
+   Output Merger Balancing
+  </span>
+ </h4>
+ <p>
+  When merging outputs from a large number of sources, avoid filling a belt to full from a single line of
+  <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+   Conveyor Mergers
+  </a>
+  .
+  <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+   Mergers
+  </a>
+  take equally from each input, meaning a item output at the end of a
+  <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+   Merger
+  </a>
+  belt will supply 1:1, while the next will supply 1:2, the next 1:4, etc. When output items are constructed in large sets (Eg 13
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Pure Iron Ingots
+  </a>
+  at once) this can cause issues with backlogging other outputs. Instead make 2 or more belts that merge together throughout the process before joining to a single output line.
+ </p>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251013120834
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.110 seconds
+Real time usage: 0.173 seconds
+Preprocessor visited node count: 348/1000000
+Revision size: 11273/4194304 bytes
+Post‐expand include size: 26308/4194304 bytes
+Template argument size: 0/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.010/15.000 seconds
+Lua memory usage: 812604/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.646      1 -total
+ 84.73%   39.525      1 Template:PioneerNav
+ 84.34%   39.341      2 Template:Navbox
+ 14.80%    6.904      1 Template:Sq
+  5.44%    2.540     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:964-0!canonical and timestamp 20251013120834 and revision id 55276. Rendering was triggered because: page_view
+ -->
+</div>

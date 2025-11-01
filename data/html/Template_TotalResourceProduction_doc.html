@@ -1,0 +1,578 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="doc">
+  <span>
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Documentation" title="Template:Documentation">
+    Template:Documentation
+   </a>
+   for more information.
+  </span>
+  <div style="float: right;">
+   <span class="mw-editsection-like plainlinks">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:TotalResourceProduction/doc?action=purge">
+     purge
+    </a>
+    ]
+   </span>
+  </div>
+ </div>
+ <p>
+  Displays the maximum possible extraction for the given number of nodes.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Parameters">
+   Parameters
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <code>
+    title
+   </code>
+   : optional. Title of the table
+  </li>
+  <li>
+   <code>
+    maxMk
+   </code>
+   : maximum Mk. (only for the column-header, does not change calculations). default: 3
+  </li>
+  <li>
+   <code>
+    normalRate
+   </code>
+   : the rate for the maxMk on a single normal node. default is 240.
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Example">
+   Example
+  </span>
+ </h2>
+ <pre>{{TotalResourceProduction|title=[[Iron]] Nodes|impure=24|normal=35|pure=37}}
+</pre>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th colspan="4">
+     <a class="mw-redirect" href="/wiki/Iron" title="Iron">
+      Iron
+     </a>
+     Nodes
+    </th>
+   </tr>
+   <tr>
+    <th scope="col">
+     Node
+     <br/>
+     purity
+    </th>
+    <th scope="col">
+     Number
+     <br/>
+     of nodes
+    </th>
+    <th scope="col">
+     Mk.3
+     <br/>
+     mining rate
+    </th>
+    <th scope="col">
+     Mk.3 mining rate
+     <br/>
+     at 250 %
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Impure
+    </td>
+    <td style="text-align:right">
+     24
+    </td>
+    <td style="text-align:right">
+     2,880
+    </td>
+    <td style="text-align:right">
+     7,200
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Normal
+    </td>
+    <td style="text-align:right">
+     35
+    </td>
+    <td style="text-align:right">
+     8,400
+    </td>
+    <td style="text-align:right">
+     21,000
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Pure
+    </td>
+    <td style="text-align:right">
+     37
+    </td>
+    <td style="text-align:right">
+     17,760
+    </td>
+    <td style="text-align:right">
+     44,400
+    </td>
+   </tr>
+   <tr>
+    <td style="font-weight:bold">
+     Total
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     96
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     29,040
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     72,600
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <pre>{{TotalResourceProduction|title=[[Crude Oil]] Nodes|impure=10|normal=12|pure=8|kind=Fluid}}
+</pre>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th colspan="4">
+     <a href="/wiki/Crude_Oil" title="Crude Oil">
+      Crude Oil
+     </a>
+     Nodes
+    </th>
+   </tr>
+   <tr>
+    <th scope="col">
+     Node
+     <br/>
+     purity
+    </th>
+    <th scope="col">
+     Number
+     <br/>
+     of nodes
+    </th>
+    <th scope="col">
+     Extraction rate
+    </th>
+    <th scope="col">
+     Extraction rate
+     <br/>
+     at 250 %
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Impure
+    </td>
+    <td style="text-align:right">
+     10
+    </td>
+    <td style="text-align:right">
+     600
+    </td>
+    <td style="text-align:right">
+     1,500
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Normal
+    </td>
+    <td style="text-align:right">
+     12
+    </td>
+    <td style="text-align:right">
+     1,440
+    </td>
+    <td style="text-align:right">
+     3,600
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Pure
+    </td>
+    <td style="text-align:right">
+     8
+    </td>
+    <td style="text-align:right">
+     1,920
+    </td>
+    <td style="text-align:right">
+     4,800
+    </td>
+   </tr>
+   <tr>
+    <td style="font-weight:bold">
+     Total
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     30
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     3,960
+    </td>
+    <td style="text-align:right;font-weight:bold">
+     9,900
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="TemplateData">
+   TemplateData
+  </span>
+ </h2>
+ <section class="mw-templatedata-doc-wrap">
+  <header>
+   <p class="mw-templatedata-doc-desc">
+    Displays the maximum possible extraction for the given number of nodes.
+   </p>
+  </header>
+  <table class="wikitable mw-templatedata-doc-params sortable">
+   <caption>
+    <p class="mw-templatedata-caption">
+     Template parameters
+     <mw:edittemplatedata page="Template:TotalResourceProduction/doc">
+     </mw:edittemplatedata>
+    </p>
+   </caption>
+   <thead>
+    <tr>
+     <th colspan="2">
+      Parameter
+     </th>
+     <th>
+      Description
+     </th>
+     <th>
+      Type
+     </th>
+     <th>
+      Status
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th>
+      Title
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       title
+      </code>
+     </td>
+     <td>
+      <p>
+       Title of the table
+      </p>
+      <dl>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Content
+     </td>
+     <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+      suggested
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Impure Nodes
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       impure
+      </code>
+     </td>
+     <td>
+      <p>
+       The amount of impure nodes
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        0
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Number
+     </td>
+     <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+      suggested
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Normal Nodes
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       normal
+      </code>
+     </td>
+     <td>
+      <p>
+       The number of normal nodes
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        0
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Number
+     </td>
+     <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+      suggested
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Pure Nodes
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       pure
+      </code>
+     </td>
+     <td>
+      <p>
+       The number of pure nodes
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        0
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Number
+     </td>
+     <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+      suggested
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Maximum Extractor Mk.
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       maxMk
+      </code>
+     </td>
+     <td>
+      <p>
+       Only for the column-header, does not change calculations
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          “1” when kind is “Fluid”
+         </li>
+         <li>
+          “3” when kind is “Ore”
+         </li>
+        </ul>
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Number
+     </td>
+     <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+      optional
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Normal Node Extraction Rate
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       normalRate
+      </code>
+     </td>
+     <td>
+      <p>
+       The rate for the maxMk on a single normal node
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          “120” when kind is “Fluid”
+         </li>
+         <li>
+          “240” when kind is “Ore”
+         </li>
+        </ul>
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Number
+     </td>
+     <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+      optional
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Omit Note?
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       noNote
+      </code>
+     </td>
+     <td>
+      <p>
+       Whether to omit the note after the table (when multiple tables are used consecutively)
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        0
+       </dd>
+       <dt>
+        Auto value
+       </dt>
+       <dd>
+        <code>
+         1
+        </code>
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      Boolean
+     </td>
+     <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+      optional
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Kind
+     </th>
+     <td class="mw-templatedata-doc-param-name">
+      <code>
+       kind
+      </code>
+     </td>
+     <td>
+      <p>
+       The kind of the item.
+      </p>
+      <dl>
+       <dt>
+        Valid values
+       </dt>
+       <dd>
+        <ul>
+         <li>
+          “Ore”
+         </li>
+         <li>
+          “Fluid”
+         </li>
+         <li>
+          “Oil” (alias for “Fluid”)
+         </li>
+        </ul>
+       </dd>
+      </dl>
+      <p class="mw-empty-elt">
+      </p>
+      <dl>
+       <dt>
+        Default
+       </dt>
+       <dd>
+        Ore
+       </dd>
+       <dt>
+        Auto value
+       </dt>
+       <dd>
+        <code>
+         Fluid
+        </code>
+       </dd>
+      </dl>
+     </td>
+     <td class="mw-templatedata-doc-param-type">
+      String
+     </td>
+     <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+      optional
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215547
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.034 seconds
+Real time usage: 0.040 seconds
+Preprocessor visited node count: 370/1000000
+Revision size: 2815/4194304 bytes
+Post‐expand include size: 3443/4194304 bytes
+Template argument size: 121/4194304 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3610/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   15.575      1 -total
+ 68.10%   10.606      2 Template:TotalResourceProduction
+ 30.12%    4.692      1 Template:Documentation_subpage
+ 12.13%    1.889      1 Template:Yesno
+ 10.65%    1.659      1 Template:M3pm
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:5071-0!canonical and timestamp 20251101215547 and revision id 33412. Rendering was triggered because: api-parse
+ -->
+</div>

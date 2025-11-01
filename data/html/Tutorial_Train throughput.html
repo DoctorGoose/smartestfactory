@@ -1,0 +1,1741 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  The
+  <b>
+   actual in-game throughput of a
+   <a href="/wiki/Freight_Platform" title="Freight Platform">
+    Freight Platform
+   </a>
+  </b>
+  can be calculated if one wishes to be that precise. The most important variable in this determination is how long it takes a train to do a complete round trip, called Round-trip Duration (RtD). This is measured between the first and last departure "choo" at any single station on the route.
+ </p>
+ <p>
+  After measuring the
+  <b>
+   Round-trip Duration (RtD)
+  </b>
+  using a stopwatch, the next thing you need to find is your
+  <b>
+   Time to Fill (TtF)
+  </b>
+  . This governs which equation is used to solve for throughput.
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Time_to_Fill">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Time to Fill
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Examples">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Examples
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-3">
+    <a href="#Calculating_throughput">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Calculating throughput
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-4">
+    <a href="#Solved_maximum_throughput">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Solved maximum throughput
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#Note_about_Fluid_Cars">
+       <span class="tocnumber">
+        3.1
+       </span>
+       <span class="toctext">
+        Note about Fluid Cars
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-6">
+      <a href="#Use_of_external_buffers">
+       <span class="tocnumber">
+        3.2
+       </span>
+       <span class="toctext">
+        Use of external buffers
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Gallery">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Gallery
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#References">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      References
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Time_to_Fill">
+   Time to Fill
+  </span>
+ </h2>
+ <p>
+  Time to Fill is not in reference to how long it takes to fill a
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platform
+  </a>
+  . It deals with how much time is required to fill the capacity of a
+  <a href="/wiki/Freight_Car" title="Freight Car">
+   Freight Car
+  </a>
+  .
+ </p>
+ <p>
+  Freight Car Capacity is 32 stacks for item cars, and 1600 m³ for fluid cars. Fluid isn't variable, as 1600 m³ is the same regardless of
+  <span style="cursor: help; border-bottom: 2px dotted #397d75;" title="Liquids and gases are both fluids">
+   fluid type
+  </span>
+  . Item freight's TtF however, will change based on the Stack Size of the items being moved.
+ </p>
+ <p>
+  It is vital to remember that during each loading and unloading animation, the freight/fluid platform blocks all in-and outputs for 27.08 seconds
+  <sup class="reference" id="cite_ref-yt-4bQakQJ_aY4-0_1-0">
+   <a href="#cite_note-yt-4bQakQJ_aY4-0-1">
+    <span class="cite-bracket">
+     [
+    </span>
+    1
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+  (
+  <span style="cursor: help; border-bottom: none;" title="0.451333333">
+   0.4513
+  </span>
+  min). Bringing the lockout timer variable into the equation gives you the following:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Time to Fill
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           Stack Size
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           Car capacity
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          Belt Speed
+         </mtext>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      4
+     </mn>
+     <mn>
+      5
+     </mn>
+     <mn>
+      1
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mover>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ‾
+       </mo>
+      </mover>
+     </mrow>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  As previously stated, the 0.4513 is converting 27.08s to minutes. Belt Speed is the combination of belts leading into the platform. At
+  <i>
+   most
+  </i>
+  this number will be 2400 (when using ×2 Mk6 belts). Any combination of belt marks is possible, simply add the two numbers together for the maximum
+  <i>
+   theoretical
+  </i>
+  throughput. For
+  <i>
+   actual
+  </i>
+  maximum throughput, Belt Speed is equal to the exact items per minute being sent to the platform.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Examples">
+   Examples
+  </span>
+ </h3>
+ <p>
+  The TtF of an item with a Stack Size of 500, such as
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Quickwire" title="Quickwire">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Quickwire.png/20px-Quickwire.png?92bd94" width="20"/>
+   </a>
+   <a href="/wiki/Quickwire" title="Quickwire">
+    Quickwire
+   </a>
+  </span>
+  , using 2×
+  <a href="/wiki/Conveyor_Belt_Mk.5" title="Conveyor Belt Mk.5">
+   <img alt="Conveyor Belt Mk.5.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Conveyor_Belt_Mk.5.png/32px-Conveyor_Belt_Mk.5.png?42cd1d" width="32"/>
+  </a>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.5" title="Conveyor Belt Mk.5">
+   Conveyor Belt Mk.5
+  </a>
+  :
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Time to Fill
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          1
+         </mn>
+         <mn>
+          5
+         </mn>
+         <mn>
+          6
+         </mn>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      4
+     </mn>
+     <mn>
+      5
+     </mn>
+     <mn>
+      1
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mover>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ‾
+       </mo>
+      </mover>
+     </mrow>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mn>
+      1
+     </mn>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      7
+     </mn>
+     <mn>
+      1
+     </mn>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  Whereas an item with a Stack Size of 50, such as
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Computer" title="Computer">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Computer.png/20px-Computer.png?823b42" width="20"/>
+   </a>
+   <a href="/wiki/Computer" title="Computer">
+    Computers
+   </a>
+  </span>
+  takes:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Time to Fill
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          1
+         </mn>
+         <mn>
+          5
+         </mn>
+         <mn>
+          6
+         </mn>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      4
+     </mn>
+     <mn>
+      5
+     </mn>
+     <mn>
+      1
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mover>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ‾
+       </mo>
+      </mover>
+     </mrow>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mn>
+      1
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      4
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  About one seventh the amount of time compared to Quickwire.
+ </p>
+ <p>
+  Doing
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Quickwire" title="Quickwire">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Quickwire.png/20px-Quickwire.png?92bd94" width="20"/>
+   </a>
+   <a href="/wiki/Quickwire" title="Quickwire">
+    Quickwire
+   </a>
+  </span>
+  again, but with 2×
+  <a href="/wiki/Conveyor_Belt_Mk.3" title="Conveyor Belt Mk.3">
+   <img alt="Conveyor Belt Mk.3.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Conveyor_Belt_Mk.3.png/32px-Conveyor_Belt_Mk.3.png?dc60e7" width="32"/>
+  </a>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.3" title="Conveyor Belt Mk.3">
+   Conveyor Belt Mk.3
+  </a>
+  gives you:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Time to Fill
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          4
+         </mn>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      4
+     </mn>
+     <mn>
+      5
+     </mn>
+     <mn>
+      1
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mover>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ‾
+       </mo>
+      </mover>
+     </mrow>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mn>
+      3
+     </mn>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mspace width="0.167em">
+     </mspace>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       min
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <h2>
+  <span class="mw-headline" id="Calculating_throughput">
+   Calculating throughput
+  </span>
+ </h2>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Train_throughput_as_function_of_trip_time.jpg">
+    <img class="thumbimage" data-file-height="1070" data-file-width="2043" decoding="async" height="168" loading="lazy" src="/images/thumb/Train_throughput_as_function_of_trip_time.jpg/320px-Train_throughput_as_function_of_trip_time.jpg?75be49" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Train_throughput_as_function_of_trip_time.jpg" title="Enlarge">
+     </a>
+    </div>
+    Throughput as a function of Round-trip Duration for a train car carrying items with a Stack Size of 500 and being loaded by ×2 Mk.4 Conveyor Belts.
+   </div>
+  </div>
+ </div>
+ <blockquote>
+  <p>
+   In both formulas, the maximum
+   <i>
+    theoretical
+   </i>
+   throughput will have Belt Speed = 2400. For the
+   <i>
+    actual
+   </i>
+   maximum throughput, Belt Speed is your actual item input rate.
+  </p>
+ </blockquote>
+ <ul>
+  <li>
+   <b>
+    TtF ≥ RtD
+   </b>
+  </li>
+ </ul>
+ <p>
+  If the Time to Fill is longer than (or equal to) the Round-trip Duration, the train car will be semi-loaded in most cases. The throughput formula used in this context is:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Throughput
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           RtD
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          −
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          .
+         </mo>
+         <mn>
+          4
+         </mn>
+         <mn>
+          5
+         </mn>
+         <mn>
+          1
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mover>
+           <mn>
+            3
+           </mn>
+           <mo>
+            ‾
+           </mo>
+          </mover>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          RtD
+         </mtext>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Belt Speed
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <blockquote>
+  <p>
+   Note: You
+   <i>
+    can
+   </i>
+   solve for the actual, in-game throughput using this formula if you take precise timing measurements.
+  </p>
+  <p>
+   However, for ease of use, it is recommended to roughly time the route and solve for the maximum theoretical throughput. Once you know the maximum in theory, you can just compare that to how much you were planning to move. If you're under max theoretical throughput, you're good.
+  </p>
+ </blockquote>
+ <ul>
+  <li>
+   <b>
+    TtF &lt; RtD
+   </b>
+  </li>
+ </ul>
+ <p>
+  If the Time to Fill is shorter than the Round-trip Duration, the train car will be fully loaded on every pickup. You do, however, lose throughput in this scenario due to wasted potential while waiting for the train to arrive. Throughput formula:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Throughput
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          TtF
+         </mtext>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          RtD
+         </mtext>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       Belt Speed
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <hr/>
+ <p>
+  The only way to reach maximum theoretical throughput per car is if your Round-trip Duration is exactly equal to your Time to Fill. This is nearly impossible to do in a vacuum, and becomes even less likely in train systems with multiple trains, junctions, or even simply if the Stack Size of the items being loaded isn't a uniform number.
+ </p>
+ <p>
+  Keep in mind, all of this is solving the throughput of a
+  <b>
+   single Freight/Fluid Platform
+  </b>
+  . If you wish to solve the throughput potential of an entire
+  <i>
+   train
+  </i>
+  , it is more complicated. As you must do the above for each individual platform of the train, and that's assuming the train commutes only between 2 stations. In systems where one or more trains are making multiple stops, it is better to solve throughput for the drop-off platforms themselves, rather than try to equate how much an individual train is moving.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Solved_maximum_throughput">
+   Solved maximum throughput
+  </span>
+ </h2>
+ <p>
+  After solving the above, the maximum throughput numbers based on Stack Size are as follows:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Freight
+    </th>
+    <th>
+     Stack Size
+    </th>
+    <th>
+     <span style="cursor: help; border-bottom: 2px dotted #397d75;" title="Round-trip Duration">
+      RtD
+     </span>
+     (Mk.5)
+    </th>
+    <th>
+     Throughput (Mk.5)
+    </th>
+    <th>
+     <span style="cursor: help; border-bottom: 2px dotted #397d75;" title="Round-trip Duration">
+      RtD
+     </span>
+     (Mk.6)
+    </th>
+    <th>
+     Throughput (Mk.6)
+    </th>
+   </tr>
+   <tr>
+    <td rowspan="4">
+     Items
+    </td>
+    <td>
+     50
+    </td>
+    <td>
+     88.62s
+    </td>
+    <td>
+     1083.3/min
+    </td>
+    <td>
+     67.08s
+    </td>
+    <td>
+     1,431.17/min
+    </td>
+   </tr>
+   <tr>
+    <td>
+     100
+    </td>
+    <td>
+     150.16s
+    </td>
+    <td>
+     1278.66/min
+    </td>
+    <td>
+     102.08s
+    </td>
+    <td>
+     1,793.08/min
+    </td>
+   </tr>
+   <tr>
+    <td>
+     200
+    </td>
+    <td>
+     273.23s
+    </td>
+    <td>
+     1405.4/min
+    </td>
+    <td>
+     187.08s
+    </td>
+    <td>
+     2,052.62/min
+    </td>
+   </tr>
+   <tr>
+    <td>
+     500
+    </td>
+    <td>
+     642.46s
+    </td>
+    <td>
+     1494.25/min
+    </td>
+    <td>
+     427.08s
+    </td>
+    <td>
+     2,247.83/min
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     Fluid
+    </td>
+    <td>
+     107.08
+    </td>
+    <td>
+     896.52 m³/min
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  If your Round-trip Duration is shorter or longer than the above listed value, your attainable throughput will be lower than the maximum theoretical throughput.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Note_about_Fluid_Cars">
+   Note about Fluid Cars
+  </span>
+ </h3>
+ <p>
+  Freight Cars with Packaged Fluid are equal to the 100 per stack values, but if you're recycling the Empty Cans back, you need twice the amount of Freight Cars. This means in either case, you're using 2 Freight Cars to move 3200 units of fluid. (The only way to get around this would be sending the Empty Cans back via a different train, truck, or drone; or not recycling them at all by simply making them at pick-up and destroying them at drop-off).
+ </p>
+ <p>
+  This changes the comparison of Fluid Cars vs. Freight Cars to:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Freight
+    </th>
+    <th>
+     Stack Size
+    </th>
+    <th>
+     <span style="cursor: help; border-bottom: 2px dotted #397d75;" title="Round-trip Duration">
+      RtD
+     </span>
+     (Mk.5)
+    </th>
+    <th>
+     Throughput (Mk.5)
+    </th>
+    <th>
+     <span style="cursor: help; border-bottom: 2px dotted #397d75;" title="Round-trip Duration">
+      RtD
+     </span>
+     (Mk.6)
+    </th>
+    <th>
+     Throughput (Mk.6)
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Canisters
+    </td>
+    <td>
+     100
+    </td>
+    <td>
+     150.16s
+    </td>
+    <td>
+     1278.66/min
+    </td>
+    <td>
+     102.078s
+    </td>
+    <td>
+     1,793.08/min
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     Fluid
+    </td>
+    <td>
+     107.08
+    </td>
+    <td>
+     1793.04 m³/min
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Meaning that, when used properly, Fluid Cars are
+  <i>
+   better
+  </i>
+  in terms of throughput for moving your
+  <b>
+   liquids
+  </b>
+  until
+  <a href="/wiki/Conveyor_Belt_Mk.6" title="Conveyor Belt Mk.6">
+   <img alt="Conveyor Belt Mk.6.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Conveyor_Belt_Mk.6.png/32px-Conveyor_Belt_Mk.6.png?64e8e7" width="32"/>
+  </a>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.6" title="Conveyor Belt Mk.6">
+   Conveyor Belt Mk.6
+  </a>
+  is obtained, at which point they perform approximately equally.
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Nitrogen_Gas" title="Nitrogen Gas">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Nitrogen_Gas.png/20px-Nitrogen_Gas.png?3f138d" width="20"/>
+   </a>
+   <a href="/wiki/Nitrogen_Gas" title="Nitrogen Gas">
+    Nitrogen Gas
+   </a>
+  </span>
+  should always be packaged before shipping as it has a 4x compression ratio (meaning a Freight Car can move 5114.64 (7,172.32) items/min).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Use_of_external_buffers">
+   Use of external buffers
+  </span>
+ </h3>
+ <p>
+  Train logistics is the sole context in Satisfactory where "buffering" is needed.
+  <sup class="reference" id="cite_ref-yt-4bQakQJ_aY4-1_2-0">
+   <a href="#cite_note-yt-4bQakQJ_aY4-1-2">
+    <span class="cite-bracket">
+     [
+    </span>
+    2
+    <span class="cite-bracket">
+     ]
+    </span>
+   </a>
+  </sup>
+  <a class="mw-redirect" href="/wiki/Industrial_Storage_Container" title="Industrial Storage Container">
+   Industrial Storage Containers
+  </a>
+  perfectly match the dual input/output of
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platforms
+  </a>
+  , and can even be wrapped next to them to save space. Fluid Platforms require a more complicated configuration. Note that if you want consistently full belt output, you can simply choose to only use one of the output ports of the
+  <a class="mw-redirect" href="/wiki/Industrial_Storage_Container" title="Industrial Storage Container">
+   Industrial Storage Container
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Gallery">
+   Gallery
+  </span>
+ </h2>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Train_Station_with_wrapped_Storage_Containers.jpg" title='Storage Containers being "wrapped" to save space.'>
+       <img alt='Storage Containers being "wrapped" to save space.' data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Train_Station_with_wrapped_Storage_Containers.jpg/120px-Train_Station_with_wrapped_Storage_Containers.jpg?849111" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Storage Containers being "wrapped" to save space.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Train_Station_with_600m3_Buffers.jpg" title="Fluid Buffer configuration, handles 600 m3/min per platform.">
+       <img alt="Fluid Buffer configuration, handles 600 m3/min per platform." data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Train_Station_with_600m3_Buffers.jpg/120px-Train_Station_with_600m3_Buffers.jpg?f2e29f" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Fluid Buffer configuration, handles 600 m
+     <sup>
+      3
+     </sup>
+     /min per platform.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Train_Station_with_600m3_Industrial_Buffers.jpg" title="Industrial Fluid Buffers are needed for maximum potential.">
+       <img alt="Industrial Fluid Buffers are needed for maximum potential." data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Train_Station_with_600m3_Industrial_Buffers.jpg/120px-Train_Station_with_600m3_Industrial_Buffers.jpg?8e3def" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Industrial Fluid Buffers are needed for maximum potential.
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="References">
+   References
+  </span>
+ </h2>
+ <div class="mw-references-wrap">
+  <ol class="references">
+   <li id="cite_note-yt-4bQakQJ_aY4-0-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-4bQakQJ_aY4-0_1-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=4bQakQJ_aY4" rel="nofollow">
+      YouTube - October 3rd, 2023 Livestream - Q&amp;A: Will the delay in throughput when loading/unloading of Trains be removed?
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-4bQakQJ_aY4-1-2">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-4bQakQJ_aY4-1_2-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=4bQakQJ_aY4&amp;t=38s" rel="nofollow">
+      YouTube - October 3rd, 2023 Livestream - Q&amp;A: Will the delay in throughput when loading/unloading of Trains be removed? - Use Storage Container Buffers
+     </a>
+    </span>
+   </li>
+  </ol>
+ </div>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251016140947
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.134 seconds
+Real time usage: 0.216 seconds
+Preprocessor visited node count: 556/1000000
+Revision size: 8371/4194304 bytes
+Post‐expand include size: 28418/4194304 bytes
+Template argument size: 676/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 3/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8967/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.010/15.000 seconds
+Lua memory usage: 811867/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   83.192      1 -total
+ 53.58%   44.577      1 Template:PioneerNav
+ 52.86%   43.978      2 Template:Navbox
+ 10.45%    8.694      3 Template:BuildingLink
+  7.55%    6.277      3 Template:IconLink
+  5.42%    4.512      1 Template:Reflist
+  4.11%    3.417      6 Template:Tooltip
+  3.97%    3.300      4 Template:ItemLink
+  3.76%    3.125     76 Template:*
+  3.13%    2.600      1 Template:Rounding
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6385-0!canonical and timestamp 20251016140947 and revision id 59963. Rendering was triggered because: page_view
+ -->
+</div>

@@ -1,0 +1,873 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  <b>
+   Independency
+  </b>
+  is a gameplay strategy where factories do not depend on each other, removing the need to distribute resources and manage connections between them. Instead of importing many raw resources from afar and handling the distribution of intermediate products, each product is made "from scratch." Factories become spread across the world.
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Overview">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Overview
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-2">
+    <a href="#Factories">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Factories
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-3">
+      <a href="#Size">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Size
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-4">
+      <a href="#Location">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Location
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#Target_outputs">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Target outputs
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-6">
+      <a href="#Preventing_rebuilding">
+       <span class="tocnumber">
+        2.4
+       </span>
+       <span class="toctext">
+        Preventing rebuilding
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Main_base_and_central_storage">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Main base and central storage
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#Exceptions">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Exceptions
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Overview">
+   Overview
+  </span>
+ </h2>
+ <p>
+  Throughout the entire game, new components are introduced. These rely on simpler components. Intuitively, you might think you can use parts you're already producing to make new parts. For example, in Tier 1:
+ </p>
+ <ul>
+  <li>
+   You automate
+   <span style="white-space:nowrap;">
+    <a href="/wiki/Iron_Plate" title="Iron Plate">
+     <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Plate.png/20px-Iron_Plate.png?93d6ef" width="20"/>
+    </a>
+    <a href="/wiki/Iron_Plate" title="Iron Plate">
+     Iron Plates
+    </a>
+   </span>
+   and
+   <span style="white-space:nowrap;">
+    <a href="/wiki/Iron_Rod" title="Iron Rod">
+     <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Rod.png/20px-Iron_Rod.png?762556" width="20"/>
+    </a>
+    <a href="/wiki/Iron_Rod" title="Iron Rod">
+     Rods
+    </a>
+   </span>
+   .
+  </li>
+  <li>
+   Then you realize the need to automate
+   <span style="white-space:nowrap;">
+    <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+     <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+    </a>
+    <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+     Reinforced Iron Plates
+    </a>
+   </span>
+   , so you decide to produce them using the existing setup. You have fewer Plates and Rods left, but some are still piling up.
+  </li>
+  <li>
+   Soon enough,
+   <span style="white-space:nowrap;">
+    <a href="/wiki/Rotor" title="Rotor">
+     <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rotor.png/20px-Rotor.png?2616b2" width="20"/>
+    </a>
+    <a href="/wiki/Rotor" title="Rotor">
+     Rotors
+    </a>
+   </span>
+   need to be automated. With few Iron Rods remaining, you have to either produce very few Rotors or expand the production of Iron Rods.
+  </li>
+  <li>
+   Later, once you decide to automate
+   <span style="white-space:nowrap;">
+    <a href="/wiki/Motor" title="Motor">
+     <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Motor.png/20px-Motor.png?345ae9" width="20"/>
+    </a>
+    <a href="/wiki/Motor" title="Motor">
+     Motors
+    </a>
+   </span>
+   , you realize your Rotor production is lacking. At this point, you end up doing a lot of backtracking to figure out what part of the production line needs to be expanded. While it seems easier to "just use existing Rotors," the rebuilding involved can get overwhelming.
+  </li>
+ </ul>
+ <p>
+  The problem boils down to tediously managing the distribution of Iron Rods, a basic component.
+ </p>
+ <p>
+  The concept of decentralizing instead aims to make each factory as independent as possible. This gives you the freedom to decide how much of each component to produce without being restrained by the output of other factories. The result is also a significant simplification of logistics.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Factories">
+   Factories
+  </span>
+ </h2>
+ <p>
+  Each factory is built to be as independent as possible. Components are produced from raw resources. A factory can have different outputs. It is logical to group them if they have some relation between them, such as a common input. For example, a factory producing Reinforced Iron Plates and Rotors makes more sense than a factory for
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Concrete" title="Concrete">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Concrete.png/20px-Concrete.png?f56994" width="20"/>
+   </a>
+   <a href="/wiki/Concrete" title="Concrete">
+    Concrete
+   </a>
+  </span>
+  and
+  <span style="white-space:nowrap;">
+   <a href="/wiki/AI_Limiter" title="AI Limiter">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/AI_Limiter.png/20px-AI_Limiter.png?a51ac6" width="20"/>
+   </a>
+   <a href="/wiki/AI_Limiter" title="AI Limiter">
+    AI Limiters
+   </a>
+  </span>
+  .
+ </p>
+ <p>
+  In practice, you decide either how much of a raw resource you want to use as input, or how much of the target component(s) you desire as output.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Size">
+   Size
+  </span>
+ </h3>
+ <p>
+  Unintuitively, it may appear that making every product from scratch leads to bigger factories. However, this is not true: in order to produce the same amount of products, the same amount of factory buildings is needed.
+ </p>
+ <p>
+  For example, instead of a large common iron
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  setup whose output is distributed between several "smaller" factories, each factory has its own proportional iron Smelter setup.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Location">
+   Location
+  </span>
+ </h3>
+ <p>
+  The ideal location for any factory is near the raw resources it uses. As the game progresses, it is increasingly unlikely that all resources will be nearby. This either caused by them being used by other factories, or their availability in the world (
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Crude_Oil" title="Crude Oil">
+    <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Crude_Oil.png/20px-Crude_Oil.png?9eadf5" width="20"/>
+   </a>
+   <a href="/wiki/Crude_Oil" title="Crude Oil">
+    Crude Oil
+   </a>
+  </span>
+  ,
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Bauxite" title="Bauxite">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Bauxite.png/20px-Bauxite.png?234701" width="20"/>
+   </a>
+   <a href="/wiki/Bauxite" title="Bauxite">
+    Bauxite
+   </a>
+  </span>
+  and
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Nitrogen_Gas" title="Nitrogen Gas">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Nitrogen_Gas.png/20px-Nitrogen_Gas.png?3f138d" width="20"/>
+   </a>
+   <a href="/wiki/Nitrogen_Gas" title="Nitrogen Gas">
+    Nitrogen Gas
+   </a>
+  </span>
+  are notable examples). In that case, decide which resources to import from elsewhere and transport long-distance.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Target_outputs">
+   Target outputs
+  </span>
+ </h3>
+ <p>
+  Except for the early game, only building materials and consumables need to be produced. Only roughly 10-20 of each item per minute should suffice. There are some notable exceptions, such as
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Concrete" title="Concrete">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Concrete.png/20px-Concrete.png?f56994" width="20"/>
+   </a>
+   <a href="/wiki/Concrete" title="Concrete">
+    Concrete
+   </a>
+  </span>
+  used for building
+  <a href="/wiki/Foundations" title="Foundations">
+   foundations
+  </a>
+  , for example.
+ </p>
+ <p>
+  See
+  <a href="/wiki/Category:Building_materials" title="Category:Building materials">
+   Category:Building materials
+  </a>
+  and
+  <a href="/wiki/Category:Equipment_materials" title="Category:Equipment materials">
+   Category:Equipment materials
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="mw-headline" id="Preventing_rebuilding">
+   Preventing rebuilding
+  </span>
+ </h3>
+ <p>
+  Because each factory is self-sufficient and does not need to account for the required input of other factories, there is no need to rebuild or expand as the need to automate new parts arises. Of course, this is difficult without having completed the game first and knowing what's to come next. You may optionally choose to rebuild a factory once new
+  <a class="mw-redirect" href="/wiki/Alternate_recipes" title="Alternate recipes">
+   alternate recipes
+  </a>
+  are unlocked, however, this is not a roadblock in progression.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Main_base_and_central_storage">
+   Main base and central storage
+  </span>
+ </h2>
+ <p>
+  It is convenient to have the output of all factories easily accessible in one location, in so-called central storage. As each factory is independent, central storage is the final destination. Thus, it is ideal to have the HUB and Space Elevator set up here.
+ </p>
+ <p>
+  A main base can also have multiple otherwise independent factories near each other, which makes it easy to transport their output to central storage.
+ </p>
+ <p>
+  The need to haul resources used by pioneers around can be alleviated using
+  <a href="/wiki/Dimensional_Depot_Uploader" title="Dimensional Depot Uploader">
+   Dimensional Depot Uploaders
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Exceptions">
+   Exceptions
+  </span>
+ </h2>
+ <p>
+  It is reasonable to make exceptions to the independency approach as desired. You might want to avoid transporting Crude Oil over long distances, set up Aluminum Ingot production in one location, or have a shared Steel Ingot smeltery for nearby factories.
+ </p>
+ <p>
+  These ultimately boil down to personal preference. The point is that the approach does not have to be followed strictly.
+ </p>
+ <div aria-labelledby="Satisfactory&amp;#95;game&amp;#95;mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory&amp;#95;game&amp;#95;mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251026100833
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.043 seconds
+Real time usage: 0.066 seconds
+Preprocessor visited node count: 427/1000000
+Revision size: 5009/4194304 bytes
+Post‐expand include size: 27740/4194304 bytes
+Template argument size: 413/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 811981/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   21.300      1 -total
+ 91.63%   19.518      1 Template:PioneerNav
+ 89.69%   19.103      2 Template:Navbox
+  6.95%    1.480     11 Template:ItemLink
+  5.49%    1.170     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6784-0!canonical and timestamp 20251026100833 and revision id 59693. Rendering was triggered because: page_view
+ -->
+</div>

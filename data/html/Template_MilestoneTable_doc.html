@@ -1,0 +1,480 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:MilestoneTable/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template is used to create tables for milestones at
+   <a href="/wiki/Milestones" title="Milestones">
+    Milestones
+   </a>
+   .
+  </p>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      Parameter
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+    <tr>
+     <td>
+      name
+     </td>
+     <td>
+      The Name of the Milestone
+     </td>
+    </tr>
+    <tr>
+     <td>
+      icon
+     </td>
+     <td>
+      The File to display as icon (24px)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      quantityN
+     </td>
+     <td>
+      (N = 1-4) Amount of the required Item
+     </td>
+    </tr>
+    <tr>
+     <td>
+      costN
+     </td>
+     <td>
+      (N = 1-4) Name of the required Item
+     </td>
+    </tr>
+    <tr>
+     <td>
+      time
+     </td>
+     <td>
+      Time the drop ship needs to come back
+     </td>
+    </tr>
+    <tr>
+     <td>
+      buildings
+     </td>
+     <td>
+      New Buildings. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      recipes
+     </td>
+     <td>
+      New Recipes. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      equipment
+     </td>
+     <td>
+      New Equipment. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      vehicles
+     </td>
+     <td>
+      New Equipment. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      scanner
+     </td>
+     <td>
+      New Scanner Upgrades. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      upgrades
+     </td>
+     <td>
+      New Character Perks or other Upgrades. Content will be shown unmodified
+     </td>
+    </tr>
+    <tr>
+     <td>
+      tableEnd
+     </td>
+     <td>
+      Set to 1 on the last Milestone-Entry
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   <span class="mw-headline" id="Example">
+    Example
+   </span>
+  </h2>
+  <pre>{{MilestoneTable
+|name = Part Assembly
+|icon = ResIcon_Production_Dark.png
+|quantity1 = 300
+|cost1 = Iron Plate
+|quantity2 = 300
+|cost2 = Iron Rod
+|quantity3 = 500
+|cost3 = Wire
+|quantity4 = 100
+|cost4 = Cable
+|time = 00:03
+|buildings = {{BuildingLink|Assembler}}
+|recipes = {{ItemLink|Copper Sheet}}, {{ItemLink|Rotor}}, {{ItemLink|Modular Frame}}, {{ItemLink|Smart Plating}}
+|equipment = {{ItemLink|Nobelisk Detonator}}
+|vehicles = {{ItemLink|Truck}}
+|scanner = {{ItemLink|Coal}}
+|upgrades= +5 [[Inventory]] Slots
+}}
+{{MilestoneTable
+|name = Part Assembly
+|icon = ResIcon_Decor_Dark.png
+|quantity1 = 100
+|cost1 = Encased Industrial Beam
+|quantity2 = 30000
+|cost2 = Crystal Oscillator
+|time = 00:59
+|recipes = {{ItemLink|Stator}}, {{ItemLink|Rotor}}
+|tableEnd = 1
+}}
+</pre>
+  <table class="wikitable milestoneTable">
+   <tbody>
+    <tr>
+     <th>
+      #
+     </th>
+     <th>
+      Milestone
+     </th>
+     <th>
+      Cost
+     </th>
+     <th>
+      Time
+     </th>
+     <th>
+      Rewards
+     </th>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="4">
+      1
+     </td>
+     <td rowspan="4">
+      <a class="image" href="/wiki/File:ResIcon_Production_Dark.png">
+       <img alt="ResIcon Production Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="24" loading="lazy" src="/images/thumb/ResIcon_Production_Dark.png/24px-ResIcon_Production_Dark.png?24787f" width="24"/>
+      </a>
+      Part Assembly
+     </td>
+     <td>
+      300 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Plate.png/20px-Iron_Plate.png?93d6ef" width="20"/>
+       </a>
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        Iron Plate
+       </a>
+      </span>
+     </td>
+     <td rowspan="4">
+      00:03
+     </td>
+     <td rowspan="4">
+      <a class="image" href="/wiki/File:Recipe_Icon_Building_Dark.png">
+       <img alt="Recipe Icon Building Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Building_Dark.png/16px-Recipe_Icon_Building_Dark.png?f5f34e" width="16"/>
+      </a>
+      <b>
+       Buildings:
+      </b>
+      <a href="/wiki/Assembler" title="Assembler">
+       <img alt="Assembler.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Assembler.png/32px-Assembler.png?38c7e9" width="32"/>
+      </a>
+      <a href="/wiki/Assembler" title="Assembler">
+       Assembler
+      </a>
+      <br/>
+      <a class="image" href="/wiki/File:Recipe_Icon_Item_Dark.png">
+       <img alt="Recipe Icon Item Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Item_Dark.png/16px-Recipe_Icon_Item_Dark.png?aa9893" width="16"/>
+      </a>
+      <b>
+       Recipes:
+      </b>
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Copper_Sheet" title="Copper Sheet">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Copper_Sheet.png/20px-Copper_Sheet.png?7eb920" width="20"/>
+       </a>
+       <a href="/wiki/Copper_Sheet" title="Copper Sheet">
+        Copper Sheet
+       </a>
+      </span>
+      ,
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Rotor" title="Rotor">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rotor.png/20px-Rotor.png?2616b2" width="20"/>
+       </a>
+       <a href="/wiki/Rotor" title="Rotor">
+        Rotor
+       </a>
+      </span>
+      ,
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Modular_Frame" title="Modular Frame">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Modular_Frame.png/20px-Modular_Frame.png?e657af" width="20"/>
+       </a>
+       <a href="/wiki/Modular_Frame" title="Modular Frame">
+        Modular Frame
+       </a>
+      </span>
+      ,
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Smart_Plating" title="Smart Plating">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Smart_Plating.png/20px-Smart_Plating.png?6026cb" width="20"/>
+       </a>
+       <a href="/wiki/Smart_Plating" title="Smart Plating">
+        Smart Plating
+       </a>
+      </span>
+      <br/>
+      <a class="image" href="/wiki/File:Recipe_Icon_Equipment_Dark.png">
+       <img alt="Recipe Icon Equipment Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Equipment_Dark.png/16px-Recipe_Icon_Equipment_Dark.png?d470f9" width="16"/>
+      </a>
+      <b>
+       Equipment:
+      </b>
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Nobelisk_Detonator" title="Nobelisk Detonator">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Nobelisk_Detonator.png/20px-Nobelisk_Detonator.png?416718" width="20"/>
+       </a>
+       <a href="/wiki/Nobelisk_Detonator" title="Nobelisk Detonator">
+        Nobelisk Detonator
+       </a>
+      </span>
+      <br/>
+      <a class="image" href="/wiki/File:Recipe_Icon_Vehicle_Dark.png">
+       <img alt="Recipe Icon Vehicle Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Vehicle_Dark.png/16px-Recipe_Icon_Vehicle_Dark.png?dda5ea" width="16"/>
+      </a>
+      <b>
+       Vehicles:
+      </b>
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Truck" title="Truck">
+        <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Truck.png/20px-Truck.png?a3a025" width="20"/>
+       </a>
+       <a href="/wiki/Truck" title="Truck">
+        Truck
+       </a>
+      </span>
+      <br/>
+      <a class="image" href="/wiki/File:Recipe_Icon_Scanner_Dark.png">
+       <img alt="Recipe Icon Scanner Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Scanner_Dark.png/16px-Recipe_Icon_Scanner_Dark.png?4ed838" width="16"/>
+      </a>
+      <b>
+       Scanner Update:
+      </b>
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Coal" title="Coal">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Coal.png/20px-Coal.png?b318d1" width="20"/>
+       </a>
+       <a href="/wiki/Coal" title="Coal">
+        Coal
+       </a>
+      </span>
+      <br/>
+      <a class="image" href="/wiki/File:Recipe_Icon_Upgrade_Dark.png">
+       <img alt="Recipe Icon Upgrade Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Upgrade_Dark.png/16px-Recipe_Icon_Upgrade_Dark.png?cfce07" width="16"/>
+      </a>
+      <b>
+       Upgrades:
+      </b>
+      +5
+      <a href="/wiki/Inventory" title="Inventory">
+       Inventory
+      </a>
+      Slots
+      <br/>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      300 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_Rod" title="Iron Rod">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Rod.png/20px-Iron_Rod.png?762556" width="20"/>
+       </a>
+       <a href="/wiki/Iron_Rod" title="Iron Rod">
+        Iron Rod
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      500 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Wire" title="Wire">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Wire.png/20px-Wire.png?7a6df2" width="20"/>
+       </a>
+       <a href="/wiki/Wire" title="Wire">
+        Wire
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      100 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Cable" title="Cable">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Cable.png/20px-Cable.png?c87492" width="20"/>
+       </a>
+       <a href="/wiki/Cable" title="Cable">
+        Cable
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="2">
+      2
+     </td>
+     <td rowspan="2">
+      <a class="image" href="/wiki/File:ResIcon_Decor_Dark.png">
+       <img alt="ResIcon Decor Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="24" loading="lazy" src="/images/thumb/ResIcon_Decor_Dark.png/24px-ResIcon_Decor_Dark.png?fa9407" width="24"/>
+      </a>
+      Part Assembly
+     </td>
+     <td>
+      100 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+       </a>
+       <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+        Encased Industrial Beam
+       </a>
+      </span>
+     </td>
+     <td rowspan="2">
+      00:59
+     </td>
+     <td rowspan="2">
+      <a class="image" href="/wiki/File:Recipe_Icon_Item_Dark.png">
+       <img alt="Recipe Icon Item Dark.png" class="invert-on-dark" data-file-height="64" data-file-width="64" decoding="async" height="16" loading="lazy" src="/images/thumb/Recipe_Icon_Item_Dark.png/16px-Recipe_Icon_Item_Dark.png?aa9893" width="16"/>
+      </a>
+      <b>
+       Recipes:
+      </b>
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Stator" title="Stator">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Stator.png/20px-Stator.png?69b63f" width="20"/>
+       </a>
+       <a href="/wiki/Stator" title="Stator">
+        Stator
+       </a>
+      </span>
+      ,
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Rotor" title="Rotor">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rotor.png/20px-Rotor.png?2616b2" width="20"/>
+       </a>
+       <a href="/wiki/Rotor" title="Rotor">
+        Rotor
+       </a>
+      </span>
+      <br/>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      30 000 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Crystal_Oscillator" title="Crystal Oscillator">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Crystal_Oscillator.png/20px-Crystal_Oscillator.png?d0e57d" width="20"/>
+       </a>
+       <a href="/wiki/Crystal_Oscillator" title="Crystal Oscillator">
+        Crystal Oscillator
+       </a>
+      </span>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215345
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.083 seconds
+Real time usage: 0.119 seconds
+Preprocessor visited node count: 574/1000000
+Revision size: 2451/4194304 bytes
+Post‐expand include size: 8791/4194304 bytes
+Template argument size: 3223/4194304 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 780/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 767768/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   54.096      1 -total
+ 88.13%   47.676      2 Template:MilestoneTable
+ 47.63%   25.767      6 Template:FormatNumber
+ 12.12%    6.558      1 Template:BuildingLink
+  8.98%    4.858     15 Template:ItemLink
+  7.66%    4.146      1 Template:IconLink
+  6.10%    3.299      1 Template:Doc/start
+  4.86%    2.628      1 Template:Doc/end
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:1164-0!canonical and timestamp 20251101215345 and revision id 6994. Rendering was triggered because: api-parse
+ -->
+</div>

@@ -1,0 +1,132 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:AutomatedCrafting/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <table class="plainlinks ambox ambox-gray" style="">
+   <tbody>
+    <tr>
+     <td class="ambox-image">
+      <a class="image" href="/wiki/File:Lua.svg">
+       <img alt="" data-file-height="937" data-file-width="937" decoding="async" height="32" loading="lazy" src="https://commons.wiki.gg/images/Lua.svg?74e3ac" width="32"/>
+      </a>
+     </td>
+     <td class="ambox-text">
+      This template uses
+      <a class="extiw" href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="wikipedia:Lua (programming language)">
+       Lua
+      </a>
+      :
+      <ul>
+       <li>
+        <a href="/wiki/Module:RenderCraftingRecipesTable" title="Module:RenderCraftingRecipesTable">
+         Module:RenderCraftingRecipesTable
+        </a>
+       </li>
+      </ul>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   Invokes
+   <a href="/wiki/Module:RenderCraftingRecipesTable" title="Module:RenderCraftingRecipesTable">
+    Module:RenderCraftingRecipesTable
+   </a>
+   , which generates a table containing all crafting recipes for specified item and items/minute calculations.
+   <br/>
+   Data for the table is taken from '
+   <i>
+    <a href="/wiki/Special:CargoTables/crafting_recipes" title="Special:CargoTables/crafting recipes">
+     crafting_recipes
+    </a>
+   </i>
+   ' cargo table.
+  </p>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <p>
+   <code>
+    {{RenderCraftingTables|Reinforced Iron Plate}}
+   </code>
+  </p>
+  <p>
+   You can omit item name, in which case {{PAGENAME}} value will be used automatically:
+   <code>
+    {{RenderCraftingTables}}
+   </code>
+   (on Reinforced Iron Plate page).
+  </p>
+  <p>
+   <code>
+    {{RenderCraftingTables|Reinforced Iron Plate|experimental}}
+   </code>
+   will display only recipes that are available only on Experimental build of the game.
+  </p>
+  <div style="overflow-x: auto;">
+   <strong class="error">
+    <span class="scribunto-error mw-scribunto-error-e77d104d">
+     Lua error: Error: Table crafting_recipes not found..
+    </span>
+   </strong>
+  </div>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101214917
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.053 seconds
+Real time usage: 0.092 seconds
+Preprocessor visited node count: 140/1000000
+Revision size: 910/4194304 bytes
+Post‐expand include size: 2129/4194304 bytes
+Template argument size: 212/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 141/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.016/15.000 seconds
+Lua memory usage: 658912/52428800 bytes
+Number of processed Cargo queries: 2
+Time spent processing Cargo queries: 0.011 s (avg. 0.006 s)
+Number of Cargo row insertion attempts: 0
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   69.560      1 -total
+ 78.46%   54.579      1 Template:AutomatedCrafting
+ 10.08%    7.012      1 Template:Lua
+  5.52%    3.840      1 Template:Doc/end
+  5.45%    3.789      1 Template:Doc/start
+  4.46%    3.102      1 Template:Ambox
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3666-0!canonical and timestamp 20251101214917 and revision id 24743. Rendering was triggered because: api-parse
+ -->
+</div>

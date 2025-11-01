@@ -1,0 +1,693 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:MainSub/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template is primarily used to show a formatted link to a specific article subsection. It is similar to
+   <code>
+    {{
+    <a href="/wiki/Template:Main" title="Template:Main">
+     Main
+    </a>
+    }}
+   </code>
+   and uses
+   <code>
+    {{
+    <a href="/wiki/Template:Hatnote" title="Template:Hatnote">
+     hatnote
+    </a>
+    }}
+   </code>
+   .
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Usage">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Usage
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-2">
+     <a href="#Parameters">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Parameters
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-3">
+     <a href="#Truncation">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       Truncation
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-4">
+     <a href="#Output">
+      <span class="tocnumber">
+       4
+      </span>
+      <span class="toctext">
+       Output
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-5">
+     <a href="#Examples">
+      <span class="tocnumber">
+       5
+      </span>
+      <span class="toctext">
+       Examples
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Satisfactory#On_storefronts" title="Satisfactory">
+     Satisfactory &gt; Official description &gt; On storefronts
+    </a>
+    <i>
+     (See also:
+     <b>
+      Early game development
+     </b>
+     )
+    </i>
+   </div>
+  </div>
+  <p>
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Main|Format Type|Before Text|Note}}
+   </code>
+  </p>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <ul>
+   <li>
+    <b>
+     Main:
+    </b>
+    This will be the direct link to an article subsection as seen in the url following
+    <i>
+     <a class="free" href="https://satisfactory.wiki.gg/wiki/">
+      https://satisfactory.wiki.gg/wiki/
+     </a>
+    </i>
+    , for example like
+    <code>
+     Satisfactory#On_storefronts
+    </code>
+    .
+    <ul>
+     <li>
+      🚩 If this is blank the template returns an null / empty string.
+     </li>
+    </ul>
+   </li>
+   <li>
+    <b>
+     Format Type:
+    </b>
+    This will determine how the resulting link will be shown.
+    <i>
+     For Format Types 4 thru 7 see
+     <b>
+      Truncation
+     </b>
+     below.
+    </i>
+    <ul>
+     <li>
+      <i>
+       No format type or a format type other than 0 thru 7 was entered
+      </i>
+      = Main Only.
+     </li>
+     <li>
+      0 = Main (Part 1) + Main (Part 2)
+     </li>
+     <li>
+      1 = Main (Part 1) + Before Text + Main (Part 2)
+     </li>
+     <li>
+      2 = Main (Part 1) + Main (Part 2) + Note
+     </li>
+     <li>
+      3 = Main (Part 1) + Before Text + Main (Part 2) + Note
+     </li>
+     <li>
+      4 = Main (Part 1) + Main (Part 2 -
+      <i>
+       Truncated
+      </i>
+      )
+     </li>
+     <li>
+      5 = Main (Part 1) + Before Text + Main (Part 2 -
+      <i>
+       Truncated
+      </i>
+      )
+     </li>
+     <li>
+      6 = Main (Part 1) + Main (Part 2 -
+      <i>
+       Truncated
+      </i>
+      ) + Note
+     </li>
+     <li>
+      7 = Main (Part 1) + Before Text + Main (Part 2 -
+      <i>
+       Truncated
+      </i>
+      ) + Note
+     </li>
+    </ul>
+   </li>
+   <li>
+    <b>
+     Before Text:
+    </b>
+    This is required for all Format Types with the exception of 0, 2 and 6.
+    <ul>
+     <li>
+      The direct link might lead to a sub-subsection and to provide clarity the Before Text can be used to show the parent subsection to where the direct link results in.
+     </li>
+     <li>
+      The Before Text can be
+      <i>
+       anything
+      </i>
+      but is automatically formatted to show first character in upper case and rest in lower case.
+     </li>
+     <li>
+      The Before Text will appear after Part 1 and before Part 2
+      <i>
+       (see
+       <b>
+        Output
+       </b>
+       below)
+      </i>
+      .
+     </li>
+    </ul>
+   </li>
+   <li>
+    <b>
+     Note:
+    </b>
+    This is optional.
+    <ul>
+     <li>
+      If used the entered text will be show in
+      <i>
+       italics
+      </i>
+      and prefaced with "See also:".
+     </li>
+     <li>
+      The Note can be
+      <i>
+       anything
+      </i>
+      , and may include wiki text formatting like '''bold text''' which appears as
+      <b>
+       bold text
+      </b>
+      , or &lt;u&gt;underlined text&lt;/u&gt; which appears as
+      <u>
+       underlined text
+      </u>
+      , or even include wiki links like [[Settings]] which appears as
+      <a href="/wiki/Settings" title="Settings">
+       Settings
+      </a>
+      .
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <h2>
+   <span class="mw-headline" id="Truncation">
+    Truncation
+   </span>
+  </h2>
+  <p>
+   Often the direct link will end with a
+   <b>
+    suffix
+   </b>
+   consisting of a single underscore and number like for example
+   <code>
+    Settings#Controller_2
+   </code>
+   which the user might not want to appear. In this case, the use of Format Types 4 thru 7 will truncate (remove) the suffix.
+  </p>
+  <h2>
+   <span class="mw-headline" id="Output">
+    Output
+   </span>
+  </h2>
+  <p>
+   If Format Types 0 thru 7 are used, the direct link will be split into two parts as determined by the position of the pound sign "#", and will be displayed as
+   <code>
+    Part 1 (Main Article) &gt; Before Text (if used) &gt; Part 2 (Subsection) &gt; Note (if used)
+   </code>
+   .
+  </p>
+  <p>
+   In Part 1 and Part 2 all underscores "_" are automatically changed to a single space " ".
+  </p>
+  <h2>
+   <span class="mw-headline" id="Examples">
+    Examples
+   </span>
+  </h2>
+  <p>
+   The follow shows various examples for illustrative purposes:
+  </p>
+  <p>
+   <br/>
+   0.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|0}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controller 2
+    </a>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Only Main Link (split).
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   1.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|1|CONTROLS}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controls &gt; Controller 2
+    </a>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Before Text corrected, and Part 2 suffix not removed.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   2.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|2|  |'''General &gt; Select Controls''' settings}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controller 2
+    </a>
+    <i>
+     (See also:
+     <b>
+      General &gt; Select Controls
+     </b>
+     settings)
+    </i>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      No Before Text due to use of blank Before Text parameter, and Part 2 suffix not removed.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   3.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|3|CONTROLS|&lt;u&gt;General &gt; Select Controls&lt;/u&gt;}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controls &gt; Controller 2
+    </a>
+    <i>
+     (See also:
+     <u>
+      General &gt; Select Controls
+     </u>
+     )
+    </i>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Before Text corrected, and Part 2 suffix not removed.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   4.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|4}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controller
+    </a>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Part 2 truncated.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   5.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|5|Controls}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controls &gt;  Controller
+    </a>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Before Text corrected
+      <i>
+       (but appears unchanged)
+      </i>
+      , and Part 2 truncated.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   6.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|6|  |General &gt; Select Controls}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controller
+    </a>
+    <i>
+     (See also: General &gt; Select Controls)
+    </i>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      No Before Text due to use of blank Before Text parameter, and Part 2 truncated.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   7.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2|7|controls|[[Settings#General_3|Settings &gt; Controls &gt; General]] and view '''Select Controls''' settings}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings &gt; Controls &gt;  Controller
+    </a>
+    <i>
+     (See also:
+     <a href="/wiki/Settings#General_3" title="Settings">
+      Settings &gt; Controls &gt; General
+     </a>
+     and view
+     <b>
+      Select Controls
+     </b>
+     settings)
+    </i>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      Before Text corrected, and Part 2 truncated, plus example use in Note of wiki link and wiki text formatting.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <p>
+   8.
+   <code>
+    {{
+    <a href="/wiki/Template:MainSub" title="Template:MainSub">
+     MainSub
+    </a>
+    |Settings#Controller_2}}
+   </code>
+   results in:
+  </p>
+  <div style="margin-top: 5px;">
+   <div style="margin-left: 30px;">
+    <i>
+     Main article:
+    </i>
+    <a href="/wiki/Settings#Controller_2" title="Settings">
+     Settings#Controller_2
+    </a>
+   </div>
+  </div>
+  <dl>
+   <dd>
+    <dl>
+     <dd>
+      <b>
+       Notes:
+      </b>
+      No changes made to direct link due to no Format Type used.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251008192422
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.039 seconds
+Real time usage: 0.057 seconds
+Preprocessor visited node count: 1171/1000000
+Revision size: 5188/4194304 bytes
+Post‐expand include size: 10035/4194304 bytes
+Template argument size: 3776/4194304 bytes
+Highest expansion depth: 11/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 284/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   32.966      1 -total
+ 35.56%   11.722     10 Template:MainSub
+ 26.60%    8.770      2 Template:Tl
+ 17.71%    5.837     10 Template:Tlx
+ 16.07%    5.296     10 Template:Hatnote
+  8.01%    2.642      1 Template:Doc/start
+  6.75%    2.226      1 Template:Doc/end
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:9319-0!canonical and timestamp 20251008192422 and revision id 59902. Rendering was triggered because: page_view
+ -->
+</div>

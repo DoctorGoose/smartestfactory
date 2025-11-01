@@ -1,0 +1,46 @@
+# Template:BuildingLink/doc
+
+[](/wiki/File:Template-info.svg) Documentation
+
+[[purge](https://satisfactory.wiki.gg/wiki/Template:BuildingLink/doc?action=purge)]
+
+## Usage
+
+Blank Template 
+    
+    
+    {{BuildingLink|"Building Name"|"Alt title"|size="Insert Desired Size"(Optional)}}
+
+1\. 
+    
+    
+    {{BuildingLink|Miner Mk.1|size=128}}
+
+2\. 
+    
+    
+    {{BuildingLink|Miner Mk.1|size=64}}
+
+3\. 
+    
+    
+    {{BuildingLink|Miner Mk.1}}
+
+4\. 
+    
+    
+    {{BuildingLink|Miner Mk.1|Tiny Miner|size=16}}
+
+## Result
+
+1\. [](/wiki/Miner_Mk.1 "Miner Mk.1") [Miner Mk.1](/wiki/Miner_Mk.1 "Miner Mk.1")  
+2\. [](/wiki/Miner_Mk.1 "Miner Mk.1") [Miner Mk.1](/wiki/Miner_Mk.1 "Miner Mk.1")  
+3\. [](/wiki/Miner_Mk.1 "Miner Mk.1") [Miner Mk.1](/wiki/Miner_Mk.1 "Miner Mk.1")  
+4\. [](/wiki/Miner_Mk.1 "Miner Mk.1") [Tiny Miner](/wiki/Miner_Mk.1 "Miner Mk.1")
+
+This is the documentation page, it should be transcluded into the main template page. See [Template:Doc](/wiki/Template:Doc "Template:Doc") for more information.
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template
+  *[his]: his trivia section
+  *[N/A]: Not applicable

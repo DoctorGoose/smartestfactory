@@ -1,0 +1,227 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  <br/>
+ </p>
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Current_version?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template contains the version number of the most recent major update, experimental patch, and early access patch. It can be optionally linked or provide the date instead.
+  </p>
+  <h2>
+   <span class="mw-headline" id="Modifying">
+    Modifying
+   </span>
+  </h2>
+  <p>
+   To update the current version, edit the source of this page and in the first few lines you'll see:
+  </p>
+  <p>
+   | major = 1.1.1.0
+   <br/>
+   | experimental = 1.1.1.6
+   <br/>
+   | #default = 1.1.1.4
+  </p>
+  <p>
+   Major means the last major update, experimental is the latest experimental branch update, and
+   <code>
+    #default
+   </code>
+   is the last update to the early access branch. Simply change the version number on the appropriate line here.
+  </p>
+  <p>
+   Below that, you'll also see:
+  </p>
+  <p>
+   | major = 2025-06-10
+   <br/>
+   | experimental = 2025-10-10
+   <br/>
+   | #default = 2025-09-08
+  </p>
+  <p>
+   These work the same as the version number, but store the dates instead. These are in the form of yyyy-mm-dd and should use the UTC timezone.
+  </p>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    }}
+   </code>
+   gives the latest early access update, which is: 1.1.1.4
+  </p>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |experimental}}
+   </code>
+   gives the latest experimental update, which is: 1.1.1.6
+  </p>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |major}}
+   </code>
+   gives the latest major update, which is: 1.1.1.0
+  </p>
+  <dl>
+   <dt>
+    Dates
+   </dt>
+  </dl>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    }}
+   </code>
+   gives the date of the latest early access update: 2025-09-08
+  </p>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |experimental}}
+   </code>
+   gives the date of the latest experimental update, which is: 2025-10-10
+  </p>
+  <p>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |major}}
+   </code>
+   gives the date of the latest major update, which is: 2025-06-10
+  </p>
+  <h3>
+   <span class="mw-headline" id="Linking">
+    Linking
+   </span>
+  </h3>
+  <p>
+   If a second parameter is given any value that equates to true (anything other than 0 or nothing) a link will be provided to the corresponding patch notes page. For major updates, the display text will be Update X instead of a version number. If a third parameter is given, that will be used as display text instead.
+  </p>
+  <p>
+   For example:
+   <br/>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |1}}
+   </code>
+   produces:
+   <a href="/wiki/Patch_1.1.1.4" title="Patch 1.1.1.4">
+    1.1.1.4
+   </a>
+   <br/>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |experimental|1|latest experimental version}}
+   </code>
+   produces:
+   <a href="/wiki/Patch_1.1.1.6" title="Patch 1.1.1.6">
+    latest experimental version
+   </a>
+   <br/>
+   <code>
+    {{
+    <a class="mw-selflink selflink">
+     Current version
+    </a>
+    |major|1}}
+   </code>
+   produces:
+   <a href="/wiki/Patch_1.1.1.0" title="Patch 1.1.1.0">
+    Update 1.1
+   </a>
+  </p>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:Current_version/doc" title="Template:Current version/doc">
+    Template:Current version/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Current_version/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Current_version/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251010180050
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.020 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 885/1000000
+Revision size: 534/4194304 bytes
+Post‐expand include size: 11967/4194304 bytes
+Template argument size: 677/4194304 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   28.367      1 Template:Doc
+100.00%   28.367      1 -total
+ 87.43%   24.802      1 Template:Current_version/doc
+ 22.99%    6.521      9 Template:Tlx
+ 13.76%    3.902      1 Template:Doc/start
+ 12.50%    3.546     15 Template:Current_version
+ 10.13%    2.874      1 Template:Doc/end
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:1351-0!canonical and timestamp 20251010180050 and revision id 59939. Rendering was triggered because: edit-page
+ -->
+</div>

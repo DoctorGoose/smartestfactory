@@ -1,0 +1,35 @@
+{
+  "title": "Template:Unreleased/doc",
+  "pageid": 1810,
+  "categories": [
+    "Unreleased_content",
+    "Experimental_content",
+    "Stable-only_content",
+    "Desktop_release_content",
+    "Console_release_content",
+    "Removed_content",
+    "Unconfirmed_features",
+    "Upcoming_features",
+    "Template_documentation"
+  ],
+  "sections": [
+    "Usage",
+    "No arguments",
+    "Output",
+    "Experimental",
+    "Output",
+    "Stable",
+    "Output",
+    "Desktop",
+    "Output",
+    "Console",
+    "Output",
+    "Removed",
+    "Output",
+    "Unconfirmed",
+    "Output",
+    "Upcoming",
+    "Output"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Template:Unreleased/doc"
+}

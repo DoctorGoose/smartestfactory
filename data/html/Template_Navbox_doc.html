@@ -1,0 +1,1893 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <table class="plainlinks ambox ambox-gray" style="">
+   <tbody>
+    <tr>
+     <td class="ambox-image">
+      <a class="image" href="/wiki/File:Lua.svg">
+       <img alt="" data-file-height="937" data-file-width="937" decoding="async" height="32" loading="lazy" src="https://commons.wiki.gg/images/Lua.svg?74e3ac" width="32"/>
+      </a>
+     </td>
+     <td class="ambox-text">
+      This template uses
+      <a class="extiw" href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="wikipedia:Lua (programming language)">
+       Lua
+      </a>
+      :
+      <ul>
+       <li>
+        <a href="/wiki/Module:Navbox" title="Module:Navbox">
+         Module:Navbox
+        </a>
+       </li>
+      </ul>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   This template allows a navigational template to be set up relatively quickly by supplying it with one or more lists of links. Using this template is highly recommended for standardization of navigational templates, and for ease of use.
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Usage">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Usage
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-2">
+     <a href="#Parameter_list">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Parameter list
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-3">
+     <a href="#Parameter_descriptions">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       Parameter descriptions
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-4">
+       <a href="#Setup_parameters">
+        <span class="tocnumber">
+         3.1
+        </span>
+        <span class="toctext">
+         Setup parameters
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-5">
+       <a href="#Cells">
+        <span class="tocnumber">
+         3.2
+        </span>
+        <span class="toctext">
+         Cells
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-6">
+     <a href="#Layout_of_table">
+      <span class="tocnumber">
+       4
+      </span>
+      <span class="toctext">
+       Layout of table
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-7">
+       <a href="#Without_image,_above_and_below">
+        <span class="tocnumber">
+         4.1
+        </span>
+        <span class="toctext">
+         Without image, above and below
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-8">
+       <a href="#With_image,_above_and_below">
+        <span class="tocnumber">
+         4.2
+        </span>
+        <span class="toctext">
+         With image, above and below
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-9">
+       <a href="#With_image_and_without_groups">
+        <span class="tocnumber">
+         4.3
+        </span>
+        <span class="toctext">
+         With image and without groups
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-10">
+     <a href="#TemplateData">
+      <span class="tocnumber">
+       5
+      </span>
+      <span class="toctext">
+       TemplateData
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <p>
+   Please remove the parameters that are left blank.
+  </p>
+  <div class="mw-highlight mw-highlight-lang-wikitext mw-content-ltr mw-highlight-copy" dir="ltr" style="overflow: auto;">
+   <pre><span></span><span class="p">{{</span><span class="nt">Navbox</span>
+<span class="p">|</span><span class="nl"> name       </span><span class="o">=</span> <span class="p">{{</span><span class="nn">subst</span><span class="p">:</span><span class="nt">PAGENAME</span><span class="p">}}</span>
+<span class="p">|</span><span class="nl"> title      </span><span class="o">=</span>
+<span class="p">|</span><span class="nl"> listclass  </span><span class="o">=</span> hlist
+<span class="p">|</span><span class="nl"> state      </span><span class="o">=</span> <span class="p">{{{</span><span class="nv">state</span><span class="p">|}}}</span>
+
+<span class="p">|</span><span class="nl"> above      </span><span class="o">=</span>
+<span class="p">|</span><span class="nl"> image      </span><span class="o">=</span>
+
+<span class="p">|</span><span class="nl"> group1     </span><span class="o">=</span>
+<span class="p">|</span><span class="nl"> list1      </span><span class="o">=</span>
+
+<span class="p">|</span><span class="nl"> group2     </span><span class="o">=</span>
+<span class="p">|</span><span class="nl"> list2      </span><span class="o">=</span>
+
+<span class="p">|</span><span class="nl"> group3     </span><span class="o">=</span>
+<span class="p">|</span><span class="nl"> list3      </span><span class="o">=</span>
+
+<span class="cm">&lt;!-- ... --&gt;</span>
+
+<span class="p">|</span><span class="nl"> below      </span><span class="o">=</span>
+<span class="p">}}</span>
+</pre>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Parameter_list">
+    Parameter list
+   </span>
+  </h2>
+  <div aria-labelledby="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;" class="navbox" role="navigation">
+   <table class="nowraplinks mw-collapsible uncollapsed navbox-inner">
+    <tbody>
+     <tr>
+      <th class="navbox-title" colspan="3" scope="col">
+       <div class="navbar plainlinks hlist navbar-mini">
+        <ul>
+         <li class="nv-view">
+          <a class="mw-selflink selflink">
+           <abbr title="View this template">
+            v
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-edit">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=edit">
+           <abbr title="Edit this template">
+            e
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-hist">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=history">
+           <abbr title="History of this template">
+            h
+           </abbr>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="navbox-title-text" id="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;">
+        {{{title}}}
+       </div>
+      </th>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-abovebelow" colspan="3">
+       <div id="&amp;#123;&amp;#123;&amp;#123;above&amp;#125;&amp;#125;&amp;#125;">
+        {{{above}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group1}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-odd">
+       <div>
+        {{{list1}}}
+       </div>
+      </td>
+      <td class="noviewer navbox-image" rowspan="4" style="width:1px;padding:0 0 0 2px">
+       <div>
+        {{{image}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group2}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list2}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-odd" colspan="2">
+       <div>
+        {{{list3}}}
+        <i>
+         without {{{group3}}}
+        </i>
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group4}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list4}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-abovebelow" colspan="3">
+       <div>
+        {{{below}}}
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <p>
+   The navbox uses lowercase parameter names, as shown in the box (
+   <i>
+    above
+   </i>
+   ). The required
+   <i>
+    name
+   </i>
+   and
+   <i>
+    title
+   </i>
+   will create a one-line box if other parameters are omitted.
+  </p>
+  <p>
+   Notice "group1" (etc.) is optional, as are sections named "above/below".
+  </p>
+  <div style="clear:both">
+  </div>
+  <p>
+   The basic and most common parameters are as follows (see
+   <a href="#Parameter_descriptions">
+    below
+   </a>
+   for the full list):
+  </p>
+  <dl>
+   <dd>
+    <code>
+     name
+    </code>
+    – the name of the template.
+   </dd>
+   <dd>
+    <code>
+     title
+    </code>
+    – text in the title bar, such as: [[Widget stuff]].
+   </dd>
+   <dd>
+    <code>
+     class
+    </code>
+    - an optional CSS class for the entire navbox, to enable custom styling.
+   </dd>
+   <dd>
+    <code>
+     listclass
+    </code>
+    – a CSS class for the list cells, usually
+    <code>
+     hlist
+    </code>
+    for horizontal lists.
+   </dd>
+   <dd>
+    <code>
+     state
+    </code>
+    – controls when a navbox is expanded or collapsed.
+   </dd>
+   <dd>
+    <code>
+     above
+    </code>
+    – text to appear above the group/list section (could be a list of overall wikilinks).
+   </dd>
+   <dd>
+    <code>
+     image
+    </code>
+    – an optional right-side image, coded as the whole image. Typically it is purely decorative, so it should be coded as
+    <code>
+     [[File:
+     <var>
+      XX
+     </var>
+     .jpg|80px|link=|alt=]]
+    </code>
+    .
+   </dd>
+   <dd>
+    <code>
+     imageleft
+    </code>
+    – an optional left-side image (code the same as the "image" parameter).
+   </dd>
+   <dd>
+    <code>
+     group
+     <sub>
+      n
+     </sub>
+    </code>
+    – the left-side text before list-n (if group-n omitted, list-n starts at left of box).
+   </dd>
+   <dd>
+    <code>
+     list
+     <sub>
+      n
+     </sub>
+    </code>
+    – text listing wikilinks using a
+    <a class="extiw" href="https://en.wikipedia.org/wiki/Help:Lists" title="wikipedia:Help:Lists">
+     wikilist
+    </a>
+    format.
+   </dd>
+   <dd>
+    <code>
+     below
+    </code>
+    – optional text to appear below the group/list section.
+   </dd>
+   <dd>
+    <code>
+     group
+     <sub>
+      n
+     </sub>
+     style
+    </code>
+    – CSS style to apply to a given group.
+   </dd>
+   <dd>
+    <code>
+     groupstyle
+    </code>
+    – CSS style to apply to all groups.
+   </dd>
+  </dl>
+  <h2>
+   <span class="mw-headline" id="Parameter_descriptions">
+    Parameter descriptions
+   </span>
+  </h2>
+  <p>
+   The following is a complete list of parameters for using
+   <code>
+    {{
+    <a href="/wiki/Template:Navbox" title="Template:Navbox">
+     Navbox
+    </a>
+    }}
+   </code>
+   .  In most cases, the only required parameters are
+   <code>
+    name
+   </code>
+   ,
+   <code>
+    title
+   </code>
+   , and
+   <code>
+    list1
+   </code>
+   .
+  </p>
+  <h3>
+   <span class="mw-headline" id="Setup_parameters">
+    Setup parameters
+   </span>
+  </h3>
+  <dl>
+   <dd>
+    <dl>
+     <dt>
+      <i>
+       name
+      </i>
+     </dt>
+     <dd>
+      The name of the template, which is needed for the "V • T • E" ("View • Talk • Edit") links to work properly on all pages where the template is used. You can enter
+      <code>
+       {{subst:PAGENAME}}
+      </code>
+      for this value as a shortcut.  The name parameter is only mandatory if a
+      <code>
+       title
+      </code>
+      is specified, and the
+      <code>
+       border
+      </code>
+      parameter is not set, and the
+      <code>
+       navbar
+      </code>
+      parameter is not used to disable the navbar.
+     </dd>
+     <dt>
+      <i>
+       state
+      </i>
+      <span style="font-weight:normal;">
+       [
+       <code>
+        autocollapse, collapsed, expanded, plain, off
+       </code>
+       ]
+      </span>
+     </dt>
+    </dl>
+    <ul>
+     <li>
+      Defaults to
+      <code>
+       autocollapse
+      </code>
+      . A navbox with
+      <code>
+       autocollapse
+      </code>
+      will start out collapsed if there are two or more tables on the same page that use other collapsible tables. Otherwise, the navbox will be expanded.
+     </li>
+     <li>
+      If set to
+      <code>
+       collapsed
+      </code>
+      , the navbox will always start out in a collapsed state.
+     </li>
+     <li>
+      If set to
+      <code>
+       expanded
+      </code>
+      , the navbox will always start out in an expanded state.
+     </li>
+     <li>
+      If set to
+      <code>
+       plain
+      </code>
+      , the navbox will always be expanded with no [hide] link on the right, and the title will remain centered (by using padding to offset the
+      <small>
+       V • T • E
+      </small>
+      links).
+     </li>
+     <li>
+      If set to
+      <code>
+       off
+      </code>
+      , the navbox will always be expanded with no [hide] link on the right, but no padding will be used to keep the title centered.  This is for advanced use only; the "plain" option should suffice for most applications where the [show]/[hide] button needs to be hidden.
+     </li>
+    </ul>
+   </dd>
+   <dd>
+    To show the box when standalone (non-included) but then auto-hide contents when in an article, put "expanded" inside
+    <code>
+     &lt;noinclude|&gt;
+    </code>
+    ...
+    <code>
+     &lt;/noinclude|&gt;
+    </code>
+    tags. This setting will force the box visible when standalone (even when followed by other boxes), displaying "[hide]", but then it will auto-collapse the box when stacked inside an article:
+    <dl>
+     <dd>
+      <code>
+       | state =
+      </code>
+      <code>
+       &lt;noinclude|&gt;
+      </code>
+      expanded
+      <code>
+       &lt;/noinclude|&gt;
+      </code>
+     </dd>
+    </dl>
+   </dd>
+   <dd>
+    Often times, editors will want a default initial state for a navbox, which may be overridden in an article. Here is the trick to do this:
+    <ul>
+     <li>
+      In your intermediate template, create a parameter also named "state" as a pass-through like this:
+     </li>
+    </ul>
+    <dl>
+     <dd>
+      <code>
+       | state = {{{state&lt;includeonly&gt;|your_desired_initial_state&lt;/includeonly&gt;}}}
+      </code>
+     </dd>
+    </dl>
+    <ul>
+     <li>
+      The
+      <code>
+       &lt;includeonly&gt;
+      </code>
+      <code>
+       |
+      </code>
+      will make the template expanded when viewing the template page by itself.
+     </li>
+    </ul>
+    <dl>
+     <dt>
+      <i>
+       navbar
+      </i>
+     </dt>
+     <dd>
+      If set to
+      <code>
+       plain
+      </code>
+      , the
+      <span style="font-size: 88%;">
+       V • T • E
+      </span>
+      links on the left side of the titlebar will not be displayed, and padding will be automatically used to keep the title centered.  Use
+      <code>
+       off
+      </code>
+      to remove the
+      <span style="font-size: 88%;">
+       V • T • E
+      </span>
+      links, but not apply padding (this is for advanced use only; the "plain" option should suffice for most applications where a navbar is not desired). It is highly recommended that one not hide the navbar, in order to make it easier for users to edit the template, and to keep a standard style across pages.
+     </dd>
+    </dl>
+   </dd>
+  </dl>
+  <dl>
+   <dd>
+    <i>
+     See later section on
+     <a href="#Child_navboxes">
+      using navboxes within one another
+     </a>
+     for examples and a more complete description.
+    </i>
+    If set to
+    <code>
+     child
+    </code>
+    or
+    <code>
+     subgroup
+    </code>
+    , then the navbox can be used as a borderless child that fits snugly in another navbox. The border is hidden and there is no padding on the sides of the table, so it fits into the
+    <i>
+     list
+    </i>
+    area of its parent navbox. If set to
+    <code>
+     none
+    </code>
+    , then the border is hidden and padding is removed, and the navbox may be used as a child of another container (do not use the
+    <code>
+     none
+    </code>
+    option inside of another navbox; similarly, only use the
+    <code>
+     child
+    </code>
+    /
+    <code>
+     subgroup
+    </code>
+    option inside of another navbox). If set to anything else (default), then a regular navbox is displayed with a 1px border. An alternate way to specify the border to be a subgroup style is like this (i.e. use the first unnamed parameter instead of the named
+    <i>
+     border
+    </i>
+    parameter):
+   </dd>
+   <dd>
+    <pre>{{Navbox|child|...}}</pre>
+   </dd>
+  </dl>
+  <h3>
+   <span class="mw-headline" id="Cells">
+    Cells
+   </span>
+  </h3>
+  <dl>
+   <dt>
+    <i>
+     title
+    </i>
+    *
+   </dt>
+   <dd>
+    Text that appears centered in the top row of the table. It is usually the template's topic, i.e. a succinct description of the body contents. This should be a single line, but if a second line is needed, use
+    <code>
+     {{-}}
+    </code>
+    to ensure proper centering. This parameter is technically not mandatory, but using
+    <code>
+     {{
+     <a href="/wiki/Template:Navbox" title="Template:Navbox">
+      Navbox
+     </a>
+     }}
+    </code>
+    is rather pointless without a title.
+   </dd>
+   <dt>
+    <i>
+     above
+    </i>
+    *
+   </dt>
+   <dd>
+    A full-width cell displayed between the titlebar and first group/list, i.e.
+    <i>
+     above
+    </i>
+    the template's body (groups, lists and image). In a template without an image,
+    <i>
+     above
+    </i>
+    behaves in the same way as the
+    <i>
+     list1
+    </i>
+    parameter without the
+    <i>
+     group1
+    </i>
+    parameter.
+   </dd>
+   <dt>
+    <i>
+     group
+     <sub>
+      n
+     </sub>
+    </i>
+    *
+   </dt>
+   <dd>
+    (i.e.
+    <i>
+     group1
+    </i>
+    ,
+    <i>
+     group2
+    </i>
+    , etc.) If specified, text appears in a header cell displayed to the left of
+    <i>
+     list
+     <sub>
+      n
+     </sub>
+    </i>
+    . If omitted,
+    <i>
+     list
+     <sub>
+      n
+     </sub>
+    </i>
+    uses the full width of the table.
+   </dd>
+   <dt>
+    <i>
+     list
+     <sub>
+      n
+     </sub>
+    </i>
+    *
+   </dt>
+   <dd>
+    (i.e.
+    <i>
+     list1
+    </i>
+    ,
+    <i>
+     list2
+    </i>
+    , etc.) The body of the template, usually a list of links. Format is inline, although the text can be entered on separate lines if the entire list is enclosed within
+    <code>
+     &lt;div&gt; &lt;/div&gt;
+    </code>
+    . At least one
+    <i>
+     list
+    </i>
+    parameter is required; each additional
+    <i>
+     list
+    </i>
+    is displayed in a separate row of the table. Each
+    <i>
+     list
+     <sub>
+      n
+     </sub>
+    </i>
+    may be preceded by a corresponding
+    <i>
+     group
+     <sub>
+      n
+     </sub>
+    </i>
+    parameter, if provided (see below).
+   </dd>
+   <dd>
+    Entries should be separated using a newline and an asterisk (*). If instead two asterisks are used, it provides
+    <a class="extiw" href="https://en.wikipedia.org/wiki/Nesting_(computing)" title="wikipedia:Nesting (computing)">
+     nesting
+    </a>
+    within the previous entry by enclosing the entry with brackets. Increasing the number of asterisks used increases the number of brackets around entries.
+   </dd>
+   <dt>
+    <i>
+     imageleft
+    </i>
+    *
+   </dt>
+   <dd>
+    An image to be displayed in a cell below the title and to the left of the body (lists). For the image to display properly, the
+    <i>
+     list1
+    </i>
+    parameter must be specified and no groups can be specified. It accepts the same sort of parameter that
+    <i>
+     image
+    </i>
+    accepts.
+   </dd>
+   <dt>
+    <i>
+     below
+    </i>
+    *
+   </dt>
+   <dd>
+    A full-width cell displayed
+    <i>
+     below
+    </i>
+    the template's body (groups, lists and image).
+   </dd>
+  </dl>
+  <h2>
+   <span class="mw-headline" id="Layout_of_table">
+    Layout of table
+   </span>
+  </h2>
+  <h3>
+   <span id="Without_image.2C_above_and_below">
+   </span>
+   <span class="mw-headline" id="Without_image,_above_and_below">
+    Without image, above and below
+   </span>
+  </h3>
+  <p>
+   Table generated by
+   <code>
+    {{
+    <a href="/wiki/Template:Navbox" title="Template:Navbox">
+     Navbox
+    </a>
+    }}
+   </code>
+   <b>
+    without
+   </b>
+   <i>
+    image
+   </i>
+   ,
+   <i>
+    above
+   </i>
+   and
+   <i>
+    below
+   </i>
+   parameters:
+  </p>
+  <div aria-labelledby="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;" class="navbox" role="navigation">
+   <table class="nowraplinks mw-collapsible uncollapsed navbox-inner">
+    <tbody>
+     <tr>
+      <th class="navbox-title" colspan="2" scope="col">
+       <div class="navbar plainlinks hlist navbar-mini">
+        <ul>
+         <li class="nv-view">
+          <a class="mw-selflink selflink">
+           <abbr title="View this template">
+            v
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-edit">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=edit">
+           <abbr title="Edit this template">
+            e
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-hist">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=history">
+           <abbr title="History of this template">
+            h
+           </abbr>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="navbox-title-text" id="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;">
+        {{{title}}}
+       </div>
+      </th>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group1}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-odd">
+       <div>
+        {{{list1}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group2}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list2}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-odd" colspan="2">
+       <div>
+        {{{list3}}}
+        <i>
+         without {{{group3}}}
+        </i>
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group4}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list4}}}
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <h3>
+   <span id="With_image.2C_above_and_below">
+   </span>
+   <span class="mw-headline" id="With_image,_above_and_below">
+    With image, above and below
+   </span>
+  </h3>
+  <p>
+   Table generated by
+   <code>
+    {{
+    <a href="/wiki/Template:Navbox" title="Template:Navbox">
+     Navbox
+    </a>
+    }}
+   </code>
+   <b>
+    with
+   </b>
+   <i>
+    image
+   </i>
+   ,
+   <i>
+    above
+   </i>
+   and
+   <i>
+    below
+   </i>
+   parameters:
+  </p>
+  <div aria-labelledby="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;" class="navbox" role="navigation">
+   <table class="nowraplinks mw-collapsible uncollapsed navbox-inner">
+    <tbody>
+     <tr>
+      <th class="navbox-title" colspan="3" scope="col">
+       <div class="navbar plainlinks hlist navbar-mini">
+        <ul>
+         <li class="nv-view">
+          <a class="mw-selflink selflink">
+           <abbr title="View this template">
+            v
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-edit">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=edit">
+           <abbr title="Edit this template">
+            e
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-hist">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=history">
+           <abbr title="History of this template">
+            h
+           </abbr>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="navbox-title-text" id="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;">
+        {{{title}}}
+       </div>
+      </th>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-abovebelow" colspan="3">
+       <div id="&amp;#123;&amp;#123;&amp;#123;above&amp;#125;&amp;#125;&amp;#125;">
+        {{{above}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group1}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-odd">
+       <div>
+        {{{list1}}}
+       </div>
+      </td>
+      <td class="noviewer navbox-image" rowspan="4" style="width:1px;padding:0 0 0 2px">
+       <div>
+        {{{image}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group2}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list2}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-odd" colspan="2">
+       <div>
+        {{{list3}}}
+        <i>
+         without {{{group3}}}
+        </i>
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <th class="navbox-group" scope="row">
+       {{{group4}}}
+      </th>
+      <td class="navbox-list-with-group navbox-list navbox-even">
+       <div>
+        {{{list4}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-abovebelow" colspan="3">
+       <div>
+        {{{below}}}
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <h3>
+   <span class="mw-headline" id="With_image_and_without_groups">
+    With image and without groups
+   </span>
+  </h3>
+  <p>
+   Table generated by
+   <code>
+    {{
+    <a href="/wiki/Template:Navbox" title="Template:Navbox">
+     Navbox
+    </a>
+    }}
+   </code>
+   <b>
+    with
+   </b>
+   <i>
+    image
+   </i>
+   ,
+   <i>
+    imageleft
+   </i>
+   ,
+   <i>
+    lists
+   </i>
+   , and
+   <b>
+    without
+   </b>
+   <i>
+    groups
+   </i>
+   ,
+   <i>
+    above
+   </i>
+   ,
+   <i>
+    below
+   </i>
+   :
+  </p>
+  <div aria-labelledby="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;" class="navbox" role="navigation">
+   <table class="nowraplinks mw-collapsible uncollapsed navbox-inner">
+    <tbody>
+     <tr>
+      <th class="navbox-title" colspan="4" scope="col">
+       <div class="navbar plainlinks hlist navbar-mini">
+        <ul>
+         <li class="nv-view">
+          <a class="mw-selflink selflink">
+           <abbr title="View this template">
+            v
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-edit">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=edit">
+           <abbr title="Edit this template">
+            e
+           </abbr>
+          </a>
+         </li>
+         <li class="nv-hist">
+          <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Navbox/doc?action=history">
+           <abbr title="History of this template">
+            h
+           </abbr>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="navbox-title-text" id="&amp;#123;&amp;#123;&amp;#123;title&amp;#125;&amp;#125;&amp;#125;">
+        {{{title}}}
+       </div>
+      </th>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="noviewer navbox-image" rowspan="4" style="width:1px;padding:0 2px 0 0">
+       <div>
+        {{{imageleft}}}
+       </div>
+      </td>
+      <td class="navbox-list navbox-odd" colspan="2">
+       <div>
+        {{{list1}}}
+       </div>
+      </td>
+      <td class="noviewer navbox-image" rowspan="4" style="width:1px;padding:0 0 0 2px">
+       <div>
+        {{{image}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-even" colspan="2">
+       <div>
+        {{{list2}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-odd" colspan="2">
+       <div>
+        {{{list3}}}
+       </div>
+      </td>
+     </tr>
+     <tr class="navbox-spacer">
+     </tr>
+     <tr>
+      <td class="navbox-list navbox-even" colspan="2">
+       <div>
+        {{{list4}}}
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <h2>
+   <span class="mw-headline" id="TemplateData">
+    TemplateData
+   </span>
+  </h2>
+  <section class="mw-templatedata-doc-wrap">
+   <header>
+    <p class="mw-templatedata-doc-desc">
+     Creates a navigational box for links to other pages.
+    </p>
+   </header>
+   <table class="wikitable mw-templatedata-doc-params sortable">
+    <caption>
+     <p class="mw-templatedata-caption">
+      Template parameters
+      <mw:edittemplatedata page="Template:Navbox/doc">
+      </mw:edittemplatedata>
+     </p>
+    </caption>
+    <thead>
+     <tr>
+      <th colspan="2">
+       Parameter
+      </th>
+      <th>
+       Description
+      </th>
+      <th>
+       Type
+      </th>
+      <th>
+       Status
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <th>
+       Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        name
+       </code>
+      </td>
+      <td>
+       <p>
+        The name of the template. Needed for "View • Talk • Edit" links to work properly.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         {{subst:PAGENAME}}
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Title
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        title
+       </code>
+      </td>
+      <td>
+       <p>
+        Text in the title bar; centered in the top row of the table. Usually the template's topic.
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         [[Template:Navbox]]
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Navbox class
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        class
+       </code>
+      </td>
+      <td>
+       <p>
+        CSS class for the navbox.
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         navbox-items
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Group 1
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        group1
+       </code>
+      </td>
+      <td>
+       <p>
+        If specified, text appears in a header cell displayed to the left of list 1. If omitted, list 1 uses the full width of the table.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       List 1
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        list1
+       </code>
+      </td>
+      <td>
+       <p>
+        Body of the template; usually a list of links. Format is inline. At least one list parameter is required; each additional list is displayed in a separate row of the table. Each listn may be preceded by a corresponding groupn parameter.
+Entries should be separated using a newline and an asterisk. If two asterisks are used, it provides nesting within the previous entry with brackets.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-required" data-sort-value="2">
+       required
+      </td>
+     </tr>
+     <tr>
+      <th>
+       List class
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        listclass
+       </code>
+      </td>
+      <td>
+       <p>
+        CSS class for the list cells, usually hlist for horizontal lists.
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         hlist
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       State
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        state
+       </code>
+      </td>
+      <td>
+       <p>
+        Controls when a navbox is expanded or collapsed
+       </p>
+       <dl>
+        <dt>
+         Suggested values
+        </dt>
+        <dd>
+         <code>
+          autocollapse
+         </code>
+         <code>
+          collapsed
+         </code>
+         <code>
+          expanded
+         </code>
+         <code>
+          plain
+         </code>
+         <code>
+          off
+         </code>
+        </dd>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         autocollapse
+        </dd>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         autocollapse
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Above
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        above
+       </code>
+      </td>
+      <td>
+       <p>
+        Full-width cell displayed between the titlebar and first group/list, i.e. above the template's body (groups, lists and image)
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Below
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        below
+       </code>
+      </td>
+      <td>
+       <p>
+        Full-width cell displayed below the template's body.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Image
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        image
+       </code>
+      </td>
+      <td>
+       <p>
+        Image to be displayed in a cell below the title and to the right of the body
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         [[File:XX.jpg | 80px | link= | alt= ]]
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       File
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       group2
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        group2
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       list2
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        list2
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       group3
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        group3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       list3
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        list3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       group4
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        group4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       list4
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        list4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Image left
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        imageleft
+       </code>
+      </td>
+      <td>
+       <p>
+        Image to be displayed in a cell below the title and to the left of the body. For the image to display properly, list1 parameter must be specified and no groups can be specified.
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         [[File:XX.jpg | 80px | link= | alt= ]]
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       File
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Navbar status
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        navbar
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         plain, off
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Border status
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        border
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         child, subgroup, none
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       evenodd
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        evenodd
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Suggested values
+        </dt>
+        <dd>
+         <code>
+          swap
+         </code>
+         <code>
+          even
+         </code>
+         <code>
+          odd
+         </code>
+         <code>
+          off
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type mw-templatedata-doc-muted">
+       Unknown
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215401
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.040 seconds
+Real time usage: 0.081 seconds
+Preprocessor visited node count: 528/1000000
+Revision size: 14103/4194304 bytes
+Post‐expand include size: 15519/4194304 bytes
+Template argument size: 191/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 10244/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.006/15.000 seconds
+Lua memory usage: 973227/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   50.177      1 -total
+ 45.97%   23.066      4 Template:Navbox
+ 25.22%   12.652      4 Template:Tl
+  7.43%    3.729      1 Template:Lua
+  4.48%    2.249      1 Template:Doc/start
+  4.12%    2.067      1 Template:Doc/end
+  4.02%    2.017      1 Template:Tlx
+  3.42%    1.718      1 Template:Ambox
+  3.15%    1.581      1 Template:Clear
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4067-0!canonical and timestamp 20251101215401 and revision id 50738. Rendering was triggered because: api-parse
+ -->
+</div>

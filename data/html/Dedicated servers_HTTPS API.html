@@ -1,0 +1,4304 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="table-of-contents--right" style="clear:right;">
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#HTTPS_API">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       HTTPS API
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#Certificate_Validation_and_Encryption">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Certificate Validation and Encryption
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#Schema">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Schema
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-4">
+         <a href="#Request_Schema">
+          <span class="tocnumber">
+           1.2.1
+          </span>
+          <span class="toctext">
+           Request Schema
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-5">
+         <a href="#Response_Schema">
+          <span class="tocnumber">
+           1.2.2
+          </span>
+          <span class="toctext">
+           Response Schema
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-6">
+         <a href="#File_Responses">
+          <span class="tocnumber">
+           1.2.3
+          </span>
+          <span class="toctext">
+           File Responses
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-7">
+         <a href="#Multipart_Requests">
+          <span class="tocnumber">
+           1.2.4
+          </span>
+          <span class="toctext">
+           Multipart Requests
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-8">
+     <a href="#Authentication">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Authentication
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-9">
+     <a href="#HealthCheck">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       HealthCheck
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-10">
+       <a href="#Summary">
+        <span class="tocnumber">
+         3.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-11">
+       <a href="#Function_Request_Data">
+        <span class="tocnumber">
+         3.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-12">
+       <a href="#Function_Response_Data">
+        <span class="tocnumber">
+         3.3
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-13">
+     <a href="#VerifyAuthentication_Token">
+      <span class="tocnumber">
+       4
+      </span>
+      <span class="toctext">
+       VerifyAuthentication Token
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-14">
+       <a href="#Summary_2">
+        <span class="tocnumber">
+         4.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-15">
+     <a href="#PasswordlessLogin">
+      <span class="tocnumber">
+       5
+      </span>
+      <span class="toctext">
+       PasswordlessLogin
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-16">
+       <a href="#Summary_3">
+        <span class="tocnumber">
+         5.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-17">
+       <a href="#Function_Request_Data_2">
+        <span class="tocnumber">
+         5.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-18">
+       <a href="#Function_Response_Data_2">
+        <span class="tocnumber">
+         5.3
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-19">
+       <a href="#Possible_Errors">
+        <span class="tocnumber">
+         5.4
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-20">
+     <a href="#PasswordLogin">
+      <span class="tocnumber">
+       6
+      </span>
+      <span class="toctext">
+       PasswordLogin
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-21">
+       <a href="#Summary_4">
+        <span class="tocnumber">
+         6.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-22">
+       <a href="#Function_Request_Data_3">
+        <span class="tocnumber">
+         6.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-23">
+       <a href="#Function_Response_Data_3">
+        <span class="tocnumber">
+         6.3
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-24">
+       <a href="#Possible_Errors_2">
+        <span class="tocnumber">
+         6.4
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-25">
+     <a href="#QueryServerState">
+      <span class="tocnumber">
+       7
+      </span>
+      <span class="toctext">
+       QueryServerState
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-26">
+       <a href="#Summary_5">
+        <span class="tocnumber">
+         7.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-27">
+       <a href="#Function_Response_Data_4">
+        <span class="tocnumber">
+         7.2
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-28">
+       <a href="#ServerGameState">
+        <span class="tocnumber">
+         7.3
+        </span>
+        <span class="toctext">
+         ServerGameState
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-29">
+       <a href="#Community_Notes">
+        <span class="tocnumber">
+         7.4
+        </span>
+        <span class="toctext">
+         Community Notes
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-30">
+     <a href="#GetServerOptions">
+      <span class="tocnumber">
+       8
+      </span>
+      <span class="toctext">
+       GetServerOptions
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-31">
+       <a href="#Summary_6">
+        <span class="tocnumber">
+         8.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-32">
+       <a href="#Function_Response_Data_5">
+        <span class="tocnumber">
+         8.2
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-33">
+     <a href="#GetAdvancedGameSettings">
+      <span class="tocnumber">
+       9
+      </span>
+      <span class="toctext">
+       GetAdvancedGameSettings
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-34">
+       <a href="#Summary_7">
+        <span class="tocnumber">
+         9.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-35">
+       <a href="#Function_Response_Data_6">
+        <span class="tocnumber">
+         9.2
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-36">
+     <a href="#ApplyAdvancedGameSettings">
+      <span class="tocnumber">
+       10
+      </span>
+      <span class="toctext">
+       ApplyAdvancedGameSettings
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-37">
+       <a href="#Summary_8">
+        <span class="tocnumber">
+         10.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-38">
+       <a href="#Function_Request_Data_4">
+        <span class="tocnumber">
+         10.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-39">
+     <a href="#ClaimServer">
+      <span class="tocnumber">
+       11
+      </span>
+      <span class="toctext">
+       ClaimServer
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-40">
+       <a href="#Summary_9">
+        <span class="tocnumber">
+         11.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-41">
+       <a href="#Function_Request_Data_5">
+        <span class="tocnumber">
+         11.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-42">
+       <a href="#Function_Response_Data_7">
+        <span class="tocnumber">
+         11.3
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-43">
+       <a href="#Possible_Errors_3">
+        <span class="tocnumber">
+         11.4
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-44">
+     <a href="#RenameServer">
+      <span class="tocnumber">
+       12
+      </span>
+      <span class="toctext">
+       RenameServer
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-45">
+       <a href="#Summary_10">
+        <span class="tocnumber">
+         12.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-46">
+       <a href="#Function_Request_Data_6">
+        <span class="tocnumber">
+         12.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-47">
+       <a href="#Possible_Errors_4">
+        <span class="tocnumber">
+         12.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-48">
+     <a href="#SetClientPassword">
+      <span class="tocnumber">
+       13
+      </span>
+      <span class="toctext">
+       SetClientPassword
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-49">
+       <a href="#Summary_11">
+        <span class="tocnumber">
+         13.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-50">
+       <a href="#Function_Request_Data_7">
+        <span class="tocnumber">
+         13.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-51">
+       <a href="#Possible_Errors_5">
+        <span class="tocnumber">
+         13.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-52">
+     <a href="#SetAdminPassword">
+      <span class="tocnumber">
+       14
+      </span>
+      <span class="toctext">
+       SetAdminPassword
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-53">
+       <a href="#Summary_12">
+        <span class="tocnumber">
+         14.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-54">
+       <a href="#Function_Request_Data_8">
+        <span class="tocnumber">
+         14.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-55">
+       <a href="#Possible_Errors_6">
+        <span class="tocnumber">
+         14.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-56">
+     <a href="#SetAutoLoadSessionName">
+      <span class="tocnumber">
+       15
+      </span>
+      <span class="toctext">
+       SetAutoLoadSessionName
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-57">
+       <a href="#Summary_13">
+        <span class="tocnumber">
+         15.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-58">
+       <a href="#Function_Request_Data_9">
+        <span class="tocnumber">
+         15.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-59">
+     <a href="#Run_Command">
+      <span class="tocnumber">
+       16
+      </span>
+      <span class="toctext">
+       Run Command
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-60">
+       <a href="#Summary_14">
+        <span class="tocnumber">
+         16.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-61">
+       <a href="#Function_Request_Data_10">
+        <span class="tocnumber">
+         16.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-62">
+       <a href="#Function_Response_Data_8">
+        <span class="tocnumber">
+         16.3
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-63">
+     <a href="#Shutdown">
+      <span class="tocnumber">
+       17
+      </span>
+      <span class="toctext">
+       Shutdown
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-64">
+       <a href="#Summary_15">
+        <span class="tocnumber">
+         17.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-65">
+     <a href="#ApplyServerOptions">
+      <span class="tocnumber">
+       18
+      </span>
+      <span class="toctext">
+       ApplyServerOptions
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-66">
+       <a href="#Summary_16">
+        <span class="tocnumber">
+         18.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-67">
+       <a href="#Function_Request_Data_11">
+        <span class="tocnumber">
+         18.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-68">
+     <a href="#CreateNewGame">
+      <span class="tocnumber">
+       19
+      </span>
+      <span class="toctext">
+       CreateNewGame
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-69">
+       <a href="#Summary_17">
+        <span class="tocnumber">
+         19.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-70">
+       <a href="#Function_Request_Data_12">
+        <span class="tocnumber">
+         19.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-71">
+       <a href="#ServerNewGameData">
+        <span class="tocnumber">
+         19.3
+        </span>
+        <span class="toctext">
+         ServerNewGameData
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-72">
+         <a href="#Note">
+          <span class="tocnumber">
+           19.3.1
+          </span>
+          <span class="toctext">
+           Note
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-73">
+     <a href="#SaveGame">
+      <span class="tocnumber">
+       20
+      </span>
+      <span class="toctext">
+       SaveGame
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-74">
+       <a href="#Summary_18">
+        <span class="tocnumber">
+         20.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-75">
+       <a href="#Function_Request_Data_13">
+        <span class="tocnumber">
+         20.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-76">
+       <a href="#Possible_Errors_7">
+        <span class="tocnumber">
+         20.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-77">
+     <a href="#DeleteSaveFile">
+      <span class="tocnumber">
+       21
+      </span>
+      <span class="toctext">
+       DeleteSaveFile
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-78">
+       <a href="#Summary_19">
+        <span class="tocnumber">
+         21.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-79">
+       <a href="#Function_Request_Data_14">
+        <span class="tocnumber">
+         21.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-80">
+       <a href="#Possible_Errors_8">
+        <span class="tocnumber">
+         21.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-81">
+     <a href="#DeleteSaveSession">
+      <span class="tocnumber">
+       22
+      </span>
+      <span class="toctext">
+       DeleteSaveSession
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-82">
+       <a href="#Summary_20">
+        <span class="tocnumber">
+         22.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-83">
+       <a href="#Function_Request_Data_15">
+        <span class="tocnumber">
+         22.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-84">
+       <a href="#Possible_Errors_9">
+        <span class="tocnumber">
+         22.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-85">
+     <a href="#EnumerateSessions">
+      <span class="tocnumber">
+       23
+      </span>
+      <span class="toctext">
+       EnumerateSessions
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-86">
+       <a href="#Summary_21">
+        <span class="tocnumber">
+         23.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-87">
+       <a href="#Function_Response_Data_9">
+        <span class="tocnumber">
+         23.2
+        </span>
+        <span class="toctext">
+         Function Response Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-88">
+       <a href="#Possible_Errors_10">
+        <span class="tocnumber">
+         23.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-89">
+       <a href="#SessionSaveStruct">
+        <span class="tocnumber">
+         23.4
+        </span>
+        <span class="toctext">
+         SessionSaveStruct
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-90">
+       <a href="#SaveHeader">
+        <span class="tocnumber">
+         23.5
+        </span>
+        <span class="toctext">
+         SaveHeader
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-91">
+     <a href="#LoadGame">
+      <span class="tocnumber">
+       24
+      </span>
+      <span class="toctext">
+       LoadGame
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-92">
+       <a href="#Summary_22">
+        <span class="tocnumber">
+         24.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-93">
+       <a href="#Function_Request_Data_16">
+        <span class="tocnumber">
+         24.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-94">
+       <a href="#Possible_Errors_11">
+        <span class="tocnumber">
+         24.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-95">
+     <a href="#UploadSaveGame">
+      <span class="tocnumber">
+       25
+      </span>
+      <span class="toctext">
+       UploadSaveGame
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-96">
+       <a href="#Summary_23">
+        <span class="tocnumber">
+         25.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-97">
+       <a href="#Multipart_Field">
+        <span class="tocnumber">
+         25.2
+        </span>
+        <span class="toctext">
+         Multipart Field
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-98">
+       <a href="#Function_Request_Data_17">
+        <span class="tocnumber">
+         25.3
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-99">
+       <a href="#Possible_Errors_12">
+        <span class="tocnumber">
+         25.4
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-100">
+     <a href="#DownloadSaveGame">
+      <span class="tocnumber">
+       26
+      </span>
+      <span class="toctext">
+       DownloadSaveGame
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-101">
+       <a href="#Summary_24">
+        <span class="tocnumber">
+         26.1
+        </span>
+        <span class="toctext">
+         Summary
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-102">
+       <a href="#Function_Request_Data_18">
+        <span class="tocnumber">
+         26.2
+        </span>
+        <span class="toctext">
+         Function Request Data
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-103">
+       <a href="#Possible_Errors_13">
+        <span class="tocnumber">
+         26.3
+        </span>
+        <span class="toctext">
+         Possible Errors
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-104">
+     <a href="#See_also">
+      <span class="tocnumber">
+       27
+      </span>
+      <span class="toctext">
+       See also
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <p>
+  This page is a copy of the HTTPS API section of the
+  <code>
+   DedicatedServerAPIDocs.md
+  </code>
+  document distributed to every player, with some community notes and edits.
+ </p>
+ <p>
+  For a list of community tools, see
+  <a href="/wiki/Dedicated_servers#Community_tools" title="Dedicated servers">
+   Dedicated_servers#Community_Tools
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="HTTPS_API">
+   HTTPS API
+  </span>
+ </h2>
+ <p>
+  The Dedicated Server HTTPS API is designed for reliably retrieving data from the running dedicated server instance and performing server management. It is available when the server has started up and is not actively loading a save game or performing a map change. To check for HTTPS API availability, the Lightweight Query API can be used.
+ </p>
+ <p>
+  The HTTPS API endpoint is available at
+  <code>
+   /api/v1
+  </code>
+  (e.g.
+  <code>
+   <a class="external free" href="https://127.0.0.1:7777/api/v1" rel="nofollow">
+    https://127.0.0.1:7777/api/v1
+   </a>
+  </code>
+  ).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Certificate_Validation_and_Encryption">
+   Certificate Validation and Encryption
+  </span>
+ </h3>
+ <p>
+  The HTTPS API is always wrapped in a TLS tunnel, even if the user did not provide a certificate for the Dedicated Server.
+ </p>
+ <p>
+  User certificates will be looked up at the following path (where $InstallRoot$ is the path where the Dedicated Server is installed):
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     File Path
+    </th>
+    <th>
+     File Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     $InstallRoot$/FactoryGame/Certificates/cert_chain.pem
+    </td>
+    <td>
+     Certificate Chain (PEM)
+    </td>
+    <td>
+     Certificate chain in PEM format
+    </td>
+   </tr>
+   <tr>
+    <td>
+     $InstallRoot$/FactoryGame/Certificates/private_key.pem
+    </td>
+    <td>
+     Private Key (PEM)
+    </td>
+    <td>
+     Certificate's private key in PEM format
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  If no certificate is provided by the user, the Dedicated Server will generate its own self-signed certificate and use it to encrypt all traffic flowing through the HTTPS API. Clients should be able to handle the HTTPS certificate being self-signed, recognize that case, and handle it appropriately.
+ </p>
+ <p>
+  <b>
+   Community Note
+  </b>
+  : The generated TLS cert is saved into the ServerSettings.PORT.sav. See
+  <a href="/wiki/Dedicated_servers/Configuration_files#Server_Settings_File" title="Dedicated servers/Configuration files">
+   Dedicated_servers/Configuration_files#Server_Settings_File
+  </a>
+ </p>
+ <p>
+  When presented with a self-signed certificate from the Dedicated Server, the game client will prompt the user to manually confirm that the certificate is from a trusted authority. Once confirmed, the certificate is cached locally and is trusted for that specific server until the user revokes it or the server changes the certificate.
+ </p>
+ <p>
+  <b>
+   Community Note: Many implementations of cURL will fail when validating a self-signed certificate as used in many servers and adding
+   <code>
+    --insecure
+   </code>
+   or the equivalent may be required to establish a connection to the server
+  </b>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Schema">
+   Schema
+  </span>
+ </h3>
+ <p>
+  The HTTPS API is based on a simple JSON schema used to pass data to the functions executing on the server and pass responses back to the caller. All server API functions are executed as POST requests, although certain query requests can be executed via GET requests if they do not require any data to be provided.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Request_Schema">
+   Request Schema
+  </span>
+ </h4>
+ <p>
+  Content Type for requests should be set to
+  <code>
+   application/json
+  </code>
+  . Encoding should preferably be set to
+  <code>
+   utf-8
+  </code>
+  , but Dedicated Servers support all encodings supported by the ICU localization library.
+ </p>
+ <p>
+  Request Object has the following properties:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     function
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the API function to execute. Names of the API functions and their behavior are described below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     data
+    </td>
+    <td>
+     object
+    </td>
+    <td>
+     Data to pass to the function to execute. Format of the object depends on the function being executed
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  An example JSON would look like this:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-json mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"function"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SetAutoLoadSession"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"SessionName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What a game"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre>
+ </div>
+ <p>
+  Dedicated Server HTTPS API supports the following standard headers:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Header Name
+    </th>
+    <th>
+     Notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Content-Encoding
+    </td>
+    <td>
+     Optional. Only gzip and deflate are supported
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Authorization
+    </td>
+    <td>
+     Required for most non-Authorization API functions. Only Bearer tokens are supported. See Authorization for more info
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The following Satisfactory-specific headers can also be used in the request:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Header Name
+    </th>
+    <th>
+     Data Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     X-FactoryGame-PlayerId
+    </td>
+    <td>
+     Hex String
+    </td>
+    <td>
+     Hex-encoded byte array encoding the ID of the player on behalf of which the request is made
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The
+  <code>
+   X-FactoryGame-PlayerId
+  </code>
+  header is only needed to obtain the server join/encryption tickets used for joining the server, and its format is highly specific to the Satisfactory version running, Unreal Engine version, and the Online Backend used by the player.
+ </p>
+ <p>
+  Generally, the first byte of the ID indicates the type of Online Backend used (1 for Epic Games Store, 6 for Steam, see values in UE's EOnlineServices type), and the following bytes are specific to the Online Backend, but generally represent the player account ID. For Steam, it would be a big-endian uint64 representing the player's SteamID64, and for Epic, it would be a HEX-encoded EOS ProductUserId string.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Response_Schema">
+   Response Schema
+  </span>
+ </h4>
+ <p>
+  The Dedicated Server can return a variety of different HTTP status codes, most prominent ones are described here:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Status Code
+    </th>
+    <th>
+     Status Code Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     200
+    </td>
+    <td>
+     Ok
+    </td>
+    <td>
+     The function has been executed successfully. The response body will either be an Error Response or a Success Response
+    </td>
+   </tr>
+   <tr>
+    <td>
+     201
+    </td>
+    <td>
+     Created
+    </td>
+    <td>
+     The function has been executed and returned no error. Returned by some functions to indicate that a new file has been created, such as UploadSaveGame
+    </td>
+   </tr>
+   <tr>
+    <td>
+     202
+    </td>
+    <td>
+     Accepted
+    </td>
+    <td>
+     The function has been executed, but is still being processed. This is returned by some functions with side effects, such as LoadGame
+    </td>
+   </tr>
+   <tr>
+    <td>
+     204
+    </td>
+    <td>
+     No Content
+    </td>
+    <td>
+     The function has been executed successfully, but returned no data (and no error)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     400
+    </td>
+    <td>
+     Bad Request
+    </td>
+    <td>
+     Only returned when the request body failed to be parsed as valid JSON or multipart request. In other cases, error response
+     <code>
+      bad_request
+     </code>
+     is used
+    </td>
+   </tr>
+   <tr>
+    <td>
+     401
+    </td>
+    <td>
+     Denied
+    </td>
+    <td>
+     Authentication token is missing, cannot be parsed, or has expired
+    </td>
+   </tr>
+   <tr>
+    <td>
+     403
+    </td>
+    <td>
+     Forbidden
+    </td>
+    <td>
+     Provided authentication does not allow executing the provided function, or when a function requiring authentication is called without one
+    </td>
+   </tr>
+   <tr>
+    <td>
+     404
+    </td>
+    <td>
+     Not Found
+    </td>
+    <td>
+     The specified function cannot be found, or when the function cannot find the specified resource in some cases (for example, for DownloadSaveGame)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     415
+    </td>
+    <td>
+     Unsupported Media
+    </td>
+    <td>
+     Specified charset or content encoding is not supported, or multipart data is malformed
+    </td>
+   </tr>
+   <tr>
+    <td>
+     500
+    </td>
+    <td>
+     Server Error
+    </td>
+    <td>
+     An internal server error has occurred when executing the function
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The Content Type of the server response will be set to
+  <code>
+   application/json
+  </code>
+  and
+  <code>
+   utf-8
+  </code>
+  encoding. Depending on the outcome of the operation, it might return either an error response or a data response.
+ </p>
+ <p>
+  Error Response has the following structure:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     errorCode
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Machine-friendly code indicating the type of the error that the executed function returned
+    </td>
+   </tr>
+   <tr>
+    <td>
+     errorMessage
+    </td>
+    <td>
+     string?
+    </td>
+    <td>
+     Optional. Human-friendly error message explaining the error
+    </td>
+   </tr>
+   <tr>
+    <td>
+     errorData
+    </td>
+    <td>
+     object?
+    </td>
+    <td>
+     Optional. Additional information about the error, for example, list of parameters that are missing
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  An example JSON would look like this:
+ </p>
+ <div class="mw-highlight mw-highlight-lang-json mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"insufficient_scope"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The client is missing required privileges to access the given function"</span>
+<span class="p">}</span>
+</pre>
+ </div>
+ <p>
+  Success Response has the following structure:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     data
+    </td>
+    <td>
+     object?
+    </td>
+    <td>
+     Data returned by the function executed. Type depends on the function the request performed
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="File_Responses">
+   File Responses
+  </span>
+ </h4>
+ <p>
+  Certain Dedicated Server API functions can respond with a file attachment instead of using the standard Server Response JSON schema. Such responses can be distinguished by the presence of the
+  <code>
+   Content-Disposition
+  </code>
+  header, indicating that the
+  <code>
+   Content-Type
+  </code>
+  and body represent a file attachment and not a standard Server API response body.
+ </p>
+ <p>
+  Such functions can still return a normal server response in case of an Error Response. Currently, the only function that utilizes the File Response functionality is
+  <code>
+   DownloadSaveGame
+  </code>
+  , which returns the save game file as a response without any additional Server API metadata attachments.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Multipart_Requests">
+   Multipart Requests
+  </span>
+ </h4>
+ <p>
+  Certain Server API functions can take both Server API request payload and a file attachment. Such functions should use
+  <code>
+   multipart/form-data
+  </code>
+  Content-Type and encode both the payload and the Server API request body as separate multipart parts.
+ </p>
+ <p>
+  Multipart Part named
+  <code>
+   data
+  </code>
+  should be present in all multipart requests and encode the request object JSON with the same schema and restrictions as the normal non-multipart requests. The charset should be provided as a separate multipart part with a special name
+  <code>
+   _charset_
+  </code>
+  , and contain the name of the charset used for encoding the Server API request as plain text.
+ </p>
+ <p>
+  Names of other multipart attachments are specific to the functions using multipart requests. Currently, multipart requests are only used by the
+  <code>
+   UploadSaveGame
+  </code>
+  function for uploading save game files.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Authentication">
+   Authentication
+  </span>
+ </h2>
+ <p>
+  The Dedicated Server API requires authentication for most of its functions. Authentication format used is Bearer tokens, which are issued by the Dedicated Server when using certain API functions that require no Authentication (such as
+  <code>
+   PasswordlessLogin
+  </code>
+  ), or functions that require additional security verification (such as
+  <code>
+   PasswordLogin
+  </code>
+  ). Tokens generated by these functions are short-lived and are bound to the specific player account.
+ </p>
+ <p>
+  Authentication Tokens internally consist of two parts separated by the dot character ('.'):
+ </p>
+ <ul>
+  <li>
+   Base64-encoded JSON token payload
+  </li>
+  <li>
+   HEX-encoded Fingerprint
+  </li>
+ </ul>
+ <p>
+  JSON token payload can be retrieved to determine the privilege level granted by the token, while the fingerprint part is used by the server to check the validity of the token and whenever it can be used currently.
+ </p>
+ <p>
+  Internal Authentication Token Payload:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     pl
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Privilege Level granted by this token. See possible values below
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Possible Privilege Level values:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Privilege Level
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     NotAuthenticated
+    </td>
+    <td>
+     The client is not Authenticated
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Client
+    </td>
+    <td>
+     Client is Authenticated with Client privileges
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Administrator
+    </td>
+    <td>
+     Client is Authenticated with Admin privileges
+    </td>
+   </tr>
+   <tr>
+    <td>
+     InitialAdmin
+    </td>
+    <td>
+     Client is Authenticated as Initial Admin with privileges to Claim the server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     APIToken
+    </td>
+    <td>
+     Client is Authenticated as Third Party Application
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The following functions are used by the game client to perform player authentication:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Function Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     PasswordlessLogin
+    </td>
+    <td>
+     Attempts logging in as a player without a password.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PasswordLogin
+    </td>
+    <td>
+     Attempts logging in as a player with a password.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     VerifyAuthenticationToken
+    </td>
+    <td>
+     Checks if the provided Authentication token is valid. Returns Ok if valid
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Third Party Applications should NOT use
+  <code>
+   PasswordLogin
+  </code>
+  or
+  <code>
+   PasswordlessLogin
+  </code>
+  , and should instead rely on the Application Tokens.
+ </p>
+ <p>
+  Application tokens do not expire and are granted by issuing the command
+  <code>
+   server.GenerateAPIToken
+  </code>
+  in the Dedicated Server console. The generated token can then be passed to the
+  <code>
+   Authorization
+  </code>
+  header with Bearer type to perform any Server API requests on behalf of the server.
+ </p>
+ <p>
+  Application tokens generated previously can still be pruned using the
+  <code>
+   server.InvalidateAPITokens
+  </code>
+  console command.
+ </p>
+ <p>
+  Authentication requirement can be lifted for locally running Dedicated Server instances serving on the loopback network adapter. To allow unrestricted Dedicated Server API access on the localhost, set
+  <code>
+   FG.DedicatedServer.AllowInsecureLocalAccess
+  </code>
+  console variable to
+  <code>
+   1
+  </code>
+  . It can be performed automatically using the following command line argument:
+  <code>
+   -ini:Engine:[SystemSettings]:FG.DedicatedServer.AllowInsecureLocalAccess=1
+  </code>
+ </p>
+ <h2>
+  <span class="mw-headline" id="HealthCheck">
+   HealthCheck
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Performs a health check on the Dedicated Server API. Allows passing additional data between Modded Dedicated Server and Modded Game Client.
+This function requires no Authentication.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ClientCustomData
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Custom Data passed from the Game Client or Third Party service. Not used by vanilla Dedicated Servers
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Health
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     "healthy" if tick rate is above ten ticks per second, "slow" otherwise
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ServerCustomData
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Custom Data passed from the Dedicated Server to the Game Client or Third Party service. Vanilla Dedicated Server returns empty string
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="VerifyAuthentication_Token">
+   VerifyAuthentication Token
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_2">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Verifies the Authentication token provided to the Dedicated Server API. Returns No Content if the provided token is valid.
+This function does not require input parameters and does not return any data.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <h2>
+  <span class="mw-headline" id="PasswordlessLogin">
+   PasswordlessLogin
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_3">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Attempts to perform a passwordless login to the Dedicated Server as a player. Passwordless login is possible if the Dedicated Server is not claimed,
+or if Client Protection Password is not set for the Dedicated Server.
+This function requires no Authentication.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_2">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     MinimumPrivilegeLevel
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Minimum privilege level to attempt to acquire by logging in. See Privilege Level enum for possible values
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_2">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     authenticationToken
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Authentication Token in case login is successful
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <b>
+   Community Note
+  </b>
+  : In the official documentation, the property name is
+  <code>
+   AuthenticationToken
+  </code>
+  with an uppercase A, but this is incorrect. The server responds with the property name with a lowercase A.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     passwordless_login_not_possible
+    </td>
+    <td>
+     Passwordless login is not currently possible for this Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="PasswordLogin">
+   PasswordLogin
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_4">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Attempts to log in to the Dedicated Server as a player using either Admin Password or Client Protection Password.
+This function requires no Authentication.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_3">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     MinimumPrivilegeLevel
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Minimum privilege level to attempt to acquire by logging in. See Privilege Level enum for possible values
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Password
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Password to attempt to log in with, in plaintext
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_3">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     AuthenticationToken
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Authentication Token in case login is successful
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_2">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     wrong_password
+    </td>
+    <td>
+     Provided Password did not match any of the passwords set for this Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <br/>
+ </p>
+ <h2>
+  <span class="mw-headline" id="QueryServerState">
+   QueryServerState
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_5">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Retrieves the current state of the Dedicated Server. Does not require any input parameters.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_4">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ServerGameState
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Current game state of the server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <b>
+   Community Note
+  </b>
+  : It's obviously not a string. Ignore that. Also it's
+  <code>
+   serverGameState
+  </code>
+  , with a lowercase 's'
+ </p>
+ <h3>
+  <span class="mw-headline" id="ServerGameState">
+   ServerGameState
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   ServerGameState
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ActiveSessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the currently loaded game session
+    </td>
+   </tr>
+   <tr>
+    <td>
+     NumConnectedPlayers
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Number of the players currently connected to the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PlayerLimit
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Maximum number of players that can be connected to the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TechTier
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Maximum Tech Tier of all Schematics currently unlocked
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActiveSchematic
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Schematic currently set as Active Milestone
+    </td>
+   </tr>
+   <tr>
+    <td>
+     GamePhase
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Current game phase. None if no game is running
+    </td>
+   </tr>
+   <tr>
+    <td>
+     IsGameRunning
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if the save is currently loaded, false if the server is waiting for the session to be created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TotalGameDuration
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Total time the current save has been loaded, in seconds
+    </td>
+   </tr>
+   <tr>
+    <td>
+     IsGamePaused
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if the game is paused. If the game is paused, total game duration does not increase
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AverageTickRate
+    </td>
+    <td>
+     float
+    </td>
+    <td>
+     Average tick rate of the server, in ticks per second
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AutoLoadSessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the session that will be loaded when the server starts automatically
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Community_Notes">
+   Community Notes
+  </span>
+ </h3>
+ <p>
+  The first letter of all of the keys above for ServerGameState should be lowercase.
+ </p>
+ <table class="wikitable">
+  <caption style="text-align:left">
+   GamePhase
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Value
+    </th>
+    <th>
+     Phase Number
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     /Script/FactoryGame.FGGamePhase'/Game/FactoryGame/GamePhases/GP_Project_Assembly_Phase_1.GP_Project_Assembly_Phase_1'
+    </td>
+    <td>
+     Phase 1
+    </td>
+    <td>
+     Distribution Platform
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Script/FactoryGame.FGGamePhase'/Game/FactoryGame/GamePhases/GP_Project_Assembly_Phase_2.GP_Project_Assembly_Phase_2'
+    </td>
+    <td>
+     Phase 2
+    </td>
+    <td>
+     Construction Dock
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Other phase names probably follow the same format. See
+  <a href="/wiki/Space_Elevator#Project_Assembly_phases" title="Space Elevator">
+   Space_Elevator#Project_Assembly_phases
+  </a>
+ </p>
+ <table class="wikitable">
+  <caption style="text-align:left">
+   ActiveSchematic
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Value
+    </th>
+    <th>
+     Description
+    </th>
+    <th>
+     Tier
+    </th>
+   </tr>
+   <tr>
+    <td>
+     /Script/Engine.BlueprintGeneratedClass'/Game/FactoryGame/Schematics/Progression/Schematic_6-7.Schematic_6-7_C'
+    </td>
+    <td>
+     Railway Signalling
+    </td>
+    <td>
+     6
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Script/Engine.BlueprintGeneratedClass'/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C'
+    </td>
+    <td>
+     Logistics Mk.5
+    </td>
+    <td rowspan="1">
+     7
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="GetServerOptions">
+   GetServerOptions
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_6">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Retrieves currently applied server options and server options that are still pending application (because of needing session or server restart)
+Does not require input parameters.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_5">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ServerOptions
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     All current server option values. Key is the name of the option, and value is its stringified value
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PendingServerOptions
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Server option values that will be applied when the session or server restarts
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="GetAdvancedGameSettings">
+   GetAdvancedGameSettings
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_7">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Retrieves currently applied advanced game settings. Does not require input parameters.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_6">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CreativeModeEnabled
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if Advanced Game Settings are enabled for the currently loaded session
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AdvancedGameSettings
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Values of Advanced Game Settings. Key is the name of the setting, and value is its stringified value
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="ApplyAdvancedGameSettings">
+   ApplyAdvancedGameSettings
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_8">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Applies new values to the provided Advanced Game Settings properties. Will automatically enable Advanced Game Settings for the currently loaded save if they are not enabled already.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_4">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     AppliedAdvancedGameSettings
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Key is the name of the Advanced Game Setting, and the Value is the new setting value as string
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <br/>
+ </p>
+ <h2>
+  <span class="mw-headline" id="ClaimServer">
+   ClaimServer
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_9">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Claims this Dedicated Server if it is not claimed. Requires InitialAdmin privilege level, which can only be acquired by attempting passwordless login
+while the server does not have an Admin Password set, e.g. it is not claimed yet.
+Function does not return any data in case of success, and the server is claimed. The client should drop InitialAdmin privileges after that
+and use returned AuthenticationToken instead, and update it's cached server game state by calling QueryServerState.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_5">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ServerName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     New name of the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AdminPassword
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Admin Password to set on the Dedicated Server, in plaintext
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_7">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     authenticationToken
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     New Authentication Token that the Caller should use to drop Initial Admin privileges
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <b>
+   Community Note
+  </b>
+  : In the official documentation, the property name is
+  <code>
+   AuthenticationToken
+  </code>
+  with an uppercase A, but this is incorrect. The server responds with the property name with a lowercase A.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_3">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     server_claimed
+    </td>
+    <td>
+     Server has already been claimed
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="RenameServer">
+   RenameServer
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_10">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Renames the Dedicated Server once it has been claimed. Requires Admin privileges.
+Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_6">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ServerName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     New name of the Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_4">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     server_not_claimed
+    </td>
+    <td>
+     Server has not been claimed yet. Use ClaimServer function instead
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="SetClientPassword">
+   SetClientPassword
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_11">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Updates the currently set Client Protection Password. This will invalidate all previously issued Client authentication tokens.
+Pass empty string to remove the password, and let anyone join the server as Client.
+Requres Admin privileges. Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_7">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Password
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Client Password to set on the Dedicated Server, in plaintext
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_5">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     server_not_claimed
+    </td>
+    <td>
+     Server has not been claimed yet. Use ClaimServer function instead before calling SetClientPassword
+    </td>
+   </tr>
+   <tr>
+    <td>
+     password_in_use
+    </td>
+    <td>
+     Same password is already used as Admin Password
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="SetAdminPassword">
+   SetAdminPassword
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_12">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Updates the currently set Admin Password. This will invalidate all previously issued Client and Admin authentication tokens.
+Requires Admin privileges. Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_8">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Password
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Admin Password to set on the Dedicated Server, in plaintext
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AuthenticationToken
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     New Admin authentication token to use, since the token used for this request will become invalidated
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_6">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     server_not_claimed
+    </td>
+    <td>
+     Server has not been claimed yet. Use ClaimServer function instead
+    </td>
+   </tr>
+   <tr>
+    <td>
+     cannot_reset_admin_password
+    </td>
+    <td>
+     Attempt to set Password to empty string. Admin Password cannot be reset
+    </td>
+   </tr>
+   <tr>
+    <td>
+     password_in_use
+    </td>
+    <td>
+     Same password is already used as Client Protection Password
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="SetAutoLoadSessionName">
+   SetAutoLoadSessionName
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_13">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Updates the name of the session that the Dedicated Server will automatically load on startup. Does not change currently loaded session.
+Requires Admin privileges. Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_9">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the session to automatically load on Dedicated Server startup
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Run_Command">
+   Run Command
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_14">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Runs the given Console Command on the Dedicated Server, and returns it's output to the Console. Requires Admin privileges.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_10">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Command
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Command Line to run on the Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_8">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CommandResult
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Output of the command executed, with \n used as line separator
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ReturnValue
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     Whether the command executed successfully
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Shutdown">
+   Shutdown
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_15">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Shuts down the Dedicated Server. If automatic restart script is setup, this allows restarting the server to apply new settings or update.
+Requires Admin privileges. Shutdowns initiated by remote hosts are logged with their IP and their token.
+Function does not return any data on success, and does not take any parameters.
+ </p>
+ <h2>
+  <span class="mw-headline" id="ApplyServerOptions">
+   ApplyServerOptions
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_16">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Applies new Server Options to the Dedicated Server. Requires Admin privileges.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_11">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     UpdatedServerOptions
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Key is the name of the Server Option, and the Value is the new value as string
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="CreateNewGame">
+   CreateNewGame
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_17">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Creates a new session on the Dedicated Server, and immediately loads it. HTTPS API becomes temporarily unavailable when map loading is in progress   |
+Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_12">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     NewGameData
+    </td>
+    <td>
+     ServerNewGameData
+    </td>
+    <td>
+     Parameters needed to create new game session
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="ServerNewGameData">
+   ServerNewGameData
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   ServerNewGameData
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the session to create
+    </td>
+   </tr>
+   <tr>
+    <td>
+     MapName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Path Name to the Map Package to use as a map. If not specified, default level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     StartingLocation
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the starting location to use. Leaving it empty will use random starting location
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SkipOnboarding
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     Whether the Onboarding should be skipped. Currently, Onboarding is always skipped on the Dedicated Servers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AdvancedGameSettings
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Advanced Game Settings to apply to the newly created session
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CustomOptionsOnlyForModding
+    </td>
+    <td>
+     map&lt;string, string&gt;
+    </td>
+    <td>
+     Custom Options to pass to the newly created session URL. Not used by vanilla Dedicated Servers
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="Note">
+   Note
+  </span>
+ </h5>
+ <p>
+  Currently SkipOnboarding must be set to bSkipOnboarding, due to an issue with the property names.
+ </p>
+ <h2>
+  <span class="mw-headline" id="SaveGame">
+   SaveGame
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_18">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Saves the currently loaded session into the new save game file named as the argument.
+Requires Admin privileges. SaveName might be changed to satisfy file system restrictions on file names.
+Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_13">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file to create. Passed name might be sanitized
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_7">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     save_game_failed
+    </td>
+    <td>
+     Failed to save the game. Additional information might be available in errorMessage property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="DeleteSaveFile">
+   DeleteSaveFile
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_19">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Deletes the existing save game file from the server. Requires Admin privileges. SaveName might be changed to satisfy file system
+restrictions on file names. Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_14">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file to delete. Passed name might be sanitized
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_8">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     delete_save_file_failed
+    </td>
+    <td>
+     Failed to delete the save game file. Additional information might be available in errorMessage property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="DeleteSaveSession">
+   DeleteSaveSession
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_20">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Deletes all save files belonging to the specific session name. Requires Admin privileges. SessionName must be
+a valid session name with at least one saved save game file belonging to it.
+Function does not return any data on success.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_15">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save session to delete
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_9">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     session_not_found
+    </td>
+    <td>
+     Failed to find any save game files belonging to the given session
+    </td>
+   </tr>
+   <tr>
+    <td>
+     delete_save_session_failed
+    </td>
+    <td>
+     Failed to delete save session files. Additional information might be available in errorMessage property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="EnumerateSessions">
+   EnumerateSessions
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_21">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Enumerates all save game files available on the Dedicated Server. Requires Admin privileges. Function does not require any additional parameters.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Response_Data_9">
+   Function Response Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Response Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Sessions
+    </td>
+    <td>
+     array&lt;SessionSaveStruct&gt;
+    </td>
+    <td>
+     List of sessions available on the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CurrentSessionIndex
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Index of the currently selected session in the list
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_10">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     enumerate_sessions_failed
+    </td>
+    <td>
+     Failed to enumerate save sessions. Additional information might be available in errorMessage property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="SessionSaveStruct">
+   SessionSaveStruct
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   SessionSaveStruct
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save session
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SaveHeaders
+    </td>
+    <td>
+     array&lt;SaveHeader&gt;
+    </td>
+    <td>
+     All save game files belonging to this session
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="SaveHeader">
+   SaveHeader
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   SaveHeader
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveVersion
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Version of the Save Game format this file was saved with
+    </td>
+   </tr>
+   <tr>
+    <td>
+     BuildVersion
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Changelist of the game or dedicated server this file was saved by
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file in the filesystem
+    </td>
+   </tr>
+   <tr>
+    <td>
+     MapName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Path to the map package this save game file is based on
+    </td>
+   </tr>
+   <tr>
+    <td>
+     MapOptions
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Additional Map URL options this save game was saved with
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SessionName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the session this save game file belongs to
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PlayDurationSeconds
+    </td>
+    <td>
+     integer
+    </td>
+    <td>
+     Amount of seconds the game has been running for in total since the session was created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SaveDateTime
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Date and time on which the save game file was saved
+    </td>
+   </tr>
+   <tr>
+    <td>
+     IsModdedSave
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if this save game file was saved with mods
+    </td>
+   </tr>
+   <tr>
+    <td>
+     IsEditedSave
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if this save game file has been edited by third party tools
+    </td>
+   </tr>
+   <tr>
+    <td>
+     IsCreativeModeEnabled
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if Advanced Game Settings are enabled for this save game
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="LoadGame">
+   LoadGame
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_22">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Loads the save game file by name, optionally with Advanced Game Settings enabled. Requires Admin privileges.
+Dedicated Server HTTPS API will become temporarily unavailable when save game is being loaded.
+Function does not return any data on succcess.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_16">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file to load
+    </td>
+   </tr>
+   <tr>
+    <td>
+     EnableAdvancedGameSettings
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if save game file should be loaded with Advanced Game Settings enabled
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_11">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     save_game_load_failed
+    </td>
+    <td>
+     Failed to find the save game file with the given name on the Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="UploadSaveGame">
+   UploadSaveGame
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_23">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Uploads save game file to the Dedicated Server with the given name, and optionally immediately loads it.
+Requires Admin privileges. If save file is immediately loaded, Dedicated Server HTTPS API will become temporarily unavailable until save game is loaded.
+This function does not return any data on success.
+ </p>
+ <p>
+  This function requires multipart-encoded form data as it's body. The following multipart part names are allowed:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Multipart_Field">
+   Multipart Field
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Multipart Field
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Multipart Field
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     data
+    </td>
+    <td>
+     Standard Request Data body for this request, encoded as utf-8 JSON. Note that this includes the envelope
+    </td>
+   </tr>
+   <tr>
+    <td>
+     saveGameFile
+    </td>
+    <td>
+     File attachment containing the save game file. Contents of the file will be validated on the server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_17">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file to create on the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     LoadSaveGame
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if save game file should be immediately loaded by the Dedicated Server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     EnableAdvancedGameSettings
+    </td>
+    <td>
+     boolean
+    </td>
+    <td>
+     True if save game file should be loaded with Advanced Game Settings enabled
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_12">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     invalid_save_game
+    </td>
+    <td>
+     Invalid save game file encoding, malformed header or corrupted contents
+    </td>
+   </tr>
+   <tr>
+    <td>
+     unsupported_save_game
+    </td>
+    <td>
+     Save game file is too old to be loaded by the Dedicated Server, or is too new
+    </td>
+   </tr>
+   <tr>
+    <td>
+     file_save_failed
+    </td>
+    <td>
+     Failed to save the save game file to the underlying file system
+    </td>
+   </tr>
+   <tr>
+    <td>
+     save_game_load_failed
+    </td>
+    <td>
+     Failed to find the created save game file
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="DownloadSaveGame">
+   DownloadSaveGame
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Summary_24">
+   Summary
+  </span>
+ </h3>
+ <p>
+  Downloads save game with the given name from the Dedicated Server. Requires Admin privileges.
+This function responds with the file attachment containing the save game file on success, and with normal error response in case of error.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Function_Request_Data_18">
+   Function Request Data
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Function Request Data
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property Name
+    </th>
+    <th>
+     Property Type
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     SaveName
+    </td>
+    <td>
+     string
+    </td>
+    <td>
+     Name of the save game file to download from the Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Possible_Errors_13">
+   Possible Errors
+  </span>
+ </h3>
+ <table class="wikitable">
+  <caption>
+   Possible Errors
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Error Code
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     file_not_found
+    </td>
+    <td>
+     Save game file with the provided name is not found on the Dedicated Server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="See_also">
+   See also
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+    Dedicated Servers - Main Page
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+    Dedicated Servers - Configuration Files
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+    Dedicated Servers - Running as a Service
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+    Dedicated Servers - Automatic Updates
+   </a>
+  </li>
+ </ul>
+ <!-- 
+NewPP limit report
+Cached time: 20251027135803
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.052 seconds
+Real time usage: 0.057 seconds
+Preprocessor visited node count: 330/1000000
+Revision size: 34679/4194304 bytes
+Post‐expand include size: 72/4194304 bytes
+Template argument size: 0/4194304 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 2/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1433/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.461      1 Template:Tocright
+100.00%    1.461      1 -total
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:7841-0!canonical and timestamp 20251027135820 and revision id 60018. Rendering was triggered because: edit-page
+ -->
+</div>

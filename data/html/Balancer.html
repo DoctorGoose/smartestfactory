@@ -1,0 +1,1576 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  <b>
+   Balancer
+  </b>
+  may refer to Load Balancer or Belt Balancer.
+  <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+   Splitters
+  </a>
+  are built in a nested way, such that all downstream belts or buildings receive an equal amount of material, regardless if the supply belt is providing sufficient input. A factory that is built this way tends to start up faster, as there is no need to wait for the internal storage to pile up. The size of a balancer grows quadratically as the number of buildings increases.
+ </p>
+ <p>
+  It is the opposite fill method to the
+  <a href="/wiki/Manifold" title="Manifold">
+   manifold
+  </a>
+  .
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Load_balancer">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Load balancer
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Construction">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Construction
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-3">
+    <a href="#Belt_balancer">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Belt balancer
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-4">
+      <a href="#Construction_2">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Construction
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#Elimination">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Elimination
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-6">
+    <a href="#Belt_compressor">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Belt compressor
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Balancer_examples">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Balancer examples
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#Alternate_Examples:">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      Alternate Examples:
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-9">
+      <a href="#2-2:">
+       <span class="tocnumber">
+        5.1
+       </span>
+       <span class="toctext">
+        <b>
+         2-2:
+        </b>
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-10">
+      <a href="#3-3:">
+       <span class="tocnumber">
+        5.2
+       </span>
+       <span class="toctext">
+        <b>
+         3-3:
+        </b>
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-11">
+      <a href="#4-4:">
+       <span class="tocnumber">
+        5.3
+       </span>
+       <span class="toctext">
+        <b>
+         4-4:
+        </b>
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-12">
+      <a href="#6-6:">
+       <span class="tocnumber">
+        5.4
+       </span>
+       <span class="toctext">
+        <b>
+         6-6:
+        </b>
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-13">
+      <a href="#9-9:">
+       <span class="tocnumber">
+        5.5
+       </span>
+       <span class="toctext">
+        <b>
+         9-9:
+        </b>
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-14">
+    <a href="#External_links">
+     <span class="tocnumber">
+      6
+     </span>
+     <span class="toctext">
+      External links
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-15">
+    <a href="#See_also">
+     <span class="tocnumber">
+      7
+     </span>
+     <span class="toctext">
+      See also
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Load_balancer">
+   Load balancer
+  </span>
+ </h2>
+ <p>
+  A
+  <b>
+   load balancer
+  </b>
+  splits 1:n belts equally (one input belt, n output belts).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Construction">
+   Construction
+  </span>
+ </h3>
+ <ul>
+  <li>
+   A
+   <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+    Splitter
+   </a>
+   has a single belt input that can split into two or three outputs.
+  </li>
+  <li>
+   To make 1:4 or 1:8 balancer, simply nest the 1:2 balancers.  To make a 1:9 or 1:27 balancer, simply nest the 1:3 balancers.
+  </li>
+  <li>
+   Similar to above, any balancer that can be made from multiplications of two and three can be built. Example, 6, 12, 18, 24, etc.
+  </li>
+  <li>
+   Balancers with other numbers can be built with simple loop-backs. This loopback will consume some of the belt capacity, reducing the overall throughput. Loop-backs of this sort are necessary for producing fractional splits with denominators that have a prime number composition of values other than two or three. This topic is discussed in detail at
+   <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+    Tutorial:Prime splitter arrays
+   </a>
+   .
+   <ul>
+    <li>
+     Round up the number and build the nearest perfect balancer, then loop back all the unused output.
+    </li>
+    <li>
+     In some cases, there may be more than one unused output. Use mergers to combine them into a single belt before loopback.
+    </li>
+   </ul>
+  </li>
+  <li>
+   To maintain the throughput, the loopback can be split and distributed evenly among the split outputs, using additional splitters and mergers.
+  </li>
+  <li>
+   All the above principles apply to balanced
+   <a class="mw-redirect" href="/wiki/Merger" title="Merger">
+    Mergers
+   </a>
+   . Just flip the entire setup vertically and swap all the splitters and mergers.
+  </li>
+ </ul>
+ <table class="wikitable">
+  <caption>
+   Odd-number balancers
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     1:n
+    </th>
+    <th>
+     Modified from 1:m
+    </th>
+    <th>
+     Outputs to loopback
+    </th>
+    <th>
+     Remarks
+    </th>
+   </tr>
+   <tr>
+    <td>
+     5
+    </td>
+    <td>
+     6
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     7
+    </td>
+    <td>
+     8
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     10
+    </td>
+    <td>
+     -
+    </td>
+    <td>
+     -
+    </td>
+    <td>
+     Split into two, each using 1:5 balancer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     11
+    </td>
+    <td>
+     12
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     13
+    </td>
+    <td>
+     16
+    </td>
+    <td>
+     3
+    </td>
+    <td>
+     Combine three unused outputs before loopback
+    </td>
+   </tr>
+   <tr>
+    <td>
+     14
+    </td>
+    <td>
+     -
+    </td>
+    <td>
+     -
+    </td>
+    <td>
+     Split into two, each using 1:7 balancer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     15
+    </td>
+    <td>
+     16
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Alternative to 1:15 split - split into 1:5, then each futher split into three.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     17
+    </td>
+    <td>
+     18
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:33.5px auto;">
+      <a class="image" href="/wiki/File:Balancer_nested.png" title="Nested balancers built from simple 1:2 or 1:3 balancers.">
+       <img alt="Nested balancers built from simple 1:2 or 1:3 balancers." data-file-height="808" data-file-width="1165" decoding="async" height="83" loading="lazy" src="/images/thumb/Balancer_nested.png/120px-Balancer_nested.png?6192ba" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Nested balancers built from simple 1:2 or 1:3 balancers.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:30px auto;">
+      <a class="image" href="/wiki/File:Balancer_compound.png" title="Balancers built from a combination of 1:2 and 1:3 balancers.">
+       <img alt="Balancers built from a combination of 1:2 and 1:3 balancers." data-file-height="815" data-file-width="1087" decoding="async" height="90" loading="lazy" src="/images/thumb/Balancer_compound.png/120px-Balancer_compound.png?1df693" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Balancers built from a combination of 1:2 and 1:3 balancers.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:19.5px auto;">
+      <a class="image" href="/wiki/File:Balancer_odd.png" title="Odd-number balancers with loop-back (prime splitter arrays). The top examples have bottleneck problem, the bottom examples don't.">
+       <img alt="Odd-number balancers with loop-back (prime splitter arrays). The top examples have bottleneck problem, the bottom examples don't." data-file-height="887" data-file-width="960" decoding="async" height="111" loading="lazy" src="/images/thumb/Balancer_odd.png/120px-Balancer_odd.png?7e60d1" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Odd-number balancers with loop-back (
+     <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+      prime splitter arrays
+     </a>
+     ). The top examples have bottleneck problem, the bottom examples don't.
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Belt_balancer">
+   Belt balancer
+  </span>
+ </h2>
+ <p>
+  A
+  <b>
+   belt balancer
+  </b>
+  splits n:m belts equally (n input belt, m output belts).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Construction_2">
+   Construction
+  </span>
+ </h3>
+ <p>
+  A belt balancer can be built by interlacing multiple load balancers such that they have multiple inputs and multiple outputs.
+ </p>
+ <ul>
+  <li>
+   To maintain the throughput, make sure no segment of the belt is having an item flow rate higher than the capacity of the belt.
+  </li>
+  <li>
+   As such, always split before the merge.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Elimination">
+   Elimination
+  </span>
+ </h3>
+ <p>
+  Whenever possible, avoid the usage of belt balancers. Balancers take up a great deal of space, so it is generally
+  <i>
+   much
+  </i>
+  easier to use another strategy to split up items.
+ </p>
+ <ul>
+  <li>
+   Consider using
+   <a href="/wiki/Manifold" title="Manifold">
+    manifolds
+   </a>
+   instead, if the total item throughput is within the capacity of a belt.
+  </li>
+  <li>
+   Use modular building style for low-compression items, such as
+   <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+    Screws
+   </a>
+   and
+   <a href="/wiki/Quickwire" title="Quickwire">
+    Quickwire
+   </a>
+   . Group them near the buildings that use these ingredients.
+  </li>
+  <li>
+   If the output of a building exactly matches the input of another building, pair these buildings up.
+   <ul>
+    <li>
+     For example, pair an
+     <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+      Iron Ingot
+     </a>
+     <a href="/wiki/Smelter" title="Smelter">
+      Smelter
+     </a>
+     with an
+     <a href="/wiki/Iron_Plate" title="Iron Plate">
+      Iron Plate
+     </a>
+     <a href="/wiki/Constructor" title="Constructor">
+      Constructor
+     </a>
+     or two
+     <a href="/wiki/Wire" title="Wire">
+      Wire
+     </a>
+     Constructors with a
+     <a href="/wiki/Cable" title="Cable">
+      Cable
+     </a>
+     Constructor.
+    </li>
+   </ul>
+  </li>
+  <li>
+   If the item flow rates of the incoming belts are known to be equal, there is no need to balance them, regardless if each belt is full or not.
+   <ul>
+    <li>
+     E.g. two belts carrying 780 Iron Ore each.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:31.5px auto;">
+      <a class="image" href="/wiki/File:Belt_balancer_schematic.png" title="Schematics of belt balancer n:m.">
+       <img alt="Schematics of belt balancer n:m." data-file-height="858" data-file-width="1181" decoding="async" height="87" loading="lazy" src="/images/thumb/Belt_balancer_schematic.png/120px-Belt_balancer_schematic.png?e6dd5a" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Schematics of belt balancer n:m.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:Belt_Balancer_2-2.png" title="2:2 belt balancer.">
+       <img alt="2:2 belt balancer." data-file-height="864" data-file-width="801" decoding="async" height="120" loading="lazy" src="/images/thumb/Belt_Balancer_2-2.png/111px-Belt_Balancer_2-2.png?b32929" width="111"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     2:2 belt balancer.
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Belt_compressor">
+   Belt compressor
+  </span>
+ </h2>
+ <p>
+  Sometimes it is useful to compress n-number of belts into m-number of full-belts, with the last belt carrying the remainder. This can be applicable to: Mega-factories and compressing from multiple sources (Eg multiple
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  outputs).
+ </p>
+ <ul>
+  <li>
+   Fluctuating input rates can cause issues with simple belt compressors.
+   <ul>
+    <li>
+     This mainly happens in recipes that output multiple items at once
+     <ul>
+      <li>
+       Eg
+       <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+        Pure Iron Ingots
+       </a>
+       output 13 items at a time
+      </li>
+     </ul>
+    </li>
+    <li>
+     The Any lines will fill, and the merger takes from them 50:50
+    </li>
+    <li>
+     This incorrectly causes overflow to the top line when space is available at the end of the current load
+    </li>
+   </ul>
+  </li>
+  <li>
+   Buffered Belt Compressors utilize an
+   <a href="/wiki/Storage_Container#Industrial" title="Storage Container">
+    Industrial Storage Container
+   </a>
+   as a buffered merger
+   <ul>
+    <li>
+     Consumes a much larger footprint
+    </li>
+    <li>
+     Requires 48 stacks to back-fill before overflow line begins
+    </li>
+    <li>
+     Has up to 48 stacks of back-fill to ensure main line is adequately supplied
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:Belt_compressor_schematic.png" title="Schematics of belt compressor. If the remainder plus the incoming belt is less than a full belt capacity, continue merging to the next belt.">
+       <img alt="Schematics of belt compressor. If the remainder plus the incoming belt is less than a full belt capacity, continue merging to the next belt." data-file-height="793" data-file-width="739" decoding="async" height="120" loading="lazy" src="/images/thumb/Belt_compressor_schematic.png/112px-Belt_compressor_schematic.png?6df9f5" width="112"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Schematics of belt compressor. If the remainder plus the incoming belt is less than a full belt capacity, continue merging to the next belt.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_vertical_Belt_Compressor.png" title="Top Smart Splitter: any center, overflow left; Bottom Smart Splitter: Any left, overflow center">
+       <img alt="Top Smart Splitter: any center, overflow left; Bottom Smart Splitter: Any left, overflow center" data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_vertical_Belt_Compressor.png/120px-Implementation_of_a_vertical_Belt_Compressor.png?79e3cb" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Top Smart Splitter: any center, overflow left; Bottom Smart Splitter: Any left, overflow center
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_Vertical_Buffered_Belt_Compressor.png" title="Utilizing an Industrial Storage Container as a buffer in a Belt Compressor">
+       <img alt="Utilizing an Industrial Storage Container as a buffer in a Belt Compressor" data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_Vertical_Buffered_Belt_Compressor.png/120px-Implementation_of_a_Vertical_Buffered_Belt_Compressor.png?eac4c6" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Utilizing an Industrial Storage Container as a buffer in a Belt Compressor
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Balancer_examples">
+   Balancer examples
+  </span>
+ </h2>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Two_3-to-3_belt_balancers_in_operation.png">
+    <img alt="Two 3-to-3 belt balancers in operation" class="thumbimage" data-file-height="1440" data-file-width="2560" decoding="async" height="180" loading="lazy" src="/images/thumb/Two_3-to-3_belt_balancers_in_operation.png/320px-Two_3-to-3_belt_balancers_in_operation.png?2fc509" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Two_3-to-3_belt_balancers_in_operation.png" title="Enlarge">
+     </a>
+    </div>
+    Two 3-to-3 belt balancers in operation
+   </div>
+  </div>
+ </div>
+ <p>
+  Perhaps the most important element of factory design in Factorio was balancers. Balancers aren't as critical in Satisfactory for two reasons. The first is that even a massive factory can operate with only a few max-level belts of a single material on the main bus. The second is that Satisfactory machines have much larger buffers on the input and output. This allows for much greater irregularity in belt flow before machines start losing efficiency. That being said, balancers are still important.
+ </p>
+ <p>
+  The concept of balancers is pretty simple. The output belts should be able to draw from the input belts at any ratio. There are hundreds of ways of configuring these but here are a few examples.
+ </p>
+ <p>
+  <b>
+   2-to-2 Belts
+  </b>
+ </p>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Schematic_of_a_2-to-2_belt_balancer.png">
+    <img alt="Schematic of a 2-to-2 belt balancer" class="thumbimage" data-file-height="1519" data-file-width="3475" decoding="async" height="140" loading="lazy" src="/images/thumb/Schematic_of_a_2-to-2_belt_balancer.png/320px-Schematic_of_a_2-to-2_belt_balancer.png?f4f584" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Schematic_of_a_2-to-2_belt_balancer.png" title="Enlarge">
+     </a>
+    </div>
+    <i>
+     Schematic of a 2-to-2 belt balancer
+    </i>
+   </div>
+  </div>
+ </div>
+ <p>
+  Definitely the easiest configuration, there is a load of ways to do this one. One possible configuration looks like this. Left shows the first layer, right the second.
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_2-to-2_belt_balancer_(1_of_2).png" title="Layer 1">
+       <img alt="Layer 1" data-file-height="672" data-file-width="1194" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_2-to-2_belt_balancer_%281_of_2%29.png/120px-Implementation_of_a_2-to-2_belt_balancer_%281_of_2%29.png?8081a3" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 1
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_2-to-2_belt_balancer_(2_of_2).png" title="Layer 2">
+       <img alt="Layer 2" data-file-height="761" data-file-width="1352" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_2-to-2_belt_balancer_%282_of_2%29.png/120px-Implementation_of_a_2-to-2_belt_balancer_%282_of_2%29.png?910d3a" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 2
+    </div>
+   </div>
+  </li>
+ </ul>
+ <p>
+  <b>
+   3-to-3 Belts
+  </b>
+ </p>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Schematic_of_a_3-to-3_belt_balancer.png">
+    <img alt="Schematic of a 3-to-3 belt balancer" class="thumbimage" data-file-height="2331" data-file-width="3475" decoding="async" height="215" loading="lazy" src="/images/thumb/Schematic_of_a_3-to-3_belt_balancer.png/320px-Schematic_of_a_3-to-3_belt_balancer.png?5b1c02" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Schematic_of_a_3-to-3_belt_balancer.png" title="Enlarge">
+     </a>
+    </div>
+    <i>
+     Schematic of a 3-to-3 belt balancer
+    </i>
+   </div>
+  </div>
+ </div>
+ <p>
+  The unique thing about Satisfactory, when compared to Factorio, is the fact that splitters and mergers operate on a 3-to-1 ratio. This means that, unlike Factorio, 3-to-3 belt balancers are straightforward. An example configuration looks like this with left-to-right showing the build-up of the layers.
+ </p>
+ <p>
+  <i>
+   Implementation of a 3-to-3 belt balancer.
+  </i>
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_3-to-3_belt_balancer_(1_of_3).png" title="Layer 1">
+       <img alt="Layer 1" data-file-height="989" data-file-width="1758" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_3-to-3_belt_balancer_%281_of_3%29.png/120px-Implementation_of_a_3-to-3_belt_balancer_%281_of_3%29.png?e242e9" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 1
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_3-to-3_belt_balancer_(2_of_3).png" title="Layer 2">
+       <img alt="Layer 2" data-file-height="1080" data-file-width="1919" decoding="async" height="68" loading="lazy" src="/images/thumb/Implementation_of_a_3-to-3_belt_balancer_%282_of_3%29.png/120px-Implementation_of_a_3-to-3_belt_balancer_%282_of_3%29.png?e8afb0" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 2
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41.5px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_3-to-3_belt_balancer_(3_of_3).png" title="Layer 3">
+       <img alt="Layer 3" data-file-height="1217" data-file-width="2164" decoding="async" height="67" loading="lazy" src="/images/thumb/Implementation_of_a_3-to-3_belt_balancer_%283_of_3%29.png/120px-Implementation_of_a_3-to-3_belt_balancer_%283_of_3%29.png?a66f67" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 3
+    </div>
+   </div>
+  </li>
+ </ul>
+ <p>
+  <b>
+   4-to-4 Belts
+  </b>
+ </p>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Schematic_of_a_4-to-4_belt_balancer.png">
+    <img alt="Schematic of a 4-to-4 belt balancer" class="thumbimage" data-file-height="3288" data-file-width="6338" decoding="async" height="166" loading="lazy" src="/images/thumb/Schematic_of_a_4-to-4_belt_balancer.png/320px-Schematic_of_a_4-to-4_belt_balancer.png?68fd5b" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Schematic_of_a_4-to-4_belt_balancer.png" title="Enlarge">
+     </a>
+    </div>
+    <i>
+     Schematic of a 4-to-4 belt balancer
+    </i>
+   </div>
+  </div>
+ </div>
+ <p>
+  4-to-4 belts are where balancers get interesting. An example using a grid of 2-to-2s as shown in the schematic on the right.
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:30px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_4-to-4_belt_balancer_(1_of_3).png" title="Layer 1">
+       <img alt="Layer 1" data-file-height="1123" data-file-width="1498" decoding="async" height="90" loading="lazy" src="/images/thumb/Implementation_of_a_4-to-4_belt_balancer_%281_of_3%29.png/120px-Implementation_of_a_4-to-4_belt_balancer_%281_of_3%29.png?12d2c8" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 1
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:30px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_4-to-4_belt_balancer_(2_of_3).png" title="Layer 2">
+       <img alt="Layer 2" data-file-height="1207" data-file-width="1609" decoding="async" height="90" loading="lazy" src="/images/thumb/Implementation_of_a_4-to-4_belt_balancer_%282_of_3%29.png/120px-Implementation_of_a_4-to-4_belt_balancer_%282_of_3%29.png?15ca19" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 2
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:30px auto;">
+      <a class="image" href="/wiki/File:Implementation_of_a_4-to-4_belt_balancer_(3_of_3).png" title="Layer 3">
+       <img alt="Layer 3" data-file-height="1208" data-file-width="1611" decoding="async" height="90" loading="lazy" src="/images/thumb/Implementation_of_a_4-to-4_belt_balancer_%283_of_3%29.png/120px-Implementation_of_a_4-to-4_belt_balancer_%283_of_3%29.png?e1fbd9" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Layer 3
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Alternate_Examples:">
+   Alternate Examples:
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="2-2:">
+   <b>
+    2-2:
+   </b>
+  </span>
+ </h3>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:2-2_Flat.png" title="2-2 Flat">
+       <img alt="2-2 Flat" data-file-height="734" data-file-width="697" decoding="async" height="120" loading="lazy" src="/images/thumb/2-2_Flat.png/114px-2-2_Flat.png?7d9b82" width="114"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     2-2 Flat
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:35px auto;">
+      <a class="image" href="/wiki/File:2-2_Vertical.png" title="2-2 Vertical">
+       <img alt="2-2 Vertical" data-file-height="586" data-file-width="880" decoding="async" height="80" loading="lazy" src="/images/thumb/2-2_Vertical.png/120px-2-2_Vertical.png?4b0962" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     2-2 Vertical
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="3-3:">
+   <b>
+    3-3:
+   </b>
+  </span>
+ </h3>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:42.5px auto;">
+      <a class="image" href="/wiki/File:3-3_Flat.png" title="Left Splitter -&gt; Left Inputs">
+       <img alt="Left Splitter -&gt; Left Inputs" data-file-height="771" data-file-width="1424" decoding="async" height="65" loading="lazy" src="/images/thumb/3-3_Flat.png/120px-3-3_Flat.png?9b1da3" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Left Splitter -&gt; Left Inputs
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:37.5px auto;">
+      <a class="image" href="/wiki/File:3-3_Vertical.png" title="Background: Top -&gt; Bottom, Foreground: Bottom -&gt; Top">
+       <img alt="Background: Top -&gt; Bottom, Foreground: Bottom -&gt; Top" data-file-height="391" data-file-width="628" decoding="async" height="75" loading="lazy" src="/images/thumb/3-3_Vertical.png/120px-3-3_Vertical.png?d761aa" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Background: Top -&gt; Bottom, Foreground: Bottom -&gt; Top
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="4-4:">
+   <b>
+    4-4:
+   </b>
+  </span>
+ </h3>
+ <p>
+  <a class="image" href="/wiki/File:4-4.png">
+   <img alt="4-4.png" data-file-height="573" data-file-width="2142" decoding="async" height="143" loading="lazy" src="/images/thumb/4-4.png/535px-4-4.png?aba822" width="535"/>
+  </a>
+ </p>
+ <p>
+  2-2 Flat -&gt; 2-2 Vertical -&gt; 2-2 Flat
+ </p>
+ <h3>
+  <span class="mw-headline" id="6-6:">
+   <b>
+    6-6:
+   </b>
+  </span>
+ </h3>
+ <p>
+  <a class="image" href="/wiki/File:3x3_flat_to_2x2_vertical_balancer.png">
+   <img alt="3x3 flat to 2x2 vertical balancer.png" data-file-height="2151" data-file-width="2858" decoding="async" height="221" loading="lazy" src="/images/thumb/3x3_flat_to_2x2_vertical_balancer.png/294px-3x3_flat_to_2x2_vertical_balancer.png?c3d933" width="294"/>
+  </a>
+ </p>
+ <p>
+  3-3 flat -&gt; 2-2 vertical (generally easier and smaller than a 5x5)
+ </p>
+ <h3>
+  <span class="mw-headline" id="9-9:">
+   <b>
+    9-9:
+   </b>
+  </span>
+ </h3>
+ <p>
+  <a class="image" href="/wiki/File:9-9.png">
+   <img alt="9-9.png" data-file-height="1255" data-file-width="2483" decoding="async" height="270" loading="lazy" src="/images/thumb/9-9.png/535px-9-9.png?cd71ad" width="535"/>
+  </a>
+ </p>
+ <p>
+  3-3 Flat -&gt; 3-3 Vertical -&gt; 3-3 Flat
+ </p>
+ <h2>
+  <span class="mw-headline" id="External_links">
+   External links
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="https://satisfactory-calculator.com/en/balancers" rel="nofollow">
+    satisfactory-calculator.com - Balancers - by EDSM / Anthor
+   </a>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="See_also">
+   See also
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Manifold" title="Manifold">
+    Manifold
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+    Tutorial:Prime splitter arrays
+   </a>
+  </li>
+ </ul>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251015163724
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.059 seconds
+Real time usage: 0.155 seconds
+Preprocessor visited node count: 323/1000000
+Revision size: 9057/4194304 bytes
+Post‐expand include size: 26296/4194304 bytes
+Template argument size: 0/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13140/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 811783/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   23.773      1 Template:PioneerNav
+100.00%   23.773      1 -total
+ 98.20%   23.344      2 Template:Navbox
+  7.34%    1.745     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3807-0!canonical and timestamp 20251015163724 and revision id 58007. Rendering was triggered because: page_view
+ -->
+</div>

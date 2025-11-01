@@ -1,0 +1,1324 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  This page serves as a categorized history section for the
+  <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+   Dedicated servers
+  </a>
+  page, due to the large amount of updates that have been released relating to Dedicated Servers. These changes are categorized by either Early Access or Full Release.
+ </p>
+ <p>
+  Dedicated server patches are being released in par with every game patch. This section only lists changes directly related to the dedicated server itself, changes to multiplayer in general are tracked
+  <a href="/wiki/Multiplayer/History" title="Multiplayer/History">
+   here
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Full_Release">
+   Full Release
+  </span>
+ </h2>
+ <p>
+  All Game Patches from
+  <a href="/wiki/Patch_1.0" title="Patch 1.0">
+   Patch 1.0
+  </a>
+  and onward are now placed in this one unified subsection.
+ </p>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_1.1.1.5" title="Patch 1.1.1.5">
+    Patch 1.1.1.5
+   </a>
+   : Fixed null pointer crash when logging discrepancy between picked up items on client and server
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.1.4" title="Patch 1.1.1.4">
+    Patch 1.1.1.4
+   </a>
+   : Potential fixes to desync issues by adding a keep alive mechanism to the TCP implementation of Reliable Messaging
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.1.3" title="Patch 1.1.1.3">
+    Patch 1.1.1.3
+   </a>
+   : Potential fixes to desync and high CPU usage issues
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+    Patch 1.1.1.1
+   </a>
+   : Potential fix for Dedicated Server crash when unequipping the
+   <a href="/wiki/Zipline" title="Zipline">
+    Zipline
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.6" title="Patch 1.1.0.6">
+    Patch 1.1.0.6
+   </a>
+   : Potential fixes for multiple ReliableMessaging related crashes
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.4" title="Patch 1.1.0.4">
+    Patch 1.1.0.4
+   </a>
+   <ul>
+    <li>
+     Fixed infinite loading screen after server save/load cycle on Linux Dedicated Server
+    </li>
+    <li>
+     Potential fixes for Crashes when reloading a Save while the server is running and there are clients in the session
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.1" title="Patch 1.1.0.1">
+    Patch 1.1.0.1
+   </a>
+   : Potential fix for a crash related to Reliable Replication on Dedicated Servers
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.0" title="Patch 1.1.0.0">
+    Patch 1.1.0.0
+   </a>
+   <ul>
+    <li>
+     Introduced the port TCP 8888 for reliable messaging, and additional command-line and configuration options to control its assignment and external remapping.
+     <ul>
+      <li>
+       Due to the extensive changes made, view
+       <a href="/wiki/Patch_1.1.0.0#Dedicated_Servers_-_Port_Forwarding_Updates" title="Patch 1.1.0.0">
+        Dedicated Servers - Port Forwarding Updates
+       </a>
+       in patch notes.
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.6" title="Patch 1.0.1.6">
+    Patch 1.0.1.6
+   </a>
+   <ul>
+    <li>
+     Bulk data replication
+     <ul>
+      <li>
+       This change requires you to open your current TCP Port (7777 by default) on top of the already open UDP port, you also need to port forward the same port as the game port (7777 UDP by default) +20000 TCP (27777 TCP by default)
+      </li>
+      <li>
+       Please note that the game port values should not be set to a value larger than 45535 since we do not have good enough error handling for this at the moment but will be addresed in the future as we are still fleshing the port selection aspect out
+      </li>
+     </ul>
+    </li>
+    <li>
+     Improves the Foliage, Lightweight, Recipe and Schematic systems in
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     and Dedicated Servers
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.5" title="Patch 1.0.1.5">
+    Patch 1.0.1.5
+   </a>
+   <ul>
+    <li>
+     Fixed an issue where
+     <a href="/wiki/Unreal_Engine#Lightweight_Actors" title="Unreal Engine">
+      lightweight buildable's
+     </a>
+     could be seen but not interacted with, either by walking through them or by dismantling them but not actually being able to remove them until restarting a Dedicated Servers or rejoining a
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Session
+     <ul>
+      <li>
+       This was most commonly seen with Foundations and Walls, but could also affect other buildable's like Road Barriers, Catwalk Walkways, etc.
+      </li>
+     </ul>
+    </li>
+    <li>
+     Fixed an issue where Lightweight buildable's would fail to sample (MMB) in Dedicated Servers or Multiplayer sessions
+    </li>
+    <li>
+     Fixed Windows Dedicated Server not working after a player disconnects until it is restarted
+     <ul>
+      <li>
+       This change required making some changes to port binding, so let us know about any new unexpected behavior
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.3" title="Patch 1.0.1.3">
+    Patch 1.0.1.3
+   </a>
+   : Added a scroll bar to the Server Options in the Server Manager to prevent the “Disable Seasonal Events” option from flowing out of the UI and displaying over the description text
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.2" title="Patch 1.0.1.2">
+    Patch 1.0.1.2
+   </a>
+   <ul>
+    <li>
+     Always show options that are marked as "Hidden in Game" or "Hidden in Main Menu" in Server Manager Server Options tab, regardless of whether the dedicated server has a save loaded or not.
+     <ul>
+      <li>
+       This allows for toggling options like “Disable Seasonal Events” on servers that are already running, Please note that this setting requires a server restart to take effect
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.1" title="Patch 1.0.1.1">
+    Patch 1.0.1.1
+   </a>
+   : Fixed incorrect title in Network Errors
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.5" title="Patch 1.0.0.5">
+    Patch 1.0.0.5
+   </a>
+   : Fixed
+   <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+    Advanced Game Settings
+   </a>
+   being activated unintentionally transferring from the current save to another when starting a new session through the Server Manager
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+    Patch 1.0.0.4
+   </a>
+   <ul>
+    <li>
+     Updated the text for the Server Restart Interval option to make it clearer to understand
+    </li>
+    <li>
+     Fix for Dedicated Server failing to bind the Server API shutting down in some scenarios
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+    Patch 1.0.0.3
+   </a>
+   <ul>
+    <li>
+     Fixed Advanced Game Settings not being Reset when creating a new game in some scenarios
+    </li>
+    <li>
+     Fixed Dedicated Server failing to bind the Server API shutting down the server
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.1" title="Patch 1.0.0.1">
+    Patch 1.0.0.1
+   </a>
+   <ul>
+    <li>
+     Fixed two crashes related to AbstractInstance that could occur when joining specific saves in
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     or Dedicated servers
+    </li>
+    <li>
+     Fix for Dedicated Server Manager/HTTP API not binding to the correct bind address when there is only one network adapter in the system or multihome active, resulting in Server Manager not working.
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0" title="Patch 1.0">
+    Patch 1.0
+   </a>
+   :
+   <sup class="reference" id="cite_ref-Reddit_1-0">
+    <a href="#cite_note-Reddit-1">
+     <span class="cite-bracket">
+      [
+     </span>
+     1
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <sup class="reference" id="cite_ref-yt-8piXNQwcUw@162_2-0">
+    <a href="#cite_note-yt-8piXNQwcUw@162-2">
+     <span class="cite-bracket">
+      [
+     </span>
+     2
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+   <ul>
+    <li>
+     Now easier to install due to a decrease in the install size.
+    </li>
+    <li>
+     Now only uses one port: UDP/TCP 7777.
+    </li>
+    <li>
+     Introduced both a Windows application and an in-game console application.
+    </li>
+    <li>
+     Introduced support for both IPv4 and IPv6.
+    </li>
+    <li>
+     Introduced support for TLS end-to-end encryption for both server and game data/traffic.
+    </li>
+    <li>
+     Introduced support for
+     <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+      Advanced Game Settings
+     </a>
+     .
+    </li>
+    <li>
+     Introduced a way for server admins to download the save file directly from within the server manager.
+    </li>
+    <li>
+     Introduced support for
+     <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+      HTTP API
+     </a>
+     methods between the server and the client.
+     <ul>
+      <li>
+       Future mod support will allow use of the HTTP API to perform functions from within game mods.
+      </li>
+     </ul>
+    </li>
+    <li>
+     Improved the console screen.
+    </li>
+    <li>
+     Made it easier to create new game sessions.
+    </li>
+    <li>
+     Made it easier to set up
+     <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+      server configuration settings
+     </a>
+     .
+    </li>
+    <li>
+     Autosave and server status notifications are now sent to all clients.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Early_Access">
+   Early Access
+  </span>
+ </h2>
+ <p>
+  All Game Patches from
+  <a href="/wiki/Patch_0.5.0.0" title="Patch 0.5.0.0">
+   Patch 0.5.0.0
+  </a>
+  (Introduction) to
+  <a href="/wiki/Patch_0.8.2.8" title="Patch 0.8.2.8">
+   Patch 0.8.2.8
+  </a>
+  are now placed in this one unified subsection.
+ </p>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_0.8.2.8" title="Patch 0.8.2.8">
+    Patch 0.8.2.8
+   </a>
+   : Potential fix for foliage not being removed when playing as Client in both regular
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   and Dedicated Server
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.7" title="Patch 0.8.2.7">
+    Patch 0.8.2.7
+   </a>
+   : Potential fix to some major log spam on Dedicated Server on Linux
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.6" title="Patch 0.8.2.6">
+    Patch 0.8.2.6
+   </a>
+   : Potential fix to leftover connectivity issues
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.5" title="Patch 0.8.2.5">
+    Patch 0.8.2.5
+   </a>
+   : Fixed a crash for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   / Dedicated Server Clients that sometimes occurred when trying to snap a
+   <a class="mw-redirect" href="/wiki/Power_Pole" title="Power Pole">
+    Power Pole
+   </a>
+   to a
+   <a href="/wiki/Power_Line" title="Power Line">
+    Power Line
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.4" title="Patch 0.8.2.4">
+    Patch 0.8.2.4
+   </a>
+   : Fixed Railway
+   <a href="/wiki/Train_Signals" title="Train Signals">
+    Block/Path Signal
+   </a>
+   Visualization crashing for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   / Dedicated Servers Clients
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.2.0" title="Patch 0.8.2.0">
+    Patch 0.8.2.0
+   </a>
+   <ul>
+    <li>
+     Potential fix for bug where item stacks can not be split in the inventory for Clients
+    </li>
+    <li>
+     Fixed Dedicated Servers Clients not continuing to have
+     <a href="/wiki/Advanced_Game_Settings#Gameplay" title="Advanced Game Settings">
+      Flight Mode
+     </a>
+     enabled after logging in and out of a session
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.1.2" title="Patch 0.8.1.2">
+    Patch 0.8.1.2
+   </a>
+   : Fixed crash when joining a Dedicated Server related to
+   <a href="/wiki/Signs" title="Signs">
+    signs
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.1.1" title="Patch 0.8.1.1">
+    Patch 0.8.1.1
+   </a>
+   : Fixed Dedicated Server not working on Linux
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.0.4" title="Patch 0.8.0.4">
+    Patch 0.8.0.4
+   </a>
+   :
+   <ul>
+    <li>
+     Fixed a crash on startup for Dedicated Server when the server query port was set to a value that exceeded the maximum value of an int16
+    </li>
+    <li>
+     Temporary fix for audio log spam on Dedicated Servers when using vehicles which would lead into clients being kicked out of the Server
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.1.1" title="Patch 0.7.1.1">
+    Patch 0.7.1.1
+   </a>
+   : Fixed
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   and Dedicated Server Clients not being able to place
+   <a href="/wiki/Power_Poles" title="Power Poles">
+    Power Poles
+   </a>
+   off a
+   <a href="/wiki/Power_Line" title="Power Line">
+    Power Cable
+   </a>
+   in the
+   <a href="/wiki/Blueprint_Designer" title="Blueprint Designer">
+    Blueprint Designer
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.5" title="Patch 0.7.0.5">
+    Patch 0.7.0.5
+   </a>
+   :
+   <ul>
+    <li>
+     Fixed deletion of Blueprints not properly propagating from Host to Clients
+    </li>
+    <li>
+     Fixed holograms temporarily staying stuck in the Blueprint designer after being built by Clients
+    </li>
+    <li>
+     Fixed a crash for Clients when using the
+     <a href="/wiki/Jetpack" title="Jetpack">
+      Jetpack
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.4" title="Patch 0.7.0.4">
+    Patch 0.7.0.4
+   </a>
+   : Fixed invisible buildings built from
+   <a href="/wiki/Blueprint" title="Blueprint">
+    Blueprints
+   </a>
+   when reconnecting to Dedicated Servers
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.3" title="Patch 0.7.0.3">
+    Patch 0.7.0.3
+   </a>
+   : Fixed Crash when joining
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   or Dedicated Servers
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.1" title="Patch 0.7.0.1">
+    Patch 0.7.0.1
+   </a>
+   <ul>
+    <li>
+     Fixed a crash for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients when placing a Blueprint that has the
+     <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+      AWESOME Sink
+     </a>
+    </li>
+    <li>
+     Fixed a crash for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients when loading a blueprint before data is properly synced with host
+    </li>
+    <li>
+     Fixed
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients Blueprints showing up in Blueprint selection when those Blueprints don’t exist on Server
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.7.0.0" title="Patch 0.7.0.0">
+    Patch 0.7.0.0
+   </a>
+   : Overhauled Pioneer name tags for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   Clients or Dedicated Server Clients
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.1.2" title="Patch 0.6.1.2">
+    Patch 0.6.1.2
+   </a>
+   <ul>
+    <li>
+     Fixed heavy stuttering for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated Server Clients when getting hit by a projectile
+    </li>
+    <li>
+     Fixed a crash for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated Server Clients when trying to remove highlights from a Map Marker
+    </li>
+    <li>
+     Fixed a Crash by making it error normally instead of crash
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.1.1" title="Patch 0.6.1.1">
+    Patch 0.6.1.1
+   </a>
+   <ul>
+    <li>
+     Fixed
+     <a href="/wiki/Nobelisk_Detonator#Gas-0" title="Nobelisk Detonator">
+      Nobelisk Gas
+     </a>
+     clouds not disappearing on Dedicated Server
+    </li>
+    <li>
+     Server should now error out instead of crash when the server is unable to bind to a query port
+    </li>
+    <li>
+     Fixed a server crash when uploading a save file
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.15" title="Patch 0.6.0.15">
+    Patch 0.6.0.15
+   </a>
+   <ul>
+    <li>
+     Fixed Equipment icon in HUD flickering when equipping an item for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated Server Clients.
+    </li>
+    <li>
+     Fixed Markers and Stamps placed on the
+     <a href="/wiki/Map" title="Map">
+      map
+     </a>
+     disappearing when reconnecting to a
+     <a class="mw-redirect" href="/wiki/Dedicated_Server" title="Dedicated Server">
+      Dedicated Server
+     </a>
+    </li>
+    <li>
+     Fixed Markers and Stamps not saving properly on Dedicated Server
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.14" title="Patch 0.6.0.14">
+    Patch 0.6.0.14
+   </a>
+   :
+   <ul>
+    <li>
+     Fixed
+     <a href="/wiki/Ping" title="Ping">
+      pings
+     </a>
+     being invisible for other
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     players or Dedicated Server players
+    </li>
+    <li>
+     Fixed “Press RMB To Respawn” still being displayed after a player is revived
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.13" title="Patch 0.6.0.13">
+    Patch 0.6.0.13
+   </a>
+   : Potential fix for
+   <a href="/wiki/Flying_Crab_Hatcher" title="Flying Crab Hatcher">
+    Crab Hatchers
+   </a>
+   displaying incorrectly when joining for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   Clients and Dedicated servers Clients
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.12" title="Patch 0.6.0.12">
+    Patch 0.6.0.12
+   </a>
+   <ul>
+    <li>
+     Fixed crash related to
+     <a href="/wiki/Flying_Crab_Hatcher" title="Flying Crab Hatcher">
+      Hatchers
+     </a>
+     on Dedicated Server
+    </li>
+    <li>
+     Updated visuals for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     and Dedicated servers offline player name tags
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.10" title="Patch 0.6.0.10">
+    Patch 0.6.0.10
+   </a>
+   <ul>
+    <li>
+     Other Player characters in the world should now show last used user name when they go offline (Not retroactive)
+    </li>
+    <li>
+     Potential fix for Foliage not being interactable sometimes on Dedicated Servers
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.5" title="Patch 0.6.0.5">
+    Patch 0.6.0.5
+   </a>
+   <ul>
+    <li>
+     Fixed
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated servers Clients not being able to place Extractors on Resource Well Satellite Nodes
+    </li>
+    <li>
+     Fixed Resources not being shown for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated servers Clients when the
+     <a href="/wiki/Map" title="Map">
+      Map
+     </a>
+     or Radar Tower was opened
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.4" title="Patch 0.6.0.4">
+    Patch 0.6.0.4
+   </a>
+   <ul>
+    <li>
+     Fixed
+     <a href="/wiki/Resource_Node#Deposit" title="Resource Node">
+      Resource Deposits
+     </a>
+     being Invisible/Non-interactable for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients
+    </li>
+    <li>
+     Potential fix for a crash that starts from players experiencing audio crackling and performance degradation on dedicated server in Northern Forest
+    </li>
+    <li>
+     Fixed issue where the Equipment HUD Slot for Consumables wouldn’t update properly on
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients
+    </li>
+    <li>
+     Fixed crash reporter not working on Windows
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.3" title="Patch 0.6.0.3">
+    Patch 0.6.0.3
+   </a>
+   <ul>
+    <li>
+     Equipment
+     <a href="/wiki/HUD" title="HUD">
+      HUD
+     </a>
+     is now correctly updated for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients
+    </li>
+    <li>
+     Weapon crosshairs are now correctly updated for Multiplayer Clients or Dedicated Server Clients
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.2" title="Patch 0.6.0.2">
+    Patch 0.6.0.2
+   </a>
+   <ul>
+    <li>
+     <a href="/wiki/Flying_Crab_Hatcher" title="Flying Crab Hatcher">
+      Hatcher
+     </a>
+     should now show their status properly for for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and
+     <a class="mw-redirect" href="/wiki/Dedicated_Servers" title="Dedicated Servers">
+      Dedicated Servers
+     </a>
+     Clients
+    </li>
+    <li>
+     Fixed Resources not being shown to
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients or Dedicated Server Clients when opening
+     <a href="/wiki/Map" title="Map">
+      Map
+     </a>
+     or
+     <a href="/wiki/Radar_Tower" title="Radar Tower">
+      Radar Tower
+     </a>
+    </li>
+    <li>
+     Dedicated server should not crash anymore when it fails to bind to a port
+    </li>
+    <li>
+     Fixed a crash that may happen if the server settings file is corrupted. In this case, the server will use default settings instead
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.1" title="Patch 0.6.0.1">
+    Patch 0.6.0.1
+   </a>
+  </li>
+  <li>
+   Fixed a crash when
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   Clients and Dedicated Servers Clients would place a second
+   <a href="/wiki/Truck_Station" title="Truck Station">
+    Truck Station
+   </a>
+  </li>
+  <li>
+   Fixed the Truck Stations UI not showing up properly for Multiplayer Clients and Dedicated Servers Clients
+  </li>
+  <li>
+   Fixed a debug icon showing up on the Truck Station inventory when accessed for a second time by Multiplayer Clients and Dedicated Servers Clients
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.2.1" title="Patch 0.5.2.1">
+    Patch 0.5.2.1
+   </a>
+   : Current Train Station stop should now properly display for clients in
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   Clients or Dedicated Servers Clients
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.13" title="Patch 0.5.1.13">
+    Patch 0.5.1.13
+   </a>
+   : Fixed Dedicated Server crash reporter not working properly
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.12" title="Patch 0.5.1.12">
+    Patch 0.5.1.12
+   </a>
+   : Fixed a crash for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   Clients and Dedicated Server Clients related to vehicle paths
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.9" title="Patch 0.5.1.9">
+    Patch 0.5.1.9
+   </a>
+   <ul>
+    <li>
+     Fixed a crash related to Vehicle Automation for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     Clients and Dedicated Server Clients
+    </li>
+    <li>
+     Fixed a bug in the Load Vehicle Path UI where the “Used by this vehicle” checkmark was missing for Multiplayer Clients and Dedicated Server Clients
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.8" title="Patch 0.5.1.8">
+    Patch 0.5.1.8
+   </a>
+   : Undid all the Networking Optimisation changes from the previous build, which accidentally introduced a bunch of issues for Clients on
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   and Dedicated Servers
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.7" title="Patch 0.5.1.7">
+    Patch 0.5.1.7
+   </a>
+   <ul>
+    <li>
+     Fixed
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     and Dedicated servers Clients not being able to cancel the
+     <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+      docking sequence
+     </a>
+    </li>
+    <li>
+     Network Optimizations that should result in some performance gain CPU side for Clients on
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     and Dedicated servers
+    </li>
+    <li>
+     Network Optimizations that should result in some performance gain on for Clients on Multiplayer and Dedicated servers hosting games with many Smart Splitters built
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.6" title="Patch 0.5.1.6">
+    Patch 0.5.1.6
+   </a>
+   :
+   <ul>
+    <li>
+     Improved stability of the packet router
+    </li>
+    <li>
+     Improved CPU usage of the packet router
+    </li>
+    <li>
+     Added a startup argument for disabling the packet router:
+     <code>
+      -DisablePacketRouting
+     </code>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.4" title="Patch 0.5.1.4">
+    Patch 0.5.1.4
+   </a>
+   : Fixed holograms having the proper position for
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   and Dedicated servers Client but the wrong one for Host/Server in some situations
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.2" title="Patch 0.5.1.2">
+    Patch 0.5.1.2
+   </a>
+   :
+   <ul>
+    <li>
+     Implemented a mechanism that routes all server packets through the query beacon, in effect reducing the number of ports that need to be open/forwarded to 1, simplifying setup.
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.1.1" title="Patch 0.5.1.1">
+    Patch 0.5.1.1
+   </a>
+   :
+   <ul>
+    <li>
+     Fixed a bug that made Clients spam poll the server, now we should poll much less
+    </li>
+    <li>
+     Fixed some more issues with the Crash reporter integration
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.14" title="Patch 0.5.0.14">
+    Patch 0.5.0.14
+   </a>
+   :
+   <ul>
+    <li>
+     Found an issue where threading was forced to be disabled for dedicated servers in some scenarios. Fixed it so now we should actually make use of multiple CPU cores
+    </li>
+    <li>
+     Added tick rate information on the Server Status UI Menu
+    </li>
+    <li>
+     Production Lights for all buildings should now be working again
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.13" title="Patch 0.5.0.13">
+    Patch 0.5.0.13
+   </a>
+   <ul>
+    <li>
+     Added Crash Reporter integration for Dedicated Server for both Windows and Linux.
+     <ul>
+      <li>
+       This is enabled by default, we plan on including a toggle for this in GUI but for the moment, if you want to disable automatically sending crash logs you can do this:
+      </li>
+      <li>
+       Go to
+       <code>
+        SatisfactoryDedicatedServer\FactoryGame\Saved\Config\WindowsServer\
+       </code>
+      </li>
+      <li>
+       Open “Engine.ini”
+      </li>
+      <li>
+       Add the following and save changes:
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <pre>[CrashReportClient]
+bImplicitSend=False
+</pre>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_0.5.0.12" title="Patch 0.5.0.12">
+    Patch 0.5.0.12
+   </a>
+   : Enabled background and hi-prio task sets for servers to match what they are for the game, This should further improve multicore CPU usage
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.11" title="Patch 0.5.0.11">
+    Patch 0.5.0.11
+   </a>
+   : Servers should now use all available cores (Up to 26 worker threads) on both Windows and Linux
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.9" title="Patch 0.5.0.9">
+    Patch 0.5.0.9
+   </a>
+   :
+   <ul>
+    <li>
+     Potential fix for a
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     / Dedicated servers crash related to
+     <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+      tireconfig
+     </a>
+     deletion
+    </li>
+    <li>
+     Fixed
+     <a class="mw-redirect" href="/wiki/Nobelisk" title="Nobelisk">
+      Nobelisks
+     </a>
+     being invisible when first equipping for Clients
+    </li>
+    <li>
+     Fixed a rare crash when accessing the
+     <a href="/wiki/Train_Station" title="Train Station">
+      Train Station
+     </a>
+     UI as Client
+    </li>
+    <li>
+     Fixed ammo count issues for Clients
+    </li>
+    <li>
+     Implemented a first revision of the Save Manager in the “Manage Saves” tab under Server Manager
+    </li>
+    <li>
+     Increased the beacon connection timeout to 30 seconds (Previous value was 5 seconds)
+    </li>
+    <li>
+     Actually fixed invisible
+     <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+      Conveyor Belts
+     </a>
+     ,
+     <a href="/wiki/Conveyor_Lifts" title="Conveyor Lifts">
+      Conveyor Lifts
+     </a>
+     and
+     <a href="/wiki/Pipelines" title="Pipelines">
+      Pipelines
+     </a>
+     sometimes being invisible for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     /Dedicated Servers Clients (Triple for real!!!)
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.8" title="Patch 0.5.0.8">
+    Patch 0.5.0.8
+   </a>
+   :
+   <ul>
+    <li>
+     Hopefully fixed remaining
+     <a class="mw-redirect" href="/wiki/Nobelisk" title="Nobelisk">
+      Nobelisk
+     </a>
+     issues for
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     / Dedicated Servers Clients (Firing, Explosions, UI Feedback, Responsiveness)
+    </li>
+    <li>
+     Fixed a bug where complex clearance would not be spawned on the server, blocking Clients from building despite holograms being ok with it on server
+    </li>
+    <li>
+     Fixed Self Driving
+     <a class="mw-redirect" href="/wiki/Train" title="Train">
+      Trains
+     </a>
+     being slow when a Client was travelling in them
+    </li>
+    <li>
+     Potential fix for invisible
+     <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+      Conveyor Belts
+     </a>
+     ,
+     <a href="/wiki/Conveyor_Lifts" title="Conveyor Lifts">
+      Conveyor Lifts
+     </a>
+     and
+     <a href="/wiki/Pipelines" title="Pipelines">
+      Pipelines
+     </a>
+     sometimes being invisible for Clients
+    </li>
+    <li>
+     Fixed player has joined messages not showing up for Clients
+    </li>
+    <li>
+     Fixed spelling mistake in the server is offline message
+    </li>
+    <li>
+     Server state is now polled a lot less by the clients (at most 3 times per second) and clients back off gradually if a server does not respond to pings which makes the client behaviour less consistent with DDOS attacks
+    </li>
+    <li>
+     Clients do not store DNS lookup results in the server manager file and instead the DNS lookups are made every time the client starts up which makes the clients work better for servers with Dynamic DNS
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.7" title="Patch 0.5.0.7">
+    Patch 0.5.0.7
+   </a>
+   :
+   <ul>
+    <li>
+     Fixed a crash on startup on Dual Stack Linux, IPv6 should now work on more recent kernels
+    </li>
+    <li>
+     Fixed a shutdown crash caused by OnlineSubsystemEOS
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.6" title="Patch 0.5.0.6">
+    Patch 0.5.0.6
+   </a>
+   :
+   <ul>
+    <li>
+     Potentially fixed a crash related to using the
+     <a href="/wiki/Rebar_Gun" title="Rebar Gun">
+      Rebar Gun
+     </a>
+     on Dedicated Server
+    </li>
+    <li>
+     Fixed Hologram snapping always using automatic clearance snapping if a
+     <a href="/wiki/Multiplayer" title="Multiplayer">
+      Multiplayer
+     </a>
+     / Dedicated Server Client was
+     <a href="/wiki/Build_Gun" title="Build Gun">
+      building
+     </a>
+     , it now updates settings between Client and Host/Server
+    </li>
+    <li>
+     Fixed
+     <a class="mw-redirect" href="/wiki/Nobelisk" title="Nobelisk">
+      Nobelisk
+     </a>
+     /
+     <a href="/wiki/FICSMAS#Parts" title="FICSMAS">
+      Snowballs
+     </a>
+     on Dedicated servers
+    </li>
+    <li>
+     Added IPv6 Support
+    </li>
+    <li>
+     Made FGAbstractServerWidget public for modders
+    </li>
+    <li>
+     UI should now properly display when new connections are established
+    </li>
+    <li>
+     Potentially fixed a crash related to using the Rebar Gun on Dedicated Server
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.4" title="Patch 0.5.0.4">
+    Patch 0.5.0.4
+   </a>
+   <ul>
+    <li>
+     Fixed Client for crash related to not-yet-replicated member
+    </li>
+    <li>
+     Fixed Dedicated Servers crash related to
+     <a href="/wiki/Vehicles" title="Vehicles">
+      Vehicles
+     </a>
+     end play
+    </li>
+    <li>
+     Fixed a crash when using
+     <a href="/wiki/Parachute" title="Parachute">
+      Parachutes
+     </a>
+     as Client
+    </li>
+    <li>
+     Changed "-GamePort" server parameter to "-Port"
+    </li>
+    <li>
+     Added a “Save Game” server command (
+     <code>
+      server.SaveGame &lt;saveName&gt;
+     </code>
+     )
+    </li>
+    <li>
+     Flipped around the Show/Hide Address Toggle Button text in the Add Server popup
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.2" title="Patch 0.5.0.2">
+    Patch 0.5.0.2
+   </a>
+   <i>
+    (Released again in
+    <a href="/wiki/Patch_0.5.0.3" title="Patch 0.5.0.3">
+     Patch 0.5.0.3
+    </a>
+    )
+   </i>
+   : Fixed
+   <a href="/wiki/Multiplayer" title="Multiplayer">
+    Multiplayer
+   </a>
+   / Dedicated Servers Clients not being able to save or remove colour presets in the
+   <a href="/wiki/Customizer" title="Customizer">
+    Customizer
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.5.0.0" title="Patch 0.5.0.0">
+    Patch 0.5.0.0
+   </a>
+   : Introduced
+   <ul>
+    <li>
+     First iteration of Dedicated Server support (Still Experimental)
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="References">
+   References
+  </span>
+ </h2>
+ <div class="mw-references-wrap">
+  <ol class="references">
+   <li id="cite_note-Reddit-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-Reddit_1-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.reddit.com/r/SatisfactoryGame/comments/1bqp8mj/comment/kx4migg/?utm_source=reddit&amp;utm_medium=web2x&amp;context=3" rel="nofollow">
+      Reddit - Dedicated Servers have LEVELED UP! - Video Bookmarks
+     </a>
+    </span>
+   </li>
+   <li id="cite_note-yt-8piXNQwcUw@162-2">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-8piXNQwcUw@162_2-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=v8piXNQwcUw&amp;t=162s" rel="nofollow">
+      YouTube - Dedicated Servers have LEVELED UP! - General
+     </a>
+    </span>
+   </li>
+  </ol>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251008152716
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.044 seconds
+Real time usage: 0.059 seconds
+Preprocessor visited node count: 202/1000000
+Revision size: 18619/4194304 bytes
+Post‐expand include size: 76/4194304 bytes
+Template argument size: 0/4194304 bytes
+Highest expansion depth: 4/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1142/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.994      1 Template:Reflist
+100.00%    3.994      1 -total
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:9166-0!canonical and timestamp 20251008152716 and revision id 59879. Rendering was triggered because: page_view
+ -->
+</div>

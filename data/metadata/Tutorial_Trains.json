@@ -1,0 +1,38 @@
+{
+  "title": "Tutorial:Trains",
+  "pageid": 4172,
+  "categories": [
+    "Outdated",
+    "Tutorials"
+  ],
+  "sections": [
+    "Prerequisites",
+    "The basics",
+    "Track construction",
+    "Switches",
+    "Train composition",
+    "Train operation",
+    "Bi-directional trains",
+    "Stations and loading cargo",
+    "Pathfinding",
+    "Signals",
+    "Blocks",
+    "Block Signals",
+    "Path Signals",
+    "Using Signals",
+    "Double Track Railway",
+    "Passing Lanes on Bi-Directional Tracks",
+    "Subdividing linear tracks",
+    "Building a complete railway",
+    "Automation",
+    "Calculating throughput",
+    "Train throughput",
+    "Example",
+    "Calculating train size",
+    "Example",
+    "Freight Platform fill duration",
+    "Packed Buffer Strategy",
+    "See also"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Tutorial:Trains"
+}

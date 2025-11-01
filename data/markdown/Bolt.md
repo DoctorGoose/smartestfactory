@@ -1,0 +1,10 @@
+# Bolt
+
+Redirect to:
+
+  * [Screws](/wiki/Screws "Screws")
+
+
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template

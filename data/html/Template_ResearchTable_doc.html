@@ -1,0 +1,272 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:ResearchTable/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template is used to create tables for researches in the
+   <a href="/wiki/MAM" title="MAM">
+    MAM
+   </a>
+   .
+  </p>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      Parameter
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+    <tr>
+     <td>
+      name
+     </td>
+     <td>
+      Name of the research
+     </td>
+    </tr>
+    <tr>
+     <td>
+      icon
+     </td>
+     <td>
+      Image to display as the icon (24px)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      quantityN
+     </td>
+     <td>
+      (N = 1-4) Amount of the required item
+     </td>
+    </tr>
+    <tr>
+     <td>
+      costN
+     </td>
+     <td>
+      (N = 1-4) Name of the required item
+     </td>
+    </tr>
+    <tr>
+     <td>
+      time
+     </td>
+     <td>
+      Time to research
+     </td>
+    </tr>
+    <tr>
+     <td>
+      rewards
+     </td>
+     <td>
+      The rewards of the research
+     </td>
+    </tr>
+    <tr>
+     <td>
+      tableEnd
+     </td>
+     <td>
+      Set to 1 on the last entry
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   <span class="mw-headline" id="Example">
+    Example
+   </span>
+  </h2>
+  <pre>{{ResearchTable
+|name = Green Power Slugs
+|icon = Green_Power_Slug.png
+|cost1 = Green Power Slug
+|quantity1 = 1
+|time = 00:03
+|rewards = Crafting Recipe: Green Power Slugs to [[Power Shard]]s
+}}
+{{ResearchTable
+|name = Yellow Power Slugs
+|icon = Yellow_Power_Slug.png
+|quantity1 = 1
+|cost1 = Yellow Power Slug
+|quantity2 = 25
+|cost2 = Reinforced Iron Plate
+|quantity3 = 10000
+|cost3 = Cable
+|time = 00:03
+|rewards = Crafting Recipe: Yellow Power Slugs to Power Shards
+|tableEnd = 1
+}}
+</pre>
+  <table class="wikitable researchTable">
+   <tbody>
+    <tr>
+     <th>
+      #
+     </th>
+     <th>
+      Research
+     </th>
+     <th>
+      Cost
+     </th>
+     <th>
+      Time
+     </th>
+     <th>
+      Rewards
+     </th>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="1">
+      1
+     </td>
+     <td rowspan="1">
+      <a class="image" href="/wiki/File:Green_Power_Slug.png">
+       <img alt="Green Power Slug.png" data-file-height="256" data-file-width="256" decoding="async" height="24" loading="lazy" src="/images/thumb/Green_Power_Slug.png/24px-Green_Power_Slug.png?5d58cc" width="24"/>
+      </a>
+      Green Power Slugs
+     </td>
+     <td>
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Green_Power_Slug" title="Green Power Slug">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Green_Power_Slug.png/20px-Green_Power_Slug.png?5d58cc" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Green_Power_Slug" title="Green Power Slug">
+        Green Power Slug
+       </a>
+      </span>
+     </td>
+     <td rowspan="1">
+      00:03
+     </td>
+     <td rowspan="1">
+      Crafting Recipe: Green Power Slugs to
+      <a href="/wiki/Power_Shard" title="Power Shard">
+       Power Shards
+      </a>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="3">
+      2
+     </td>
+     <td rowspan="3">
+      <a class="image" href="/wiki/File:Yellow_Power_Slug.png">
+       <img alt="Yellow Power Slug.png" data-file-height="256" data-file-width="256" decoding="async" height="24" loading="lazy" src="/images/thumb/Yellow_Power_Slug.png/24px-Yellow_Power_Slug.png?73d24c" width="24"/>
+      </a>
+      Yellow Power Slugs
+     </td>
+     <td>
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Yellow_Power_Slug" title="Yellow Power Slug">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Yellow_Power_Slug.png/20px-Yellow_Power_Slug.png?73d24c" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Yellow_Power_Slug" title="Yellow Power Slug">
+        Yellow Power Slug
+       </a>
+      </span>
+     </td>
+     <td rowspan="3">
+      00:03
+     </td>
+     <td rowspan="3">
+      Crafting Recipe: Yellow Power Slugs to Power Shards
+     </td>
+    </tr>
+    <tr>
+     <td>
+      25 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+       </a>
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        Reinforced Iron Plate
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      10 000 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Cable" title="Cable">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Cable.png/20px-Cable.png?c87492" width="20"/>
+       </a>
+       <a href="/wiki/Cable" title="Cable">
+        Cable
+       </a>
+      </span>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215456
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.046 seconds
+Real time usage: 0.063 seconds
+Preprocessor visited node count: 283/1000000
+Revision size: 1471/4194304 bytes
+Post‐expand include size: 3349/4194304 bytes
+Template argument size: 536/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 497/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.004/15.000 seconds
+Lua memory usage: 659880/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   33.803      1 -total
+ 81.49%   27.546      2 Template:ResearchTable
+ 59.07%   19.966      4 Template:FormatNumber
+  9.43%    3.187      1 Template:Doc/start
+  8.28%    2.798      4 Template:ItemLink
+  7.86%    2.658      1 Template:Doc/end
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6069-0!canonical and timestamp 20251101215456 and revision id 39521. Rendering was triggered because: api-parse
+ -->
+</div>

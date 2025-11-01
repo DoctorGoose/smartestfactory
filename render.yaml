@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smartestfactory-rag
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn rag_api:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: INDEX_PATH
+        value: index/main.index
+      - key: CHUNKS_PATH
+        value: index/chunks.npy
+      - key: MODEL_NAME
+        value: all-MiniLM-L6-v2

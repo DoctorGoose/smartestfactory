@@ -1,0 +1,15 @@
+{
+  "title": "Patch 0.4.3.1",
+  "pageid": 4806,
+  "categories": [
+    "Patch_notes",
+    "Experimental_patch_notes"
+  ],
+  "sections": [
+    "Intro",
+    "Bug fixes",
+    "Known issues",
+    "Enable/Disable DX11/DX12/Vulkan via config file"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Patch_0.4.3.1"
+}

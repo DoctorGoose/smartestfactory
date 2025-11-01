@@ -1,0 +1,16 @@
+# Template:FluidsNav
+
+  * v
+  * [e](https://satisfactory.wiki.gg/wiki/Template:FluidsNav?action=edit)
+  * [h](https://satisfactory.wiki.gg/wiki/Template:FluidsNav?action=history)
+
+[Fluids](/wiki/Fluids "Fluids")  
+---  
+Liquids| [](/wiki/Water "Water") [Water](/wiki/Water "Water") • [](/wiki/Crude_Oil "Crude Oil") [Crude Oil](/wiki/Crude_Oil "Crude Oil") • [](/wiki/Heavy_Oil_Residue "Heavy Oil Residue") [Heavy Oil Residue](/wiki/Heavy_Oil_Residue "Heavy Oil Residue") • [](/wiki/Fuel "Fuel") [Fuel](/wiki/Fuel "Fuel") • [](/wiki/Turbofuel "Turbofuel") [Turbofuel](/wiki/Turbofuel "Turbofuel") • [](/wiki/Liquid_Biofuel "Liquid Biofuel") [Liquid Biofuel](/wiki/Liquid_Biofuel "Liquid Biofuel") • [](/wiki/Alumina_Solution "Alumina Solution") [Alumina Solution](/wiki/Alumina_Solution "Alumina Solution") • [](/wiki/Sulfuric_Acid "Sulfuric Acid") [Sulfuric Acid](/wiki/Sulfuric_Acid "Sulfuric Acid") • [](/wiki/Nitric_Acid "Nitric Acid") [Nitric Acid](/wiki/Nitric_Acid "Nitric Acid") • [](/wiki/Dissolved_Silica "Dissolved Silica") [Dissolved Silica](/wiki/Dissolved_Silica "Dissolved Silica")  
+Gases| [](/wiki/Nitrogen_Gas "Nitrogen Gas") [Nitrogen Gas](/wiki/Nitrogen_Gas "Nitrogen Gas") • [](/wiki/Rocket_Fuel "Rocket Fuel") [Rocket Fuel](/wiki/Rocket_Fuel "Rocket Fuel") • [](/wiki/Ionized_Fuel "Ionized Fuel") [Ionized Fuel](/wiki/Ionized_Fuel "Ionized Fuel") • [](/wiki/Excited_Photonic_Matter "Excited Photonic Matter") [Excited Photonic Matter](/wiki/Excited_Photonic_Matter "Excited Photonic Matter") • [](/wiki/Dark_Matter_Residue "Dark Matter Residue") [Dark Matter Residue](/wiki/Dark_Matter_Residue "Dark Matter Residue")  
+Packaged| [](/wiki/Packaged_Water "Packaged Water") [Packaged Water](/wiki/Packaged_Water "Packaged Water") • [](/wiki/Packaged_Oil "Packaged Oil") [Packaged Oil](/wiki/Packaged_Oil "Packaged Oil") • [](/wiki/Packaged_Heavy_Oil_Residue "Packaged Heavy Oil Residue") [Packaged Heavy Oil Residue](/wiki/Packaged_Heavy_Oil_Residue "Packaged Heavy Oil Residue") • [](/wiki/Packaged_Fuel "Packaged Fuel") [Packaged Fuel](/wiki/Packaged_Fuel "Packaged Fuel") • [](/wiki/Packaged_Turbofuel "Packaged Turbofuel") [Packaged Turbofuel](/wiki/Packaged_Turbofuel "Packaged Turbofuel") • [](/wiki/Packaged_Liquid_Biofuel "Packaged Liquid Biofuel") [Packaged Liquid Biofuel](/wiki/Packaged_Liquid_Biofuel "Packaged Liquid Biofuel") • [](/wiki/Packaged_Alumina_Solution "Packaged Alumina Solution") [Packaged Alumina Solution](/wiki/Packaged_Alumina_Solution "Packaged Alumina Solution") • [](/wiki/Packaged_Sulfuric_Acid "Packaged Sulfuric Acid") [Packaged Sulfuric Acid](/wiki/Packaged_Sulfuric_Acid "Packaged Sulfuric Acid") • [](/wiki/Packaged_Nitrogen_Gas "Packaged Nitrogen Gas") [Packaged Nitrogen Gas](/wiki/Packaged_Nitrogen_Gas "Packaged Nitrogen Gas") • [](/wiki/Packaged_Nitric_Acid "Packaged Nitric Acid") [Packaged Nitric Acid](/wiki/Packaged_Nitric_Acid "Packaged Nitric Acid") • [](/wiki/Packaged_Rocket_Fuel "Packaged Rocket Fuel") [Packaged Rocket Fuel](/wiki/Packaged_Rocket_Fuel "Packaged Rocket Fuel") • [](/wiki/Packaged_Ionized_Fuel "Packaged Ionized Fuel") [Packaged Ionized Fuel](/wiki/Packaged_Ionized_Fuel "Packaged Ionized Fuel")
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template
+  *[his]: his trivia section
+  *[N/A]: Not applicable

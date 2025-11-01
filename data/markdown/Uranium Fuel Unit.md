@@ -1,0 +1,11 @@
+# Uranium Fuel Unit
+
+Redirect to:  
+  
+  * [Uranium Fuel Rod](/wiki/Uranium_Fuel_Rod "Uranium Fuel Rod")
+
+
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template
+  *[his]: his trivia section

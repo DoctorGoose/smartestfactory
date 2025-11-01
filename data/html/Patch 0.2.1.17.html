@@ -1,0 +1,1764 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  Patch Notes: Early Access –
+  <b>
+   v0.2.1.17
+  </b>
+  – Build 106504. This patch was released on
+  <span class="mw-formatted-date" title="2019-10-09">
+   9 October 2019
+  </span>
+  .
+ </p>
+ <p>
+  The original post can be viewed on Satisfactory's
+  <a class="external text" href="https://discord.com/channels/370472939054956546/557603412565426196/631413621070495746" rel="nofollow">
+   Discord
+  </a>
+  and
+  <a class="external text" href="https://www.reddit.com/r/SatisfactoryGame/comments/dfeax8" rel="nofollow">
+   Reddit
+  </a>
+  .
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Intro">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Intro
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-2">
+    <a href="#Save_system">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Save system
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-3">
+    <a href="#Known_bugs">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Known bugs
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-4">
+    <a href="#Train_changes">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Train changes
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-5">
+    <a href="#Other_bug_fixes">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      Other bug fixes
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-6">
+    <a href="#Quality_of_Life">
+     <span class="tocnumber">
+      6
+     </span>
+     <span class="toctext">
+      Quality of Life
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Optimisation">
+     <span class="tocnumber">
+      7
+     </span>
+     <span class="toctext">
+      Optimisation
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#Languages">
+     <span class="tocnumber">
+      8
+     </span>
+     <span class="toctext">
+      Languages
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Intro">
+   Intro
+  </span>
+ </h2>
+ <p>
+  Hi Pioneers!
+ </p>
+ <p>
+  The train fixes, cloud save preparation, mass dismantle and uObject optimisations we have been pushing to Experimental are now live on the Early Access version. These patch notes summarise all changes that have been made while we were patching Experimental. We’ve had a bunch of disclaimers on Early Access, but I will stress it here once more: Backup your saves before you start playing, we are messing with them in this build!
+You can find some detailed info about it on our blog or watch the video we released with information on the topic of Cloud Saves.
+ </p>
+ <p>
+  <a class="external free" href="https://www.satisfactorygame.com/blog" rel="nofollow">
+   https://www.satisfactorygame.com/blog
+  </a>
+ </p>
+ <p>
+  <a class="external free" href="https://www.youtube.com/watch?v=t1LfyNfuMVQ" rel="nofollow">
+   https://www.youtube.com/watch?v=t1LfyNfuMVQ
+  </a>
+ </p>
+ <p>
+  Hope you all enjoy the new stuff and improvements to the trains. This will not be the last time we work on them, we plan to add more improvements and depth to the system in the future. For now we are shifting our focus fully to Update 3 for this December's release.
+ </p>
+ <p>
+  Cheers &lt;3
+ </p>
+ <h2>
+  <span class="mw-headline" id="Save_system">
+   Save system
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Save files will now be compressed
+  </li>
+  <li>
+   Old saves will be migrated over to new save folder structure
+  </li>
+  <li>
+   We recommend you backup your saves!
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Known_bugs">
+   Known bugs
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Disabling the AI from within the train sometimes causes the train to not be driveable until you re-enter the train.
+  </li>
+  <li>
+   Turning off the AI can still cause train to run away, related to the above.
+  </li>
+  <li>
+   When dismantling part of a train, the time table might get cleared.
+  </li>
+  <li>
+   Stations can be snapped to another station even if that has a track connected.
+  </li>
+  <li>
+   Ukrainian language doesn’t work. (We will fix this one Soon™)
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Train_changes">
+   Train changes
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Feature, you can have the AI enabled while being inside the train.
+  </li>
+  <li>
+   Feature, Applying throttle (W or S) after jumping into a train automatically releases the brake.
+  </li>
+  <li>
+   Tweak, self driving calculations improved for better brake prediction, this shortens the brake distances and fixes some problems going uphill or downhill.
+  </li>
+  <li>
+   Optimization, self driving logic is rewritten in c++.
+  </li>
+  <li>
+   Optimization, sound no longer plays when the train is not close to a player.
+  </li>
+  <li>
+   Crashfix, orphaned switch controls sometimes caused crashes.
+  </li>
+  <li>
+   Crashfix, game crashes when dismantling a track in the AI's path.
+  </li>
+  <li>
+   Crashfix, Manual docking would sometimes crash, the crash is avoided but it's likely that the train won't dock if this case occurs. We still need a better reproduction case to fix this properly. A workaround for now would probably be to just exit and then enter the train again.
+  </li>
+  <li>
+   Crashfix, Trains sometimes crash on client or when exiting the game.
+  </li>
+  <li>
+   Crashfix, Dismantling the station a train is going to was causing a crash.
+  </li>
+  <li>
+   Bugfix, The reverser would be incorrectly updated for bidirectional trains causing them to not be driveable in one of the directions. This affected both player and AI.
+  </li>
+  <li>
+   Bugfix, only one AI per train, fixes the edge case where 2 AI's would try to drive the same train.
+  </li>
+  <li>
+   Bugfix, trains sometimes moved too fast and missed the station, this made them unreliable for docking, now the AI will brake better and the station will catch the train.
+  </li>
+  <li>
+   Bugfix, if a train is split in half at a switch the train is repositioned back together (this is a temporary fix until we can get proper train collision and signalling in)
+  </li>
+  <li>
+   Bugfix, fixed case where player character could get destroyed while driving a train near water.
+  </li>
+  <li>
+   Bugfix, cannot use build gun after being inside a train near water.
+  </li>
+  <li>
+   Bugfix, train now save their velocity so they keep moving when loaded.
+  </li>
+  <li>
+   Bugfix, integrated track of the station does not cost anything now.
+  </li>
+  <li>
+   Bugfix, When a bidirectional train "reverses" it will now brake correctly. Fun fact: -100 km/h is indeed below a speed limit of 15 km/h.
+  </li>
+  <li>
+   Bugfix, Appending an AI controlled train doesn’t make the AI lose control over the train anymore.
+  </li>
+  <li>
+   Bugfix, Unmanned trains (not driven by player or AI) now automatically apply their brakes.
+  </li>
+  <li>
+   Bugfix, If you dismantle a track a train is on, you can now dismantle the train that gets left in the air.
+  </li>
+  <li>
+   Bugfix, Pathfinding bug when a locomotive is on the station track segments.
+  </li>
+  <li>
+   Bugfix, Trains will no longer be stuck in docking due to multiple linked stations. (This means generally, Trains should no longer get stuck in docking).
+  </li>
+  <li>
+   Bugfix, Update the master locomotive for player driven train during load.
+  </li>
+  <li>
+   Bugfix, Update locomotive input correctly during load.
+  </li>
+  <li>
+   Bugfix, Entering a train no longer auto releases the brakes, needs manual release with space.
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Other_bug_fixes">
+   Other bug fixes
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Fixed issue with biomass burner not rendering at times
+  </li>
+  <li>
+   Client side issue with inventory not updating for miners
+  </li>
+  <li>
+   Fixed issue with Splitters/Mergers not snapping properly to foundations when using guidelines
+  </li>
+  <li>
+   The 8x1 Foundations now cast shadows.
+  </li>
+  <li>
+   Fixed the ladder collision on the Freight Platform
+  </li>
+  <li>
+   Dismantling now displays the name of the building you are aiming at again. (Currently doesn’t work for Vehicles &amp; Trains)
+  </li>
+  <li>
+   Fixed some crashes related to Mass Dismantle
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Quality_of_Life">
+   Quality of Life
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Mass dismantle. Hold left-ctrl while aiming to mark objects to dismantle.
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Optimisation">
+   Optimisation
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Reduced the amount of uObjects per buildable. (Save files with huge factories can crash when they exceed the uObject limit)
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Languages">
+   Languages
+  </span>
+ </h2>
+ <ul>
+  <li>
+   Updated the localisation files for all languages
+  </li>
+ </ul>
+ <div aria-labelledby="Patches" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PatchesNav" title="Template:PatchesNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Patches">
+       <a href="/wiki/Category:Patch_notes" title="Category:Patch notes">
+        Patches
+       </a>
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      1.1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_1.1.1.0" title="Patch 1.1.1.0">
+        1.1.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+        1.1.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.2" title="Patch 1.1.1.2">
+        1.1.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.3" title="Patch 1.1.1.3">
+        1.1.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.4" title="Patch 1.1.1.4">
+        1.1.1.4
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental 1.1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_1.1.0.0" title="Patch 1.1.0.0">
+        1.1.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.1" title="Patch 1.1.0.1">
+        1.1.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.2" title="Patch 1.1.0.2">
+        1.1.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.3" title="Patch 1.1.0.3">
+        1.1.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.4" title="Patch 1.1.0.4">
+        1.1.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.5" title="Patch 1.1.0.5">
+        1.1.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.6" title="Patch 1.1.0.6">
+        1.1.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.5" title="Patch 1.1.1.5">
+        1.1.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.6" title="Patch 1.1.1.6">
+        1.1.1.6
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      1.0
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_1.0" title="Patch 1.0">
+        1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.1" title="Patch 1.0.0.1">
+        1.0.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.2" title="Patch 1.0.0.2">
+        1.0.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+        1.0.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+        1.0.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.5" title="Patch 1.0.0.5">
+        1.0.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.6" title="Patch 1.0.0.6">
+        1.0.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.7" title="Patch 1.0.0.7">
+        1.0.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.0" title="Patch 1.0.1.0">
+        1.0.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.1" title="Patch 1.0.1.1">
+        1.0.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.2" title="Patch 1.0.1.2">
+        1.0.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.3" title="Patch 1.0.1.3">
+        1.0.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.4" title="Patch 1.0.1.4">
+        1.0.1.4
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental 1.0
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_1.0.1.5" title="Patch 1.0.1.5">
+        1.0.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.6" title="Patch 1.0.1.6">
+        1.0.1.6
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 8
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.8.3.0" title="Patch 0.8.3.0">
+        0.8.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.2" title="Patch 0.8.3.2">
+        0.8.3.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.3" title="Patch 0.8.3.3">
+        0.8.3.3
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 8
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.8.0.0" title="Patch 0.8.0.0">
+        0.8.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.1" title="Patch 0.8.0.1">
+        0.8.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.2" title="Patch 0.8.0.2">
+        0.8.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.3" title="Patch 0.8.0.3">
+        0.8.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.4" title="Patch 0.8.0.4">
+        0.8.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.5" title="Patch 0.8.0.5">
+        0.8.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.0" title="Patch 0.8.1.0">
+        0.8.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.1" title="Patch 0.8.1.1">
+        0.8.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.2" title="Patch 0.8.1.2">
+        0.8.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.3" title="Patch 0.8.1.3">
+        0.8.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.0" title="Patch 0.8.2.0">
+        0.8.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.1" title="Patch 0.8.2.1">
+        0.8.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.2" title="Patch 0.8.2.2">
+        0.8.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.3" title="Patch 0.8.2.3">
+        0.8.2.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.4" title="Patch 0.8.2.4">
+        0.8.2.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.5" title="Patch 0.8.2.5">
+        0.8.2.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.6" title="Patch 0.8.2.6">
+        0.8.2.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.7" title="Patch 0.8.2.7">
+        0.8.2.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.8" title="Patch 0.8.2.8">
+        0.8.2.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.9" title="Patch 0.8.2.9">
+        0.8.2.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.1" title="Patch 0.8.3.1">
+        0.8.3.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 7
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.7.0.8" title="Patch 0.7.0.8">
+        0.7.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.1.1" title="Patch 0.7.1.1">
+        0.7.1.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 7
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.7.0.0" title="Patch 0.7.0.0">
+        0.7.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.1" title="Patch 0.7.0.1">
+        0.7.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.2" title="Patch 0.7.0.2">
+        0.7.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.3" title="Patch 0.7.0.3">
+        0.7.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.4" title="Patch 0.7.0.4">
+        0.7.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.5" title="Patch 0.7.0.5">
+        0.7.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.6" title="Patch 0.7.0.6">
+        0.7.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.7" title="Patch 0.7.0.7">
+        0.7.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.8_(Experimental)" title="Patch 0.7.0.8 (Experimental)">
+        0.7.0.8 (Experimental)
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 6
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.6.1.0" title="Patch 0.6.1.0">
+        0.6.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.1" title="Patch 0.6.1.1">
+        0.6.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.2" title="Patch 0.6.1.2">
+        0.6.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.3" title="Patch 0.6.1.3">
+        0.6.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.4" title="Patch 0.6.1.4">
+        0.6.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.5" title="Patch 0.6.1.5">
+        0.6.1.5
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 6
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.6.0.0" title="Patch 0.6.0.0">
+        0.6.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.1" title="Patch 0.6.0.1">
+        0.6.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.2" title="Patch 0.6.0.2">
+        0.6.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.3" title="Patch 0.6.0.3">
+        0.6.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.4" title="Patch 0.6.0.4">
+        0.6.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.5" title="Patch 0.6.0.5">
+        0.6.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.6" title="Patch 0.6.0.6">
+        0.6.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.7" title="Patch 0.6.0.7">
+        0.6.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.8" title="Patch 0.6.0.8">
+        0.6.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.9" title="Patch 0.6.0.9">
+        0.6.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.10" title="Patch 0.6.0.10">
+        0.6.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.11" title="Patch 0.6.0.11">
+        0.6.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.12" title="Patch 0.6.0.12">
+        0.6.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.13" title="Patch 0.6.0.13">
+        0.6.0.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.14" title="Patch 0.6.0.14">
+        0.6.0.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.15" title="Patch 0.6.0.15">
+        0.6.0.15
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 5
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.5.1.0" title="Patch 0.5.1.0">
+        0.5.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.1" title="Patch 0.5.1.1">
+        0.5.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.3" title="Patch 0.5.1.3">
+        0.5.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.4" title="Patch 0.5.1.4">
+        0.5.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.5" title="Patch 0.5.1.5">
+        0.5.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.7" title="Patch 0.5.1.7">
+        0.5.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.8" title="Patch 0.5.1.8">
+        0.5.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.10" title="Patch 0.5.1.10">
+        0.5.1.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.2.0" title="Patch 0.5.2.0">
+        0.5.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.2.1" title="Patch 0.5.2.1">
+        0.5.2.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 5
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.5.0.0" title="Patch 0.5.0.0">
+        0.5.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.1" title="Patch 0.5.0.1">
+        0.5.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.2" title="Patch 0.5.0.2">
+        0.5.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.3" title="Patch 0.5.0.3">
+        0.5.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.4" title="Patch 0.5.0.4">
+        0.5.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.5" title="Patch 0.5.0.5">
+        0.5.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.6" title="Patch 0.5.0.6">
+        0.5.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.7" title="Patch 0.5.0.7">
+        0.5.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.8" title="Patch 0.5.0.8">
+        0.5.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.9" title="Patch 0.5.0.9">
+        0.5.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.10" title="Patch 0.5.0.10">
+        0.5.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.11" title="Patch 0.5.0.11">
+        0.5.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.12" title="Patch 0.5.0.12">
+        0.5.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.13" title="Patch 0.5.0.13">
+        0.5.0.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.14" title="Patch 0.5.0.14">
+        0.5.0.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.2" title="Patch 0.5.1.2">
+        0.5.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.6" title="Patch 0.5.1.6">
+        0.5.1.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.9" title="Patch 0.5.1.9">
+        0.5.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.11" title="Patch 0.5.1.11">
+        0.5.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.12" title="Patch 0.5.1.12">
+        0.5.1.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.13" title="Patch 0.5.1.13">
+        0.5.1.13
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 4
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.4.1.0" title="Patch 0.4.1.0">
+        0.4.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.1.1" title="Patch 0.4.1.1">
+        0.4.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.0" title="Patch 0.4.2.0">
+        0.4.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.2" title="Patch 0.4.2.2">
+        0.4.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.5" title="Patch 0.4.2.5">
+        0.4.2.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.7" title="Patch 0.4.2.7">
+        0.4.2.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.9" title="Patch 0.4.2.9">
+        0.4.2.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.11" title="Patch 0.4.2.11">
+        0.4.2.11
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 4
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.4.0.0" title="Patch 0.4.0.0">
+        0.4.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.1" title="Patch 0.4.0.1">
+        0.4.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.2" title="Patch 0.4.0.2">
+        0.4.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.3" title="Patch 0.4.0.3">
+        0.4.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.4" title="Patch 0.4.0.4">
+        0.4.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.5" title="Patch 0.4.0.5">
+        0.4.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.6" title="Patch 0.4.0.6">
+        0.4.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.7" title="Patch 0.4.0.7">
+        0.4.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.8" title="Patch 0.4.0.8">
+        0.4.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.9" title="Patch 0.4.0.9">
+        0.4.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.10" title="Patch 0.4.0.10">
+        0.4.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.11" title="Patch 0.4.0.11">
+        0.4.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.12" title="Patch 0.4.0.12">
+        0.4.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.1" title="Patch 0.4.2.1">
+        0.4.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.2_(Experimental)" title="Patch 0.4.2.2 (Experimental)">
+        0.4.2.2 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.3" title="Patch 0.4.2.3">
+        0.4.2.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.4" title="Patch 0.4.2.4">
+        0.4.2.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.6" title="Patch 0.4.2.6">
+        0.4.2.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.8" title="Patch 0.4.2.8">
+        0.4.2.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.10" title="Patch 0.4.2.10">
+        0.4.2.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.3.0" title="Patch 0.4.3.0">
+        0.4.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.3.1" title="Patch 0.4.3.1">
+        0.4.3.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 3
+      <br/>
+      &amp; Steam Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.3.3.3" title="Patch 0.3.3.3">
+        0.3.3.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.4" title="Patch 0.3.3.4">
+        0.3.3.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.5" title="Patch 0.3.3.5">
+        0.3.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.6" title="Patch 0.3.3.6">
+        0.3.3.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.14" title="Patch 0.3.4.14">
+        0.3.4.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.15" title="Patch 0.3.4.15">
+        0.3.4.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.16" title="Patch 0.3.4.16">
+        0.3.4.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5" title="Patch 0.3.5">
+        0.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.1" title="Patch 0.3.5.1">
+        0.3.5.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.2" title="Patch 0.3.5.2">
+        0.3.5.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.3" title="Patch 0.3.5.3">
+        0.3.5.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.4" title="Patch 0.3.5.4">
+        0.3.5.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.6" title="Patch 0.3.5.6">
+        0.3.5.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.5" title="Patch 0.3.6.5">
+        0.3.6.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7" title="Patch 0.3.7">
+        0.3.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.1" title="Patch 0.3.7.1">
+        0.3.7.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.2" title="Patch 0.3.7.2">
+        0.3.7.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.3" title="Patch 0.3.7.3">
+        0.3.7.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.4" title="Patch 0.3.7.4">
+        0.3.7.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.5" title="Patch 0.3.7.5">
+        0.3.7.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.6" title="Patch 0.3.7.6">
+        0.3.7.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.7" title="Patch 0.3.7.7">
+        0.3.7.7
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 3
+      <br/>
+      &amp; Steam Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.3" title="Patch 0.3">
+        0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.0.1" title="Patch 0.3.0.1">
+        0.3.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.0.2" title="Patch 0.3.0.2">
+        0.3.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.0" title="Patch 0.3.1.0">
+        0.3.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.1" title="Patch 0.3.1.1">
+        0.3.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.2" title="Patch 0.3.1.2">
+        0.3.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.0" title="Patch 0.3.2.0">
+        0.3.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.1" title="Patch 0.3.2.1">
+        0.3.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.2" title="Patch 0.3.2.2">
+        0.3.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.0" title="Patch 0.3.3.0">
+        0.3.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.1" title="Patch 0.3.3.1">
+        0.3.3.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.2" title="Patch 0.3.3.2">
+        0.3.3.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.4" title="Patch 0.3.3.4">
+        0.3.3.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.5" title="Patch 0.3.3.5">
+        0.3.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.0" title="Patch 0.3.4.0">
+        0.3.4.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.1" title="Patch 0.3.4.1">
+        0.3.4.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.2" title="Patch 0.3.4.2">
+        0.3.4.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.3" title="Patch 0.3.4.3">
+        0.3.4.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.4" title="Patch 0.3.4.4">
+        0.3.4.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.5" title="Patch 0.3.4.5">
+        0.3.4.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.6" title="Patch 0.3.4.6">
+        0.3.4.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.7" title="Patch 0.3.4.7">
+        0.3.4.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.8" title="Patch 0.3.4.8">
+        0.3.4.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.9" title="Patch 0.3.4.9">
+        0.3.4.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.10" title="Patch 0.3.4.10">
+        0.3.4.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.11" title="Patch 0.3.4.11">
+        0.3.4.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.12" title="Patch 0.3.4.12">
+        0.3.4.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.13" title="Patch 0.3.4.13">
+        0.3.4.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.5" title="Patch 0.3.5.5">
+        0.3.5.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6" title="Patch 0.3.6">
+        0.3.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.1" title="Patch 0.3.6.1">
+        0.3.6.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.2" title="Patch 0.3.6.2">
+        0.3.6.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.3" title="Patch 0.3.6.3">
+        0.3.6.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.4" title="Patch 0.3.6.4">
+        0.3.6.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.6" title="Patch 0.3.6.6">
+        0.3.6.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.7" title="Patch 0.3.6.7">
+        0.3.6.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.8" title="Patch 0.3.6.8">
+        0.3.6.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.9" title="Patch 0.3.6.9">
+        0.3.6.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.10" title="Patch 0.3.6.10">
+        0.3.6.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.11" title="Patch 0.3.6.11">
+        0.3.6.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.12" title="Patch 0.3.6.12">
+        0.3.6.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.13" title="Patch 0.3.6.13">
+        0.3.6.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.0" title="Patch 0.3.8.0">
+        0.3.8.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.1" title="Patch 0.3.8.1">
+        0.3.8.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.2" title="Patch 0.3.8.2">
+        0.3.8.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.3" title="Patch 0.3.8.3">
+        0.3.8.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.4" title="Patch 0.3.8.4">
+        0.3.8.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.5" title="Patch 0.3.8.5">
+        0.3.8.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.6" title="Patch 0.3.8.6">
+        0.3.8.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.7" title="Patch 0.3.8.7">
+        0.3.8.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.8" title="Patch 0.3.8.8">
+        0.3.8.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.9" title="Patch 0.3.8.9">
+        0.3.8.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.10" title="Patch 0.3.8.10">
+        0.3.8.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.11" title="Patch 0.3.8.11">
+        0.3.8.11
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 2
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.2.1" title="Patch 0.2.1">
+        0.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.1" title="Patch 0.2.1.1">
+        0.2.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.2" title="Patch 0.2.1.2">
+        0.2.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.3" title="Patch 0.2.1.3">
+        0.2.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.4" title="Patch 0.2.1.4">
+        0.2.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.5" title="Patch 0.2.1.5">
+        0.2.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.7" title="Patch 0.2.1.7">
+        0.2.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.10" title="Patch 0.2.1.10">
+        0.2.1.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.12" title="Patch 0.2.1.12">
+        0.2.1.12
+       </a>
+       •
+       <a class="mw-selflink selflink">
+        0.2.1.17
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.18" title="Patch 0.2.1.18">
+        0.2.1.18
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 2
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.1.14" title="Patch 0.1.14">
+        0.1.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.15" title="Patch 0.1.15">
+        0.1.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.16" title="Patch 0.1.16">
+        0.1.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.17" title="Patch 0.1.17">
+        0.1.17 (101256)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.17_build_101353" title="Patch 0.1.17 build 101353">
+        0.1.17 (101353)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.19" title="Patch 0.1.19">
+        0.1.19
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.20" title="Patch 0.1.20">
+        0.1.20
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.6" title="Patch 0.2.1.6">
+        0.2.1.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.7_(Experimental)" title="Patch 0.2.1.7 (Experimental)">
+        0.2.1.7 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.8" title="Patch 0.2.1.8">
+        0.2.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.9" title="Patch 0.2.1.9">
+        0.2.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.11" title="Patch 0.2.1.11">
+        0.2.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.12_(Experimental)" title="Patch 0.2.1.12 (Experimental)">
+        0.2.1.12 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.13" title="Patch 0.2.1.13">
+        0.2.1.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.14" title="Patch 0.2.1.14">
+        0.2.1.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.15" title="Patch 0.2.1.15">
+        0.2.1.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.16" title="Patch 0.2.1.16">
+        0.2.1.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.17_(Experimental)" title="Patch 0.2.1.17 (Experimental)">
+        0.2.1.17 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.19" title="Patch 0.2.1.19">
+        0.2.1.19
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.20" title="Patch 0.2.1.20">
+        0.2.1.20
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.1.11" title="Patch 0.1.11">
+        0.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.12" title="Patch 0.1.12">
+        0.1.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.13" title="Patch 0.1.13">
+        0.1.13
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.1.5" title="Patch 0.1.5">
+        0.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.6_build_98394" title="Patch 0.1.6 build 98394">
+        0.1.6 (98394)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.6_build_98445" title="Patch 0.1.6 build 98445">
+        0.1.6 (98445)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.7" title="Patch 0.1.7">
+        0.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.8" title="Patch 0.1.8">
+        0.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.9" title="Patch 0.1.9">
+        0.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.10" title="Patch 0.1.10">
+        0.1.10
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Early Access Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.1" title="Patch 0.1">
+        0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.101" title="Patch 0.101">
+        0.101
+       </a>
+       •
+       <a href="/wiki/Patch_0.102" title="Patch 0.102">
+        0.102
+       </a>
+       •
+       <a href="/wiki/Patch_0.103" title="Patch 0.103">
+        0.103
+       </a>
+       •
+       <a href="/wiki/Patch_0.104" title="Patch 0.104">
+        0.104
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Closed Alpha
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Early_game_development" title="Early game development">
+        Early game development
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-11" title="Patch 2018-10-11">
+        2018-10-11
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-17" title="Patch 2018-10-17">
+        2018-10-17
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-19" title="Patch 2018-10-19">
+        2018-10-19
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-27" title="Patch 2018-10-27">
+        2018-10-27
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_2" title="Patch Closed Alpha 2">
+        2
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_2.1" title="Patch Closed Alpha 2.1">
+        2.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3" title="Patch Closed Alpha 3">
+        3
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3.1" title="Patch Closed Alpha 3.1">
+        3.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3.2" title="Patch Closed Alpha 3.2">
+        3.2
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_4" title="Patch Closed Alpha 4">
+        4
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_4.1" title="Patch Closed Alpha 4.1">
+        4.1
+       </a>
+       •
+       <a href="/wiki/Alpha_Test_Weekend" title="Alpha Test Weekend">
+        Alpha Test Weekend
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5" title="Patch Closed Alpha 5">
+        5
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5.1" title="Patch Closed Alpha 5.1">
+        5.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5.3" title="Patch Closed Alpha 5.3">
+        5.3
+       </a>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251010173852
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.040 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 560/1000000
+Revision size: 5391/4194304 bytes
+Post‐expand include size: 59622/4194304 bytes
+Template argument size: 299/4194304 bytes
+Highest expansion depth: 6/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 883801/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   33.202      1 -total
+ 92.62%   30.750      1 Template:PatchesNav
+ 86.82%   28.825      1 Template:Navbox
+  7.70%    2.557    263 Template:*
+  7.16%    2.377      1 Template:Patch
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:189-0!dateformat=default and timestamp 20251010173851 and revision id 45034. Rendering was triggered because: edit-page
+ -->
+</div>

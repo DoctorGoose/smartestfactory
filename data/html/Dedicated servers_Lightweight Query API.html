@@ -1,0 +1,841 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  This page is a copy of the Lightweight Query API section of the
+  <code>
+   DedicatedServerAPIDocs.md
+  </code>
+  document distributed to every player, with some community notes and edits.
+ </p>
+ <p>
+  For a list of community tools, see
+  <a href="/wiki/Dedicated_servers#Community_Tools" title="Dedicated servers">
+   Dedicated_servers#Community_Tools
+  </a>
+  .
+ </p>
+ <hr/>
+ <p>
+  Lightweight Query API is a lightweight API designed to allow continuously pulling data from the server and track server state changes.
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Introduction_and_Flow">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Introduction and Flow
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-2">
+    <a href="#Protocol">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Protocol
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-3">
+      <a href="#Poll_Server_State">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Poll Server State
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-4">
+      <a href="#Server_State">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Server State
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#Server_State_Enum">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Server State Enum
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-6">
+      <a href="#Server_Flags_Bits">
+       <span class="tocnumber">
+        2.4
+       </span>
+       <span class="toctext">
+        Server Flags Bits
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-7">
+      <a href="#Server_Sub_States">
+       <span class="tocnumber">
+        2.5
+       </span>
+       <span class="toctext">
+        Server Sub States
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#Flow">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Flow
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-9">
+    <a href="#API_Availability">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      API Availability
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h1>
+  <span class="mw-headline" id="Introduction_and_Flow">
+   Introduction and Flow
+  </span>
+ </h1>
+ <p>
+  The Lightweight query API as the name implies is a low CPU usage request to the server to obtain basic information about the state of the server. This response can be used to determine if a call to the TCP API is necessary.
+The client will send a message of type
+  <i>
+   PollServerState
+  </i>
+  to the Lightweight API with a unique identifier (cookie). When the server receives the message, it will send the
+  <i>
+   ServerStateResponce
+  </i>
+  message to the relevant client with the previously provided unique identifier and basic status information in the response.
+The response form the server contains
+  <b>
+   SubStates
+  </b>
+  that can be used to determine if any changes to the the State of the game (tier progress, active players, Game Phase, etc), if game options have changed, or if a new save has been made. Checking with the Lightweight API prior to a call to the much more CPU demanding TCP API is highly recommended.
+ </p>
+ <h1>
+  <span class="mw-headline" id="Protocol">
+   Protocol
+  </span>
+ </h1>
+ <p>
+  Lightweight Query is a simple request-response UDP protocol with a message-based approach.
+ </p>
+ <p>
+  Note that all data used in the Lightweight Query API is always
+  <i>
+   Little Endian
+  </i>
+  , and not of network byte order.
+ </p>
+ <p>
+  Since the protocol is UDP, it is unreliable, which means some of the requests might be dropped or not receive responses, so instead
+ </p>
+ <p>
+  of waiting for the responses you should attempt to ping the server with a specific time interval.
+ </p>
+ <p>
+  Be wary of not trying to ping a dead Lightweight Query API for too long though, since you might end up triggering anti-DDoS measures on the host network.
+ </p>
+ <p>
+  The protocol consists of a simple message envelope format used for all messages:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Offset (bytes)
+    </th>
+    <th>
+     Data Type
+    </th>
+    <th>
+     Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     uint16 (LE)
+    </td>
+    <td>
+     ProtocolMagic
+    </td>
+    <td>
+     Always set to 0xF6D5
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     MessageType
+    </td>
+    <td>
+     Type ID of the payload in this envelope. See table down for details
+    </td>
+   </tr>
+   <tr>
+    <td>
+     3
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     ProtocolVersion
+    </td>
+    <td>
+     Version of the protocol desired by the client. Current protocol version is
+     <i>
+      1
+     </i>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     …
+    </td>
+    <td>
+     Variant
+    </td>
+    <td>
+     Payload
+    </td>
+    <td>
+     Payload of the message. Specific to the message type.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     3+sizeof(Payload)
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     Terminator Byte
+    </td>
+    <td>
+     Always 0x1. Messages not ending with the terminator byte will be discarded.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The following message types are currently supported.
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Message Type
+    </th>
+    <th>
+     Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     Poll Server State
+    </td>
+    <td>
+     A request sent to the API to retrieve the information about the current server state
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     Server State Response
+    </td>
+    <td>
+     A response sent by the server API back to the client containing the current state of the server
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Poll_Server_State">
+   Poll Server State
+  </span>
+ </h2>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Offset (bytes)
+    </th>
+    <th>
+     Data Type
+    </th>
+    <th>
+     Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     uint64 (LE)
+    </td>
+    <td>
+     Cookie
+    </td>
+    <td>
+     An unique identifier for this request to mark the response. Game Client uses current time in UE ticks
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Server_State">
+   Server State
+  </span>
+ </h2>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Offset (bytes)
+    </th>
+    <th>
+     Data Type
+    </th>
+    <th>
+     Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     uint64 (LE)
+    </td>
+    <td>
+     Cookie
+    </td>
+    <td>
+     An unique identifier for the request that triggered this response.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     8
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     ServerState
+    </td>
+    <td>
+     Current state that the server is in. See Server States table for details.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     9
+    </td>
+    <td>
+     uint32 (LE)
+    </td>
+    <td>
+     ServerNetCL
+    </td>
+    <td>
+     Game Changelist that the server is running. Changelist of the server must match the game client changelist for the client to be able to connect
+    </td>
+   </tr>
+   <tr>
+    <td>
+     13
+    </td>
+    <td>
+     uint64 (LE)
+    </td>
+    <td>
+     ServerFlags
+    </td>
+    <td>
+     Flags describing this server. Most values are reserved or available for modded servers to use. See Server Flags for more information
+    </td>
+   </tr>
+   <tr>
+    <td>
+     21
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     NumSubStates
+    </td>
+    <td>
+     Number of Sub State entries in this response. Sub state entries can be used to detect changes in server state
+    </td>
+   </tr>
+   <tr>
+    <td>
+     22
+    </td>
+    <td>
+     ServerSubState[]
+    </td>
+    <td>
+     SubStates
+    </td>
+    <td>
+     Sub state at index i. Number of sub states matches the value of NumSubStates
+    </td>
+   </tr>
+   <tr>
+    <td>
+     22+sizeof(SubStates)
+    </td>
+    <td>
+     uint16 (LE)
+    </td>
+    <td>
+     ServerNameLength
+    </td>
+    <td>
+     Length of the ServerName field in bytes
+    </td>
+   </tr>
+   <tr>
+    <td>
+     22+sizeof(SubStates)+1
+    </td>
+    <td>
+     uint8[]
+    </td>
+    <td>
+     ServerName
+    </td>
+    <td>
+     UTF-8 encoded Server Name, as set by the player
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Server Sub State is a sequential counter that is incremented by the server each time a state of the relevant system changes.
+ </p>
+ <p>
+  This allows determining a set of data that the API client needs to refresh when the server changes it, without having to continuously poll the HTTPS API.
+ </p>
+ <p>
+  ServerSubState structure is defined as following:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Offset (bytes)
+    </th>
+    <th>
+     Data Type
+    </th>
+    <th>
+     Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     uint8
+    </td>
+    <td>
+     SubStateId
+    </td>
+    <td>
+     ID of the sub state being changed. See Server Sub States for list of values
+    </td>
+   </tr>
+   <tr>
+    <td>
+     8
+    </td>
+    <td>
+     uint16 (LE)
+    </td>
+    <td>
+     SubStateVersion
+    </td>
+    <td>
+     Current changelist of the sub state
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Server_State_Enum">
+   Server State Enum
+  </span>
+ </h2>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Enum Value
+    </th>
+    <th>
+     Enum Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     Offline
+    </td>
+    <td>
+     The server is offline. Servers will never send this as a response
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     Idle
+    </td>
+    <td>
+     The server is running, but no save is currently loaded
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2
+    </td>
+    <td>
+     Loading
+    </td>
+    <td>
+     The server is currently loading a map. In this state, HTTPS API is unavailable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     3
+    </td>
+    <td>
+     Playing
+    </td>
+    <td>
+     The server is running, and a save is loaded. Server is joinable by players
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Server_Flags_Bits">
+   Server Flags Bits
+  </span>
+ </h2>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Bit Index (LE)
+    </th>
+    <th>
+     Flag Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     Modded
+    </td>
+    <td>
+     The server is considered Modded. Vanilla clients will not try to connect to Modded servers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     Custom1
+    </td>
+    <td>
+     A flag with server-specific or context-specific meaning
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2
+    </td>
+    <td>
+     Custom2
+    </td>
+    <td>
+     A flag with server-specific or context-specific meaning
+    </td>
+   </tr>
+   <tr>
+    <td>
+     3
+    </td>
+    <td>
+     Custom3
+    </td>
+    <td>
+     A flag with server-specific or context-specific meaning
+    </td>
+   </tr>
+   <tr>
+    <td>
+     4
+    </td>
+    <td>
+     Custom4
+    </td>
+    <td>
+     A flag with server-specific or context-specific meaning
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Server_Sub_States">
+   Server Sub States
+  </span>
+ </h2>
+ <p>
+  The following sub states are currently defined by the vanilla dedicated server.
+ </p>
+ <p>
+  Sub states that are not known are not invalid, and should instead be silently discarded.
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Sub State ID
+    </th>
+    <th>
+     Sub State Name
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     0
+    </td>
+    <td>
+     ServerGameState
+    </td>
+    <td>
+     Game state of the server. Maps to QueryServerState HTTPS API function
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1
+    </td>
+    <td>
+     ServerOptions
+    </td>
+    <td>
+     Global options set on the server. Maps to GetServerOptions HTTPS API function
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2
+    </td>
+    <td>
+     AdvancedGameSettings
+    </td>
+    <td>
+     Advanced Game Settings in the currently loaded session. Maps to GetAdvancedGameSettings HTTPS API function
+    </td>
+   </tr>
+   <tr>
+    <td>
+     3
+    </td>
+    <td>
+     SaveCollection
+    </td>
+    <td>
+     List of saves available on the server for loading/downloading has changed. Maps to EnumerateSessions HTTPS API function
+    </td>
+   </tr>
+   <tr>
+    <td>
+     4
+    </td>
+    <td>
+     Custom1
+    </td>
+    <td>
+     A value that can be used by the mods or custom servers. Not used by the vanilla clients or servers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     5
+    </td>
+    <td>
+     Custom2
+    </td>
+    <td>
+     A value that can be used by the mods or custom servers. Not used by the vanilla clients or servers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     6
+    </td>
+    <td>
+     Custom3
+    </td>
+    <td>
+     A value that can be used by the mods or custom servers. Not used by the vanilla clients or servers
+    </td>
+   </tr>
+   <tr>
+    <td>
+     7
+    </td>
+    <td>
+     Custom4
+    </td>
+    <td>
+     A value that can be used by the mods or custom servers. Not used by the vanilla clients or servers
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h1>
+  <span class="mw-headline" id="Flow">
+   Flow
+  </span>
+ </h1>
+ <p>
+  A client sends a message of type Poll Server State to the Server API with it’s Cookie. When the server receives the message, it will send the
+ </p>
+ <p>
+  Server State Response message to the relevant client, with the Cookie value on the response copied from the received request.
+ </p>
+ <p>
+  A client can continuously poll the server for the updates using that API without using much of server CPU, and investigate the changes
+ </p>
+ <p>
+  in the Server Sub States changelists to determine which subset of information it has cached locally from the HTTPS API could need to be re-fetched from the server.
+ </p>
+ <h1>
+  <span class="mw-headline" id="API_Availability">
+   API Availability
+  </span>
+ </h1>
+ <p>
+  Lightweight Server Query API is available at all times when the server is running, except for when it is starting up. When the server is performing
+ </p>
+ <p>
+  a save game load or a map change, the lightweight query API will retain it’s availability, but will report Loading as the server status.
+ </p>
+ <p>
+  In that state, HTTPS API becomes temporarily unavailable until the blocking work on the server is finished.
+ </p>
+ <!-- 
+NewPP limit report
+Cached time: 20251026230859
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.017 seconds
+Real time usage: 0.022 seconds
+Preprocessor visited node count: 28/1000000
+Revision size: 7867/4194304 bytes
+Post‐expand include size: 0/4194304 bytes
+Template argument size: 0/4194304 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:8070-0!canonical and timestamp 20251026230859 and revision id 55293. Rendering was triggered because: page_view
+ -->
+</div>

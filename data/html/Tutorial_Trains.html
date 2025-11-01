@@ -1,0 +1,3120 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="nomobile">
+  <table class="plainlinks ambox ambox-orange" style="">
+   <tbody>
+    <tr>
+     <td class="ambox-image">
+      <a class="image" href="/wiki/File:Stub.svg" title="Outdated">
+       <img alt="Outdated" data-file-height="128" data-file-width="128" decoding="async" height="44" loading="lazy" src="https://commons.wiki.gg/images/Stub.svg?ddd5ba" width="44"/>
+      </a>
+     </td>
+     <td class="ambox-text">
+      <i>
+       This article is
+       <a href="/wiki/Category:Outdated" title="Category:Outdated">
+        outdated
+       </a>
+       . You can help Satisfactory Wiki by
+       <a class="text" href="https://satisfactory.wiki.gg/wiki/Tutorial:Trains?action=edit">
+        updating it
+       </a>
+       .
+      </i>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="mobileonly" style="text-align:center">
+  <i>
+   This article is
+   <a href="/wiki/Category:Outdated" title="Category:Outdated">
+    outdated
+   </a>
+   . You can help Satisfactory Wiki by
+   <a class="text" href="https://satisfactory.wiki.gg/wiki/Tutorial:Trains?action=edit">
+    updating it
+   </a>
+   .
+  </i>
+  <br/>
+  <br/>
+ </div>
+ <p>
+  This tutorial explains
+  <b>
+   what there is to know about trains
+  </b>
+  , how to set them up, how to calculate throughput etc.
+ </p>
+ <p>
+  <i>
+   NOTE: This article is still work-in-progress, images are to be added.
+  </i>
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Prerequisites">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Prerequisites
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-2">
+    <a href="#The_basics">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      The basics
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-3">
+      <a href="#Track_construction">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Track construction
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-4">
+        <a href="#Switches">
+         <span class="tocnumber">
+          2.1.1
+         </span>
+         <span class="toctext">
+          Switches
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#Train_composition">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Train composition
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-6">
+      <a href="#Train_operation">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Train operation
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-7">
+      <a href="#Bi-directional_trains">
+       <span class="tocnumber">
+        2.4
+       </span>
+       <span class="toctext">
+        Bi-directional trains
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-8">
+      <a href="#Stations_and_loading_cargo">
+       <span class="tocnumber">
+        2.5
+       </span>
+       <span class="toctext">
+        Stations and loading cargo
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-9">
+      <a href="#Pathfinding">
+       <span class="tocnumber">
+        2.6
+       </span>
+       <span class="toctext">
+        Pathfinding
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-10">
+    <a href="#Signals">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Signals
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-11">
+      <a href="#Blocks">
+       <span class="tocnumber">
+        3.1
+       </span>
+       <span class="toctext">
+        Blocks
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-12">
+      <a href="#Block_Signals">
+       <span class="tocnumber">
+        3.2
+       </span>
+       <span class="toctext">
+        Block Signals
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-13">
+      <a href="#Path_Signals">
+       <span class="tocnumber">
+        3.3
+       </span>
+       <span class="toctext">
+        Path Signals
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-14">
+      <a href="#Using_Signals">
+       <span class="tocnumber">
+        3.4
+       </span>
+       <span class="toctext">
+        Using Signals
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-15">
+        <a href="#Double_Track_Railway">
+         <span class="tocnumber">
+          3.4.1
+         </span>
+         <span class="toctext">
+          Double Track Railway
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-16">
+        <a href="#Passing_Lanes_on_Bi-Directional_Tracks">
+         <span class="tocnumber">
+          3.4.2
+         </span>
+         <span class="toctext">
+          Passing Lanes on Bi-Directional Tracks
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-17">
+        <a href="#Subdividing_linear_tracks">
+         <span class="tocnumber">
+          3.4.3
+         </span>
+         <span class="toctext">
+          Subdividing linear tracks
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-18">
+    <a href="#Building_a_complete_railway">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      Building a complete railway
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-19">
+      <a href="#Automation">
+       <span class="tocnumber">
+        4.1
+       </span>
+       <span class="toctext">
+        Automation
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-20">
+    <a href="#Calculating_throughput">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      Calculating throughput
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-21">
+      <a href="#Train_throughput">
+       <span class="tocnumber">
+        5.1
+       </span>
+       <span class="toctext">
+        Train throughput
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-22">
+        <a href="#Example">
+         <span class="tocnumber">
+          5.1.1
+         </span>
+         <span class="toctext">
+          Example
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-23">
+      <a href="#Calculating_train_size">
+       <span class="tocnumber">
+        5.2
+       </span>
+       <span class="toctext">
+        Calculating train size
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-24">
+        <a href="#Example_2">
+         <span class="tocnumber">
+          5.2.1
+         </span>
+         <span class="toctext">
+          Example
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-25">
+      <a href="#Freight_Platform_fill_duration">
+       <span class="tocnumber">
+        5.3
+       </span>
+       <span class="toctext">
+        Freight Platform fill duration
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-26">
+    <a href="#Packed_Buffer_Strategy">
+     <span class="tocnumber">
+      6
+     </span>
+     <span class="toctext">
+      Packed Buffer Strategy
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-27">
+    <a href="#See_also">
+     <span class="tocnumber">
+      7
+     </span>
+     <span class="toctext">
+      See also
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Prerequisites">
+   Prerequisites
+  </span>
+ </h2>
+ <p>
+  Trains are unlocked in
+  <a class="mw-redirect" href="/wiki/Tier_6" title="Tier 6">
+   Tier 6
+  </a>
+  . Before they can be unlocked, Oil processing has to be set up to allow for
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Computer" title="Computer">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Computer.png/20px-Computer.png?823b42" width="20"/>
+   </a>
+   <a href="/wiki/Computer" title="Computer">
+    Computers
+   </a>
+  </span>
+  to be made - although Computers found at Crash Sites can allow a few early station setups. Beside Computers, a sufficient amount of
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Heavy_Modular_Frame" title="Heavy Modular Frame">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Heavy_Modular_Frame.png/20px-Heavy_Modular_Frame.png?3faddb" width="20"/>
+   </a>
+   <a href="/wiki/Heavy_Modular_Frame" title="Heavy Modular Frame">
+    Heavy Modular Frames
+   </a>
+  </span>
+  and
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Motor" title="Motor">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Motor.png/20px-Motor.png?345ae9" width="20"/>
+   </a>
+   <a href="/wiki/Motor" title="Motor">
+    Motors
+   </a>
+  </span>
+  are also required.
+ </p>
+ <h2>
+  <span class="mw-headline" id="The_basics">
+   The basics
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Track_construction">
+   Track construction
+  </span>
+ </h3>
+ <p>
+  <a href="/wiki/Railway" title="Railway">
+   <img alt="Railway.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Railway.png/32px-Railway.png?13e1c3" width="32"/>
+  </a>
+  <a href="/wiki/Railway" title="Railway">
+   Railways
+  </a>
+  are built using
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Steel_Beam" title="Steel Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Steel_Beam.png/20px-Steel_Beam.png?422f94" width="20"/>
+   </a>
+   <a href="/wiki/Steel_Beam" title="Steel Beam">
+    Steel Beams
+   </a>
+  </span>
+  and
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Steel_Pipe.png/20px-Steel_Pipe.png?c79680" width="20"/>
+   </a>
+   <a href="/wiki/Steel_Pipe" title="Steel Pipe">
+    Pipes
+   </a>
+  </span>
+  . One railway segment can be up to 100 meters long.
+Railways take shape and angle based on the terrain they are built on, which can lead to very wiggly tracks or tracks that clip through the ground on uneven terrain. For optimal results, construct Railways on
+  <a href="/wiki/Foundations" title="Foundations">
+   Foundations
+  </a>
+  .
+ </p>
+ <h4>
+  <span class="mw-headline" id="Switches">
+   Switches
+  </span>
+ </h4>
+ <p>
+  Switches are formed by joining Railway segments together:
+ </p>
+ <ul>
+  <li>
+   This cannot be done directly before or after a
+   <a href="/wiki/Train_Station" title="Train Station">
+    Train Station
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Railroad_Switch_Control" title="Railroad Switch Control">
+    Railroad Switch Control
+   </a>
+   will appear at each switch; it is only relevant for manual driving (automatic trains will always choose a path regardless of the switch control)
+  </li>
+  <li>
+   A switch doesn't have to be just 2-way, it is possible to keep on adding more tracks
+  </li>
+  <li>
+   A switch can be cross-shaped
+  </li>
+  <li>
+   <b>
+    Avoid:
+   </b>
+   There is a bug, where if a single Railway segment has a switch on both ends, automatic trains will have trouble pathing through the switch. Instead of having one Railway segment with a switch on both ends, break the segment into two smaller segments, both of which only have a switch at one end.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Train_composition">
+   Train composition
+  </span>
+ </h3>
+ <p>
+  Trains are made up out of
+  <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+   <img alt="Electric Locomotive.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Electric_Locomotive.png/32px-Electric_Locomotive.png?e13850" width="32"/>
+  </a>
+  <a href="/wiki/Electric_Locomotive" title="Electric Locomotive">
+   Electric Locomotives
+  </a>
+  and
+  <a href="/wiki/Freight_Car" title="Freight Car">
+   <img alt="Freight Car.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Freight_Car.png/32px-Freight_Car.png?e168f9" width="32"/>
+  </a>
+  <a href="/wiki/Freight_Car" title="Freight Car">
+   Freight Cars
+  </a>
+  . Trains with more carriages will speed up and brake more slowly, but most importantly, they will handle inclines worse. Therefore, having multiple Locomotives is a requirement unless the track is
+  <i>
+   completely
+  </i>
+  without inclines. The recommended ratio is one Locomotive for four Freight Cars. Whether a Freight Car is loaded does not affect the weight.
+ </p>
+ <p>
+  Freight Cars can carry either 32 stacks of items or 1,600 m
+  <sup>
+   3
+  </sup>
+  , however, not fluids and items at the same time.
+ </p>
+ <p>
+  It is un-advisable to mix cargo in Freight Cars; the optimal solution is to have at least one Freight Car per item. See
+  <a href="#Calculating_throughput">
+   § Calculating throughput
+  </a>
+  for how many Freight Cars should a train have to have sufficient capacity.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Train_operation">
+   Train operation
+  </span>
+ </h3>
+ <p>
+  A train can be only operated if it has at least one Electric Locomotive and is on a powered Railway. For manual driving,
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     W
+    </kbd>
+   </a>
+  </span>
+  /
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     S
+    </kbd>
+   </a>
+  </span>
+  to speed up or use engine brake (based on direction),
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     A
+    </kbd>
+   </a>
+  </span>
+  /
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     D
+    </kbd>
+   </a>
+  </span>
+  to change upcoming signal direction,
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Space
+    </kbd>
+   </a>
+  </span>
+  to use air brake and
+  <a class="image" href="/wiki/File:Keyboard_White_Mouse_Left.png" title="Left">
+   <img alt="Left" data-file-height="100" data-file-width="100" decoding="async" height="28" loading="lazy" src="https://commons.wiki.gg/images/thumb/Keyboard_White_Mouse_Left.png/28px-Keyboard_White_Mouse_Left.png?c1a406" width="28"/>
+  </a>
+  to use the horn. Automated driving is set up using a timetable (explained in
+  <a href="#Automation">
+   § Automation
+  </a>
+  ).
+ </p>
+ <p>
+  Trains derail when colliding with other trains if there is sufficient speed involved. If it is a low speed collision, sparks will appear at the point of contact. Trains can collide if they are on the same track with improper signaling or if two tracks are too close. As mentioned before, there are signals and they are important to control the flow of automated trains.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Bi-directional_trains">
+   Bi-directional trains
+  </span>
+ </h3>
+ <p>
+  Placing a Locomotive (or Locomotives) on both ends of a train makes it bi-directional, as Locomotives on autopilot don't reverse. A bi-directional train can run as a shuttle without turning around.
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:41px auto;">
+      <a class="image" href="/wiki/File:Electric_Train_Overpass.png" title="A bi-directional train">
+       <img alt="A bi-directional train" data-file-height="1080" data-file-width="1920" decoding="async" height="68" loading="lazy" src="/images/thumb/Electric_Train_Overpass.png/120px-Electric_Train_Overpass.png?15feef" width="120"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     A bi-directional train
+    </div>
+   </div>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Stations_and_loading_cargo">
+   Stations and loading cargo
+  </span>
+ </h3>
+ <p>
+  Stations consist of four different buildings:
+  <a href="/wiki/Train_Station" title="Train Station">
+   <img alt="Train Station.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Train_Station.png/32px-Train_Station.png?9a06ba" width="32"/>
+  </a>
+  <a href="/wiki/Train_Station" title="Train Station">
+   Train Station
+  </a>
+  ,
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   <img alt="Freight Platform.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Freight_Platform.png/32px-Freight_Platform.png?27866a" width="32"/>
+  </a>
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platforms
+  </a>
+  ,
+  <a href="/wiki/Fluid_Freight_Platform" title="Fluid Freight Platform">
+   <img alt="Fluid Freight Platform.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Fluid_Freight_Platform.png/32px-Fluid_Freight_Platform.png?8902df" width="32"/>
+  </a>
+  <a class="mw-redirect" href="/wiki/Fluid_Freight_Platform" title="Fluid Freight Platform">
+   Fluid Freight Platforms
+  </a>
+  and
+  <a href="/wiki/Empty_Platform" title="Empty Platform">
+   <img alt="Empty Platform.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Empty_Platform.png/32px-Empty_Platform.png?7810cd" width="32"/>
+  </a>
+  <a href="/wiki/Empty_Platform" title="Empty Platform">
+   Empty Platforms
+  </a>
+  .
+ </p>
+ <p>
+  Starting with the
+  <a href="/wiki/Train_Station" title="Train Station">
+   Train Station
+  </a>
+  , it is very important to note that it is directional. The direction of the Train Station dictates how will trains arrive in the station, but not depart. That means that for bi-directional trains, both Train Stations have to face the end of the track. Train Stations have to be powered and constantly consume 50 MW, they also power the railway network they are on and all other stations on the same network (making it an extension of the standard power grid).
+ </p>
+ <p>
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platforms
+  </a>
+  attach to the Train Station. They can be rotated either left or right, which does not affect how they behave. Inside their UI, they can be either set to "load" or "unload" (where the yellow button is the currently active option). One Freight Platform handles one Freight Car, therefore to load a train consisting of one Locomotive and three Freight Cars, the station will begin with a Train Station (for the Locomotive) followed by three Freight Platforms. Freight Platforms stop accepting or outputting items during the 25-second long loading animation. To keep items moving, Industrial Storage Containers or at least two Industrial Fluid Buffers should be placed before each loading and after each unloading Freight Platform.
+ </p>
+ <p>
+  Freight Platforms can be spaced out using
+  <a href="/wiki/Empty_Platform" title="Empty Platform">
+   Empty Platforms
+  </a>
+  . For example, for a train made up of two Locomotives and seven Freight Cars where only the 3rd Freight Car has to be loaded, the station will consist of a Train Station, three Empty Platforms (one for the second Locomotive and two for the two Freight Cars that precede the 3rd one) and one Freight Platform (that handles the 3rd Freight Car). It is not necessary to add trailing Empty Platforms after the last used Freight Platform.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Pathfinding">
+   Pathfinding
+  </span>
+ </h3>
+ <p>
+  Autopilot trains will calculate their paths based on tiles (real or implied) between the current set of destinations in their time table. They will always choose the shortest path between two destinations. This cannot be controlled by train signals. Trains will also ignore any other trains on the same path during calculations which can result in either collisions or delays. On single track bi directional paths this could also result in head to head deadlock. Trains will not use "bypass" lanes to avoid each other. Just shortest path.
+ </p>
+ <p>
+  That said, you can do things to prevent issues. For instance, having train stations branch off the mainline and properly signaled, trains will be out of the way of other trains on the mainline. Use of dual one way tracks also removes many of the issues of single bi directional tracks.
+ </p>
+ <p>
+  Lastly, Train Stations the train does not stop at add a 200m "penalty" to the path. If you build stations inline in the mainline keep this penalty in mind, especially if you notice the trains taking odd paths to avoid stations.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Signals">
+   Signals
+  </span>
+ </h2>
+ <p>
+  Main article:
+  <a href="/wiki/Train_Signals" title="Train Signals">
+   Train Signals
+  </a>
+ </p>
+ <p>
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Train_Signals" title="Train Signals">
+    <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Block_Signal.png/20px-Block_Signal.png?48c89c" width="20"/>
+   </a>
+   <a href="/wiki/Train_Signals" title="Train Signals">
+    Train Signals
+   </a>
+  </span>
+  are structures, that allow the construction of more complex rail networks, controlling the movement of trains, and allowing multiple trains to use the same network without the risk of colliding. Train Signals come in two flavors, Block Signals and Path Signals.
+ </p>
+ <p>
+  A signal can only be constructed at the joints or ends of Railway tracks with each signal having a forward direction, that is determined by the side the signal is on. Automated trains will not pass a signal that is "backwards" from their direction but placing two signals in opposite directions makes the track bi-directional.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Blocks">
+   Blocks
+  </span>
+ </h3>
+ <p>
+  By adding signals the Railway track is divided into
+  <i>
+   blocks
+  </i>
+  . Each block must have at least on entry and one exit signal, but more complex structures with multiple entries and exits can be constructed. The entry signals for a block must be of the same type (either all Block or all Path), otherwise the signals will shown an error and any automated train will refuse to enter. Note that separate tracks that come to close to one another or clip are considered part of the same block,  allowing for the safe construction of crossing tracks.
+ </p>
+ <p>
+  If any part of a train, even only half a cart, is inside a block this block is considered occupied. Blocks without trains are considered empty or vacant.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Block_Signals">
+   Block Signals
+  </span>
+ </h3>
+ <p>
+  Block Signals are simple signals either permitting an automated train to move into the next block or stopping it at a red light. A Block Signal will show red if it leads into an occupied block and green if the next block is empty, this prevents trains from colliding by ensuring, that every block will have at most one train in it.
+ </p>
+ <p>
+  A Block Signal is only concerned with the block it leads into. Block Signals therefore do not communicate with other Block Signals further ahead making it impossible to "chain" signals or to ensure the next block in a train's path is empty. Automated Trains however can look beyond the current signal and will slow down if they would enter an occupied block.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Path_Signals">
+   Path Signals
+  </span>
+ </h3>
+ <p>
+  Path Signals subdivide a block into multiple paths than can be occupied individually allowing for multiple trains to move through a block simultaneously.
+ </p>
+ <p>
+  An approaching train will reserve a path through the block, preventing other trains that would cross its path from entering but allowing those trains to enter that use another path. This is especially useful for intersections with multiple entries and exits as a train does not have to wait for another train to leave the intersection, like a Block Signal would require, but instead the train can enter the block as long as it's safe to do so.
+ </p>
+ <p>
+  Path Signals also look ahead of the current block ensuring that a train that enters the block can also exit it. This prevents a train from stopping inside an intersection and blocking it. This seems to extend for as long as there are Path Signals leading to situations were a train refuses to enter a block because a different block further down the line has an occupied path.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Using_Signals">
+   Using Signals
+  </span>
+ </h3>
+ <p>
+  Here are a few examples of how to use signals. Keep in mind, that signals are not strictly necessary if there is only a single train on the entire network.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Double_Track_Railway">
+   Double Track Railway
+  </span>
+ </h4>
+ <p>
+  By using the directionality of signals, two railway tracks can be build side-by-side with one only allowing traffic in one direction and the other in the opposite direction. This allows trains to always safely pass and can increase throughput when there is a lot of traffic in both directions.
+ </p>
+ <p>
+  It's best to decide on a "handedness" (left- or right-hand traffic) for the rail network to make planning easier and prevent accidental head on collisions.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Passing_Lanes_on_Bi-Directional_Tracks">
+   Passing Lanes on Bi-Directional Tracks
+  </span>
+ </h4>
+ <p>
+  A single track can also be used in both directions by multiple trains through the use of passing lanes. These are splits in the track creating one side for each direction and allowing two trains to pass on another.
+ </p>
+ <div class="center">
+  <div class="thumb tnone">
+   <div class="thumbinner" style="width:322px;">
+    <a class="image" href="/wiki/File:Bi-Directional_Rail_System_Design_1.webp">
+     <img class="thumbimage" data-file-height="1440" data-file-width="2560" decoding="async" height="180" loading="lazy" src="/images/thumb/Bi-Directional_Rail_System_Design_1.webp/320px-Bi-Directional_Rail_System_Design_1.webp.png?9d85f7" width="320"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify">
+      <a class="internal" href="/wiki/File:Bi-Directional_Rail_System_Design_1.webp" title="Enlarge">
+      </a>
+     </div>
+     Diagram of a rail system using a bi-directional track with a passing lane and Train Signal setup.
+    </div>
+   </div>
+  </div>
+ </div>
+ <h4>
+  <span class="mw-headline" id="Subdividing_linear_tracks">
+   Subdividing linear tracks
+  </span>
+ </h4>
+ <p>
+  On long stretches between intersections or stations the track can be further subdivided through Block Signals to allow multiple trains to move on the track at the same time. This is especially useful when using Path Signals at intersections as trains will not enter the intersection if they cannot leave the intersection. This does not work however on bi-directional tracks as Block Signals don't take into account whether or not a train can leave a block, leading to a potential gridlock when two trains face head on.
+ </p>
+ <p>
+  There is no general best distance between signals, but they should be at least as far apart as the longest train that uses this track is.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Building_a_complete_railway">
+   Building a complete railway
+  </span>
+ </h2>
+ <p>
+  As an example, we'll automate the transportation of
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Crude_Oil" title="Crude Oil">
+    <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Crude_Oil.png/20px-Crude_Oil.png?9eadf5" width="20"/>
+   </a>
+   <a href="/wiki/Crude_Oil" title="Crude Oil">
+    Crude Oil
+   </a>
+  </span>
+  products:
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Plastic" title="Plastic">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Plastic.png/20px-Plastic.png?c8d276" width="20"/>
+   </a>
+   <a href="/wiki/Plastic" title="Plastic">
+    Plastic
+   </a>
+  </span>
+  ,
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Rubber" title="Rubber">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rubber.png/20px-Rubber.png?69f8e2" width="20"/>
+   </a>
+   <a href="/wiki/Rubber" title="Rubber">
+    Rubber
+   </a>
+  </span>
+  ,
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Petroleum_Coke.png/20px-Petroleum_Coke.png?c7b3af" width="20"/>
+   </a>
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    Petroleum Coke
+   </a>
+  </span>
+  and
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Fuel" title="Fuel">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Fuel.png/20px-Fuel.png?f21d48" width="20"/>
+   </a>
+   <a href="/wiki/Fuel" title="Fuel">
+    Fuel
+   </a>
+  </span>
+  or
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Packaged_Fuel" title="Packaged Fuel">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Packaged_Fuel.png/20px-Packaged_Fuel.png?1f8352" width="20"/>
+   </a>
+   <a href="/wiki/Packaged_Fuel" title="Packaged Fuel">
+    Packaged Fuel
+   </a>
+  </span>
+  . Packaging the fluid doubles the capacity one Freight Car can transport, at the cost of having to deal with recycling Empty Canisters or dedicating a part of the Plastic production, it is better to use double the number of Freight Cars in that scenario. It is best to avoid transporting fluids as much as possible (that's why we're transporting Crude Oil products and not Crude Oil itself; for power generation, burn all produced Fuel near the source without having to transport it, for Jetpack and Vehicle fuel only small amounts of either fluid or Packaged Fuel are necessary). For this tutorial, fluid Fuel will be transported.
+ </p>
+ <p>
+  Starting with the train, it will have five carriages (one for Plastic, Rubber, and Coke each and two for fluid Fuel, avoiding mixing cargo whatsoever). As mentioned above, the recommended ratio is one Locomotive per four Freight cars, and because five Freight Cars are used, the train will be hauled with two Electric Locomotives. It is very useful to define the order of the carriages, so we don't accidentally happen to mix cargo later on.
+ </p>
+ <p>
+  The station at the Crude Oil outpost will consist of a Train Station, one Empty Platform, and five Freight Platforms, of which the last two are for fluids. All of the Freight Platforms have to be set to "load" in their UI (each one individually). The Train Station can be renamed upon being interacted with.
+ </p>
+ <p>
+  The station at our destination will look the same, with the only exception that the Freight Platforms will be set to "unload".
+ </p>
+ <h3>
+  <span class="mw-headline" id="Automation">
+   Automation
+  </span>
+ </h3>
+ <p>
+  Trains can be automated using a timetable. Despite the name, the timetable has nothing to do with time, only sets which stations the train should path to and stop at, it is not possible to e.g. make the train wait until it is fully loaded or unloaded.
+Setting up the timetable is quite primitive:
+ </p>
+ <ul>
+  <li>
+   Make one entry for each Train Station, in order, only mentioning each station once
+  </li>
+  <li>
+   The train will complete the route in order and automatically go from the last station to the first one
+  </li>
+  <li>
+   Bi-directional train routes are set up the same way, however, ensure the train can actually reach all of the stations (as mentioned above, Train Stations are directional and trains can only arrive in them in that direction but can depart either forward or in reverse)
+  </li>
+  <li>
+   If the train cannot find a path, check if all Train Stations are rotated correctly, and the Railway is connected (easiest way to check if the Railway is connected is to drive the route manually if the train suddenly stops then the Railway is not connected)
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Calculating_throughput">
+   Calculating throughput
+  </span>
+ </h2>
+ <div style="margin-top: 5px;">
+  <div style="margin-left: 30px;">
+   <i>
+    Main article:
+   </i>
+   <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+    Tutorial:Train throughput
+   </a>
+  </div>
+ </div>
+ <h3>
+  <span class="mw-headline" id="Train_throughput">
+   Train throughput
+  </span>
+ </h3>
+ <p>
+  The theoretical throughput for a single train can be calculated, using:
+ </p>
+ <ul>
+  <li>
+   The time
+   <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow data-mjx-texclass="ORD">
+     <mstyle displaystyle="false" scriptlevel="0">
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          round trip
+         </mtext>
+        </mrow>
+       </mrow>
+      </msub>
+     </mstyle>
+    </mrow>
+   </math>
+   (in seconds) for a complete round trip
+  </li>
+  <li>
+   The  cargo volume
+   <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow data-mjx-texclass="ORD">
+     <mstyle displaystyle="false" scriptlevel="0">
+      <msub>
+       <mi>
+        V
+       </mi>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          cargo
+         </mtext>
+        </mrow>
+       </mrow>
+      </msub>
+     </mstyle>
+    </mrow>
+   </math>
+   for each Freight Car:
+   <ul>
+    <li>
+     For items: items per stack times inventory size (currently 32)
+     <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow data-mjx-texclass="ORD">
+       <mstyle displaystyle="false" scriptlevel="0">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         =
+        </mo>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            stack
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         ×
+        </mo>
+        <mn>
+         3
+        </mn>
+        <mn>
+         2
+        </mn>
+       </mstyle>
+      </mrow>
+     </math>
+    </li>
+    <li>
+     For fluids:
+     <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow data-mjx-texclass="ORD">
+       <mstyle displaystyle="false" scriptlevel="0">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mn>
+         6
+        </mn>
+        <mn>
+         0
+        </mn>
+        <mn>
+         0
+        </mn>
+        <msup>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           m
+          </mtext>
+         </mrow>
+         <mrow data-mjx-texclass="ORD">
+          <mn>
+           3
+          </mn>
+         </mrow>
+        </msup>
+       </mstyle>
+      </mrow>
+     </math>
+    </li>
+   </ul>
+  </li>
+  <li>
+   The total belt or pipe input
+   <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow data-mjx-texclass="ORD">
+     <mstyle displaystyle="false" scriptlevel="0">
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          input
+         </mtext>
+        </mrow>
+       </mrow>
+      </msub>
+     </mstyle>
+    </mrow>
+   </math>
+   (in items/s or m³/s) at each platform
+  </li>
+  <li>
+   The number of Freight Cars:
+   <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow data-mjx-texclass="ORD">
+     <mstyle displaystyle="false" scriptlevel="0">
+      <msub>
+       <mi>
+        n
+       </mi>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mtext>
+          freight car
+         </mtext>
+        </mrow>
+       </mrow>
+      </msub>
+     </mstyle>
+    </mrow>
+   </math>
+  </li>
+ </ul>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Train_throughput_as_function_of_trip_time.jpg">
+    <img class="thumbimage" data-file-height="1070" data-file-width="2043" decoding="async" height="168" loading="lazy" src="/images/thumb/Train_throughput_as_function_of_trip_time.jpg/320px-Train_throughput_as_function_of_trip_time.jpg?75be49" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Train_throughput_as_function_of_trip_time.jpg" title="Enlarge">
+     </a>
+    </div>
+    Throughput as a function of trip time. The longer the trip time, the more time the station has to fill up and the higher the throughput. At one point the station is sufficiently full and the throughput decreases again.
+   </div>
+  </div>
+ </div>
+ <p>
+  First, the required time to sufficiently fill each
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   <img alt="Freight Platform.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Freight_Platform.png/32px-Freight_Platform.png?27866a" width="32"/>
+  </a>
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platform
+  </a>
+  has to be calculated:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       t
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         fill platform
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          T
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            input
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      2
+     </mn>
+     <mn>
+      7
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       s
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  Where 27.08s is the time for the loading animation during which all inputs are blocked. If this time is less than the round trip time, the platform can prepare a full load of cargo and the Freight Cars leave fully loaded.  In this case the average throughput
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="false" scriptlevel="0">
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         train
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+    </mstyle>
+   </mrow>
+  </math>
+  is:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         train
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <msub>
+      <mi>
+       n
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         freight car
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          t
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            round trip
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  Should the time to fill the station be higher than the round trip duration, the Freight Car leaves only semi loaded and the throughput is:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         train
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             round trip
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+         <mo stretchy="false">
+          −
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mn>
+          7
+         </mn>
+         <mo stretchy="false">
+          .
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mn>
+          8
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          t
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            round trip
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <msub>
+      <mi>
+       n
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         freight car
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         input
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Example">
+   Example
+  </span>
+ </h4>
+ <p>
+  A single Freight Car carrying
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Quickwire" title="Quickwire">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Quickwire.png/20px-Quickwire.png?92bd94" width="20"/>
+   </a>
+   <a href="/wiki/Quickwire" title="Quickwire">
+    Quickwire
+   </a>
+  </span>
+  (500 items per stack) takes 300s (5min) for a round trip, loading from a platform with two
+  <a href="/wiki/Conveyor_Belt_Mk.4" title="Conveyor Belt Mk.4">
+   <img alt="Conveyor Belt Mk.4.png" data-file-height="512" data-file-width="512" decoding="async" height="32" loading="lazy" src="/images/thumb/Conveyor_Belt_Mk.4.png/32px-Conveyor_Belt_Mk.4.png?e6fc1d" width="32"/>
+  </a>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.4" title="Conveyor Belt Mk.4">
+   Conveyor Belt Mk.4
+  </a>
+  (480 items/min = 8 items/s each). In this scenario the calculations are as follows:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       t
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         fill platform
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          T
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            belt
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      2
+     </mn>
+     <mn>
+      7
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       s
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           item/stack
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          2
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           stack
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          2
+         </mn>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          8
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           item
+          </mtext>
+         </mrow>
+         <mo lspace="0" rspace="0">
+          /
+         </mo>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      +
+     </mo>
+     <mn>
+      2
+     </mn>
+     <mn>
+      7
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       s
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mn>
+      1
+     </mn>
+     <mn>
+      0
+     </mn>
+     <mn>
+      2
+     </mn>
+     <mn>
+      7
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mn>
+      8
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       s
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  The platform takes too long to load and the trains leaves only partially loaded. The throughput is therefore:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         train
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             round trip
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+         <mo stretchy="false">
+          −
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mn>
+          7
+         </mn>
+         <mo stretchy="false">
+          .
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mn>
+          8
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          t
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            round trip
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         belt
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          3
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          −
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mn>
+          7
+         </mn>
+         <mo stretchy="false">
+          .
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mn>
+          8
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          3
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <mn>
+      2
+     </mn>
+     <mo stretchy="false">
+      ×
+     </mo>
+     <mn>
+      8
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       item/s
+      </mtext>
+     </mrow>
+     <mo stretchy="false">
+      ≈
+     </mo>
+     <mn>
+      1
+     </mn>
+     <mn>
+      4
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      5
+     </mn>
+     <mn>
+      6
+     </mn>
+     <mrow data-mjx-texclass="ORD">
+      <mtext>
+       item/s
+      </mtext>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  Or about 870 items/min (≈1.8 Mk.4 Belts).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Calculating_train_size">
+   Calculating train size
+  </span>
+ </h3>
+ <p>
+  On the other hand, given a desired throughput
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="false" scriptlevel="0">
+     <msub>
+      <mi>
+       T
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         desired
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+    </mstyle>
+   </mrow>
+  </math>
+  , the required amount of Freight Cars can be calculated as:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       n
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         freight car
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <msub>
+          <mi>
+           T
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             desired
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             round trip
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <p>
+  and then rounding up to the next whole number.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Example_2">
+   Example
+  </span>
+ </h4>
+ <p>
+  Using the numbers from the previous example and a desired throughput of 26 items/s (= 2 Mk.5 Belts), the required amount of Freight Cars is:
+ </p>
+ <p>
+  <math class="mwe-math-element mwe-math-element-inline" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow data-mjx-texclass="ORD">
+    <mstyle displaystyle="true" scriptlevel="0">
+     <msub>
+      <mi>
+       n
+      </mi>
+      <mrow data-mjx-texclass="ORD">
+       <mrow data-mjx-texclass="ORD">
+        <mtext>
+         freight car
+        </mtext>
+       </mrow>
+      </mrow>
+     </msub>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <msub>
+          <mi>
+           T
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             desired
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mrow data-mjx-texclass="ORD">
+           <mrow data-mjx-texclass="ORD">
+            <mtext>
+             round trip
+            </mtext>
+           </mrow>
+          </mrow>
+         </msub>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <msub>
+         <mi>
+          V
+         </mi>
+         <mrow data-mjx-texclass="ORD">
+          <mrow data-mjx-texclass="ORD">
+           <mtext>
+            cargo
+           </mtext>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      =
+     </mo>
+     <mrow data-mjx-texclass="ORD">
+      <mfrac>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          2
+         </mn>
+         <mn>
+          6
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           item/s
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           s
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+         <mn>
+          5
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mn>
+          0
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           item/stack
+          </mtext>
+         </mrow>
+         <mo stretchy="false">
+          ×
+         </mo>
+         <mn>
+          3
+         </mn>
+         <mn>
+          2
+         </mn>
+         <mrow data-mjx-texclass="ORD">
+          <mtext>
+           stack
+          </mtext>
+         </mrow>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">
+      ≈
+     </mo>
+     <mn>
+      0
+     </mn>
+     <mo stretchy="false">
+      .
+     </mo>
+     <mn>
+      5
+     </mn>
+    </mstyle>
+   </mrow>
+  </math>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Freight_Platform_fill_duration">
+   Freight Platform fill duration
+  </span>
+ </h3>
+ <p>
+  The following table shows how long (in hh:mm:ss) it takes to completely fill up or empty the storage of a single Freight Platform. (Click [Expand] to view)
+ </p>
+ <table class="wikitable mw-collapsible mw-collapsed">
+  <caption>
+   Freight Platform fill duration
+  </caption>
+  <tbody>
+   <tr>
+    <th colspan="6">
+     Belts
+    </th>
+   </tr>
+   <tr>
+    <th>
+     Belt Mk.
+    </th>
+    <th>
+     Stack size 1
+    </th>
+    <th>
+     Stack size 50
+    </th>
+    <th>
+     Stack size 100
+    </th>
+    <th>
+     Stack size 200
+    </th>
+    <th>
+     Stack size 500
+    </th>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.1
+    </td>
+    <td>
+     0:00:48
+    </td>
+    <td>
+     0:40:00
+    </td>
+    <td>
+     1:20:00
+    </td>
+    <td>
+     2:40:00
+    </td>
+    <td>
+     6:40:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.1
+    </td>
+    <td>
+     0:00:24
+    </td>
+    <td>
+     0:20:00
+    </td>
+    <td>
+     0:40:00
+    </td>
+    <td>
+     1:20:00
+    </td>
+    <td>
+     3:20:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.2
+    </td>
+    <td>
+     0:00:24
+    </td>
+    <td>
+     0:20:00
+    </td>
+    <td>
+     0:40:00
+    </td>
+    <td>
+     1:20:00
+    </td>
+    <td>
+     3:20:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.2
+    </td>
+    <td>
+     0:00:12
+    </td>
+    <td>
+     0:10:00
+    </td>
+    <td>
+     0:20:00
+    </td>
+    <td>
+     0:40:00
+    </td>
+    <td>
+     1:40:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.3
+    </td>
+    <td>
+     0:00:10
+    </td>
+    <td>
+     0:08:53
+    </td>
+    <td>
+     0:17:46
+    </td>
+    <td>
+     0:35:33
+    </td>
+    <td>
+     1:28:53
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.3
+    </td>
+    <td>
+     0:00:05
+    </td>
+    <td>
+     0:04:26
+    </td>
+    <td>
+     0:08:53
+    </td>
+    <td>
+     0:17:46
+    </td>
+    <td>
+     0:44:26
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.4
+    </td>
+    <td>
+     0:00:06
+    </td>
+    <td>
+     0:05:00
+    </td>
+    <td>
+     0:10:00
+    </td>
+    <td>
+     0:20:00
+    </td>
+    <td>
+     0:50:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.4
+    </td>
+    <td>
+     0:00:03
+    </td>
+    <td>
+     0:02:30
+    </td>
+    <td>
+     0:05:00
+    </td>
+    <td>
+     0:10:00
+    </td>
+    <td>
+     0:25:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.5
+    </td>
+    <td>
+     0:00:03
+    </td>
+    <td>
+     0:03:04
+    </td>
+    <td>
+     0:06:09
+    </td>
+    <td>
+     0:12:18
+    </td>
+    <td>
+     0:30:46
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.5
+    </td>
+    <td>
+     0:00:01
+    </td>
+    <td>
+     0:01:32
+    </td>
+    <td>
+     0:03:04
+    </td>
+    <td>
+     0:06:09
+    </td>
+    <td>
+     0:15:23
+    </td>
+   </tr>
+   <tr>
+    <th colspan="6">
+     Pipes
+    </th>
+   </tr>
+   <tr>
+    <th>
+     Pipe Mk.
+    </th>
+    <th colspan="5">
+     Fluid
+    </th>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.1
+    </td>
+    <td colspan="5">
+     0:08:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.1
+    </td>
+    <td colspan="5">
+     0:04:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1× Mk.2
+    </td>
+    <td colspan="5">
+     0:04:00
+    </td>
+   </tr>
+   <tr>
+    <td>
+     2× Mk.2
+    </td>
+    <td colspan="5">
+     0:02:00
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  This table is useful for determining whether the round trip time isn't too long. The round trip time shouldn't be more than 3/5 of the shortest time required for the whole train.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Packed_Buffer_Strategy">
+   Packed Buffer Strategy
+  </span>
+ </h2>
+ <p>
+  The packed buffer strategy is meant to solve the following scenario:
+ </p>
+ <p>
+  Factory A produces some good that needs to be shipped to Factory B via Train. Factory A has a large storage reserve of this good, and all output of this good is put into storage, then drawn from storage into consuming machines. This is a common strategy to allow for overproduction of a good that meets demand while also allowing the pioneer an available supply for other uses. In our example, Factory A is better equipped to produce
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  , which is needed by Factory B, some large distance away. We need to transport the
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  via Train, but we also need to use our large storage reserve for output of the
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  . The consumers of
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  at Factory B only consume it at a rate of 5 parts/min, but the lowest we can ship it out of storage is 60 parts/min (unless we do a complicated series of divide back-merges into storage). If we allow our
+  <a href="/wiki/Freight_Platform" title="Freight Platform">
+   Freight Platform
+  </a>
+  at Factory A to receive the
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  at a rate of 60 parts/min (the minimum rate we can transport product out of a full storage container), it will fill up. So will the
+  <a href="/wiki/Freight_Car" title="Freight Car">
+   Freight Car
+  </a>
+  that transports it, as well as the Freight Platform at Factory B. If we only have three Industrial
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Storage Container
+  </a>
+  as a reserve, we will end up dumping almost our entire reserve into the Freight Platforms/Freight Car, without having any available at the producing factory for other uses.
+ </p>
+ <p>
+  To remedy a full drain of our
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  reserves, we will need to use the packed buffer strategy. This involves filling all transport buffers with some
+  <i>
+   other
+  </i>
+  product that can be easily produced in abundance, and doesn't hold significant value (
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Petroleum_Coke.png/20px-Petroleum_Coke.png?c7b3af" width="20"/>
+   </a>
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    Petroleum Coke
+   </a>
+  </span>
+  , or
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Concrete" title="Concrete">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Concrete.png/20px-Concrete.png?f56994" width="20"/>
+   </a>
+   <a href="/wiki/Concrete" title="Concrete">
+    Concrete
+   </a>
+  </span>
+  for example). Once we use the above tutorial (
+  <a class="new" href="/wiki/Tutorial:Train_Throughput?action=edit&amp;redlink=1" rel="nofollow" title="Tutorial:Train Throughput (page does not exist)">
+   Tutorial:Train Throughput
+  </a>
+  ) to calculate how much
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  we need to actually use (let's say we only need two stacks total to handle consumption at Factory B), we can pack our Freight Platforms and Freight Car with the buffer product to ensure the remaining storage slots will not fill up with our Industrial Beams.
+ </p>
+ <p>
+  The only tricky part of this is understanding how items will enter/leave a Freight Platform/Freight Car. The below pictures demonstrate how products flow through train storage:
+ </p>
+ <ul class="gallery mw-gallery-traditional">
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:Input_Platform_Flow.png" title="Direction in which product leaves from input Freight Platform at Factory A.">
+       <img alt="Direction in which product leaves from input Freight Platform at Factory A." data-file-height="543" data-file-width="439" decoding="async" height="120" loading="lazy" src="/images/thumb/Input_Platform_Flow.png/97px-Input_Platform_Flow.png?e8c121" width="97"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Direction in which product leaves from input Freight Platform at Factory A.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:Freight_Car_Flow.png" title="Direction in which product leaves a Freight Car.">
+       <img alt="Direction in which product leaves a Freight Car." data-file-height="553" data-file-width="473" decoding="async" height="120" loading="lazy" src="/images/thumb/Freight_Car_Flow.png/103px-Freight_Car_Flow.png?516108" width="103"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Direction in which product leaves a Freight Car.
+    </div>
+   </div>
+  </li>
+  <li class="gallerybox" style="width: 155px">
+   <div style="width: 155px">
+    <div class="thumb" style="width: 150px;">
+     <div style="margin:15px auto;">
+      <a class="image" href="/wiki/File:Output_Platform_Flow.png" title="Direction in which product leaves from output Freight Platform at Factory B.">
+       <img alt="Direction in which product leaves from output Freight Platform at Factory B." data-file-height="458" data-file-width="425" decoding="async" height="120" loading="lazy" src="/images/thumb/Output_Platform_Flow.png/111px-Output_Platform_Flow.png?351bef" width="111"/>
+      </a>
+     </div>
+    </div>
+    <div class="gallerytext">
+     Direction in which product leaves from output Freight Platform at Factory B.
+    </div>
+   </div>
+  </li>
+ </ul>
+ <p>
+  Products are shipped in a FIFO manner (First In, First Out). Products are extracted from output storage in a LIFO manner (Last In, First Out). If you arrange your Freight storage containers/cars with a packed buffer in this order, you will be able to transport only the minimal amount of the desired product (
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  in this case), while never transporting the buffer product (
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Petroleum_Coke.png/20px-Petroleum_Coke.png?c7b3af" width="20"/>
+   </a>
+   <a href="/wiki/Petroleum_Coke" title="Petroleum Coke">
+    Petroleum Coke
+   </a>
+  </span>
+  in this case), while also keeping all of your storage reserves of
+  <span style="white-space:nowrap;">
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Encased_Industrial_Beam.png/20px-Encased_Industrial_Beam.png?61a80d" width="20"/>
+   </a>
+   <a href="/wiki/Encased_Industrial_Beam" title="Encased Industrial Beam">
+    Encased Industrial Beam
+   </a>
+  </span>
+  in place back at Factory A where it is produced and reserved.
+ </p>
+ <h2>
+  <span class="mw-headline" id="See_also">
+   See also
+  </span>
+ </h2>
+ <p>
+  <a class="external text" href="https://docs.ficsit.app/satisfactory-modding/latest/CommunityResources/TrainSignalGuide.html" rel="nofollow">
+   Modding Community Resource - Satisfactory Train / Train Signal Manual
+  </a>
+ </p>
+ <div aria-labelledby="Satisfactory&amp;#95;game&amp;#95;mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory&amp;#95;game&amp;#95;mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251018053547
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.099 seconds
+Real time usage: 0.154 seconds
+Preprocessor visited node count: 1931/1000000
+Revision size: 23933/4194304 bytes
+Post‐expand include size: 34799/4194304 bytes
+Template argument size: 2898/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 8/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14814/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.006/15.000 seconds
+Lua memory usage: 811969/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   64.534      1 -total
+ 33.56%   21.658      1 Template:PioneerNav
+ 33.33%   21.507      2 Template:Navbox
+ 11.59%    7.481      1 Template:Main
+  9.37%    6.048      9 Template:BuildingLink
+  8.48%    5.470      1 Template:Cubic
+  7.21%    4.650      9 Template:IconLink
+  6.63%    4.280      1 Template:Outdated
+  6.02%    3.884      6 Template:Key
+  4.42%    2.851      1 Template:Ambox
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4172-0!canonical and timestamp 20251018053547 and revision id 49895. Rendering was triggered because: page_view
+ -->
+</div>

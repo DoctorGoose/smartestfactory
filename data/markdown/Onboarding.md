@@ -1,0 +1,118 @@
+# Onboarding
+
+_"Tutorial" redirects here. You might be looking for[Category:Tutorials](/wiki/Category:Tutorials "Category:Tutorials")._  
+  
+[](/wiki/File:Stub.svg "Outdated") | _This article is[outdated](/wiki/Category:Outdated "Category:Outdated"). You can help Satisfactory Wiki by [updating it](https://satisfactory.wiki.gg/wiki/Onboarding?action=edit)._  
+---|---  
+  
+_This article is[outdated](/wiki/Category:Outdated "Category:Outdated"). You can help Satisfactory Wiki by [updating it](https://satisfactory.wiki.gg/wiki/Onboarding?action=edit)._  
+  
+
+
+“  | _Objective-based introduction initialized. Welcome to: Onboarding._ | „   
+---|---|---  
+| ~ **[ADA](/wiki/ADA "ADA")** |   
+  
+The **Onboarding** tutorial teaches basic game mechanics at the start of the game. After the [pioneer](/wiki/Pioneer "Pioneer") exits the [drop-pod](/wiki/Drop-pod "Drop-pod"), they are asked by [ADA](/wiki/ADA "ADA") to complete a series of objectives. In a multiplayer game, tutorial messages are shared. Only the host is required to complete the tutorial. 
+
+If Onboarding is skipped during the creation of a new game, the pioneer starts with these items in the inventory: 1x [](/wiki/Xeno-Zapper "Xeno-Zapper") [Xeno-Zapper](/wiki/Xeno-Zapper "Xeno-Zapper"), 4x [](/wiki/Portable_Miner "Portable Miner") [Portable Miner](/wiki/Portable_Miner "Portable Miner"), 129x [](/wiki/Iron_Plate "Iron Plate") [Iron Plate](/wiki/Iron_Plate "Iron Plate"), 58x [](/wiki/Concrete "Concrete") [Concrete](/wiki/Concrete "Concrete"), 60x [](/wiki/Iron_Rod "Iron Rod") [Iron Rod](/wiki/Iron_Rod "Iron Rod"), 48x [](/wiki/Wire "Wire") [Wire](/wiki/Wire "Wire"), 8x [](/wiki/Reinforced_Iron_Plate "Reinforced Iron Plate") [Reinforced Iron Plate](/wiki/Reinforced_Iron_Plate "Reinforced Iron Plate"), 52x [](/wiki/Cable "Cable") [Cable](/wiki/Cable "Cable"), 20x [](/wiki/Iron_Ore "Iron Ore") [Iron Ore](/wiki/Iron_Ore "Iron Ore"). 
+
+## Contents
+
+  * 1 Objectives
+  * 2 Achievements
+  * 3 Narrative
+  * 4 Trivia
+  * 5 History
+  * 6 See also
+
+
+
+## Objectives
+
+All the objectives are listed below in order. 
+
+  1. Dismantle [`F`](/wiki/Controls "Controls") the [Drop-pod](/wiki/Drop-pod "Drop-pod") with the [Build Gun](/wiki/Build_Gun "Build Gun"). Then, press [`Esc`](/wiki/Controls "Controls") to exit the Dismantle mode.
+  2. Open the [Codex](/wiki/Codex "Codex") [`O`](/wiki/Controls "Controls") then close it [`Esc`](/wiki/Controls "Controls").
+  3. Equip [`Tab ↹`](/wiki/Controls "Controls") the [Xeno-Zapper](/wiki/Xeno-Zapper "Xeno-Zapper") the close the inventory [`Esc`](/wiki/Controls "Controls").
+  4. Use the [Resource Scanner](/wiki/Resource_Scanner "Resource Scanner") (Hold [`V`](/wiki/Controls "Controls") then release) to search and mine [`E`](/wiki/Controls "Controls") [](/wiki/Iron_Ore "Iron Ore") [Iron Ore](/wiki/Iron_Ore "Iron Ore").
+  5. Build [`Q`](/wiki/Controls "Controls") [The HUB](/wiki/The_HUB "The HUB") on the ground.
+  6. Upgrade [The HUB](/wiki/The_HUB "The HUB") to level 1 to unlock the [Personal Storage Box](/wiki/Personal_Storage_Box "Personal Storage Box") and the [Portable Miner](/wiki/Portable_Miner "Portable Miner") among other things.
+  7. Upgrade [The HUB](/wiki/The_HUB "The HUB") to level 2 to unlock the [Smelter](/wiki/Smelter "Smelter") and the first [Biomass Burner](/wiki/Biomass_Burner "Biomass Burner") among other things.
+  8. Upgrade [The HUB](/wiki/The_HUB "The HUB") to level 3 to unlock the [Constructor](/wiki/Constructor "Constructor"), [Power Pole](/wiki/Power_Pole "Power Pole"), and several other [crafting components](/wiki/Category:Crafting_components "Category:Crafting components").
+  9. Upgrade [The HUB](/wiki/The_HUB "The HUB") to level 4 to unlock [Conveyor Belts](/wiki/Conveyor_Belts "Conveyor Belts") and more.
+  10. Upgrade [The HUB](/wiki/The_HUB "The HUB") to level 5 to unlock [Miner Mk.1](/wiki/Miner_Mk.1 "Miner Mk.1"), an additional [Biomass Burner](/wiki/Biomass_Burner "Biomass Burner") among other things.
+  11. Complete [The HUB](/wiki/The_HUB "The HUB") level 6 and get access to the [FICSIT Freighter](/wiki/FICSIT_Freighter "FICSIT Freighter") in addition to [Biomass](/wiki/Biomass "Biomass"). The [Space Elevator](/wiki/Space_Elevator "Space Elevator") can now be built.
+
+
+
+_Further reading:_ [Tier 0](/wiki/Tier_0 "Tier 0")
+
+## Achievements
+
+[](/wiki/Achievements "Achievements")**[Do you want a medal?](/wiki/Achievements#Do_you_want_a_medal? "Achievements")** •  _"Complete the Onboarding process."_
+
+## Narrative
+
+**Expand to reveal spoiler**
+
+While completing [Tier 0 - Onboarding](/wiki/Milestones#Tier_0:_Onboarding "Milestones"), upon the finish of initial actions and individual milestones, the player will hear [ADA](/wiki/ADA "ADA") speak. 
+
+  * View [Story Onboarding](/wiki/Story#Onboarding "Story") to read and hear individual ADA messages.
+
+
+
+## Trivia
+
+  * If [Iron Ore](/wiki/Iron_Ore "Iron Ore") is located then mined without using the Resource Scanner, that step will be ignored and ADA will inform to proceed to build The HUB.
+  * If Iron Ore is not mined but is obtained anyway (such as using Command or mods), then this step will also be skipped.
+
+
+
+## History
+
+  * [Patch 0.3.4.12](/wiki/Patch_0.3.4.12 "Patch 0.3.4.12"): Dismantle is now available before the Codex step
+  * [Patch 0.3.4.11](/wiki/Patch_0.3.4.11 "Patch 0.3.4.11"): Codex step now has a voice-over and no longer blocks pick-up input
+  * [Patch 0.3.4.10](/wiki/Patch_0.3.4.10 "Patch 0.3.4.10"): 
+    * Added an additional step highlighting the Codex
+    * Reworked Hint text
+    * Hints are now received as emails that can be looked up in the Codex
+  * [Patch 0.3.4.0](/wiki/Patch_0.3.4.0 "Patch 0.3.4.0"): The button prompts now properly show the key bindings set by the player on the options menu
+  * [Patch 0.3](/wiki/Patch_0.3 "Patch 0.3"): 
+    * Onboarding contents have been tweaked (to include the phrase "and pipelines" during the narration)
+    * Now can be skipped entirely when starting a game from the main menu, making all Tier 0 Milestones already unlocked
+  * [Patch 0.1](/wiki/Patch_0.1 "Patch 0.1"): 
+    * Tweaked hints a little bit
+    * Fixed that entering the water during Onboarding resets the key restrictions
+    * Tweaks to the Intro Sequence
+
+
+
+## See also
+
+  * [Tutorial:How to play](/wiki/Tutorial:How_to_play "Tutorial:How to play")
+
+
+
+  * [v](/wiki/Template:PioneerNav "Template:PioneerNav")
+  * [e](https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit)
+  * [h](https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history)
+
+[Satisfactory](/wiki/Satisfactory "Satisfactory") game mechanics  
+---  
+Player abilities| [Codex](/wiki/Codex "Codex") • [Resource Scanner](/wiki/Resource_Scanner "Resource Scanner") • [Build Gun](/wiki/Build_Gun "Build Gun") • [Inventory](/wiki/Inventory "Inventory") • [Health](/wiki/Health "Health") • [Combat](/wiki/Combat "Combat") • [Movement](/wiki/Movement "Movement") • [Flashlight](/wiki/Flashlight "Flashlight") • [HUD](/wiki/HUD "HUD") • [Crate](/wiki/Crate "Crate") • [To-Do List](/wiki/To-Do_List "To-Do List")  
+Unlockable abilities| [Recipes](/wiki/Recipes "Recipes") • [Power](/wiki/Power "Power") • [Overclocking/Underclocking](/wiki/Clock_speed "Clock speed") • [Production amplifier](/wiki/Production_amplifier "Production amplifier") • [Customizer](/wiki/Customizer "Customizer") • [Map](/wiki/Map "Map") • [Productivity Display](/wiki/Productivity_Display "Productivity Display") • [Head lift](/wiki/Head_lift "Head lift") • [Blueprints](/wiki/Blueprints "Blueprints") • [Fuels](/wiki/Category:Fuels "Category:Fuels") • [FICSIT Productive Packer Deluxe](/wiki/FICSIT_Productive_Packer_Deluxe "FICSIT Productive Packer Deluxe")  
+Progression| [Story](/wiki/Story "Story") • [Drop-pod](/wiki/Drop-pod "Drop-pod") • Onboarding (In-game tutorial) • [Milestones](/wiki/Milestones "Milestones") • [MAM](/wiki/MAM "MAM") • [Alternate recipes](/wiki/Hard_Drive#Alternate_recipes "Hard Drive") • [Space Elevator](/wiki/Space_Elevator "Space Elevator") • [AWESOME Sink](/wiki/AWESOME_Sink "AWESOME Sink") • [AWESOME Shop](/wiki/AWESOME_Shop "AWESOME Shop")  
+Seasonal events| [April Fools' Day](/wiki/April_Fools%27_Day "April Fools' Day") • [Anniversary](/wiki/Anniversary "Anniversary") • [FICSMAS](/wiki/FICSMAS "FICSMAS")  
+Environment| [World](/wiki/World "World") • [Resource Node](/wiki/Resource_Node "Resource Node") • [Resource Well](/wiki/Resource_Well "Resource Well") • [Resource renewability](/wiki/Resource_renewability "Resource renewability") • [Crash Site](/wiki/Crash_Site "Crash Site") • [Radiation](/wiki/Radiation "Radiation") • [Poison Gas](/wiki/Poison_Gas "Poison Gas") • [Cracked boulder](/wiki/Cracked_boulder "Cracked boulder") • [Cave](/wiki/Cave "Cave")  
+Gameplay| [Controls](/wiki/Controls "Controls") • [Settings](/wiki/Settings "Settings") • [Future content](/wiki/Future_content "Future content") • [Old unreleased content](/wiki/Old_unreleased_content "Old unreleased content") • [Online tools](/wiki/Online_tools "Online tools") • [Community resources](/wiki/Community_resources "Community resources") • [Advanced Game Settings](/wiki/Advanced_Game_Settings "Advanced Game Settings") • [Acronyms](/wiki/Acronyms "Acronyms") • [Achievements](/wiki/Achievements "Achievements") • [Easter eggs](/wiki/Easter_eggs "Easter eggs") • [Game menus](/wiki/Game_menus "Game menus") • [Indicator Light](/wiki/Indicator_Light "Indicator Light") • [Multiplayer](/wiki/Multiplayer "Multiplayer") • [Music](/wiki/Music "Music")  
+Technical| [Console release](/wiki/Console_release "Console release") • [Debug console](/wiki/Debug_console "Debug console") • [Launch arguments](/wiki/Launch_arguments "Launch arguments") • [Save files](/wiki/Save_files "Save files") • [System requirements](/wiki/System_requirements "System requirements") • [Units](/wiki/Units "Units") • [Unreal Engine](/wiki/Unreal_Engine "Unreal Engine")  
+Guides and tutorials| | Basics| [Walkthrough/How to play](/wiki/Tutorial:How_to_play "Tutorial:How to play") • [New Pioneer Guide](/wiki/Tutorial:New_Pioneer_Guide "Tutorial:New Pioneer Guide") • [Production line basics](/wiki/Tutorial:Production_line "Tutorial:Production line") • [Advanced production line tips](/wiki/Tutorial:Production_line_design_tips "Tutorial:Production line design tips") • [Picking an alternate recipe](/wiki/Tutorial:Picking_an_alternate_recipe "Tutorial:Picking an alternate recipe") • [Independency](/wiki/Tutorial:Independency "Tutorial:Independency") • [Aluminum Ingot production](/wiki/Tutorial:Setting_up_Aluminum_Ingot_production "Tutorial:Setting up Aluminum Ingot production")  
+---|---  
+Logistics| [Manifold](/wiki/Manifold "Manifold") • [Balancer](/wiki/Balancer "Balancer") • [Pipeline manifold](/wiki/Pipeline_manifold "Pipeline manifold") • [Prime Splitter Arrays](/wiki/Tutorial:Prime_splitter_arrays "Tutorial:Prime splitter arrays") • [Trains](/wiki/Tutorial:Trains "Tutorial:Trains") • [Train throughput](/wiki/Tutorial:Train_throughput "Tutorial:Train throughput")  
+Dedicated servers| [Dedicated servers](/wiki/Dedicated_servers "Dedicated servers") • [Running as a Service](/wiki/Dedicated_servers/Running_as_a_Service "Dedicated servers/Running as a Service") • [Configuration files](/wiki/Dedicated_servers/Configuration_files "Dedicated servers/Configuration files") • [Automatic updates](/wiki/Dedicated_servers/Automatic_updates "Dedicated servers/Automatic updates") • [HTTPS API](/wiki/Dedicated_servers/HTTPS_API "Dedicated servers/HTTPS API") • [Lightweight Query API](/wiki/Dedicated_servers/Lightweight_Query_API "Dedicated servers/Lightweight Query API")  
+Other| [Hypertube cannon](/wiki/Tutorial:Hypertube_cannon "Tutorial:Hypertube cannon") • [Hypertube brake](/wiki/Tutorial:Hypertube_brake "Tutorial:Hypertube brake") • [Steam Deck & Controller setup](/wiki/Tutorial:Controller_setup "Tutorial:Controller setup") • [Extracting UI icons](/wiki/Tutorial:Extracting_UI_icons "Tutorial:Extracting UI icons")
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template
+  *[his]: his trivia section

@@ -1,0 +1,1145 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/ko?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   Infobox simple은 건물, 항목, 유체 및 차량 정보를 표시하기 위한 다목적 템플릿입니다.
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1">
+     <a href="#매개_변수">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       매개 변수
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2">
+       <a href="#기본">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         기본
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#숨기기">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         숨기기
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#건물">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         건물
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#차량">
+        <span class="tocnumber">
+         1.4
+        </span>
+        <span class="toctext">
+         차량
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#치수">
+        <span class="tocnumber">
+         1.5
+        </span>
+        <span class="toctext">
+         치수
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#아이템">
+        <span class="tocnumber">
+         1.6
+        </span>
+        <span class="toctext">
+         아이템
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#장비">
+        <span class="tocnumber">
+         1.7
+        </span>
+        <span class="toctext">
+         장비
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#연료">
+        <span class="tocnumber">
+         1.8
+        </span>
+        <span class="toctext">
+         연료
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2">
+       <a href="#재료">
+        <span class="tocnumber">
+         1.9
+        </span>
+        <span class="toctext">
+         재료
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1">
+     <a href="#예시">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       예시
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span id=".EB.A7.A4.EA.B0.9C_.EB.B3.80.EC.88.98">
+   </span>
+   <span class="mw-headline" id="매개_변수">
+    매개 변수
+   </span>
+  </h2>
+  <h3>
+   <span id=".EA.B8.B0.EB.B3.B8">
+   </span>
+   <span class="mw-headline" id="기본">
+    기본
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      name
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      템플릿의 “name”을 정합니다. 기본값은 문서 이름입니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      displayName
+     </td>
+     <td>
+      Strings
+     </td>
+     <td>
+      문서 이름과 다를 경우 사용합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      image
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      기본값은 "name".png입니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      description
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      템플릿의 내용을 추가하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      researchTier
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      Tier와 해제 조건을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      category
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      건물 분류를 표시하기 위해 사용됩니다. (wiki 분류는 “noCategories”으로 비활성화할 수 있습니다.)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      subCategory
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      건물 하위 분류를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      blueprintPath
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      청사진 경로를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.88.A8.EA.B8.B0.EA.B8.B0">
+   </span>
+   <span class="mw-headline" id="숨기기">
+    숨기기
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      noCategories
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      true인 경우 모든 분류를 비활성화합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      noCargo
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      true인 경우 모든 cargo storing을 비활성화합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      recipeName
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      recipe name (eponymous for buildings) 기본값은 문서 이름입니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      experimental
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      실험 버전에서만 사용할 수 있는지 여부를 결정합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      unreleased
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      제작법이 공개되지 않았거나 다른 방법으로 얻을 수 없는지를 나타냅니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      alternateRecipe
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      제작법이 대체 제작법인지 아닌지를 결정합니다. (거의 사용하지 않습니다.)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      mainRecipe
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      제작법이 기본 제작법인지 아닌지를 결정합니다. (거의 사용하지 않습니다.)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      product
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      the actual product 기본값은 문서 이름입니다. (거의 사용하지 않습니다.)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      productCount
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      the actual product count 기본값은 1입니다. (거의 사용하지 않습니다.)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      bioFuel
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      Whether the fuel is a valid fuel for the Biomass Burner
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EA.B1.B4.EB.AC.BC">
+   </span>
+   <span class="mw-headline" id="건물">
+    건물
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      inventorySize
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      건물 인벤토리 크기를 표시하기 위해 사용됩니다. 또한 차량 부분에서도 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      powerUsage
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      전기사용량(MW)을 추가하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      powerGenerated
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      전기생산량(MW)을 추가하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      fuel
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      사용할 수 있는 연료를 표시하기 위해 사용됩니다. 또한 차량 부분에서도 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      overclockable
+     </td>
+     <td>
+      Boolean
+     </td>
+     <td>
+      건물의 오버클럭 가능한지 여부를 결정합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inputs
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      총입력을 추가하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      outputs
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      총출력을 추가하기 위해 사용됩니다.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.B0.A8.EB.9F.89">
+   </span>
+   <span class="mw-headline" id="차량">
+    차량
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      maxSpeed
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      중요한 매개 변수, determines whether the Vehicle or Building group is used for colliding parameters
+      <br/>
+      평평한 직선 경로에서 차량의 최대 속도를 표시합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inventorySize
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      차량의 인벤토리 크기를 표시하기 위해 사용됩니다. 또한 건물 부분에서도 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      time0_50
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      50km/h까지 걸리는 시간(s)을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      power
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      연료 연소율을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      fuel
+     </td>
+     <td>
+      Wikitext
+     </td>
+     <td>
+      사용할 수 있는 연료를 표시하기 위해 사용됩니다. 또한 건물 부분에서도 사용됩니다.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.B9.98.EC.88.98">
+   </span>
+   <span class="mw-headline" id="치수">
+    치수
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      size_width
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      너비(m)를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_length
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      길이(m)를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_height
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      높이(m)를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_note
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      적층 가능 여부와 추가 크기 정보를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.95.84.EC.9D.B4.ED.85.9C">
+   </span>
+   <span class="mw-headline" id="아이템">
+    아이템
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      stackSize
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      한 세트의 양을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      isRadioactive
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      Radioactive decay value (acquired from Docs.json)
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.9E.A5.EB.B9.84">
+   </span>
+   <span class="mw-headline" id="장비">
+    장비
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      ammo
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      사용할 수 있는 탄약을 표시하기 위해 사용됩니다. (또는 가스 필터와 같은 소모품)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      magSize
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      재장전 탄창 크기를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      damage
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      타격당 대미지를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      rateOfFire
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      발사 속도를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      reloadTime
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      재장전 시간(s)을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      damagePerSecond
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      초당 피해량을 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      range
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      유효 사거리를 표시하기 위해 사용됩니다.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.97.B0.EB.A3.8C">
+   </span>
+   <span class="mw-headline" id="연료">
+    연료
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      energy
+     </td>
+     <td>
+      Integer OR "N/A"
+     </td>
+     <td>
+      Energy per item or m
+      <sup>
+       3
+      </sup>
+      in MJ
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   <span id=".EC.9E.AC.EB.A3.8C">
+   </span>
+   <span class="mw-headline" id="재료">
+    재료
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      매개 변수
+     </th>
+     <th>
+      유형
+     </th>
+     <th>
+      설명
+     </th>
+    </tr>
+    <tr>
+     <td>
+      craftedIn
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      제품을 제작하는 데 사용되는 건물 또는 도구를 표시합니다.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      ingredientX
+     </td>
+     <td>
+      Page
+     </td>
+     <td>
+      X 번째의 재료 이름, 인게임과 같은 재료로 표시해야 합니다. (X의 범위는 1–10)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      quantityX
+     </td>
+     <td>
+      Float
+     </td>
+     <td>
+      X 번째의 재료 총개수
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   <span id=".EC.98.88.EC.8B.9C">
+   </span>
+   <span class="mw-headline" id="예시">
+    예시
+   </span>
+  </h2>
+  <pre>{{Infobox simple/ko
+ | description = 부품 두 개를 결합하여 다른 부품을 만듭니다.&lt;br/&gt;입력부에 컨베이어 벨트로 부품을 공급함으로써 자동화가 가능합니다. 제조된 부품은 출력부에 연결된 컨베이어 벨트를 통해 자동으로 배출됩니다.
+ | category = Production
+ | subCategory = Manufacturers
+ | researchTier = [[Tier 2]] - Part Assembly
+ | powerUsage = 15
+ | overclockable = 가능
+ | craftedIn = Build Gun
+ | inputs = 2
+ | outputs = 1
+ | quantity1 = 8
+ | ingredient1 = 보강된 철판
+ | quantity2 = 4
+ | ingredient2 = 회전자
+ | quantity3 = 10
+ | ingredient3 = 케이블
+ | size_width = 10
+ | size_length = 15
+ | size_height = 10
+ }}
+</pre>
+  <p class="mw-empty-elt">
+  </p>
+  <aside class="portable-infobox noexcerpt searchaux pi-background pi-theme-default pi-layout-default">
+   <h2 class="pi-item pi-item-spacing pi-title" data-source="displayName">
+    조립기
+   </h2>
+   <figure class="pi-item pi-media pi-image" data-source="image">
+    <a class="image image-thumbnail" href="/wiki/File:%EC%A1%B0%EB%A6%BD%EA%B8%B0.png" title="조립기.png">
+     <img alt="조립기.png" class="pi-image-thumbnail" height="270" src="/images/thumb/Assembler.png/300px-Assembler.png?38c7e9" srcset="/images/thumb/Assembler.png/300px-Assembler.png?38c7e9 1x, /images/Assembler.png?38c7e9 2x" width="270"/>
+    </a>
+   </figure>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="description">
+    <div class="pi-data-value pi-font">
+     <i>
+      부품 두 개를 결합하여 다른 부품을 만듭니다.
+      <br/>
+      입력부에 컨베이어 벨트로 부품을 공급함으로써 자동화가 가능합니다. 제조된 부품은 출력부에 연결된 컨베이어 벨트를 통해 자동으로 배출됩니다.
+     </i>
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="researchTier">
+    <h3 class="pi-data-label pi-secondary-font">
+     해금 조건
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="mw-redirect" href="/wiki/Tier_2" title="Tier 2">
+      Tier 2
+     </a>
+     - 부품 조립
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="category">
+    <h3 class="pi-data-label pi-secondary-font">
+     분류
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="new" href="/wiki/Category:Production_buildings?action=edit&amp;redlink=1" rel="nofollow" title="Category:Production buildings (page does not exist)">
+      Production
+     </a>
+    </div>
+   </div>
+   <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="subCategory">
+    <h3 class="pi-data-label pi-secondary-font">
+     하위­ 분류
+    </h3>
+    <div class="pi-data-value pi-font">
+     <a class="new" href="/wiki/Category:Manufacturers?action=edit&amp;redlink=1" rel="nofollow" title="Category:Manufacturers (page does not exist)">
+      Manufacturers
+     </a>
+    </div>
+   </div>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     건물
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="powerUsage">
+     <h3 class="pi-data-label pi-secondary-font">
+      <a href="/wiki/Power" title="Power">
+       전기 소모량
+      </a>
+     </h3>
+     <div class="pi-data-value pi-font">
+      15 MW
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="overclockable">
+     <h3 class="pi-data-label pi-secondary-font">
+      <a class="mw-redirect" href="/wiki/Overclock" title="Overclock">
+       오버클럭­
+      </a>
+     </h3>
+     <div class="pi-data-value pi-font">
+      가능
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="inputs">
+     <h3 class="pi-data-label pi-secondary-font">
+      입력부
+     </h3>
+     <div class="pi-data-value pi-font">
+      2
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="outputs">
+     <h3 class="pi-data-label pi-secondary-font">
+      출력부
+     </h3>
+     <div class="pi-data-value pi-font">
+      1
+     </div>
+    </div>
+   </section>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     치수
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_width">
+     <h3 class="pi-data-label pi-secondary-font">
+      너비
+     </h3>
+     <div class="pi-data-value pi-font">
+      10 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_length">
+     <h3 class="pi-data-label pi-secondary-font">
+      길이
+     </h3>
+     <div class="pi-data-value pi-font">
+      15 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="size_height">
+     <h3 class="pi-data-label pi-secondary-font">
+      높이
+     </h3>
+     <div class="pi-data-value pi-font">
+      10 m
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color">
+     <h3 class="pi-data-label pi-secondary-font">
+      면적
+     </h3>
+     <div class="pi-data-value pi-font">
+      150 m
+      <sup>
+       2
+      </sup>
+     </div>
+    </div>
+   </section>
+   <section class="pi-item pi-group pi-border-color pi-collapse pi-collapse-open">
+    <h2 class="pi-item pi-header pi-secondary-font pi-item-spacing pi-secondary-background">
+     재료
+    </h2>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="craftedIn">
+     <h3 class="pi-data-label pi-secondary-font">
+      도구
+     </h3>
+     <div class="pi-data-value pi-font">
+      Build Gun
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient1">
+     <div class="pi-data-value pi-font">
+      <b>
+       8×
+      </b>
+      <a href="/wiki/%EB%B3%B4%EA%B0%95%EB%90%9C_%EC%B2%A0%ED%8C%90" title="보강된 철판">
+       <img alt="Reinforced Iron Plate.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+      </a>
+      <a class="new" href="/wiki/%EB%B3%B4%EA%B0%95%EB%90%9C_%EC%B2%A0%ED%8C%90?action=edit&amp;redlink=1" rel="nofollow" title="보강된 철판 (page does not exist)">
+       보강된 철판
+      </a>
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient2">
+     <div class="pi-data-value pi-font">
+      <b>
+       4×
+      </b>
+      <a href="/wiki/%ED%9A%8C%EC%A0%84%EC%9E%90" title="회전자">
+       <img alt="Rotor.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Rotor.png/20px-Rotor.png?2616b2" width="20"/>
+      </a>
+      <a class="new" href="/wiki/%ED%9A%8C%EC%A0%84%EC%9E%90?action=edit&amp;redlink=1" rel="nofollow" title="회전자 (page does not exist)">
+       회전자
+      </a>
+     </div>
+    </div>
+    <div class="pi-item pi-data pi-item-spacing pi-border-color" data-source="ingredient3">
+     <div class="pi-data-value pi-font">
+      <b>
+       10×
+      </b>
+      <a href="/wiki/%EC%BC%80%EC%9D%B4%EB%B8%94" title="케이블">
+       <img alt="Cable.png" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Cable.png/20px-Cable.png?c87492" width="20"/>
+      </a>
+      <a class="new" href="/wiki/%EC%BC%80%EC%9D%B4%EB%B8%94?action=edit&amp;redlink=1" rel="nofollow" title="케이블 (page does not exist)">
+       케이블
+      </a>
+     </div>
+    </div>
+   </section>
+  </aside>
+  <p class="mw-empty-elt">
+  </p>
+  <div style="clear:both">
+  </div>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:Infobox_simple/ko/doc" title="Template:Infobox simple/ko/doc">
+    Template:Infobox simple/ko/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/ko/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_simple/ko/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251008044210
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.117 seconds
+Real time usage: 0.196 seconds
+Preprocessor visited node count: 242/1000000
+Revision size: 6797/4194304 bytes
+Post‐expand include size: 15541/4194304 bytes
+Template argument size: 552/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6955/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  171.614      1 Template:Doc
+100.00%  171.614      1 -total
+ 98.61%  169.235      1 Template:Infobox_simple/ko/doc
+ 81.18%  139.318      1 Template:Infobox_simple/ko
+  3.23%    5.536      1 Template:Doc/start
+  3.11%    5.332      1 Template:Clear
+  2.30%    3.939      1 Template:Cubic
+  1.39%    2.388      1 Template:Doc/end
+  1.25%    2.144      2 Template:Tooltip
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:1310-0!canonical and timestamp 20251008044210 and revision id 52375. Rendering was triggered because: page_view
+ -->
+</div>

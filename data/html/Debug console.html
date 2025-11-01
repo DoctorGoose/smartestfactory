@@ -1,0 +1,1730 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  The
+  <b>
+   debug console
+  </b>
+  in
+  <i>
+   Satisfactory
+  </i>
+  can be used to access debug data (like player coordinates or a list of
+  <a href="/wiki/Radiation" title="Radiation">
+   radiation
+  </a>
+  sources) or for changing some options not available in the game's settings, such as disabling the fog or enabling an FPS counter. It cannot be used for cheating (e.g. spawning items),
+  <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+   Advanced Game Settings
+  </a>
+  and
+  <a href="/wiki/Online_tools" title="Online tools">
+   save editors
+  </a>
+  serve that purpose.
+ </p>
+ <p>
+  The effects of commands are reset once the game is closed to desktop, but persist between sessions (the only exception is the Suicide command, which will remain if the game is saved).
+ </p>
+ <p>
+  Config files can be edited in order to persistently apply console commands, see
+  <a href="/wiki/Settings#Options_not_available_in_the_settings_menu" title="Settings">
+   Settings § Options not available in the settings menu
+  </a>
+  .
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Accessing">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Accessing
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Changing_the_activation_key">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Changing the activation key
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-3">
+    <a href="#List_of_commands">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      List of commands
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-4">
+      <a href="#Functional_commands">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Functional commands
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-5">
+      <a href="#ShowDebug_Parameters">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        ShowDebug Parameters
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-6">
+      <a href="#Non-functional_commands">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Non-functional commands
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-7">
+    <a href="#Options_not_available_in_the_settings_menu">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Options not available in the settings menu
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-8">
+    <a href="#External_link">
+     <span class="tocnumber">
+      4
+     </span>
+     <span class="toctext">
+      External link
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-1 tocsection-9">
+    <a href="#History">
+     <span class="tocnumber">
+      5
+     </span>
+     <span class="toctext">
+      History
+     </span>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Accessing">
+   Accessing
+  </span>
+ </h2>
+ <p>
+  The debug console can be accessed by
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     §
+    </kbd>
+   </a>
+  </span>
+  (paragraph)/
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     `
+    </kbd>
+   </a>
+  </span>
+  (backtick)/
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     ~
+    </kbd>
+   </a>
+  </span>
+  (tilde) key. This will open the console command line; press it again to open a larger window (at least one command requires a large window in order to be used properly).
+ </p>
+ <p>
+  It might be necessary to change the keyboard layout to English - UK on some keyboard layouts, as the console can only be opened if the keyboard layout has at least one of the 3 activation keys (
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     §
+    </kbd>
+   </a>
+  </span>
+  ,
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     `
+    </kbd>
+   </a>
+  </span>
+  or
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     ~
+    </kbd>
+   </a>
+  </span>
+  ). The activation key will not work if it requires a modifier key like
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     ⇧ Shift
+    </kbd>
+   </a>
+  </span>
+  ,
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Ctrl
+    </kbd>
+   </a>
+  </span>
+  or
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Alt
+    </kbd>
+   </a>
+  </span>
+  to type, it has to be a single key stroke.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Changing_the_activation_key">
+   Changing the activation key
+  </span>
+ </h3>
+ <p>
+  There is a solution that does not require switching the keyboard layout.  Navigate to and edit the
+  <code>
+   %LOCALAPPDATA%\FactoryGame\Saved\Config\Windows\Input.ini
+  </code>
+  file.  Add the following line(s):
+ </p>
+ <pre>[/Script/Engine.InputSettings]
+ConsoleKeys=F6
+</pre>
+ <p>
+  This will allow the debug console to be opened with
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     F6
+    </kbd>
+   </a>
+  </span>
+  . Any other key or character can be, as long as it doesn't require to use a modifying key such as
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Ctrl
+    </kbd>
+   </a>
+  </span>
+  ,
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     ⇧ Shift
+    </kbd>
+   </a>
+  </span>
+  or
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     Alt
+    </kbd>
+   </a>
+  </span>
+  , also avoid using any keys that the game already uses by default.
+ </p>
+ <p>
+  Changing the activation keys disables the default
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     §
+    </kbd>
+   </a>
+  </span>
+  /
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     `
+    </kbd>
+   </a>
+  </span>
+  /
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     ~
+    </kbd>
+   </a>
+  </span>
+  , but allows those keys to be bound to
+  <a href="/wiki/Controls" title="Controls">
+   controls
+  </a>
+  in-game, which isn't possible otherwise.
+ </p>
+ <p>
+  If the above method doesn’t work for you an alternate is the free Microsoft Branded “Power Toys” application from the Microsoft AppStore or Website. Select Keyboard Manager. Enable the Keyboard Manager toggle. Under Keys select remap a key. Under select, use the key you want to disable or remap. Under “To Send” set the bottom box to either “Disable” or whichever key you want it remapped to. This is a Windows wide fix not specific to Satisfactory.
+ </p>
+ <h2>
+  <span class="mw-headline" id="List_of_commands">
+   List of commands
+  </span>
+ </h2>
+ <p>
+  The "window" column is to differentiate between commands that require the large console window to be properly used and commands that do not require it. Since
+  <i>
+   Satisfactory
+  </i>
+  is made in Unreal Engine, many commands from the Unreal Engine itself appear in this list.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Functional_commands">
+   Functional commands
+  </span>
+ </h3>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th style="width: 400px">
+     Command
+    </th>
+    <th style="width: 50px">
+     Window
+    </th>
+    <th>
+     Default
+    </th>
+    <th>
+     Use/effect
+    </th>
+   </tr>
+   <tr>
+    <td>
+     space (without pressing enter)
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+     Shows a complete list of all commands, some with brief explanations.
+     <p>
+      There are 5705 commands in total as of
+      <a href="/wiki/Patch_1.0.0.5" title="Patch 1.0.0.5">
+       Patch 1.0.0.5
+      </a>
+      , though not all of them are available as a public user.
+     </p>
+     <p>
+      Use Up/Down arrow keys to navigate thru the list
+     </p>
+     <p>
+      Searching the list is automatic.  Anything typed in console will be searched for.  Space is the global 'wildcard' to list all.  (Originally was the question mark)
+     </p>
+     <ul>
+      <li>
+       Green commands: Executable as a public user, alteration possible
+      </li>
+     </ul>
+     <ul>
+      <li>
+       Purple commands: Executable as administrator
+       <i>
+        (possibly accessible by commands like "Admin" and/or "AdminLogin"),
+       </i>
+       but some have been made accessible for public users, could be host in a multiplayer game
+      </li>
+      <li>
+       Grey commands: Only readable
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     materialFlowAnalysis
+     <i>
+      recipeName[FString]
+     </i>
+    </td>
+    <td>
+     Large
+    </td>
+    <td>
+    </td>
+    <td>
+     <span id="blueprintPath">
+      This command can be used to find the items required
+      <i>
+       per second
+      </i>
+      for all craftable items in the game. To use the command, type "materialFlowAnalysis" (not case sensitive) and then type in the item name you wish to find out about (this is case sensitive). The 'name' of the item, or 'FString', shall follow the exact string as indicated in the individual item's Blueprint Path, which can be found in the infobox of each item on its respective page.
+     </span>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Gamma [number]
+    </td>
+    <td rowspan="30">
+     Small
+    </td>
+    <td>
+     2.2
+    </td>
+    <td>
+     Changes the gamma (brightness) level.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Pause
+    </td>
+    <td>
+    </td>
+    <td>
+     Pauses the game, enter the command again to continue playing.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.HDR.EnableHDROutput
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Set to 1 to enable HDR (High Dynamic Range) for higher contrast and a wider color gamut. Has no effect if HDR is not supported by the display
+     <i>
+      and
+     </i>
+     enabled in the operating system.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.Atmosphere [0/1]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Activates/deactivates the atmosphere.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.Fog [0/1]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Activates/deactivates the fog.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.ViewDistanceScale
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Sets the render distance of things like trees/foliage/rocks. Value is multiplicative*
+    </td>
+   </tr>
+   <tr>
+    <td>
+     foliage.LODDistanceScale
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Controls how are higher quality LOD models being shown further out. It primarily affects foliage and buildings and can have a major impact on performance, but can make the game look better. Set this to higher values to increase the distance (recommended high is 5).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.Shadow.DistanceScale
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Sets the render distance of shadows cast by objects. Value is multiplicative*
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.ScreenPercentage [percent]
+    </td>
+    <td>
+     100
+    </td>
+    <td>
+     Sets internal resolution scale. It can be used together with r.TemporalAA.Upsampling set to 1 to get a "fake" full resolution image achieved with temporal anti-aliasing (TAA). This can improve performance a lot.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.TemporalAACurrentFrameWeight [number]
+    </td>
+    <td>
+     0.2
+    </td>
+    <td>
+     Range 0-1. Sets the impact of the current internal frame on the final image. Set this to a low value e.g. 0.05 for better anti-aliasing or better upsampling at the cost of more artifacts (especially smearing) in motion. Also, increase r.TemporalAASamples to something larger like 16 when using low values.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.TemporalAAFilterSize
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Sets the spread of the TAA samples. Use values below 1 like 0.25 to sharpen the image (only works if r.TemporalAASamples &gt; 6).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.TemporalAASamples [number]
+    </td>
+    <td>
+     8
+    </td>
+    <td>
+     Sets the number of samples to use for TAA. Set this to 2 - 5 to reduce jitter.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.Tonemapper.Sharpen [number]
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Sets the amount of a simple sharpen filter.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.StaticMeshLODDistanceScale [number]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Controls the level of detail (LOD) for static meshes. Set this to 0 to improve graphics but possibly decrease performance, or higher than 1 to make it significantly worse.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.LandscapeLODBias [number]
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Fixes terrain geometry in the far distance. Set this to -2 or -3 to improve graphics but possibly decrease performance.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Grass.densityscale [number]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Sets the grass density. 0 disables it entirely, values between 0 and 1 reduce it, and values over 1 increase it.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.streaming.poolsize [number]
+    </td>
+    <td>
+     ?
+    </td>
+    <td>
+     Specifies the maximum amount of memory,
+     <b>
+      in megabytes
+     </b>
+     , that the texture streaming system can use. This is placed in the
+     <i>
+      Engine.ini
+     </i>
+     file in the
+     <code>
+      [/Script/Engine.RendererSettings]
+     </code>
+     section.❗This might cause performance issues if values higher than 1000 are used.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     pool.light.count [number]
+    </td>
+    <td>
+     ?
+    </td>
+    <td>
+     Sets the amount of lights to render.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     pool.light.lightshaft.count [number]
+    </td>
+    <td>
+     ?
+    </td>
+    <td>
+     Sets the amount of light shafts to render.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ShowDebug
+     <i>
+      DebugType[FName]
+     </i>
+    </td>
+    <td>
+    </td>
+    <td>
+     Activating this command with any valid parameter will also show the following information in the top left corner of the screen regardless of the command executed (unless otherwise stated):
+     <ul>
+      <li>
+       Player name
+      </li>
+      <li>
+       Coordinates in the world (X, Y, Z)
+      </li>
+      <li>
+       Rotation
+      </li>
+      <li>
+       Instigator
+      </li>
+      <li>
+       Owner
+      </li>
+      <li>
+       Base eye height
+      </li>
+     </ul>
+     <p>
+      Replace
+      <code>
+       DebugType[FName]
+      </code>
+      with a parameter from
+      <a class="mw-disambig" href="/wiki/Console#ShowDebug_Parameters" title="Console">
+       Console#ShowDebug_Parameters
+      </a>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Stat FPS
+    </td>
+    <td>
+    </td>
+    <td>
+     Activates Unreal Engine 4's built-in FPS counter, all command fields are non-case-sensitive. The FPS counter will work in all environments, even on loading screens or the main menu.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Stat Levels
+    </td>
+    <td>
+    </td>
+    <td>
+     From the description: "Displays level streaming info".
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Stat Unit
+    </td>
+    <td>
+    </td>
+    <td>
+     Activating it shows a small readout of various statistics including Frame time (1000/Frame time = FPS), Game time (1000/Game time = UPS), Draw time (unknown), GPU time (unknown), RHIT time (unknown) and whether or not DynRes is supported (use unknown).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Suicide
+    </td>
+    <td>
+    </td>
+    <td>
+     Has the same effect as using the Respawn option from the
+     <span class="key">
+      <a href="/wiki/Controls" title="Controls">
+       <kbd class="keysDark">
+        Esc
+       </kbd>
+      </a>
+     </span>
+     in-game menu.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     t.MaxFPS [number]
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Sets the maximum framerate to any value, other than the options in video settings. 0 makes the framerate unlimited.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     FOV [number]
+    </td>
+    <td>
+    </td>
+    <td>
+     Sets field of view to the entered value, however, values over 150 can become unstable and glitches will occur. The FOV can be changed by a slider in the game's option, but this console command allows to set it to any value beyond the slider.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ToggleDebugOverlay [0/1]
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Displays a window with various debug info.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SaveWithNewSessionName [name]
+    </td>
+    <td>
+    </td>
+    <td>
+     Saves the current session under a new session name, separating it in the "Load Game" menu.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.AOGlobalDistanceField.MinMeshSDFRadius [number]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Temporary fix to make emissive materials (like
+     <a href="/wiki/Signs" title="Signs">
+      Signs
+     </a>
+     ) in Global Illumination (Lumen) illuminate further. Values up to 20 seem to work in varying degrees.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.LumenScene.SurfaceCache.CardTexelDensityScale [number]
+    </td>
+    <td>
+     100
+    </td>
+    <td>
+     Temporary fix to increase render distance of emissive Signs. Values up to 3000 seem to work fine. May decrease performance.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r.DFDistanceScale [number]
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     Higher values increase shadow distance at the cost of FPS. HEAVY FPS impact.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  *Multiplicative values means setting it to 2 will render at double the default distance and setting it to 0.5 will render at half of the default. It appears to be limited to a maximum value of 3. Can be FPS heavy if set too high values and can give you more FPS if set to lower values.
+ </p>
+ <h3>
+  <span class="mw-headline" id="ShowDebug_Parameters">
+   ShowDebug Parameters
+  </span>
+ </h3>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     Parameter
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     AI
+    </td>
+    <td>
+     Use unknown. Presumably shows information regarding enemies and/or automated vehicles near the player.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AKAUDIOSOURCES
+    </td>
+    <td>
+     Shows the number of active audio sources + other information. Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ANIMATION
+    </td>
+    <td>
+     Use unknown. Presumably shows information regarding what frame of an animation is being played, the name of the animation, etc.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     BONES
+    </td>
+    <td>
+     Use unknown. Presumably shows information regarding bone connections and their orientation in non-static models.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CAMERA
+    </td>
+    <td>
+     Shows extra information about the camera position underneath default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CIRCUITS
+    </td>
+    <td>
+     Shows information regarding any power networks (circuits) in the world including; the number of circuits, ID(s), and information about the circuits including; components, power produced, the power consumed, and fuse status. Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     COLLISION
+    </td>
+    <td>
+     Unknown. Presumably shows collision information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     FACTORY
+    </td>
+    <td>
+     Shows the number of player-built structures (not including vehicles) in order from most to least.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     FACTORYCONNNECTIONS
+    </td>
+    <td>
+     Use Unknown. Notes: Causes extreme lag, use at own risk. Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     FORCEFEEDBACK
+    </td>
+    <td>
+     Shows information about current force feedback values and what is contributing to that calculation underneath default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     INPUT
+    </td>
+    <td>
+     Shows information about which input method is currently being used (keyboard/mouse) which key is being used, the input value of the input, and the time the input has been executed. It also shows information about the input stack. All of this information is shown underneath the default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     NET
+    </td>
+    <td>
+     Use unknown. Presumably used to show multiplayer connection info.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     NONE
+    </td>
+    <td>
+     Shows only default information, hiding the rest.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PHYSICS
+    </td>
+    <td>
+     Shows information about; Current player velocity components, total player speed in cm/s, total player speed (2D), acceleration experienced by the player, and other physics-related information. This is all shown underneath default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     POWER
+    </td>
+    <td>
+     Use unknown. Note: Causes Lag, use at your own risk.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     RADIATION
+    </td>
+    <td>
+     Shows information related to the radioactivity subsystem including; Number of radiation sources, emitters and levels of radiation emitted, and player exposure level. Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     RADIATIONSPHERES
+    </td>
+    <td>
+     Presumably shows spheres where radiation would begin to affect the player. Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Reset
+    </td>
+    <td>
+     Hides all debug information, including default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SIGNIFICANCEMANAGER
+    </td>
+    <td>
+     Shows information on the significance of sounds currently being played and their volume relative to each other.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TRACKS
+    </td>
+    <td>
+     Shows information on the railroad subsystem on tracks, such as track segments and blocks, divided into graphs (graphs are loops or stretches of tracks). Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TRAINCOUPLERS
+    </td>
+    <td>
+     Does not work.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TRAINSCHEDULER
+    </td>
+    <td>
+     Shows train scheduling information.
+     <p>
+      Priority: xxxxxx | Rail [Segment] Number the train has priority for
+Train: xxxxx | Train Name
+Dependency Level: x | Currently Unknown
+RN: xxxx | Rail [Segment] Number
+Potential Deadlock: [Yes] [No] | Further Detail Required
+Reservations: x | Further Detail Required
+Dependencies: x | Further Detail Required
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TRAINSIGNALS
+    </td>
+    <td>
+     Shows Train Signal and block information, such as what the entry signal is, whether a block is defined by Path or Block signals, reservation requests, what train is in the block etc.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     TRAINS
+    </td>
+    <td>
+     Shows information about all existing trains (weight, pulling force, braking force, power usage, slave and master etc.). Execute again to show default information.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     VEHICLE
+    </td>
+    <td>
+     Shows information on the vehicle the player is currently in including speed, steering angle, throttle information, whether or not the brake is on, current gear, engine RPM, drag force being experienced, and physics information about each wheel on the vehicle.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     WEAPON
+    </td>
+    <td>
+     Use unknown. Presumably shows information regarding held weapons/tools.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Non-functional_commands">
+   Non-functional commands
+  </span>
+ </h3>
+ <p>
+  The following commands appear in the autocomplete list in the console but have never worked since
+  <a href="/wiki/Patch_0.1" title="Patch 0.1">
+   Early Access release
+  </a>
+  , as they either don't do anything when executed or aren't even recognized by the console when executed.
+ </p>
+ <ul>
+  <li>
+   Fly
+  </li>
+  <li>
+   Ghost
+  </li>
+  <li>
+   GiveItem
+  </li>
+  <li>
+   Cheats
+  </li>
+  <li>
+   Teleport
+  </li>
+  <li>
+   God
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Options_not_available_in_the_settings_menu">
+   Options not available in the settings menu
+  </span>
+ </h2>
+ <p>
+  It's possible to achieve higher visual fidelity than "Ultra quality" by modifying the game settings file directly. The following changes will have a drastic negative impact on your framerate, but will eliminate rocks and foliage magically appearing a few meters away from you. For a more detailed explanation of these settings and pictures, see this old but still relevant post:
+  <a class="external text" href="https://www.reddit.com/r/SatisfactoryGame/comments/f75pxf/useful_console_commands_inside_force_good_lod/" rel="nofollow">
+   Force good LOD, Draw distance
+  </a>
+ </p>
+ <p>
+  Two steps to apply these changes (close the game first):
+ </p>
+ <ol>
+  <li>
+   Open Notepad, then open this file:
+   <code>
+    %LOCALAPPDATA%\FactoryGame\Saved\Config\Windows\Engine.ini
+   </code>
+  </li>
+  <li>
+   Add (or replace if you've already done this) the following to the bottom of the file then save it:
+  </li>
+ </ol>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[SystemSettings]</span>
+<span class="na">r.TemporalAACurrentFrameWeight</span><span class="o">=</span><span class="s">0</span>
+<span class="na">r.TemporalAASamples</span><span class="o">=</span><span class="s">32</span>
+<span class="na">r.PostProcessAAQuality</span><span class="o">=</span><span class="s">5</span>
+<span class="na">r.ToneMapper.Sharpen</span><span class="o">=</span><span class="s">1</span>
+<span class="na">r.ViewDistanceScale</span><span class="o">=</span><span class="s">5</span>
+<span class="na">r.Shadow.MinResolution</span><span class="o">=</span><span class="s">256</span>
+<span class="na">r.Shadow.DistanceScale</span><span class="o">=</span><span class="s">5</span>
+<span class="na">foliage.LODDistanceScale</span><span class="o">=</span><span class="s">2</span>
+<span class="na">foliage.DitheredLOD</span><span class="o">=</span><span class="s">5</span>
+<span class="na">r.MaxAnisotropy</span><span class="o">=</span><span class="s">16</span>
+</pre>
+ </div>
+ <p>
+  You've done the change right if your file looks similar to this when you're done:
+  <a class="external text" href="https://i.imgur.com/23dw407.png" rel="nofollow">
+   picture of modified Engine.ini
+  </a>
+ </p>
+ <h2>
+  <span class="mw-headline" id="External_link">
+   External link
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="https://forums.unrealengine.com/t/unreal-engine-5-all-console-variables-and-commands/608054" rel="nofollow">
+    Unreal Engine 5 All Console Variables and Commands
+   </a>
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="History">
+   History
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_0.4.0.0" title="Patch 0.4.0.0">
+    Patch 0.4.0.0
+   </a>
+   ?: The console no longer needs to be activated using
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      Ctrl
+     </kbd>
+    </a>
+   </span>
+   +
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      ⇧ Shift
+     </kbd>
+    </a>
+   </span>
+   +
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      L
+     </kbd>
+    </a>
+   </span>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.3.6.7" title="Patch 0.3.6.7">
+    Patch 0.3.6.7
+   </a>
+   : Added ToggleDebugOverlay command
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.3.5.4" title="Patch 0.3.5.4">
+    Patch 0.3.5.4
+   </a>
+   ?: r.Gamma is replaced with Gamma, Pause is functional again
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.3" title="Patch 0.3">
+    Patch 0.3
+   </a>
+   ?: r.Gamma and Pause commands no longer work
+  </li>
+ </ul>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a class="mw-selflink selflink">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251006195228
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.114 seconds
+Real time usage: 0.932 seconds
+Preprocessor visited node count: 2495/1000000
+Revision size: 16127/4194304 bytes
+Post‐expand include size: 30690/4194304 bytes
+Template argument size: 51/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1156/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.008/15.000 seconds
+Lua memory usage: 811831/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  644.536      1 -total
+ 25.33%  163.241      2 Template:Navbox
+ 24.70%  159.175      1 Template:PioneerNav
+  2.97%   19.156     20 Template:Key
+  0.79%    5.081     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3109-0!canonical and timestamp 20251006195227 and revision id 59240. Rendering was triggered because: RefreshLinksJob
+ -->
+</div>

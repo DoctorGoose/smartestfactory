@@ -1,0 +1,1713 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:CraftingTable?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template is used to add recipes to
+   <i>
+    crafting_recipes
+   </i>
+   cargo table. It can also be used to display these recipes in a table, but consider using
+   <a href="/wiki/Template:AutomatedCrafting" title="Template:AutomatedCrafting">
+    Template:AutomatedCrafting
+   </a>
+   for that instead.
+  </p>
+  <p>
+   <b>
+    Note: by default table will be invisible but the recipe will be added to cargo. If you need to display the table itself, use
+    <code>
+     | makeVisible = 1
+    </code>
+   </b>
+   <br/>
+   <b>
+    To display information from all CraftingTables at once use
+    <code>
+     {{AutomatedCrafting}}
+    </code>
+    after that.
+   </b>
+  </p>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <section class="mw-templatedata-doc-wrap">
+   <header>
+    <p class="mw-templatedata-doc-desc">
+     This template is used to add recipes to crafting_recipes cargo table.
+    </p>
+   </header>
+   <table class="wikitable mw-templatedata-doc-params sortable">
+    <caption>
+     <p class="mw-templatedata-caption">
+      Template parameters
+      <mw:edittemplatedata page="Template:CraftingTable/doc">
+      </mw:edittemplatedata>
+     </p>
+     <p>
+      <span class="oo-ui-widget oo-ui-widget-enabled oo-ui-iconElement-icon oo-ui-icon-template-format-block oo-ui-iconElement oo-ui-labelElement-invisible oo-ui-iconWidget">
+      </span>
+      <span class="mw-templatedata-format">
+       This template prefers block formatting of parameters.
+      </span>
+     </p>
+    </caption>
+    <thead>
+     <tr>
+      <th colspan="2">
+       Parameter
+      </th>
+      <th>
+       Description
+      </th>
+      <th>
+       Type
+      </th>
+      <th>
+       Status
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <th>
+       Recipe Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        recipeName
+       </code>
+      </td>
+      <td>
+       <p>
+        Optional. The name of the recipe, if different from `product`.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         {{{product}}}
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Line
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Main Product Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        product
+       </code>
+      </td>
+      <td>
+       <p>
+        The name of the main crafted product.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-required" data-sort-value="2">
+       required
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Main Product Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        productCount
+       </code>
+      </td>
+      <td>
+       <p>
+        Count of created main product.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 2 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        product2
+       </code>
+      </td>
+      <td>
+       <p>
+        The name of the byproducts.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 2 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        productCount2
+       </code>
+      </td>
+      <td>
+       <p>
+        Count of created byproducts.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 3 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        product3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 3 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        productCount3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 4 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        product4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Product 4 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        productCount4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       alternateRecipe
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        alternateRecipe
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if the recipe is an alternate recipe. Defaults to 0.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       mainRecipe
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        mainRecipe
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if it's the first recipe you learn for this item or it's the primary mean of acquiring the item (e.g. crafting [[Empty Canister]] from plastic is a main recipe in contrast to all unpackage recipes, which also yield Empty Canisters).
+       </p>
+       <p>
+        Used for ordering recipes. You can use numbers higher than 1 to give the recipe even more ordering priority if there're multiple 'main' recipes.
+       </p>
+       <p class="mw-empty-elt">
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 1 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient1
+       </code>
+      </td>
+      <td>
+       <p>
+        The name of ingredients used.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 1 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity1
+       </code>
+      </td>
+      <td>
+       <p>
+        The count of ingredients used.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 2 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient2
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 2 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity2
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 3 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 3 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity3
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 4 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 4 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity4
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 5 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient5
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 5 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity5
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 6 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient6
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 6 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity6
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 7 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient7
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 7 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity7
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 8 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient8
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 8 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity8
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 9 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient9
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 9 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity9
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 10 Name
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        ingredient10
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Ingredient 10 Count
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        quantity10
+       </code>
+      </td>
+      <td>
+       <p class="mw-templatedata-doc-muted">
+        no description
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Building
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        craftedIn
+       </code>
+      </td>
+      <td>
+       <p>
+        Name of the building where this recipe is used.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Page name
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Average Power
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        avgPower
+       </code>
+      </td>
+      <td>
+       <p>
+        The average power consumption for the selected recipe, if power consumption depends on this recipe. Currently only used for [[Particle Accelerator]] recipes.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       inCraftBench
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        inCraftBench
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if the recipe can be crafted by hand in the [[Craft Bench]].
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       inWorkshop
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        inWorkshop
+       </code>
+       <code class="mw-templatedata-doc-param-alias">
+        inWorkShop
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if the recipe can be crafted by hand in the [[Equipment Workshop]].
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Automatic Crafting Time
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        craftingTime
+       </code>
+      </td>
+      <td>
+       <p>
+        Duration of crafting in buildings without overclocking.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Manual Crafting Time
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        craftingClicks
+       </code>
+      </td>
+      <td>
+       <p>
+        The amount of clicks/cycles needed for manual crafting in Craft Bench or Equipment Workshop.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Number
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Research Tier
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        researchTier
+       </code>
+      </td>
+      <td>
+       <p>
+        The milestone tier or the M.A.M. research category in which this item is unlocked.
+       </p>
+       <dl>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Content
+      </td>
+      <td class="mw-templatedata-doc-param-status-suggested" data-sort-value="1">
+       suggested
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Make Visible?
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        makeVisible
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` to display the table, otherwise it will be invisible and will only add the recipe to cargo.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Table End?
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        tableEnd
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` for the last row to end the table. '''Do not forget this parameter or page layout may start acting weird!'''
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Store in Cargo?
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        storeInCargo
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `0` to skip storing data in cargo. Normally it will store in cargo automatically if page name matches the main product of the recipe.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         1
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          0
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Experimental?
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        experimental
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if this recipe is only available in Experimental version of the game.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Unreleased?
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        unreleased
+       </code>
+      </td>
+      <td>
+       <p>
+        Set to `1` if this recipe is not available in the game but was datamined or removed at some point.
+       </p>
+       <dl>
+        <dt>
+         Default
+        </dt>
+        <dd>
+         0
+        </dd>
+        <dt>
+         Auto value
+        </dt>
+        <dd>
+         <code>
+          1
+         </code>
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       Boolean
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Season
+      </th>
+      <td class="mw-templatedata-doc-param-name">
+       <code>
+        season
+       </code>
+      </td>
+      <td>
+       <p>
+        The name of the season.
+       </p>
+       <dl>
+        <dt>
+         Valid values
+        </dt>
+        <dd>
+         FICSMAS
+        </dd>
+       </dl>
+       <p class="mw-empty-elt">
+       </p>
+       <dl>
+        <dt>
+         Example
+        </dt>
+        <dd>
+         FICSMAS
+        </dd>
+       </dl>
+      </td>
+      <td class="mw-templatedata-doc-param-type">
+       String
+      </td>
+      <td class="mw-templatedata-doc-param-status-optional" data-sort-value="0">
+       optional
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <h2>
+   <span class="mw-headline" id="Example_usage">
+    Example usage
+   </span>
+  </h2>
+  <pre>{{CraftingTable
+| recipeName = Reinforced Iron Plate
+| craftingTime = 10
+| craftingClicks = 5
+| craftedIn = Assembler
+| inCraftBench = 1
+| product = Reinforced Iron Plate
+| productCount = 1
+| ingredient1 = Iron Plate
+| quantity1 = 3
+| ingredient2 = Screw
+| quantity2 = 30
+| makeVisible = 1
+}}
+{{CraftingTable
+| recipeName = Stitched Iron Plate
+| alternateRecipe = 1
+| craftingTime = 24
+| craftedIn = Assembler
+| product = Reinforced Iron Plate
+| productCount = 3
+| ingredient1 = Iron Plate
+| quantity1 = 6
+| ingredient2 = Wire
+| quantity2 = 30
+| makeVisible = 1
+}}
+{{CraftingTable
+| recipeName = FICSMAS Ornament Bundle
+| researchTier = [[FICSMAS#MAM Research|FICSMAS Research]] - FICSMAS Lights
+| craftingTime = 12
+| craftedIn = Assembler
+| product = FICSMAS Ornament Bundle
+| productCount = 1
+| ingredient1 = Copper FICSMAS Ornament
+| quantity1 = 1
+| ingredient2 = Iron FICSMAS Ornament
+| quantity2 = 1
+| season = FICSMAS
+| makeVisible = 1
+}}
+{{CraftingTable
+| recipeName = Foundation 8m x 1m
+| researchTier = [[Tier 1]] - Base Building
+| craftedIn = Build Gun
+| product = Foundation 8m x 1m
+| productCount = 1
+| ingredient1 = Concrete
+| quantity1 = 5
+| ingredient2 = Iron Plate
+| quantity2 = 2
+| experimental = 1
+| makeVisible = 1
+}}
+{{CraftingTable
+| recipeName = SAM Ingot
+| inCraftBench = 1
+| craftingClicks = 6
+| craftingTime = 2
+| craftedIn = Smelter
+| product = SAM Ingot
+| productCount = 1
+| ingredient1 = SAM Ore
+| quantity1 = 6
+| unreleased = 1
+| makeVisible = 1
+| tableEnd = 1
+}}
+</pre>
+  <table class="wikitable craftingTable">
+   <tbody>
+    <tr>
+     <th>
+      Recipe
+     </th>
+     <th>
+      Ingredients
+     </th>
+     <th>
+      Time (s)
+     </th>
+     <th>
+      Product
+     </th>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="2" style="text-align: center; padding: 1.5em 0.75em; line-height: 1; position: relative; overflow: hidden; overflow: clip;">
+      Reinforced Iron Plate
+     </td>
+     <td>
+      3 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Plate.png/20px-Iron_Plate.png?93d6ef" width="20"/>
+       </a>
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        Iron Plate
+       </a>
+      </span>
+     </td>
+     <td rowspan="2" style="text-align:right;">
+      10
+     </td>
+     <td rowspan="2">
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+       </a>
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        Reinforced Iron Plate
+       </a>
+      </span>
+      (6 / min)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      30 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Screw" title="Screw">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Screws.png/20px-Screws.png?c69a34" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+        Screw
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="2" style="text-align: center; padding: 1.5em 0.75em; line-height: 1; position: relative; overflow: hidden; overflow: clip;">
+      <a href="/wiki/Hard_Drive" title="Hard Drive">
+       <span class="recipe-badge recipe-alternate" title="Alternate recipe">
+        Alt
+       </span>
+      </a>
+      Stitched Iron Plate
+     </td>
+     <td>
+      6 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Plate.png/20px-Iron_Plate.png?93d6ef" width="20"/>
+       </a>
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        Iron Plate
+       </a>
+      </span>
+     </td>
+     <td rowspan="2" style="text-align:right;">
+      24
+     </td>
+     <td rowspan="2">
+      3 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Reinforced_Iron_Plate.png/20px-Reinforced_Iron_Plate.png?9d05d4" width="20"/>
+       </a>
+       <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+        Reinforced Iron Plate
+       </a>
+      </span>
+      (7.5 / min)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      30 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Wire" title="Wire">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Wire.png/20px-Wire.png?7a6df2" width="20"/>
+       </a>
+       <a href="/wiki/Wire" title="Wire">
+        Wire
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="2" style="text-align: center; padding: 1.5em 0.75em; line-height: 1; position: relative; overflow: hidden; overflow: clip;">
+      FICSMAS Ornament Bundle
+      <a href="/wiki/FICSMAS" title="FICSMAS">
+       <div style="  left: 0; right: 0; top: 0; position: absolute;   background: repeating-linear-gradient(-45deg, red, red 8px, #FFF 8px, #FFF 16px); color: #000; font-variant: all-small-caps; font-size: smaller; font-weight: bold; text-align: center; text-shadow: -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 1px 1px 0 #FFF; text-decoration: inherit; line-height: 1; padding-bottom: 2px;   cursor: help;" title="This recipe is only available during FICS⁕MAS">
+        FICS⁕MAS
+       </div>
+      </a>
+     </td>
+     <td>
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Copper_FICSMAS_Ornament" title="Copper FICSMAS Ornament">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Copper_FICSMAS_Ornament.png/20px-Copper_FICSMAS_Ornament.png?e42182" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Copper_FICSMAS_Ornament" title="Copper FICSMAS Ornament">
+        Copper FICSMAS Ornament
+       </a>
+      </span>
+     </td>
+     <td rowspan="2" style="text-align:right;">
+      12
+     </td>
+     <td rowspan="2">
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/FICSMAS_Ornament_Bundle" title="FICSMAS Ornament Bundle">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/FICSMAS_Ornament_Bundle.png/20px-FICSMAS_Ornament_Bundle.png?345d78" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/FICSMAS_Ornament_Bundle" title="FICSMAS Ornament Bundle">
+        FICSMAS Ornament Bundle
+       </a>
+      </span>
+      (5 / min)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_FICSMAS_Ornament" title="Iron FICSMAS Ornament">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_FICSMAS_Ornament.png/20px-Iron_FICSMAS_Ornament.png?d75334" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Iron_FICSMAS_Ornament" title="Iron FICSMAS Ornament">
+        Iron FICSMAS Ornament
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="2" style="text-align: center; padding: 1.5em 0.75em; line-height: 1; position: relative; overflow: hidden; overflow: clip;">
+      Foundation 8m x 1m
+      <div style="  top: 0; left: 0; position: absolute; transform: rotate(-45deg) translate(-15px, -5px); z-index: 1;   background: red; color: white; font-variant: all-small-caps; font-size: small; font-weight: bold; text-align: center; padding: 1px 20px;   cursor: help;" title="This recipe is only available in the Experimental branch">
+       Exp
+      </div>
+     </td>
+     <td>
+      5 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Concrete" title="Concrete">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Concrete.png/20px-Concrete.png?f56994" width="20"/>
+       </a>
+       <a href="/wiki/Concrete" title="Concrete">
+        Concrete
+       </a>
+      </span>
+     </td>
+     <td rowspan="2" style="text-align:right;">
+      0
+     </td>
+     <td rowspan="2">
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Foundation_8m_x_1m" title="Foundation 8m x 1m">
+        <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/Foundation_1m_%28FICSIT%29.png/20px-Foundation_1m_%28FICSIT%29.png?a6b5c3" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/Foundation_8m_x_1m" title="Foundation 8m x 1m">
+        Foundation 8m x 1m
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      2 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/Iron_Plate.png/20px-Iron_Plate.png?93d6ef" width="20"/>
+       </a>
+       <a href="/wiki/Iron_Plate" title="Iron Plate">
+        Iron Plate
+       </a>
+      </span>
+     </td>
+    </tr>
+    <tr class="firstRow">
+     <td rowspan="1" style="text-align: center; padding: 1.5em 0.75em; line-height: 1; position: relative; overflow: hidden; overflow: clip;">
+      SAM Ingot
+      <div style="  left: 0; right: 0; top: 0; position: absolute;   background: repeating-linear-gradient(-45deg, yellow, yellow 8px, black 8px, black 16px); color: black; font-variant: all-small-caps; font-size: smaller; font-weight: bold; text-align: center; text-shadow: -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, 1px 1px 0 #fff; padding-bottom: 2px;   cursor: help;" title="This recipe is not available, it was either datamined or removed">
+       Unreleased
+      </div>
+      <div style="  left: 0; right: 0; bottom: 0; position: absolute;   background: repeating-linear-gradient(-45deg, yellow, yellow 8px, black 8px, black 16px); color: black; font-variant: all-small-caps; font-size: smaller; font-weight: bold; text-align: center; text-shadow: -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, 1px 1px 0 #fff; padding-bottom: 2px;">
+      </div>
+     </td>
+     <td>
+      6 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/SAM_Ore" title="SAM Ore">
+        <img alt="" data-file-height="256" data-file-width="256" decoding="async" height="20" loading="lazy" src="/images/thumb/SAM.png/20px-SAM.png?62cd09" width="20"/>
+       </a>
+       <a class="mw-redirect" href="/wiki/SAM_Ore" title="SAM Ore">
+        SAM Ore
+       </a>
+      </span>
+     </td>
+     <td rowspan="1" style="text-align:right;">
+      2
+     </td>
+     <td rowspan="1">
+      1 ×
+      <span style="white-space:nowrap;">
+       <a href="/wiki/SAM_Ingot" title="SAM Ingot">
+        <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/SAM_Ingot.png/20px-SAM_Ingot.png?519e1e" width="20"/>
+       </a>
+       <a class="new" href="/wiki/SAM_Ingot?action=edit&amp;redlink=1" rel="nofollow" title="SAM Ingot (page does not exist)">
+        SAM Ingot
+       </a>
+      </span>
+      (30 / min)
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:CraftingTable/doc" title="Template:CraftingTable/doc">
+    Template:CraftingTable/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:CraftingTable/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:CraftingTable/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251016223005
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.059 seconds
+Real time usage: 0.150 seconds
+Preprocessor visited node count: 1333/1000000
+Revision size: 5673/4194304 bytes
+Post‐expand include size: 38823/4194304 bytes
+Template argument size: 1416/4194304 bytes
+Highest expansion depth: 16/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 18320/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   87.654      1 Template:Doc
+100.00%   87.654      1 -total
+ 96.79%   84.839      1 Template:CraftingTable/doc
+ 67.83%   59.458      5 Template:CraftingTable
+ 18.41%   16.139      1 Template:AlternateIcon
+ 14.95%   13.100      1 Template:CraftingTable/experimental
+ 13.76%   12.062      1 Template:CraftingTable/season
+  5.50%    4.823      1 Template:CraftingTable/unreleased
+  4.11%    3.605     14 Template:ItemLink
+  3.82%    3.347     14 Template:Yesno
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6285-0!canonical and timestamp 20251016223005 and revision id 46118. Rendering was triggered because: page_view
+ -->
+</div>

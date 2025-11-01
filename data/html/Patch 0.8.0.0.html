@@ -1,0 +1,3229 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  <a class="image" href="/wiki/File:Update8_Sign_Logo.png">
+   <img alt="Update8 Sign Logo.png" data-file-height="2731" data-file-width="8625" decoding="async" height="127" loading="lazy" src="/images/thumb/Update8_Sign_Logo.png/400px-Update8_Sign_Logo.png?6097cd" width="400"/>
+  </a>
+ </p>
+ <p>
+  Patch Notes: Early Access (EXPERIMENTAL) –
+  <b>
+   v0.8.0.0
+  </b>
+  – Build 238433. This patch was released on
+  <span class="mw-formatted-date" title="2023-06-13">
+   13 June 2023
+  </span>
+  . It is the first patch of Update 8 development.
+ </p>
+ <p>
+  The original post can be viewed on Satisfactory's
+  <a class="external text" href="https://www.satisfactorygame.com/updates/update-8" rel="nofollow">
+   official website
+  </a>
+  , as well as
+  <a class="external text" href="https://discord.com/channels/370472939054956546/557603412565426196/1118193735218507828" rel="nofollow">
+   Discord
+  </a>
+  ,
+  <a class="external text" href="https://www.reddit.com/r/SatisfactoryGame/comments/148heqg" rel="nofollow">
+   Reddit
+  </a>
+  , and
+  <a class="external text" href="https://store.steampowered.com/news/app/526870/view/3690183765419759383" rel="nofollow">
+   Steam
+  </a>
+  .
+ </p>
+ <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+  <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+  <div class="toctitle" dir="ltr" lang="en">
+   <h2 id="mw-toc-heading">
+    Contents
+   </h2>
+   <span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox">
+    </label>
+   </span>
+  </div>
+  <ul>
+   <li class="toclevel-1 tocsection-1">
+    <a href="#Intro">
+     <span class="tocnumber">
+      1
+     </span>
+     <span class="toctext">
+      Intro
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-2">
+      <a href="#Upgrading_to_Unreal_Engine_5">
+       <span class="tocnumber">
+        1.1
+       </span>
+       <span class="toctext">
+        Upgrading to Unreal Engine 5
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-3">
+        <a href="#World_partitioning">
+         <span class="tocnumber">
+          1.1.1
+         </span>
+         <span class="toctext">
+          World partitioning
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-4">
+        <a href="#Vehicle_physics_&amp;_sound_overhaul">
+         <span class="tocnumber">
+          1.1.2
+         </span>
+         <span class="toctext">
+          Vehicle physics &amp; sound overhaul
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-5">
+        <a href="#Enhanced_Input_System">
+         <span class="tocnumber">
+          1.1.3
+         </span>
+         <span class="toctext">
+          Enhanced Input System
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-6">
+        <a href="#Anti-aliasing_(TSR_&amp;_FXAA)">
+         <span class="tocnumber">
+          1.1.4
+         </span>
+         <span class="toctext">
+          Anti-aliasing (TSR &amp; FXAA)
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-7">
+        <a href="#Nanite">
+         <span class="tocnumber">
+          1.1.5
+         </span>
+         <span class="toctext">
+          Nanite
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-8">
+        <a href="#Lumen">
+         <span class="tocnumber">
+          1.1.6
+         </span>
+         <span class="toctext">
+          Lumen
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-9">
+      <a href="#Blueprint_improvements">
+       <span class="tocnumber">
+        1.2
+       </span>
+       <span class="toctext">
+        Blueprint improvements
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-10">
+        <a href="#Dismantling">
+         <span class="tocnumber">
+          1.2.1
+         </span>
+         <span class="toctext">
+          Dismantling
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-11">
+        <a href="#Building">
+         <span class="tocnumber">
+          1.2.2
+         </span>
+         <span class="toctext">
+          Building
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-12">
+      <a href="#Changes_to_the_world">
+       <span class="tocnumber">
+        1.3
+       </span>
+       <span class="toctext">
+        Changes to the world
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-13">
+        <a href="#Visuals">
+         <span class="tocnumber">
+          1.3.1
+         </span>
+         <span class="toctext">
+          Visuals
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-14">
+        <a href="#Gameplay">
+         <span class="tocnumber">
+          1.3.2
+         </span>
+         <span class="toctext">
+          Gameplay
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-15">
+        <a href="#Atmosphere">
+         <span class="tocnumber">
+          1.3.3
+         </span>
+         <span class="toctext">
+          Atmosphere
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toclevel-2 tocsection-16">
+      <a href="#Advanced_Game_Settings">
+       <span class="tocnumber">
+        1.4
+       </span>
+       <span class="toctext">
+        Advanced Game Settings
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-17">
+      <a href="#Priority_Power_Switch_&amp;_Power_Tower">
+       <span class="tocnumber">
+        1.5
+       </span>
+       <span class="toctext">
+        Priority Power Switch &amp; Power Tower
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-18">
+      <a href="#Quality_of_life_and_other_improvements">
+       <span class="tocnumber">
+        1.6
+       </span>
+       <span class="toctext">
+        Quality of life and other improvements
+       </span>
+      </a>
+      <ul>
+       <li class="toclevel-3 tocsection-19">
+        <a href="#Destructible_Gas_Pillars">
+         <span class="tocnumber">
+          1.6.1
+         </span>
+         <span class="toctext">
+          Destructible Gas Pillars
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-20">
+        <a href="#Jetpack_fuels">
+         <span class="tocnumber">
+          1.6.2
+         </span>
+         <span class="toctext">
+          Jetpack fuels
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-21">
+        <a href="#Parachute">
+         <span class="tocnumber">
+          1.6.3
+         </span>
+         <span class="toctext">
+          Parachute
+         </span>
+        </a>
+       </li>
+       <li class="toclevel-3 tocsection-22">
+        <a href="#Dismantle_Filter">
+         <span class="tocnumber">
+          1.6.4
+         </span>
+         <span class="toctext">
+          Dismantle Filter
+         </span>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-23">
+    <a href="#Patch_notes">
+     <span class="tocnumber">
+      2
+     </span>
+     <span class="toctext">
+      Patch notes
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-24">
+      <a href="#Factory">
+       <span class="tocnumber">
+        2.1
+       </span>
+       <span class="toctext">
+        Factory
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-25">
+      <a href="#Advanced_Game_Settings_2">
+       <span class="tocnumber">
+        2.2
+       </span>
+       <span class="toctext">
+        Advanced Game Settings
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-26">
+      <a href="#Equipment">
+       <span class="tocnumber">
+        2.3
+       </span>
+       <span class="toctext">
+        Equipment
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-27">
+      <a href="#Creatures">
+       <span class="tocnumber">
+        2.4
+       </span>
+       <span class="toctext">
+        Creatures
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-28">
+      <a href="#Vehicles">
+       <span class="tocnumber">
+        2.5
+       </span>
+       <span class="toctext">
+        Vehicles
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-29">
+      <a href="#World">
+       <span class="tocnumber">
+        2.6
+       </span>
+       <span class="toctext">
+        World
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-30">
+      <a href="#Quality_of_Life">
+       <span class="tocnumber">
+        2.7
+       </span>
+       <span class="toctext">
+        Quality of Life
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-31">
+      <a href="#Balancing">
+       <span class="tocnumber">
+        2.8
+       </span>
+       <span class="toctext">
+        Balancing
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-32">
+      <a href="#UI">
+       <span class="tocnumber">
+        2.9
+       </span>
+       <span class="toctext">
+        UI
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-33">
+      <a href="#Player_character">
+       <span class="tocnumber">
+        2.10
+       </span>
+       <span class="toctext">
+        Player character
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-34">
+      <a href="#Systems">
+       <span class="tocnumber">
+        2.11
+       </span>
+       <span class="toctext">
+        Systems
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-35">
+      <a href="#Optimization">
+       <span class="tocnumber">
+        2.12
+       </span>
+       <span class="toctext">
+        Optimization
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-36">
+      <a href="#Bug_fixes">
+       <span class="tocnumber">
+        2.13
+       </span>
+       <span class="toctext">
+        Bug fixes
+       </span>
+      </a>
+     </li>
+     <li class="toclevel-2 tocsection-37">
+      <a href="#Known_issues">
+       <span class="tocnumber">
+        2.14
+       </span>
+       <span class="toctext">
+        Known issues
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-1 tocsection-38">
+    <a href="#Media">
+     <span class="tocnumber">
+      3
+     </span>
+     <span class="toctext">
+      Media
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-2 tocsection-39">
+      <a href="#Videos">
+       <span class="tocnumber">
+        3.1
+       </span>
+       <span class="toctext">
+        Videos
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Intro">
+   Intro
+  </span>
+ </h2>
+ <p>
+  Hi Pioneers!
+Since you’re reading this, Update 8 is now out on Experimental for you all to try and let us know what you think. We’ve put in great effort to stabilise the game before it gets out to you, but with a major engine upgrade there are always extra chances for issues to occur. So, while you hopefully enjoy all the new goodies, keep an eye out for bugs and problems and most importantly: BACK UP YOUR SAVES! Better to be safe than sorry with this one. Now let’s move on to content.
+ </p>
+ <p>
+  Oh boy, did we say this was a smaller update again? Well, it seems we’ve overshot the target a little bit and are now looking at a big package of additions, changes, and quality of life improvements coming out with Update 8!
+ </p>
+ <p>
+  There are two new buildings joining the line-up, the Power Tower, and Priority Power Switch. The Titan Forest has gotten a new look, we’ve done updates to atmosphere and lighting, and worked on polishing many other biomes in terms of gameplay and/or visuals. Advanced Game Settings are coming to the game, allowing you to experiment and enjoy Satisfactory with less restrictions than before – if you wish. Blueprints have gotten some major improvements in how you can build with them, and we’ve added several other improvements that we’ll describe in more detail below. We also reworked a number of our systems in conjunction with the engine upgrade to make things run more smoothly for you.
+ </p>
+ <p>
+  Find things you love? Things you hate? Tell us about any bugs, issues, and feedback you have on our Questions Site:
+  <a class="external free" href="https://questions.satisfactorygame.com/" rel="nofollow">
+   https://questions.satisfactorygame.com/
+  </a>
+ </p>
+ <p>
+  We’ve hit some roadblocks on the way to this release, but we’re very excited to have you finally play it. Hope you all have a great time, be safe, and best wishes from the team! ❤️
+ </p>
+ <h3>
+  <span class="mw-headline" id="Upgrading_to_Unreal_Engine_5">
+   Upgrading to Unreal Engine 5
+  </span>
+ </h3>
+ <p>
+  The bulk of our work on Update 8 has been the engine upgrade. With this come many reworks and updates of systems that should improve aspects of the game, but it all being new also means that new issues can be hiding in lots of places as well. We’ve put a lot of effort into stabilising the game and performance before Experimental release, but there has been lots of ground to cover and this combined with the fact that you all are playing on a vast array of differing hardware means there might very well be things that we’ve missed. So again, come our usual reminders: please back up your saves beforehand and let us know about any differences that you encounter, good or bad, while playing Update 8.
+ </p>
+ <p>
+  Below are the most relevant details on what this engine upgrade means for Satisfactory, but if you’ve got some time on your hands Jace talked about the upgrade in depth in one of our earliest Update 8 related videos:
+  <a class="external free" href="https://youtu.be/dY__x2dq7Sk" rel="nofollow">
+   https://youtu.be/dY__x2dq7Sk
+  </a>
+ </p>
+ <h4>
+  <span class="mw-headline" id="World_partitioning">
+   World partitioning
+  </span>
+ </h4>
+ <p>
+  This is the new system in Unreal Engine 5 for streaming parts of the world in and out, and we’ve switched to it entirely. The base line for you is that with world partitioning the level streaming should be much more flexible compared to the tile-based system we used before, reducing hitches that you will have encountered at specific parts of the world where these tiles used to intersect.
+ </p>
+ <h4>
+  <span id="Vehicle_physics_.26_sound_overhaul">
+  </span>
+  <span class="mw-headline" id="Vehicle_physics_&amp;_sound_overhaul">
+   Vehicle physics &amp; sound overhaul
+  </span>
+ </h4>
+ <p>
+  With UE5 comes an all-new physics simulation called Chaos, and we’ve reworked our vehicles to use this instead of our previous implementation. There should be little to no changes when it comes to vehicle automation, but the manual driving of vehicles has been redone and we made improvements in feel and usage of the different vehicles. From our own tests we feel it is an upgrade overall, but we are curious to hear what you think after playing with them!
+ </p>
+ <p>
+  With this we also reworked all vehicle sounds, eliminating many issues we couldn’t easily resolve in our old implementation, overall improving quality and consistency.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Enhanced_Input_System">
+   Enhanced Input System
+  </span>
+ </h4>
+ <p>
+  Another new system that we switched to with Unreal Engine 5 is the Enhanced Input system. With this we implemented contextual key bindings in the options, allowing for much more granularity and control over your control scheme across different contexts like the build mode, driving vehicles, using equipment, etc.
+ </p>
+ <p>
+  Using the Enhanced Input system has also made it easier for us to fix bugs related to inputs. While the migration to the new system created some short-term issues, we have done an extensive pass to ensure all inputs work as intended. But there is always the possibility that you run into an issue that we have missed, in which case you can let us know on our questions site.
+ </p>
+ <h4>
+  <span id="Anti-aliasing_.28TSR_.26_FXAA.29">
+  </span>
+  <span class="mw-headline" id="Anti-aliasing_(TSR_&amp;_FXAA)">
+   Anti-aliasing (TSR &amp; FXAA)
+  </span>
+ </h4>
+ <p>
+  For scalability options we added a lightweight anti-aliasing method known as FXAA (Fast approximate anti-aliasing) which would allow for better performance on lower end machines or for people that don’t like the effect that the previous default anti-aliasing technique had.
+ </p>
+ <p>
+  Next to that we setup our content to work with TSR (Temporal Super Resolution) which is Epic’s implementation of upscaling technology combined with anti-aliasing. For user experience we added several presets: Performance, Balanced, Quality &amp; Insanity.
+ </p>
+ <p>
+  Note, this doesn’t mean we won't support other Upscaling technologies in the future.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Nanite">
+   Nanite
+  </span>
+ </h4>
+ <p>
+  With Unreal Engine 5 comes Nanite, a new way of rendering complex meshes allowing for high visual quality. Due to complications we only decided to convert a part of our content to Nanite. Rocks, Cliffs and Conveyor items will be using Nanite for the time being.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Lumen">
+   Lumen
+  </span>
+ </h4>
+ <p>
+  Lumen is a Global Illumination system that improves lighting and reflections. This new rendering feature will make the world and factory more grounded which can result in more intense &amp; realistic scenes.
+ </p>
+ <p>
+  We decided to have Lumen disabled by default even on the ultra-preset due to its high demand on the hardware. There are several scalability options to make Lumen perform well on most hardware.
+ </p>
+ <p>
+  When using Lumen, we recommend running with TSR enabled on the “Performance” preset and Lumen on Medium or High due to the minimum quality difference. Next to that if you want the high-quality bounce light but not the reflections you can disable the Lumen Reflections in the video settings.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Blueprint_improvements">
+   Blueprint improvements
+  </span>
+ </h3>
+ <p>
+  The main feature of our last update is getting some additional love in this one as well. These were a number of improvements you’ve requested and that we still wanted to make, which should significantly improve using Blueprints in Satisfactory. Since a lot changed here, we are closing the old posts on our Questions Site and are curious for you all to submit some fresh feedback after playing with all these changes. Jace talks a little about this, and mostly about the new features coming to Blueprints in this video:
+  <a class="external free" href="https://youtu.be/ZDN_b6TX5gg" rel="nofollow">
+   https://youtu.be/ZDN_b6TX5gg
+  </a>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Dismantling">
+   Dismantling
+  </span>
+ </h4>
+ <p>
+  Before Update 8 Blueprints were very tedious to dismantle after being placed. Now we’ve added a Blueprint dismantle mode that you can toggle with ‘R’ by default while in the regular dismantle mode. With this you can dismantle an entire Blueprint at once, significantly reducing the effort to get rid of Blueprints that are misplaced or no longer useful!
+ </p>
+ <h4>
+  <span class="mw-headline" id="Building">
+   Building
+  </span>
+ </h4>
+ <p>
+  To improve building with Blueprints we’ve added several useful features. Blueprints now have a directional indicator in their hologram making it easier to place them in the correct rotation. We also implemented Quick Switch for Blueprints, a feature we’ve already had for regular buildables, allowing you to quickly toggle through Blueprints in the same sub-category by pressing or holding ‘E’, without leaving the build mode.
+ </p>
+ <p>
+  We’ve also added a Nudge Mode for all buildables! Using it will lock the current hologram in place, so you can move around freely to check its placement from different directions. From there you are then able to nudge the hologram around to adjust the placement, if necessary, before building it. While this feature is available for all buildables, it is particularly useful for Blueprints and other large buildings.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Changes_to_the_world">
+   Changes to the world
+  </span>
+ </h3>
+ <p>
+  We didn’t make any changes to Resource Nodes this time around and any terrain changes we’ve done are minor, so your factories should be safe. In Update 8 we instead polished a number of areas in terms of visuals, atmosphere, and gameplay elements. Lots of work has gone into all of this, so to get an overview on what’s changed you can read the next parts below and/or look at this video covering it in a little more detail:
+  <a class="external free" href="https://youtu.be/6X4jqMUtCwI" rel="nofollow">
+   https://youtu.be/6X4jqMUtCwI
+  </a>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Visuals">
+   Visuals
+  </span>
+ </h4>
+ <p>
+  Titan Forest and Red Jungle have received the most significant overhaul for their foliage, visual and sound effects, as well as lighting.
+ </p>
+ <p>
+  Many areas have received more polish, those being the Abyss Cliffs, Rocky Desert, Eastern Dune Forest, Spire Coast, and some of the caves as well.
+ </p>
+ <p>
+  We also updated and improved the vista around the world, which has a huge impact on the look and feel of the areas at the edge on the map. With this one we are not fully done yet, but it is certainly an upgrade, and are excited for you to see the direction it is taking.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Gameplay">
+   Gameplay
+  </span>
+ </h4>
+ <p>
+  In terms of gameplay in the world, we are adding two new variants to the Hogs: The Cliff Hog and Nuclear Hog! They are the most menacing members of their family, defending their territory with devastating charges, and in case of the Nuclear Hog, also radiation.
+ </p>
+ <p>
+  We’ve also polished and updated placements of creatures, hazards, and collectables in many areas of the world, Such as Titan Forest, Red Jungle, Spire Coast, Grass Fields, Crater Lakes, Western Beaches, Abyss Cliffs, Coin Tree Forest, Dune Desert, Northern Forest and most of their sub areas.
+ </p>
+ <p>
+  We also did a preliminary pass of Bamboo Fields and Rocky Desert as well to prepare them for Experimental Release, though there may still be changes on them in the future.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Atmosphere">
+   Atmosphere
+  </span>
+ </h4>
+ <p>
+  It was time for us to take a look at lighting and sound in the world, both with the upgrade to Unreal Engine 5 and just in general to polish things up and get rid of lingering issues. In terms of lighting, we’ve done full passes over all starting areas; Grass Fields, Rocky Desert, Northern Forest and Dune Desert, the Titan Forest, Red Jungle and Spire Coast to elevate their look and feel further and fix existing issues.
+ </p>
+ <p>
+  When it comes to sound improvements and clean-up in the world, we’ve passed all the same areas and several more. You can find all the details in the patch notes below!
+ </p>
+ <h3>
+  <span class="mw-headline" id="Advanced_Game_Settings">
+   Advanced Game Settings
+  </span>
+ </h3>
+ <p>
+  We are adding a number of settings that will allow you to customise your experience quite heavily when it comes to removing restrictions inherent to Satisfactory. These Advanced Game Settings can alter the experience drastically, so you can either enable them when creating a new game or when converting your existing save to using these settings when loading a save from the main menu.
+ </p>
+ <p>
+  There is a full list of all new settings in the detailed patch notes below, but they include things such as Flight Mode making traversal and building freely a non-issue, No Build Cost which means buildables no longer need the required items to be built, Set Starting Tier allowing you to start a new game with everything up to that point unlocked and some resources to get started quickly, and No Stinger Mode fully removing the spidery Stinger enemy from the game.
+ </p>
+ <p>
+  Many of these settings change restrictions that are part of what makes Satisfactory what it is, but we also know that people find their fun in games in different ways, and we wanted to give you the option to experiment with that and find out how you enjoy Satisfactory the most.
+ </p>
+ <p>
+  Here is our video covering all of this in detail:
+  <a class="external free" href="https://youtu.be/T2lOiHtygVM" rel="nofollow">
+   https://youtu.be/T2lOiHtygVM
+  </a>
+ </p>
+ <h3>
+  <span id="Priority_Power_Switch_.26_Power_Tower">
+  </span>
+  <span class="mw-headline" id="Priority_Power_Switch_&amp;_Power_Tower">
+   Priority Power Switch &amp; Power Tower
+  </span>
+ </h3>
+ <p>
+  Both of these features can make a significant change in how you set up your power grid. We’ve got a summary for what they can do below, or you can watch Jace talk about them in this video:
+  <a class="external free" href="https://youtu.be/v4mbNy3gt7c" rel="nofollow">
+   https://youtu.be/v4mbNy3gt7c
+  </a>
+ </p>
+ <p>
+  The Priority Power Switch allows you to organise sections of your power grid into different priorities. So, if your power would fail, the Priority Power Switches turn off in order of their set priority, shutting of the parts of your factory gated behind them until there is enough power available for the remainder of your grid to keep running.
+ </p>
+ <p>
+  While they are great to prevent full power outages, they can also be switched off and on remotely from any other Priority Power Switch, allowing you to remotely control which parts of your factory are running.
+ </p>
+ <p>
+  The Power Tower is a large building allowing you to connect power lines over longer distances. It comes in two versions, one with a ladder and platform that make them and excellent combination with the Zipline, and one version without for a cleaner look.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Quality_of_life_and_other_improvements">
+   Quality of life and other improvements
+  </span>
+ </h3>
+ <p>
+  It wouldn’t be our usual updates if there weren’t several miscellaneous improvements to features and quality of life for Satisfactory included in the Update, so let’s take a quick look at these as well!
+ </p>
+ <h4>
+  <span class="mw-headline" id="Destructible_Gas_Pillars">
+   Destructible Gas Pillars
+  </span>
+ </h4>
+ <p>
+  With Update 8 you’ll be able to blow up Gas Pillars using the Nobelisk! We’ve been wanting to add this for a while, and it is finally in the game. After unlocking Nobelisks you won’t have to worry anymore about odd Gas Pillars disrupting how you can build your factories.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Jetpack_fuels">
+   Jetpack fuels
+  </span>
+ </h4>
+ <p>
+  The Jetpack can now use a selection of fuels with different burn rates and acceleration. Thanks to this the Jetpack can be used before automating fuel with Solid Biofuel, and in the late game you can even use Turbofuel which has unparalleled acceleration.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Parachute">
+   Parachute
+  </span>
+ </h4>
+ <p>
+  This feature has received some changes to make it a viable tool in the early to mid-game. For one, the Parachute no longer gets consumed when used, so you can now make one and use it for as long as you want.
+ </p>
+ <p>
+  It now has a standard and sprint speed, which match the Bladerunner speeds, and we balanced it to be an excellent tool for making longer jumps while exploring and traversing your factory. Of course, it also retains its signature function of preventing fall damage in any dicey situations you might find yourself in.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Dismantle_Filter">
+   Dismantle Filter
+  </span>
+ </h4>
+ <p>
+  We’ve added a filter to the Dismantle Mode where you can hover over a specific type of building, such as a Constructor, and select it to your dismantle filter. While remaining in Dismantle Mode you will only highlight the selected type of building for dismantling, making it much easier to dismantle specific parts of your factory while avoiding removing the other parts you want to keep by accident, such as Foundations.
+ </p>
+ <p>
+  You can switch the filter freely while dismantling, and it works with both the new Blueprint Dismantle Mode and Mass Dismantle!
+ </p>
+ <p>
+  If you want to see these changes in action before trying them out yourself, you can check out this video we made:
+  <a class="external free" href="https://youtu.be/9jDBEpAlS2s" rel="nofollow">
+   https://youtu.be/9jDBEpAlS2s
+  </a>
+ </p>
+ <h2>
+  <span class="mw-headline" id="Patch_notes">
+   Patch notes
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Factory">
+   Factory
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Added the
+   <a href="/wiki/Power_Tower" title="Power Tower">
+    Power Tower
+   </a>
+   and
+   <a class="mw-redirect" href="/wiki/Power_Tower_Platform" title="Power Tower Platform">
+    Power Tower Platform
+   </a>
+   <ul>
+    <li>
+     Unlocked in
+     <a class="mw-redirect" href="/wiki/Tier_4" title="Tier 4">
+      Tier 4
+     </a>
+     : Expanded Power Infrastructure
+    </li>
+   </ul>
+  </li>
+  <li>
+   Added the
+   <a href="/wiki/Priority_Power_Switch" title="Priority Power Switch">
+    Priority Power Switch
+   </a>
+   <ul>
+    <li>
+     Unlocked in
+     <a class="mw-redirect" href="/wiki/Caterium_Research" title="Caterium Research">
+      MAM: Caterium
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Advanced_Game_Settings_2">
+   Advanced Game Settings
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Added several
+   <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+    Advanced Game Settings
+   </a>
+   that can be enabled when starting a new game or loading a save from the main menu:
+   <ul>
+    <li>
+     Flight mode: Player can fly
+    </li>
+    <li>
+     God mode: Player takes no
+     <a class="mw-redirect" href="/wiki/Damage" title="Damage">
+      damage
+     </a>
+     (will still die from leaving the map)
+    </li>
+    <li>
+     Give items: Player can add items to their inventory
+    </li>
+    <li>
+     No build cost: Buildables cost nothing to build
+    </li>
+    <li>
+     No unlock cost: Unlocks cost nothing to unlock
+    </li>
+    <li>
+     Unlock alternative recipes instantly:
+     <a class="mw-redirect" href="/wiki/Alternate_recipes" title="Alternate recipes">
+      Alternate recipes
+     </a>
+     unlock as soon as all requirements are met (removes need for Hard Drives)
+    </li>
+    <li>
+     No power: Buildings don’t consume power
+    </li>
+    <li>
+     Set starting tier: The session will start at the selected Tier and players will receive a starting set of items
+    </li>
+    <li>
+     Set game phase: Unlocks all phases before
+    </li>
+    <li>
+     Unlock all Tiers/MAM/Shop/Phases: Unlocks everything in the selected progression branch
+    </li>
+    <li>
+     Respawn settings: Player can set what they keep on them when respawning (everything, only equipped items, nothing)
+    </li>
+    <li>
+     Disable arachnid creatures: Disables the spawning of
+     <a href="/wiki/Stinger" title="Stinger">
+      Stingers
+     </a>
+     in the session
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Equipment">
+   Equipment
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Added support for using different
+   <a class="mw-redirect" href="/wiki/Fuels" title="Fuels">
+    fuel
+   </a>
+   types in the
+   <a href="/wiki/Jetpack" title="Jetpack">
+    Jetpack
+   </a>
+   <ul>
+    <li>
+     <a href="/wiki/Solid_Biofuel" title="Solid Biofuel">
+      Solid Biofuel
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Packaged_Liquid_Biofuel" title="Packaged Liquid Biofuel">
+      Liquid Biofuel
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Packaged_Fuel" title="Packaged Fuel">
+      Fuel
+     </a>
+    </li>
+    <li>
+     <a href="/wiki/Packaged_Turbofuel" title="Packaged Turbofuel">
+      Turbo Fuel
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Jetpack can now refuel while the player is on a
+   <a href="/wiki/Zipline" title="Zipline">
+    Zipline
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Parachute" title="Parachute">
+    Parachute
+   </a>
+   changes
+   <ul>
+    <li>
+     The Parachute is no longer consumed after usage and the stack size is now 1, making it function the same as other back slot equipment, such as the Jetpack
+    </li>
+    <li>
+     Added a Sprint Mode to the Parachute, allowing for slow and fast movement
+    </li>
+    <li>
+     Increased the maximum speed and descending speed, allowing for improved gliding
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Zipline" title="Zipline">
+    Zipline
+   </a>
+   changes
+   <ul>
+    <li>
+     The Zipline now automatically connects to the next
+     <a href="/wiki/Power_Line" title="Power Line">
+      Power Line
+     </a>
+     while ziplining on
+     <a href="/wiki/Power_Tower" title="Power Tower">
+      Power Towers
+     </a>
+     and
+     <a class="mw-redirect" href="/wiki/Wall_Outlet" title="Wall Outlet">
+      ceiling connections
+     </a>
+     <ul>
+      <li>
+       This will not work if the angle between the Power Lines exceeds 60 degrees
+      </li>
+      <li>
+       If the Zipline can move along more than one Power Line the direction can be controlled by looking at the desired direction or by holding the directional movement input
+      </li>
+     </ul>
+    </li>
+    <li>
+     Reduced maximum Zipline Sprint Speed to 100 km/h (due to the previous maximum speed being too high for the world loading)
+    </li>
+    <li>
+     Increased the Zipline Sprint acceleration to be nearly instant
+    </li>
+    <li>
+     The Zipline can now be toggled on/off by pressing the secondary equipment input (RMB by default), which allows ziplining without needing to hold down the primary equipment input (LMB by default)
+    </li>
+   </ul>
+  </li>
+  <li>
+   Weapon balancing
+   <ul>
+    <li>
+     Fire rate and damage balancing done to the
+     <a class="mw-redirect" href="/wiki/Homing_Rifle_Ammo" title="Homing Rifle Ammo">
+      Homing Rifle ammo
+     </a>
+    </li>
+    <li>
+     Weapon spread and damage balancing done to the
+     <a class="mw-redirect" href="/wiki/Turbo_Rifle_Ammo" title="Turbo Rifle Ammo">
+      Turbo Rifle ammo
+     </a>
+    </li>
+    <li>
+     Minor damage reductions on
+     <a href="/wiki/Rebar_Gun" title="Rebar Gun">
+      Iron, Stun, and Explosive Rebar ammo
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Creatures">
+   Creatures
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Added
+   <a href="/wiki/Cliff_Hog" title="Cliff Hog">
+    Cliff Hog
+   </a>
+   <ul>
+    <li>
+     Higher health, damage, size, and speed relative to the
+     <a href="/wiki/Alpha_Hog" title="Alpha Hog">
+      Alpha Hog
+     </a>
+    </li>
+    <li>
+     Basic Hog Charge attack, with increased speed and damage
+    </li>
+    <li>
+     New Rock Throw attack, which launches a rock at a distant or unreachable target
+    </li>
+    <li>
+     New Plow Charge attack, which continually pushes and deals damage to the target
+    </li>
+   </ul>
+  </li>
+  <li>
+   Added
+   <a class="mw-redirect" href="/wiki/Nuclear_Hog" title="Nuclear Hog">
+    Nuclear Hog
+   </a>
+   <ul>
+    <li>
+     Higher health, damage, size, and speed relative to the Cliff Hog
+    </li>
+    <li>
+     Basic Hog Charge attack, with increased speed and damage
+    </li>
+    <li>
+     New Rock Throw attack, which launches a rock at a distant or unreachable target
+    </li>
+    <li>
+     New Plow Charge attack, which continually pushes and deals damage to the target
+    </li>
+    <li>
+     Passive
+     <a href="/wiki/Radiation" title="Radiation">
+      Radiation
+     </a>
+     Damage area of effect
+    </li>
+   </ul>
+  </li>
+  <li>
+   Creature health and damage balancing
+   <ul>
+    <li>
+     Reduced the health of
+     <a href="/wiki/Spitter" title="Spitter">
+      Small Desert and Aquatic Spitters
+     </a>
+     from 30 to 20
+    </li>
+    <li>
+     Increased health of
+     <a href="/wiki/Alpha_Spitter" title="Alpha Spitter">
+      Alpha Forest Spitter
+     </a>
+     from 60 to 80
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Vehicles">
+   Vehicles
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Moved
+   <a href="/wiki/Vehicles" title="Vehicles">
+    vehicle
+   </a>
+   physics to using Chaos
+  </li>
+  <li>
+   Overhauled all vehicle sounds
+  </li>
+  <li>
+   Improved the manual driving of all vehicles
+  </li>
+  <li>
+   Reworked all vehicle trunks visually simplifying the animation and adding a new sound
+  </li>
+  <li>
+   Added functionality for vehicles to deal damage to creatures by hitting them
+  </li>
+  <li>
+   Damage dealt is relative to vehicle speed and size
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="World">
+   World
+  </span>
+ </h3>
+ <ul>
+  <li>
+   <a href="/wiki/Gas_Pillar" title="Gas Pillar">
+    Gas Pillars
+   </a>
+   can now be destroyed by explosives such as the Nobelisk
+  </li>
+  <li>
+   Titan Forest
+   <ul>
+    <li>
+     Major overhaul of the area and foliage
+    </li>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Red Jungle
+   <ul>
+    <li>
+     Major overhaul of the area and foliage
+    </li>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Rocky Desert
+   <ul>
+    <li>
+     Polished foliage assets and placement
+    </li>
+    <li>
+     Minor tweaks to creature, hazard, and rewards, but there are more changes we intend to make in the future
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Grass Fields
+   <ul>
+    <li>
+     Polished foliage assets and placement, also for the Grass Crater and Snake Tree Forest Sub biomes
+    </li>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Northern Forest
+   <ul>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Dune Desert
+   <ul>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Improved lighting and atmosphere in the area
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Abyss Cliffs
+   <ul>
+    <li>
+     Polished foliage placement and replaced old assets
+    </li>
+    <li>
+     Added creature, hazard, and reward placements
+    </li>
+    <li>
+     Preliminary sound improvements in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Eastern Dune Forest
+   <ul>
+    <li>
+     Polished foliage placement, landscape painting, and the Coin Forest sub biome
+    </li>
+    <li>
+     Minor tweaks to creature, hazard, and rewards, but there are more changes we intend to make in the future
+    </li>
+    <li>
+     Preliminary sound improvements in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Crater Lakes
+   <ul>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Preliminary sound improvements in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Western Beaches
+   <ul>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Preliminary sound improvements in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Spire Coast
+   <ul>
+    <li>
+     Updated creature, hazard, and reward placements
+    </li>
+    <li>
+     Overhauled lighting and atmosphere in the area
+    </li>
+    <li>
+     Overhauled sound in the area
+    </li>
+   </ul>
+  </li>
+  <li>
+   Bamboo Fields
+   <ul>
+    <li>
+     Some changes to foliage have been made, but there are more changes we intend to make later to fix any remaining issues
+    </li>
+    <li>
+     Improved sound in the area
+    </li>
+    <li>
+     Added the new prototype of the world perimeter, which we will continue working on in the future
+    </li>
+    <li>
+     Overhauled the look and gameplay of several caves
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Quality_of_Life">
+   Quality of Life
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Added the ability to lock a hologram in place with
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      H
+     </kbd>
+    </a>
+   </span>
+   by default while in Build Mode, allowing players to inspect the placement before building
+  </li>
+  <li>
+   Added the ability to nudge a locked hologram with the arrow keys by default, allowing players to adjust the placement before building
+  </li>
+  <li>
+   Added a directional indicator to the
+   <a href="/wiki/Blueprint" title="Blueprint">
+    Blueprint
+   </a>
+   hologram
+  </li>
+  <li>
+   Added a Blueprints Dismantle Mode that can be switched on in the regular Dismantle Mode, allowing an entire Blueprint to be dismantled at once
+  </li>
+  <li>
+   Added Quick Switch functionality to Blueprints, allowing the player to quickly switch between Blueprints in the same sub-category
+  </li>
+  <li>
+   Added Sample functionality to Blueprints (can only be sampled when in Blueprint Dismantle Mode)
+  </li>
+  <li>
+   Added a Dismantle Filter to the Dismantle Mode, allowing the player to select a specific buildable to dismantle and ignore all other buildables
+  </li>
+  <li>
+   Added automatic placement of a
+   <a href="/wiki/Conveyor_Poles" title="Conveyor Poles">
+    Conveyor
+   </a>
+   or
+   <a href="/wiki/Pipeline_Supports" title="Pipeline Supports">
+    Pipe pole
+   </a>
+   when not building a
+   <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+    Belt
+   </a>
+   or
+   <a class="mw-redirect" href="/wiki/Pipeline" title="Pipeline">
+    Pipe
+   </a>
+   from an existing connection point
+  </li>
+  <li>
+   Changed the Quick Switching of Conveyor Belt, Lift, and Pipe Mk.’s to no longer revert back to the first placement step
+  </li>
+  <li>
+   Moved validation check for building Conveyors and Pipes to final placement step
+  </li>
+  <li>
+   <a href="/wiki/Somersloop" title="Somersloop">
+    Somersloops
+   </a>
+   and
+   <a href="/wiki/Mercer_Sphere" title="Mercer Sphere">
+    Mercer Spheres
+   </a>
+   can no longer be deleted in the inventory
+  </li>
+  <li>
+   Made the automatic power connections when building Power Lines context sensitive, copying the same type of pole the Power Line was initially connected to
+  </li>
+  <li>
+   Added the option to upgrade
+   <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+    Splitters
+   </a>
+   (regular,
+   <a href="/wiki/Smart_Splitter" title="Smart Splitter">
+    Smart
+   </a>
+   ,
+   <a href="/wiki/Programmable_Splitter" title="Programmable Splitter">
+    Programmable
+   </a>
+   ) by holding
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      Ctrl
+     </kbd>
+    </a>
+   </span>
+   (default input) while aiming any Splitter variant hologram at any other already build Splitter variant
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Balancing">
+   Balancing
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Changed the
+   <a href="/wiki/Parachute" title="Parachute">
+    Parachute
+   </a>
+   recipe to only produce 1 at a time and increased the cost of a single Parachute
+  </li>
+  <li>
+   Removed the option to purchase Parachutes from the
+   <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+    AWESOME Shop
+   </a>
+  </li>
+  <li>
+   Added a new milestone to
+   <a class="mw-redirect" href="/wiki/Tier_4" title="Tier 4">
+    Tier 4
+   </a>
+   : ‘Expanded Power Infrastructure’
+  </li>
+  <li>
+   Moved the
+   <a href="/wiki/Power_Storage" title="Power Storage">
+    Power Storage
+   </a>
+   unlock to Tier 4: Expanded Power Infrastructure
+  </li>
+  <li>
+   Added the
+   <a href="/wiki/Power_Tower" title="Power Tower">
+    Power Tower
+   </a>
+   and
+   <a class="mw-redirect" href="/wiki/Power_Tower_Platform" title="Power Tower Platform">
+    Power Tower Platform
+   </a>
+   to Tier 4: Expanded Power Infrastructure
+  </li>
+  <li>
+   Renamed the
+   <a class="mw-redirect" href="/wiki/Tier_6" title="Tier 6">
+    Tier 6
+   </a>
+   milestone ‘Expanded Power Infrastructure’ to ‘Logistics Mk.4’
+  </li>
+  <li>
+   Moved the location of the
+   <a class="mw-redirect" href="/wiki/Power_Pole_Mk.3" title="Power Pole Mk.3">
+    Power Poles Mk.3
+   </a>
+   unlock in the MAM: Caterium research tree
+  </li>
+  <li>
+   Reduced the
+   <a href="/wiki/High-Speed_Connector" title="High-Speed Connector">
+    High-Speed Connector
+   </a>
+   cost of the Power Poles Mk.3 research from 100 to 50
+  </li>
+  <li>
+   Added the
+   <a href="/wiki/Priority_Power_Switch" title="Priority Power Switch">
+    Priority Power Switch
+   </a>
+   unlock to the
+   <a class="mw-redirect" href="/wiki/Caterium_Research" title="Caterium Research">
+    MAM: Caterium
+   </a>
+   research tree
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="UI">
+   UI
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Updated UI to work with the new UE5 Input System
+  </li>
+  <li>
+   Re-worked the
+   <a href="/wiki/Settings" title="Settings">
+    options
+   </a>
+   menus and key binding menu
+  </li>
+  <li>
+   Added a search bar in the options and key binding menu
+  </li>
+  <li>
+   Re-worked the main menu and new game menu
+  </li>
+  <li>
+   Added functionality to change the preferred fuel of equipped Jetpack in inventory window
+  </li>
+  <li>
+   Improved UI memory usage
+  </li>
+  <li>
+   Added UI for selecting Dismantle Modes
+  </li>
+  <li>
+   Added Dark Mode for the
+   <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+    A.W.E.S.O.M.E. Shop
+   </a>
+  </li>
+  <li>
+   Added Quick Switch functionality to Blueprints
+  </li>
+  <li>
+   Rewrote descriptions for video and graphical settings to be clearer to understand
+  </li>
+  <li>
+   Updated the credits :D
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Player_character">
+   Player character
+  </span>
+ </h3>
+ <ul>
+  <li>
+   The
+   <a href="/wiki/Pioneer" title="Pioneer">
+    player character
+   </a>
+   now respawns with the equipment that was equipped on death still equipped
+  </li>
+  <li>
+   Reworked and improved the player character footstep sounds
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Systems">
+   Systems
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Overhauled the foliage system to be compatible with Unreal Engine 5
+  </li>
+  <li>
+   Some adjustments in the power system, no changes should be noticeable during play
+  </li>
+  <li>
+   Migrated all inputs to the new Enhanced Input System
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Optimization">
+   Optimization
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Optimized the
+   <a class="mw-redirect" href="/wiki/Save_file" title="Save file">
+    save
+   </a>
+   system to decrease saving time on larger saves by roughly 80-90%
+  </li>
+  <li>
+   Optimized significance manager to be ISPC accelerated
+  </li>
+  <li>
+   Converted to World Partitioning (Work in progress)
+  </li>
+  <li>
+   Deprecated World composition implementation
+  </li>
+  <li>
+   Added streaming scalability for foliage streaming cells
+   <ul>
+    <li>
+     Foliage cells can now be loaded from different ranges
+     <ul>
+      <li>
+       Near, Default, Far, Cinematic
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Optimized Signs
+   <ul>
+    <li>
+     Signs will now share when same configuration is found
+    </li>
+    <li>
+     Emissive only signs are handled in a more performant way
+    </li>
+   </ul>
+  </li>
+  <li>
+   Re-implemented conveyor rendering system to work well with Nanite
+  </li>
+  <li>
+   Added TSR
+   <ul>
+    <li>
+     Added TSR Presets:
+     <ul>
+      <li>
+       Performance (60% Screen percentage)
+      </li>
+      <li>
+       Balanced (75% Screen percentage)
+      </li>
+      <li>
+       Quality (90% Screen percentage)
+      </li>
+      <li>
+       Insanity (100% Screen percentage)
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Added Lumen
+  </li>
+  <li>
+   Added Lumen Scalability
+  </li>
+  <li>
+   Added Lumen Reflections Scalability
+  </li>
+  <li>
+   Improved DirectX12 Stability
+  </li>
+  <li>
+   Improved Vulkan Stability
+  </li>
+  <li>
+   Deprecated/Soft Removed DirectX 11
+   <ul>
+    <li>
+     Note you can still run on DirectX 11 but without Nanite or Lumen. We cannot promise the same quality as on DirectX 12 or Vulkan.
+    </li>
+   </ul>
+  </li>
+  <li>
+   Minor optimizations for the Conveyor tick
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Bug_fixes">
+   Bug fixes
+  </span>
+ </h3>
+ <ul>
+  <li>
+   Fixed a potential bug with
+   <a href="/wiki/Drone" title="Drone">
+    drone
+   </a>
+   queue processing
+  </li>
+  <li>
+   Fixed shadow flickering
+  </li>
+  <li>
+   Fixed so
+   <a class="mw-redirect" href="/wiki/Train" title="Train">
+    trains
+   </a>
+   do not have to wait 2 seconds for pathfinding (a cooldown) when loading a save. This fixed a case where a train could take a wrong turn on load if it was close enough to a switch.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Known_issues">
+   Known issues
+  </span>
+ </h3>
+ <ul>
+  <li>
+   The first time booting the game will be very slow, but that should not continue to happen after the first boot
+  </li>
+  <li>
+   Game can hang on quit
+  </li>
+  <li>
+   Performance loss when running out of VRAM
+  </li>
+  <li>
+   Lights don’t behave correctly in Lumen compared with Signs
+  </li>
+  <li>
+   Factory Animation tick reductions can be slightly too aggressive
+  </li>
+  <li>
+   TSR can cause visual issues with conveyor belts, you can try using the following console command to alleviate the issues, but this will reduce AntiAliasing quality
+  </li>
+  <li>
+   r.TSR.ShadingRejection.Flickering 0
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="Media">
+   Media
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Videos">
+   Videos
+  </span>
+ </h3>
+ <figure class="embedvideo" data-mw-iframeconfig='{"width":410,"height":231,"src":"https://www.youtube-nocookie.com/embed/px_gG4JvWXQ?autoplay=1"}' data-service="youtube" style="width:410px">
+  <div class="embedvideo-wrapper" style="height:231px">
+   <div class="embedvideo-consent" data-show-privacy-notice="1">
+    <div class="embedvideo-overlay">
+     <div class="embedvideo-loader" role="button">
+      <div class="embedvideo-loader__fakeButton">
+       Load video
+      </div>
+      <div class="embedvideo-loader__footer">
+       <div class="embedvideo-loader__service">
+        YouTube
+       </div>
+      </div>
+     </div>
+     <div class="embedvideo-privacyNotice hidden">
+      <div class="embedvideo-privacyNotice__content">
+       YouTube might collect personal data.
+       <a class="embedvideo-privacyNotice__link" href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank">
+        Privacy Policy
+       </a>
+      </div>
+      <div class="embedvideo-privacyNotice__buttons">
+       <button class="embedvideo-privacyNotice__continue" type="submit">
+        Continue
+       </button>
+       <button class="embedvideo-privacyNotice__dismiss" type="submit">
+        Dismiss
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <figcaption>
+   Patch Notes
+  </figcaption>
+ </figure>
+ <figure class="embedvideo" data-mw-iframeconfig='{"width":410,"height":231,"src":"https://www.youtube-nocookie.com/embed/GeKE40L2cSw?autoplay=1"}' data-service="youtube" style="width:410px">
+  <div class="embedvideo-wrapper" style="height:231px">
+   <div class="embedvideo-consent" data-show-privacy-notice="1">
+    <div class="embedvideo-overlay">
+     <div class="embedvideo-loader" role="button">
+      <div class="embedvideo-loader__fakeButton">
+       Load video
+      </div>
+      <div class="embedvideo-loader__footer">
+       <div class="embedvideo-loader__service">
+        YouTube
+       </div>
+      </div>
+     </div>
+     <div class="embedvideo-privacyNotice hidden">
+      <div class="embedvideo-privacyNotice__content">
+       YouTube might collect personal data.
+       <a class="embedvideo-privacyNotice__link" href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank">
+        Privacy Policy
+       </a>
+      </div>
+      <div class="embedvideo-privacyNotice__buttons">
+       <button class="embedvideo-privacyNotice__continue" type="submit">
+        Continue
+       </button>
+       <button class="embedvideo-privacyNotice__dismiss" type="submit">
+        Dismiss
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <figcaption>
+   Launch Stream
+  </figcaption>
+ </figure>
+ <figure class="embedvideo" data-mw-iframeconfig='{"width":410,"height":231,"src":"https://www.youtube-nocookie.com/embed/dY__x2dq7Sk?autoplay=1"}' data-service="youtube" style="width:410px">
+  <div class="embedvideo-wrapper" style="height:231px">
+   <div class="embedvideo-consent" data-show-privacy-notice="1">
+    <div class="embedvideo-overlay">
+     <div class="embedvideo-loader" role="button">
+      <div class="embedvideo-loader__fakeButton">
+       Load video
+      </div>
+      <div class="embedvideo-loader__footer">
+       <div class="embedvideo-loader__service">
+        YouTube
+       </div>
+      </div>
+     </div>
+     <div class="embedvideo-privacyNotice hidden">
+      <div class="embedvideo-privacyNotice__content">
+       YouTube might collect personal data.
+       <a class="embedvideo-privacyNotice__link" href="https://www.youtube.com/howyoutubeworks/user-settings/privacy/" rel="nofollow,noopener" target="_blank">
+        Privacy Policy
+       </a>
+      </div>
+      <div class="embedvideo-privacyNotice__buttons">
+       <button class="embedvideo-privacyNotice__continue" type="submit">
+        Continue
+       </button>
+       <button class="embedvideo-privacyNotice__dismiss" type="submit">
+        Dismiss
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <figcaption>
+   Unreal Engine 5
+  </figcaption>
+ </figure>
+ <div aria-labelledby="Patches" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PatchesNav" title="Template:PatchesNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Patches">
+       <a href="/wiki/Category:Patch_notes" title="Category:Patch notes">
+        Patches
+       </a>
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      1.1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_1.1.1.0" title="Patch 1.1.1.0">
+        1.1.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+        1.1.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.2" title="Patch 1.1.1.2">
+        1.1.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.3" title="Patch 1.1.1.3">
+        1.1.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.4" title="Patch 1.1.1.4">
+        1.1.1.4
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental 1.1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_1.1.0.0" title="Patch 1.1.0.0">
+        1.1.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.1" title="Patch 1.1.0.1">
+        1.1.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.2" title="Patch 1.1.0.2">
+        1.1.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.3" title="Patch 1.1.0.3">
+        1.1.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.4" title="Patch 1.1.0.4">
+        1.1.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.5" title="Patch 1.1.0.5">
+        1.1.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.0.6" title="Patch 1.1.0.6">
+        1.1.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.5" title="Patch 1.1.1.5">
+        1.1.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.1.1.6" title="Patch 1.1.1.6">
+        1.1.1.6
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      1.0
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_1.0" title="Patch 1.0">
+        1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.1" title="Patch 1.0.0.1">
+        1.0.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.2" title="Patch 1.0.0.2">
+        1.0.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+        1.0.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+        1.0.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.5" title="Patch 1.0.0.5">
+        1.0.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.6" title="Patch 1.0.0.6">
+        1.0.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.0.7" title="Patch 1.0.0.7">
+        1.0.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.0" title="Patch 1.0.1.0">
+        1.0.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.1" title="Patch 1.0.1.1">
+        1.0.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.2" title="Patch 1.0.1.2">
+        1.0.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.3" title="Patch 1.0.1.3">
+        1.0.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.4" title="Patch 1.0.1.4">
+        1.0.1.4
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental 1.0
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_1.0.1.5" title="Patch 1.0.1.5">
+        1.0.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_1.0.1.6" title="Patch 1.0.1.6">
+        1.0.1.6
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 8
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.8.3.0" title="Patch 0.8.3.0">
+        0.8.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.2" title="Patch 0.8.3.2">
+        0.8.3.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.3" title="Patch 0.8.3.3">
+        0.8.3.3
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 8
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a class="mw-selflink selflink">
+        0.8.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.1" title="Patch 0.8.0.1">
+        0.8.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.2" title="Patch 0.8.0.2">
+        0.8.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.3" title="Patch 0.8.0.3">
+        0.8.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.4" title="Patch 0.8.0.4">
+        0.8.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.0.5" title="Patch 0.8.0.5">
+        0.8.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.0" title="Patch 0.8.1.0">
+        0.8.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.1" title="Patch 0.8.1.1">
+        0.8.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.2" title="Patch 0.8.1.2">
+        0.8.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.1.3" title="Patch 0.8.1.3">
+        0.8.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.0" title="Patch 0.8.2.0">
+        0.8.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.1" title="Patch 0.8.2.1">
+        0.8.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.2" title="Patch 0.8.2.2">
+        0.8.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.3" title="Patch 0.8.2.3">
+        0.8.2.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.4" title="Patch 0.8.2.4">
+        0.8.2.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.5" title="Patch 0.8.2.5">
+        0.8.2.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.6" title="Patch 0.8.2.6">
+        0.8.2.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.7" title="Patch 0.8.2.7">
+        0.8.2.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.8" title="Patch 0.8.2.8">
+        0.8.2.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.2.9" title="Patch 0.8.2.9">
+        0.8.2.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.8.3.1" title="Patch 0.8.3.1">
+        0.8.3.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 7
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.7.0.8" title="Patch 0.7.0.8">
+        0.7.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.1.1" title="Patch 0.7.1.1">
+        0.7.1.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 7
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.7.0.0" title="Patch 0.7.0.0">
+        0.7.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.1" title="Patch 0.7.0.1">
+        0.7.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.2" title="Patch 0.7.0.2">
+        0.7.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.3" title="Patch 0.7.0.3">
+        0.7.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.4" title="Patch 0.7.0.4">
+        0.7.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.5" title="Patch 0.7.0.5">
+        0.7.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.6" title="Patch 0.7.0.6">
+        0.7.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.7" title="Patch 0.7.0.7">
+        0.7.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.7.0.8_(Experimental)" title="Patch 0.7.0.8 (Experimental)">
+        0.7.0.8 (Experimental)
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 6
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.6.1.0" title="Patch 0.6.1.0">
+        0.6.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.1" title="Patch 0.6.1.1">
+        0.6.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.2" title="Patch 0.6.1.2">
+        0.6.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.3" title="Patch 0.6.1.3">
+        0.6.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.4" title="Patch 0.6.1.4">
+        0.6.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.1.5" title="Patch 0.6.1.5">
+        0.6.1.5
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 6
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.6.0.0" title="Patch 0.6.0.0">
+        0.6.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.1" title="Patch 0.6.0.1">
+        0.6.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.2" title="Patch 0.6.0.2">
+        0.6.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.3" title="Patch 0.6.0.3">
+        0.6.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.4" title="Patch 0.6.0.4">
+        0.6.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.5" title="Patch 0.6.0.5">
+        0.6.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.6" title="Patch 0.6.0.6">
+        0.6.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.7" title="Patch 0.6.0.7">
+        0.6.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.8" title="Patch 0.6.0.8">
+        0.6.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.9" title="Patch 0.6.0.9">
+        0.6.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.10" title="Patch 0.6.0.10">
+        0.6.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.11" title="Patch 0.6.0.11">
+        0.6.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.12" title="Patch 0.6.0.12">
+        0.6.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.13" title="Patch 0.6.0.13">
+        0.6.0.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.14" title="Patch 0.6.0.14">
+        0.6.0.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.6.0.15" title="Patch 0.6.0.15">
+        0.6.0.15
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 5
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.5.1.0" title="Patch 0.5.1.0">
+        0.5.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.1" title="Patch 0.5.1.1">
+        0.5.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.3" title="Patch 0.5.1.3">
+        0.5.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.4" title="Patch 0.5.1.4">
+        0.5.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.5" title="Patch 0.5.1.5">
+        0.5.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.7" title="Patch 0.5.1.7">
+        0.5.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.8" title="Patch 0.5.1.8">
+        0.5.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.10" title="Patch 0.5.1.10">
+        0.5.1.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.2.0" title="Patch 0.5.2.0">
+        0.5.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.2.1" title="Patch 0.5.2.1">
+        0.5.2.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 5
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.5.0.0" title="Patch 0.5.0.0">
+        0.5.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.1" title="Patch 0.5.0.1">
+        0.5.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.2" title="Patch 0.5.0.2">
+        0.5.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.3" title="Patch 0.5.0.3">
+        0.5.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.4" title="Patch 0.5.0.4">
+        0.5.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.5" title="Patch 0.5.0.5">
+        0.5.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.6" title="Patch 0.5.0.6">
+        0.5.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.7" title="Patch 0.5.0.7">
+        0.5.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.8" title="Patch 0.5.0.8">
+        0.5.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.9" title="Patch 0.5.0.9">
+        0.5.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.10" title="Patch 0.5.0.10">
+        0.5.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.11" title="Patch 0.5.0.11">
+        0.5.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.12" title="Patch 0.5.0.12">
+        0.5.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.13" title="Patch 0.5.0.13">
+        0.5.0.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.0.14" title="Patch 0.5.0.14">
+        0.5.0.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.2" title="Patch 0.5.1.2">
+        0.5.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.6" title="Patch 0.5.1.6">
+        0.5.1.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.9" title="Patch 0.5.1.9">
+        0.5.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.11" title="Patch 0.5.1.11">
+        0.5.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.12" title="Patch 0.5.1.12">
+        0.5.1.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.5.1.13" title="Patch 0.5.1.13">
+        0.5.1.13
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 4
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.4.1.0" title="Patch 0.4.1.0">
+        0.4.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.1.1" title="Patch 0.4.1.1">
+        0.4.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.0" title="Patch 0.4.2.0">
+        0.4.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.2" title="Patch 0.4.2.2">
+        0.4.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.5" title="Patch 0.4.2.5">
+        0.4.2.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.7" title="Patch 0.4.2.7">
+        0.4.2.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.9" title="Patch 0.4.2.9">
+        0.4.2.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.11" title="Patch 0.4.2.11">
+        0.4.2.11
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 4
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.4.0.0" title="Patch 0.4.0.0">
+        0.4.0.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.1" title="Patch 0.4.0.1">
+        0.4.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.2" title="Patch 0.4.0.2">
+        0.4.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.3" title="Patch 0.4.0.3">
+        0.4.0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.4" title="Patch 0.4.0.4">
+        0.4.0.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.5" title="Patch 0.4.0.5">
+        0.4.0.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.6" title="Patch 0.4.0.6">
+        0.4.0.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.7" title="Patch 0.4.0.7">
+        0.4.0.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.8" title="Patch 0.4.0.8">
+        0.4.0.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.9" title="Patch 0.4.0.9">
+        0.4.0.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.10" title="Patch 0.4.0.10">
+        0.4.0.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.11" title="Patch 0.4.0.11">
+        0.4.0.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.0.12" title="Patch 0.4.0.12">
+        0.4.0.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.1" title="Patch 0.4.2.1">
+        0.4.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.2_(Experimental)" title="Patch 0.4.2.2 (Experimental)">
+        0.4.2.2 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.3" title="Patch 0.4.2.3">
+        0.4.2.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.4" title="Patch 0.4.2.4">
+        0.4.2.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.6" title="Patch 0.4.2.6">
+        0.4.2.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.8" title="Patch 0.4.2.8">
+        0.4.2.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.2.10" title="Patch 0.4.2.10">
+        0.4.2.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.3.0" title="Patch 0.4.3.0">
+        0.4.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.4.3.1" title="Patch 0.4.3.1">
+        0.4.3.1
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 3
+      <br/>
+      &amp; Steam Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.3.3.3" title="Patch 0.3.3.3">
+        0.3.3.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.4" title="Patch 0.3.3.4">
+        0.3.3.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.5" title="Patch 0.3.3.5">
+        0.3.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.6" title="Patch 0.3.3.6">
+        0.3.3.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.14" title="Patch 0.3.4.14">
+        0.3.4.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.15" title="Patch 0.3.4.15">
+        0.3.4.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.16" title="Patch 0.3.4.16">
+        0.3.4.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5" title="Patch 0.3.5">
+        0.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.1" title="Patch 0.3.5.1">
+        0.3.5.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.2" title="Patch 0.3.5.2">
+        0.3.5.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.3" title="Patch 0.3.5.3">
+        0.3.5.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.4" title="Patch 0.3.5.4">
+        0.3.5.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.6" title="Patch 0.3.5.6">
+        0.3.5.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.5" title="Patch 0.3.6.5">
+        0.3.6.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7" title="Patch 0.3.7">
+        0.3.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.1" title="Patch 0.3.7.1">
+        0.3.7.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.2" title="Patch 0.3.7.2">
+        0.3.7.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.3" title="Patch 0.3.7.3">
+        0.3.7.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.4" title="Patch 0.3.7.4">
+        0.3.7.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.5" title="Patch 0.3.7.5">
+        0.3.7.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.6" title="Patch 0.3.7.6">
+        0.3.7.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.7.7" title="Patch 0.3.7.7">
+        0.3.7.7
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 3
+      <br/>
+      &amp; Steam Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.3" title="Patch 0.3">
+        0.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.0.1" title="Patch 0.3.0.1">
+        0.3.0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.0.2" title="Patch 0.3.0.2">
+        0.3.0.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.0" title="Patch 0.3.1.0">
+        0.3.1.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.1" title="Patch 0.3.1.1">
+        0.3.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.1.2" title="Patch 0.3.1.2">
+        0.3.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.0" title="Patch 0.3.2.0">
+        0.3.2.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.1" title="Patch 0.3.2.1">
+        0.3.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.2.2" title="Patch 0.3.2.2">
+        0.3.2.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.0" title="Patch 0.3.3.0">
+        0.3.3.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.1" title="Patch 0.3.3.1">
+        0.3.3.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.2" title="Patch 0.3.3.2">
+        0.3.3.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.4" title="Patch 0.3.3.4">
+        0.3.3.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.3.5" title="Patch 0.3.3.5">
+        0.3.3.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.0" title="Patch 0.3.4.0">
+        0.3.4.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.1" title="Patch 0.3.4.1">
+        0.3.4.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.2" title="Patch 0.3.4.2">
+        0.3.4.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.3" title="Patch 0.3.4.3">
+        0.3.4.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.4" title="Patch 0.3.4.4">
+        0.3.4.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.5" title="Patch 0.3.4.5">
+        0.3.4.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.6" title="Patch 0.3.4.6">
+        0.3.4.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.7" title="Patch 0.3.4.7">
+        0.3.4.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.8" title="Patch 0.3.4.8">
+        0.3.4.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.9" title="Patch 0.3.4.9">
+        0.3.4.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.10" title="Patch 0.3.4.10">
+        0.3.4.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.11" title="Patch 0.3.4.11">
+        0.3.4.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.12" title="Patch 0.3.4.12">
+        0.3.4.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.4.13" title="Patch 0.3.4.13">
+        0.3.4.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.5.5" title="Patch 0.3.5.5">
+        0.3.5.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6" title="Patch 0.3.6">
+        0.3.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.1" title="Patch 0.3.6.1">
+        0.3.6.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.2" title="Patch 0.3.6.2">
+        0.3.6.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.3" title="Patch 0.3.6.3">
+        0.3.6.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.4" title="Patch 0.3.6.4">
+        0.3.6.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.6" title="Patch 0.3.6.6">
+        0.3.6.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.7" title="Patch 0.3.6.7">
+        0.3.6.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.8" title="Patch 0.3.6.8">
+        0.3.6.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.9" title="Patch 0.3.6.9">
+        0.3.6.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.10" title="Patch 0.3.6.10">
+        0.3.6.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.11" title="Patch 0.3.6.11">
+        0.3.6.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.12" title="Patch 0.3.6.12">
+        0.3.6.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.6.13" title="Patch 0.3.6.13">
+        0.3.6.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.0" title="Patch 0.3.8.0">
+        0.3.8.0
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.1" title="Patch 0.3.8.1">
+        0.3.8.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.2" title="Patch 0.3.8.2">
+        0.3.8.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.3" title="Patch 0.3.8.3">
+        0.3.8.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.4" title="Patch 0.3.8.4">
+        0.3.8.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.5" title="Patch 0.3.8.5">
+        0.3.8.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.6" title="Patch 0.3.8.6">
+        0.3.8.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.7" title="Patch 0.3.8.7">
+        0.3.8.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.8" title="Patch 0.3.8.8">
+        0.3.8.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.9" title="Patch 0.3.8.9">
+        0.3.8.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.10" title="Patch 0.3.8.10">
+        0.3.8.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.3.8.11" title="Patch 0.3.8.11">
+        0.3.8.11
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 2
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.2.1" title="Patch 0.2.1">
+        0.2.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.1" title="Patch 0.2.1.1">
+        0.2.1.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.2" title="Patch 0.2.1.2">
+        0.2.1.2
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.3" title="Patch 0.2.1.3">
+        0.2.1.3
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.4" title="Patch 0.2.1.4">
+        0.2.1.4
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.5" title="Patch 0.2.1.5">
+        0.2.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.7" title="Patch 0.2.1.7">
+        0.2.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.10" title="Patch 0.2.1.10">
+        0.2.1.10
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.12" title="Patch 0.2.1.12">
+        0.2.1.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.17" title="Patch 0.2.1.17">
+        0.2.1.17
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.18" title="Patch 0.2.1.18">
+        0.2.1.18
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 2
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.1.14" title="Patch 0.1.14">
+        0.1.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.15" title="Patch 0.1.15">
+        0.1.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.16" title="Patch 0.1.16">
+        0.1.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.17" title="Patch 0.1.17">
+        0.1.17 (101256)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.17_build_101353" title="Patch 0.1.17 build 101353">
+        0.1.17 (101353)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.19" title="Patch 0.1.19">
+        0.1.19
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.20" title="Patch 0.1.20">
+        0.1.20
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.6" title="Patch 0.2.1.6">
+        0.2.1.6
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.7_(Experimental)" title="Patch 0.2.1.7 (Experimental)">
+        0.2.1.7 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.8" title="Patch 0.2.1.8">
+        0.2.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.9" title="Patch 0.2.1.9">
+        0.2.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.11" title="Patch 0.2.1.11">
+        0.2.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.12_(Experimental)" title="Patch 0.2.1.12 (Experimental)">
+        0.2.1.12 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.13" title="Patch 0.2.1.13">
+        0.2.1.13
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.14" title="Patch 0.2.1.14">
+        0.2.1.14
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.15" title="Patch 0.2.1.15">
+        0.2.1.15
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.16" title="Patch 0.2.1.16">
+        0.2.1.16
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.17_(Experimental)" title="Patch 0.2.1.17 (Experimental)">
+        0.2.1.17 (Experimental)
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.19" title="Patch 0.2.1.19">
+        0.2.1.19
+       </a>
+       •
+       <a href="/wiki/Patch_0.2.1.20" title="Patch 0.2.1.20">
+        0.2.1.20
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Update 1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.1.11" title="Patch 0.1.11">
+        0.1.11
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.12" title="Patch 0.1.12">
+        0.1.12
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.13" title="Patch 0.1.13">
+        0.1.13
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Experimental Update 1
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Patch_0.1.5" title="Patch 0.1.5">
+        0.1.5
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.6_build_98394" title="Patch 0.1.6 build 98394">
+        0.1.6 (98394)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.6_build_98445" title="Patch 0.1.6 build 98445">
+        0.1.6 (98445)
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.7" title="Patch 0.1.7">
+        0.1.7
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.8" title="Patch 0.1.8">
+        0.1.8
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.9" title="Patch 0.1.9">
+        0.1.9
+       </a>
+       •
+       <a href="/wiki/Patch_0.1.10" title="Patch 0.1.10">
+        0.1.10
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Early Access Release
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Patch_0.1" title="Patch 0.1">
+        0.1
+       </a>
+       •
+       <a href="/wiki/Patch_0.101" title="Patch 0.101">
+        0.101
+       </a>
+       •
+       <a href="/wiki/Patch_0.102" title="Patch 0.102">
+        0.102
+       </a>
+       •
+       <a href="/wiki/Patch_0.103" title="Patch 0.103">
+        0.103
+       </a>
+       •
+       <a href="/wiki/Patch_0.104" title="Patch 0.104">
+        0.104
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;;background-color: #B01E1E90;">
+      Closed Alpha
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Early_game_development" title="Early game development">
+        Early game development
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-11" title="Patch 2018-10-11">
+        2018-10-11
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-17" title="Patch 2018-10-17">
+        2018-10-17
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-19" title="Patch 2018-10-19">
+        2018-10-19
+       </a>
+       •
+       <a href="/wiki/Patch_2018-10-27" title="Patch 2018-10-27">
+        2018-10-27
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_2" title="Patch Closed Alpha 2">
+        2
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_2.1" title="Patch Closed Alpha 2.1">
+        2.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3" title="Patch Closed Alpha 3">
+        3
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3.1" title="Patch Closed Alpha 3.1">
+        3.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_3.2" title="Patch Closed Alpha 3.2">
+        3.2
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_4" title="Patch Closed Alpha 4">
+        4
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_4.1" title="Patch Closed Alpha 4.1">
+        4.1
+       </a>
+       •
+       <a href="/wiki/Alpha_Test_Weekend" title="Alpha Test Weekend">
+        Alpha Test Weekend
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5" title="Patch Closed Alpha 5">
+        5
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5.1" title="Patch Closed Alpha 5.1">
+        5.1
+       </a>
+       •
+       <a href="/wiki/Patch_Closed_Alpha_5.3" title="Patch Closed Alpha 5.3">
+        5.3
+       </a>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251010173941
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.066 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 986/1000000
+Revision size: 27832/4194304 bytes
+Post‐expand include size: 61108/4194304 bytes
+Template argument size: 786/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3414/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.006/15.000 seconds
+Lua memory usage: 883798/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   49.894      1 -total
+ 81.84%   40.834      1 Template:PatchesNav
+ 76.35%   38.093      1 Template:Navbox
+  8.07%    4.026      2 Template:Key
+  6.59%    3.290    263 Template:*
+  5.76%    2.874      1 Template:Patch
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6388-0!dateformat=default and timestamp 20251010173940 and revision id 48602. Rendering was triggered because: edit-page
+ -->
+</div>

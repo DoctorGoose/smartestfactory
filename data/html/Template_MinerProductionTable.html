@@ -1,0 +1,366 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  Displays the amount that can be mined using different source-purities and miner-generations.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Usage">
+   Usage
+  </span>
+ </h2>
+ <h3>
+  <span class="mw-headline" id="Parameter">
+   Parameter
+  </span>
+ </h3>
+ <ul>
+  <li>
+   <code>
+    1
+   </code>
+   : Amount of resources that can be gathered from a normal purity with a
+   <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+    Miner Mk.1
+   </a>
+   or
+   <a href="/wiki/Oil_Extractor" title="Oil Extractor">
+    Oil Extractor
+   </a>
+   per minute.
+  </li>
+  <li>
+   <code>
+    miner
+   </code>
+   : The name of the miner, default is
+   <code>
+    Miner
+   </code>
+   . MK1-3 will be appended
+  </li>
+  <li>
+   <code>
+    maxMK
+   </code>
+   : maximum of displayed columns for MK, possible values are 1 to 3, default is 3.
+  </li>
+  <li>
+   <code>
+    maxRate
+   </code>
+   : maximum belt or pipe speed, default is 1200.
+  </li>
+ </ul>
+ <p>
+  For example,
+  <code>
+   {{MinerProductionTable|maxRate = 780}}
+  </code>
+ </p>
+ <dl>
+  <dt>
+   Items produced per minute
+  </dt>
+ </dl>
+ <div class="tabber tabber--init">
+  <header class="tabber__header">
+   <button aria-hidden="true" class="tabber__header__prev" tabindex="-1" type="button">
+   </button>
+   <nav class="tabber__tabs" role="tablist">
+    <a aria-controls="100%_Clock_Speed-0" class="tabber__tab" href="#100%_Clock_Speed-0" id="100%_Clock_Speed-0-label" role="tab">
+     100% Clock Speed
+    </a>
+    <a aria-controls="250%_Clock_Speed-0" class="tabber__tab" href="#250%_Clock_Speed-0" id="250%_Clock_Speed-0-label" role="tab">
+     250% Clock Speed
+    </a>
+   </nav>
+   <button aria-hidden="true" class="tabber__header__next" tabindex="-1" type="button">
+   </button>
+  </header>
+  <section class="tabber__section">
+   <article aria-labelledby="100%_Clock_Speed-0-label" class="tabber__panel" id="100%_Clock_Speed-0" role="tabpanel" tabindex="0">
+    <p class="mw-empty-elt">
+    </p>
+    <table class="wikitable">
+     <tbody>
+      <tr>
+       <th>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+         Miner Mk.1
+        </a>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.2" title="Miner Mk.2">
+         Miner Mk.2
+        </a>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.3" title="Miner Mk.3">
+         Miner Mk.3
+        </a>
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Impure
+       </th>
+       <td style="text-align:right;">
+        30
+       </td>
+       <td style="text-align:right;">
+        60
+       </td>
+       <td style="text-align:right;">
+        120
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Normal
+       </th>
+       <td style="text-align:right;">
+        60
+       </td>
+       <td style="text-align:right;">
+        120
+       </td>
+       <td style="text-align:right;">
+        240
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Pure
+       </th>
+       <td style="text-align:right;">
+        120
+       </td>
+       <td style="text-align:right;">
+        240
+       </td>
+       <td style="text-align:right;">
+        480
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="mw-empty-elt">
+    </p>
+   </article>
+   <article aria-labelledby="250%_Clock_Speed-0-label" class="tabber__panel" id="250%_Clock_Speed-0" role="tabpanel" tabindex="0">
+    <p class="mw-empty-elt">
+    </p>
+    <table class="wikitable">
+     <tbody>
+      <tr>
+       <th>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+         Miner Mk.1
+        </a>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.2" title="Miner Mk.2">
+         Miner Mk.2
+        </a>
+       </th>
+       <th>
+        <a class="mw-redirect" href="/wiki/Miner_Mk.3" title="Miner Mk.3">
+         Miner Mk.3
+        </a>
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Impure
+       </th>
+       <td style="text-align:right;">
+        75
+       </td>
+       <td style="text-align:right;">
+        150
+       </td>
+       <td style="text-align:right;">
+        300
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Normal
+       </th>
+       <td style="text-align:right;">
+        150
+       </td>
+       <td style="text-align:right;">
+        300
+       </td>
+       <td style="text-align:right;">
+        600
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Pure
+       </th>
+       <td style="text-align:right;">
+        300
+       </td>
+       <td style="text-align:right;">
+        600
+       </td>
+       <td style="text-align:right;">
+        1200
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="mw-empty-elt">
+    </p>
+   </article>
+  </section>
+ </div>
+ <p>
+  <br/>
+ </p>
+ <p>
+  <code>
+   {{MinerProductionTable|120|miner = [[Oil Extractor]]| maxMK = 1|maxRate = 300}}
+  </code>
+ </p>
+ <dl>
+  <dt>
+   Items produced per minute
+  </dt>
+ </dl>
+ <div class="tabber tabber--init">
+  <header class="tabber__header">
+   <button aria-hidden="true" class="tabber__header__prev" tabindex="-1" type="button">
+   </button>
+   <nav class="tabber__tabs" role="tablist">
+    <a aria-controls="100%_Clock_Speed-1" class="tabber__tab" href="#100%_Clock_Speed-1" id="100%_Clock_Speed-1-label" role="tab">
+     100% Clock Speed
+    </a>
+    <a aria-controls="250%_Clock_Speed-1" class="tabber__tab" href="#250%_Clock_Speed-1" id="250%_Clock_Speed-1-label" role="tab">
+     250% Clock Speed
+    </a>
+   </nav>
+   <button aria-hidden="true" class="tabber__header__next" tabindex="-1" type="button">
+   </button>
+  </header>
+  <section class="tabber__section">
+   <article aria-labelledby="100%_Clock_Speed-1-label" class="tabber__panel" id="100%_Clock_Speed-1" role="tabpanel" tabindex="0">
+    <p class="mw-empty-elt">
+    </p>
+    <table class="wikitable">
+     <tbody>
+      <tr>
+       <th>
+       </th>
+       <th>
+        <a href="/wiki/Oil_Extractor" title="Oil Extractor">
+         Oil Extractor
+        </a>
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Impure
+       </th>
+       <td style="text-align:right;">
+        60
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Normal
+       </th>
+       <td style="text-align:right;">
+        120
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Pure
+       </th>
+       <td style="text-align:right;">
+        240
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="mw-empty-elt">
+    </p>
+   </article>
+   <article aria-labelledby="250%_Clock_Speed-1-label" class="tabber__panel" id="250%_Clock_Speed-1" role="tabpanel" tabindex="0">
+    <p class="mw-empty-elt">
+    </p>
+    <table class="wikitable">
+     <tbody>
+      <tr>
+       <th>
+       </th>
+       <th>
+        <a href="/wiki/Oil_Extractor" title="Oil Extractor">
+         Oil Extractor
+        </a>
+       </th>
+      </tr>
+      <tr>
+       <th>
+        Impure
+       </th>
+       <td style="text-align:right;">
+        150
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Normal
+       </th>
+       <td style="text-align:right;">
+        300
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Pure
+       </th>
+       <td style="text-align:right;">
+        300
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="mw-empty-elt">
+    </p>
+   </article>
+  </section>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251012232801
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.028 seconds
+Real time usage: 0.035 seconds
+Preprocessor visited node count: 202/1000000
+Revision size: 3221/4194304 bytes
+Post‐expand include size: 1028/4194304 bytes
+Template argument size: 78/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3613/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.003      1 -total
+ 99.24%   19.851      2 Template:MinerProductionTable
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:2114-0!canonical and timestamp 20251012232801 and revision id 53237. Rendering was triggered because: page_view
+ -->
+</div>

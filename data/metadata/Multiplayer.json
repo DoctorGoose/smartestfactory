@@ -1,0 +1,33 @@
+{
+  "title": "Multiplayer",
+  "pageid": 4575,
+  "categories": [
+    "Citation_needed",
+    "Gameplay_mechanics",
+    "Satisfactory"
+  ],
+  "sections": [
+    "Hosting a session",
+    "Session privacy",
+    "Network configuration",
+    "Sessions with more than 4 players",
+    "Dedicated servers",
+    "Joining a session",
+    "Join Game menu",
+    "Session ID",
+    "Other options",
+    "Troubleshooting tips",
+    "LogMeIn Hamachi VPN",
+    "pfSense Firewall/Router",
+    "Performance improvements",
+    "Temporary lag solution",
+    "Engine.ini",
+    "Game.ini",
+    "Scalability.ini",
+    "FICSIT checkmark",
+    "Trivia",
+    "History",
+    "References"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Multiplayer"
+}

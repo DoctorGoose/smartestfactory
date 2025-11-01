@@ -1,0 +1,11 @@
+# Elite Flying Crab Hatcher
+
+Redirect to:
+
+  * [Flying Crab Hatcher#Elite Flying Crab Hatcher](/wiki/Flying_Crab_Hatcher#Elite_Flying_Crab_Hatcher "Flying Crab Hatcher")
+
+
+  *[v]: View this template
+  *[e]: Edit this template
+  *[h]: History of this template
+  *[his]: his trivia section

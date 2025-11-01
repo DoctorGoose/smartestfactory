@@ -1,0 +1,529 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:FP_link/doc?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   This template is for creating the styled links used within boxes on the front page:
+   <a href="/" title="Satisfactory Wiki">
+    Satisfactory Wiki
+   </a>
+   . It relies heavily on CSS in
+   <a class="new" href="/wiki/MediaWiki:Hydra.css?action=edit&amp;redlink=1" rel="nofollow" title="MediaWiki:Hydra.css (page does not exist)">
+    MediaWiki:Hydra.css
+   </a>
+   /
+   <a class="new" href="/wiki/MediaWiki:Hydradark.css?action=edit&amp;redlink=1" rel="nofollow" title="MediaWiki:Hydradark.css (page does not exist)">
+    MediaWiki:Hydradark.css
+   </a>
+   and
+   <a href="/wiki/MediaWiki:Mobile.css" title="MediaWiki:Mobile.css">
+    MediaWiki:Mobile.css
+   </a>
+   .
+  </p>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Usage">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Usage
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#Internal_(wiki)_links">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Internal (wiki) links
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#External_links">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         External links
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-4">
+     <a href="#Parameters">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Parameters
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-5">
+       <a href="#Internal_(wiki)_links_2">
+        <span class="tocnumber">
+         2.1
+        </span>
+        <span class="toctext">
+         Internal (wiki) links
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-6">
+       <a href="#External_links_2">
+        <span class="tocnumber">
+         2.2
+        </span>
+        <span class="toctext">
+         External links
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-7">
+       <a href="#Style_parameters">
+        <span class="tocnumber">
+         2.3
+        </span>
+        <span class="toctext">
+         Style parameters
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-8">
+     <a href="#Examples">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       Examples
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-9">
+       <a href="#Links_only">
+        <span class="tocnumber">
+         3.1
+        </span>
+        <span class="toctext">
+         Links only
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-10">
+       <a href="#With_images">
+        <span class="tocnumber">
+         3.2
+        </span>
+        <span class="toctext">
+         With images
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <p>
+   Any group of
+   <code>
+    {{
+    <a href="/wiki/Template:FP_link" title="Template:FP link">
+     FP link
+    </a>
+    }}
+   </code>
+   templates must be enclosed by an element with the class
+   <code>
+    fplinks
+   </code>
+   .
+  </p>
+  <h3>
+   <span id="Internal_.28wiki.29_links">
+   </span>
+   <span class="mw-headline" id="Internal_(wiki)_links">
+    Internal (wiki) links
+   </span>
+  </h3>
+  <pre>{{FP link | destination | display text /optional
+| image = file link /optional
+| width = &lt;normal/wide/full&gt; /optional
+| imageonly = &lt;true/false&gt; /optional
+| plain = &lt;true/false&gt; /optional
+}}
+</pre>
+  <h3>
+   <span class="mw-headline" id="External_links">
+    External links
+   </span>
+  </h3>
+  <pre>{{FP link | url = destination | display text /optional
+| image = file link /optional
+| width = &lt;normal/wide/full&gt; /optional
+| imageonly = &lt;true/false&gt; /optional
+| plain = &lt;true/false&gt; /optional
+}}
+</pre>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <h3>
+   <span id="Internal_.28wiki.29_links_2">
+   </span>
+   <span class="mw-headline" id="Internal_(wiki)_links_2">
+    Internal (wiki) links
+   </span>
+  </h3>
+  <dl>
+   <dt>
+    <code>
+     <i>
+      destination
+     </i>
+    </code>
+   </dt>
+   <dd>
+    Destination wiki page.
+    <b>
+     Required
+    </b>
+    .
+   </dd>
+   <dt>
+    <code>
+     <i>
+      display text
+     </i>
+    </code>
+   </dt>
+   <dd>
+    Optional text to display instead of the name of the destination page.
+   </dd>
+  </dl>
+  <h3>
+   <span class="mw-headline" id="External_links_2">
+    External links
+   </span>
+  </h3>
+  <dl>
+   <dt>
+    <code>
+     |url=
+    </code>
+   </dt>
+   <dd>
+    The destination URL.
+    <b>
+     Required
+    </b>
+    for external links.
+   </dd>
+   <dt>
+    <code>
+     <i>
+      display text
+     </i>
+    </code>
+   </dt>
+   <dd>
+    Optional text to display instead of the URL. If omitted, the full URL will be displayed.
+   </dd>
+  </dl>
+  <h3>
+   <span class="mw-headline" id="Style_parameters">
+    Style parameters
+   </span>
+  </h3>
+  <dl>
+   <dt>
+    <code>
+     |image=
+    </code>
+   </dt>
+   <dd>
+    Optional image, to be displayed above the link.
+   </dd>
+   <dt>
+    <code>
+     |width=
+    </code>
+   </dt>
+   <dd>
+    Determines the size of the link box.
+    <code>
+     normal
+    </code>
+    links take up to 25% of the width of the containing element.
+    <code>
+     wide
+    </code>
+    links take up to 33% of the containing element.
+    <code>
+     full
+    </code>
+    links take the entire width of the containing element. If omitted, defaults to
+    <code>
+     normal
+    </code>
+    .
+   </dd>
+   <dt>
+    <code>
+     |imageonly=
+    </code>
+   </dt>
+   <dd>
+    When an image is specified, this determines whether to show only the image or both the image and the link.
+    <code>
+     true
+    </code>
+    will show only the image,
+    <code>
+     false
+    </code>
+    will show the link as well. If omitted, defaults to
+    <code>
+     false
+    </code>
+    .
+   </dd>
+   <dt>
+    <code>
+     |plain=
+    </code>
+   </dt>
+   <dd>
+    This provides an option to remove backgrounds and borders for certain links.
+    <code>
+     true
+    </code>
+    will remove visible styles,
+    <code>
+     false
+    </code>
+    will use the default styles. If omitted, defaults to
+    <code>
+     false
+    </code>
+    .
+   </dd>
+  </dl>
+  <h2>
+   <span class="mw-headline" id="Examples">
+    Examples
+   </span>
+  </h2>
+  <h3>
+   <span class="mw-headline" id="Links_only">
+    Links only
+   </span>
+  </h3>
+  <pre>&lt;div class="fplinks"&gt;
+{{FP link | Main Page | Normal}}
+{{FP link | Main Page | Wide | width = wide}}
+{{FP link | Main Page | Plain | plain = true}}
+
+{{FP link | Main Page | Full width | width = full}}
+&lt;/div&gt;
+</pre>
+  <div class="fplinks">
+   <div class="fplink-outer plainlinks">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Normal
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks fplink-wide">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Wide
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks">
+    <div class="fplink fplink-plain">
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Plain
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks fplink-fullwidth">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Full width
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <h3>
+   <span class="mw-headline" id="With_images">
+    With images
+   </span>
+  </h3>
+  <pre>&lt;div class="fplinks"&gt;
+{{FP link | Main Page | With image | image = Wiki.png}}
+{{FP link | Main Page | Hidden text | image = Wiki.png | imageonly = true}}
+{{FP link | Main Page | Plain | image = Wiki.png | plain = true}}
+{{FP link | Main Page | Plain | image = Wiki.png | plain = true | imageonly = true}}
+
+{{FP link | Main Page | Wide with image | image = Wiki.png | width = wide}}
+{{FP link | Main Page | Wide hidden text | image = Wiki.png | width = wide | imageonly = true}}
+&lt;/div&gt;
+</pre>
+  <div class="fplinks">
+   <div class="fplink-outer plainlinks">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       With image
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks">
+    <div class="fplink fplink-plain">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Plain
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks">
+    <div class="fplink fplink-plain">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks fplink-wide">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+     <div class="fplink-inner">
+      <a class="mw-redirect" href="/wiki/Main_Page" title="Main Page">
+       Wide with image
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="fplink-outer plainlinks fplink-wide">
+    <div class="fplink">
+     <div class="fplink-inner">
+      <a href="/wiki/Main_Page" title="Main Page">
+       <img alt="Site-logo.png" data-file-height="194" data-file-width="500" decoding="async" height="58" loading="lazy" src="/images/thumb/Site-logo.png/150px-Site-logo.png?744174" width="150"/>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p style="margin: 0">
+   This is the documentation page, it should be transcluded into the main template page. See
+   <a href="/wiki/Template:Doc" title="Template:Doc">
+    Template:Doc
+   </a>
+   for more information.
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251101215118
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.039 seconds
+Real time usage: 0.056 seconds
+Preprocessor visited node count: 612/1000000
+Revision size: 3654/4194304 bytes
+Post‐expand include size: 4787/4194304 bytes
+Template argument size: 650/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 12/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1193/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   23.482      1 -total
+ 57.31%   13.458     10 Template:FP_link
+ 15.18%    3.565      1 Template:Doc/start
+ 10.97%    2.577      1 Template:Doc/end
+ 10.85%    2.547      1 Template:Tlx
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:5423-0!canonical and timestamp 20251101215118 and revision id 35452. Rendering was triggered because: api-parse
+ -->
+</div>

@@ -1,0 +1,345 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:MAMunlock/es?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  La plantilla MAMunlock/es se utiliza en la sección de Obtención de piezas y edificios en Desbloqueo. Muestra que la pieza/edificio se desbloquea en el M.A.M. utilizando qué partes en qué cadena de investigación.
+  <h2>
+   <span class="mw-headline" id="Uso">
+    Uso
+   </span>
+  </h2>
+  <h3>
+   <span class="mw-headline" id="Parametros">
+    Parametros
+   </span>
+  </h3>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      Parametro
+     </th>
+     <th>
+      Tipo de Data
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+    <tr>
+     <td>
+      nombre
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      Nombre del objeto o edificio que se usará
+     </td>
+    </tr>
+    <tr>
+     <td>
+      plural
+     </td>
+     <td>
+      Any
+     </td>
+     <td>
+      Si cualquier valor no en blando se ingresa, cambiara "desbloquea" o "añade" a plural
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Escáner de recursos
+     </td>
+     <td>
+      Any
+     </td>
+     <td>
+      Si cualquier valor no en blando se ingresa, cambia "desbloquea" por "añade al escáner de recursos"
+     </td>
+    </tr>
+    <tr>
+     <td>
+      cadena
+     </td>
+     <td>
+      Required
+     </td>
+     <td>
+      Nombre de la cadena de investigación, sin "investigación" o "cadena de investigación"
+      <b>
+       (requerido)
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      ingredienteN
+     </td>
+     <td>
+      String
+     </td>
+     <td>
+      (N = 1-5) Nombre del objeto usado en la investigación
+      <b>
+       (requerido)
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      cantidadN
+     </td>
+     <td>
+      Integer
+     </td>
+     <td>
+      (N = 1-5) Cantidad del objeto usado en la investigación
+      <b>
+       (requerido)
+      </b>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   <span class="mw-headline" id="ejemplo">
+    ejemplo
+   </span>
+  </h2>
+  <pre>{{MAMunlock/es
+|nombre= Lingote de caterio
+|cadena = Caterio
+|ingrediente1 = Mineral de Caterio
+|cantidad1 = 50
+}}</pre>
+  <div class="descriptionbox">
+   <b>
+    Caterio
+   </b>
+   se desbloquea mediante la
+   <b>
+    <a href="/wiki/MAM/es#Caterio" title="MAM/es">
+     cadena de investigación de Caterio
+    </a>
+   </b>
+   en el
+   <span style="white-space:nowrap;">
+    <a href="/wiki/MAM/es" title="MAM/es">
+     <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/MAM.png/20px-MAM.png?c85e80" width="20"/>
+    </a>
+    <a href="/wiki/MAM/es" title="MAM/es">
+     MAM
+    </a>
+   </span>
+   usando:
+   <br/>
+   <table align="left" style="">
+    <tbody>
+     <tr>
+      <td>
+       <div class="ingredient-cost-wrapper">
+        <div class="ingredient-cost">
+         <a class="new" href="/wiki/Special:Upload?wpDestFile=Mineral_de_Caterio.png" title="File:Mineral de Caterio.png">
+          File:Mineral de Caterio.png
+         </a>
+        </div>
+        <div class="ingredient-cost-counter">
+         10
+        </div>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div style="clear: left;">
+  </div>
+  <pre>{{MAMunlock/es
+|nombre= Turbopatines
+|plural = 1
+|cadena = Caterio
+|ingrediente1 = Turboalambre
+|cantidad1 = 100
+|ingrediente2 = Estructura modular
+|cantidad2 = 10
+}}</pre>
+  <div class="descriptionbox">
+   <b>
+    Turbopatines
+   </b>
+   se desbloquean mediante la
+   <b>
+    <a href="/wiki/MAM/es#Caterio" title="MAM/es">
+     cadena de investigación de Caterio
+    </a>
+   </b>
+   en el
+   <span style="white-space:nowrap;">
+    <a href="/wiki/MAM/es" title="MAM/es">
+     <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/MAM.png/20px-MAM.png?c85e80" width="20"/>
+    </a>
+    <a href="/wiki/MAM/es" title="MAM/es">
+     MAM
+    </a>
+   </span>
+   usando:
+   <br/>
+   <table align="left" style="">
+    <tbody>
+     <tr>
+      <td>
+       <div class="ingredient-cost-wrapper">
+        <div class="ingredient-cost">
+         <a href="/wiki/Turboalambre" title="Turboalambre">
+          <img alt="Quickwire.png" data-file-height="256" data-file-width="256" decoding="async" height="65" loading="lazy" src="/images/thumb/Quickwire.png/65px-Quickwire.png?92bd94" width="65"/>
+         </a>
+        </div>
+        <div class="ingredient-cost-counter">
+         100
+        </div>
+       </div>
+      </td>
+      <td>
+       <div class="ingredient-cost-wrapper">
+        <div class="ingredient-cost">
+         <a href="/wiki/Estructura_modular" title="Estructura modular">
+          <img alt="Modular Frame.png" data-file-height="256" data-file-width="256" decoding="async" height="65" loading="lazy" src="/images/thumb/Modular_Frame.png/65px-Modular_Frame.png?e657af" width="65"/>
+         </a>
+        </div>
+        <div class="ingredient-cost-counter">
+         10
+        </div>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div style="clear: left;">
+  </div>
+  <pre>{{MAMunlock/es
+|nombre= {{ItemLink/es|Mineral de caterio|Caterium Ore}}
+|Escáner de recursos=1
+|cadena=Caterio
+|ingrediente1=Mineral de caterio
+|cantidad1=10}}
+}}</pre>
+  <div class="descriptionbox">
+   <b>
+    <span style="white-space:nowrap;">
+     <a class="new" href="/wiki/Special:Upload?wpDestFile=Mineral_de_caterio.png" title="File:Mineral de caterio.png">
+      File:Mineral de caterio.png
+     </a>
+     <a href="/wiki/Caterium_Ore" title="Caterium Ore">
+      Mineral de caterio
+     </a>
+    </span>
+   </b>
+   se añade al escáner de recursos de la
+   <b>
+    <a href="/wiki/MAM/es#Caterio" title="MAM/es">
+     cadena de investigación de Caterio
+    </a>
+   </b>
+   en el
+   <span style="white-space:nowrap;">
+    <a href="/wiki/MAM/es" title="MAM/es">
+     <img alt="" data-file-height="512" data-file-width="512" decoding="async" height="20" loading="lazy" src="/images/thumb/MAM.png/20px-MAM.png?c85e80" width="20"/>
+    </a>
+    <a href="/wiki/MAM/es" title="MAM/es">
+     MAM
+    </a>
+   </span>
+   usando:
+   <br/>
+   <table align="left" style="">
+    <tbody>
+     <tr>
+      <td>
+       <div class="ingredient-cost-wrapper">
+        <div class="ingredient-cost">
+         <a class="new" href="/wiki/Special:Upload?wpDestFile=Mineral_de_caterio.png" title="File:Mineral de caterio.png">
+          File:Mineral de caterio.png
+         </a>
+        </div>
+        <div class="ingredient-cost-counter">
+         10
+        </div>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div style="clear: left;">
+  </div>
+  <p>
+   }}
+  </p>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:MAMunlock/es/doc" title="Template:MAMunlock/es/doc">
+    Template:MAMunlock/es/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:MAMunlock/es/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:MAMunlock/es/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251005075310
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.058 seconds
+Real time usage: 0.105 seconds
+Preprocessor visited node count: 254/1000000
+Revision size: 1669/4194304 bytes
+Post‐expand include size: 11809/4194304 bytes
+Template argument size: 478/4194304 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 476/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   42.510      1 Template:Doc
+100.00%   42.510      1 -total
+ 80.61%   34.266      1 Template:MAMunlock/es/doc
+ 20.30%    8.629      3 Template:MAMunlock/es
+ 20.09%    8.542      1 Template:Doc/end
+ 13.75%    5.845      4 Template:ItemLink/es
+  8.04%    3.418      1 Template:Doc/start
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:1629-0!canonical and timestamp 20251005075310 and revision id 44443. Rendering was triggered because: page_view
+ -->
+</div>

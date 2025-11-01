@@ -1,0 +1,24 @@
+{
+  "title": "Dedicated servers/Configuration files",
+  "pageid": 4382,
+  "categories": [
+    "Tutorials"
+  ],
+  "sections": [
+    "Overview",
+    "Configuration Editing",
+    "Default and Configurable Port Ranges",
+    "Disabling Server Crash Reporting",
+    "Client disconnected for Timeout",
+    "Number of Kept Autosaves",
+    "Increasing Player Count",
+    "In Server Configuration",
+    "Or as a Startup Parameter",
+    "Autosave Interval",
+    "Server tick rate",
+    "Seasonal events",
+    "UObject Limit Increase",
+    "See also"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Dedicated_servers/Configuration_files"
+}

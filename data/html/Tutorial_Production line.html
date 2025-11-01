@@ -1,0 +1,2456 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  This article describes the
+  <b>
+   basics of setting up production lines
+  </b>
+  , how to read the UI of buildings (such as input and output item rates), and how to calculate building ratios.
+ </p>
+ <p>
+  For more information on planning a production line, see
+  <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+   Tutorial:Production line design tips
+  </a>
+  .
+ </p>
+ <div class="table-of-contents--right" style="clear:right;">
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Reading_building_interfaces">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Reading building interfaces
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#Miner">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Miner
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#Smelter">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Smelter
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-4">
+       <a href="#Constructor">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         Constructor
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-5">
+         <a href="#Per-cycle_and_per-minute_rates">
+          <span class="tocnumber">
+           1.3.1
+          </span>
+          <span class="toctext">
+           Per-cycle and per-minute rates
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-6">
+       <a href="#Conveyor_Belt">
+        <span class="tocnumber">
+         1.4
+        </span>
+        <span class="toctext">
+         Conveyor Belt
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-7">
+       <a href="#Storage_Container">
+        <span class="tocnumber">
+         1.5
+        </span>
+        <span class="toctext">
+         Storage Container
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-8">
+       <a href="#Overclocking">
+        <span class="tocnumber">
+         1.6
+        </span>
+        <span class="toctext">
+         Overclocking
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-9">
+     <a href="#Splitting_and_merging">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Splitting and merging
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-10">
+       <a href="#Miner_2">
+        <span class="tocnumber">
+         2.1
+        </span>
+        <span class="toctext">
+         Miner
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-11">
+       <a href="#Smelter_2">
+        <span class="tocnumber">
+         2.2
+        </span>
+        <span class="toctext">
+         Smelter
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-12">
+       <a href="#Constructor_(Wire)">
+        <span class="tocnumber">
+         2.3
+        </span>
+        <span class="toctext">
+         Constructor (Wire)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-13">
+       <a href="#Constructor_(Cable)">
+        <span class="tocnumber">
+         2.4
+        </span>
+        <span class="toctext">
+         Constructor (Cable)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-14">
+       <a href="#Conveyor_Belt_2">
+        <span class="tocnumber">
+         2.5
+        </span>
+        <span class="toctext">
+         Conveyor Belt
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-15">
+       <a href="#Storage_Container_2">
+        <span class="tocnumber">
+         2.6
+        </span>
+        <span class="toctext">
+         Storage Container
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-16">
+     <a href="#Overclocking_and_Flow_Rate">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       Overclocking and Flow Rate
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-17">
+       <a href="#Miner_3">
+        <span class="tocnumber">
+         3.1
+        </span>
+        <span class="toctext">
+         Miner
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-18">
+       <a href="#Smelter_3">
+        <span class="tocnumber">
+         3.2
+        </span>
+        <span class="toctext">
+         Smelter
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-19">
+       <a href="#Conveyor_Belt_3">
+        <span class="tocnumber">
+         3.3
+        </span>
+        <span class="toctext">
+         Conveyor Belt
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-20">
+       <a href="#Manifold">
+        <span class="tocnumber">
+         3.4
+        </span>
+        <span class="toctext">
+         Manifold
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-21">
+     <a href="#Fractions_and_decimals">
+      <span class="tocnumber">
+       4
+      </span>
+      <span class="toctext">
+       Fractions and decimals
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-22">
+       <a href="#Build_more_machines">
+        <span class="tocnumber">
+         4.1
+        </span>
+        <span class="toctext">
+         Build more machines
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-23">
+       <a href="#Overclocking_and_Underclocking">
+        <span class="tocnumber">
+         4.2
+        </span>
+        <span class="toctext">
+         Overclocking and Underclocking
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-24">
+       <a href="#Overclock_the_Miner">
+        <span class="tocnumber">
+         4.3
+        </span>
+        <span class="toctext">
+         Overclock the Miner
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-25">
+       <a href="#Overclock_the_Constructor">
+        <span class="tocnumber">
+         4.4
+        </span>
+        <span class="toctext">
+         Overclock the Constructor
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-26">
+       <a href="#Underclock_the_last_machine">
+        <span class="tocnumber">
+         4.5
+        </span>
+        <span class="toctext">
+         Underclock the last machine
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-27">
+       <a href="#Underclock_all_machines">
+        <span class="tocnumber">
+         4.6
+        </span>
+        <span class="toctext">
+         Underclock all machines
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-28">
+     <a href="#Complex_production_line">
+      <span class="tocnumber">
+       5
+      </span>
+      <span class="toctext">
+       Complex production line
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-29">
+       <a href="#Miner_4">
+        <span class="tocnumber">
+         5.1
+        </span>
+        <span class="toctext">
+         Miner
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-30">
+       <a href="#Smelter_4">
+        <span class="tocnumber">
+         5.2
+        </span>
+        <span class="toctext">
+         Smelter
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-31">
+       <a href="#Dividing_Resources">
+        <span class="tocnumber">
+         5.3
+        </span>
+        <span class="toctext">
+         Dividing Resources
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-32">
+         <a href="#Reinforced_Iron_Plate">
+          <span class="tocnumber">
+           5.3.1
+          </span>
+          <span class="toctext">
+           Reinforced Iron Plate
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-33">
+         <a href="#Iron_Plate">
+          <span class="tocnumber">
+           5.3.2
+          </span>
+          <span class="toctext">
+           Iron Plate
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-34">
+         <a href="#Screw">
+          <span class="tocnumber">
+           5.3.3
+          </span>
+          <span class="toctext">
+           Screw
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-35">
+         <a href="#Iron_Rod">
+          <span class="tocnumber">
+           5.3.4
+          </span>
+          <span class="toctext">
+           Iron Rod
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-36">
+         <a href="#Math_it_out">
+          <span class="tocnumber">
+           5.3.5
+          </span>
+          <span class="toctext">
+           Math it out
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-37">
+       <a href="#Constructor_(Iron_Plate)">
+        <span class="tocnumber">
+         5.4
+        </span>
+        <span class="toctext">
+         Constructor (Iron Plate)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-38">
+       <a href="#Constructor_(Iron_Rod)">
+        <span class="tocnumber">
+         5.5
+        </span>
+        <span class="toctext">
+         Constructor (Iron Rod)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-39">
+       <a href="#Constructor_(Screw)">
+        <span class="tocnumber">
+         5.6
+        </span>
+        <span class="toctext">
+         Constructor (Screw)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-40">
+       <a href="#Assembler_(Reinforced_Iron_Plate)">
+        <span class="tocnumber">
+         5.7
+        </span>
+        <span class="toctext">
+         Assembler (Reinforced Iron Plate)
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-41">
+       <a href="#Conveyor_Belt_4">
+        <span class="tocnumber">
+         5.8
+        </span>
+        <span class="toctext">
+         Conveyor Belt
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-42">
+     <a href="#Online_tools">
+      <span class="tocnumber">
+       6
+      </span>
+      <span class="toctext">
+       Online tools
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Reading_building_interfaces">
+   Reading building interfaces
+  </span>
+ </h2>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Simple_production_line.png">
+    <img class="thumbimage" data-file-height="897" data-file-width="1655" decoding="async" height="173" loading="lazy" src="/images/thumb/Simple_production_line.png/320px-Simple_production_line.png?ef6dbc" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Simple_production_line.png" title="Enlarge">
+     </a>
+    </div>
+    A simple production line, showing the UI of each building. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <p>
+  A simple production line involves
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  →
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  →
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  →
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Storage Container
+  </a>
+  . The example shows the buildings' UI, which can be accessed by approaching and interacting
+  <span class="key">
+   <a href="/wiki/Controls" title="Controls">
+    <kbd class="keysDark">
+     E
+    </kbd>
+   </a>
+  </span>
+  with each
+  <a class="mw-redirect" href="/wiki/Building" title="Building">
+   building
+  </a>
+  . In this example, each machine's item production matches up perfectly with item consumption (marked in red) making a 1:1 ratio.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Miner">
+   Miner
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  extracts ore at a rate that depends on both
+  <a href="/wiki/Resource_Node" title="Resource Node">
+   Resource Node
+  </a>
+  's
+  <a class="mw-redirect" href="/wiki/Purity" title="Purity">
+   purity
+  </a>
+  and the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  's mark. The Resource Node's purity, either impure, normal, or pure is fixed based on its location on the
+  <a href="/wiki/Map" title="Map">
+   map
+  </a>
+  . Higher marks of Miners can be unlocked in later
+  <a href="/wiki/Milestones" title="Milestones">
+   Milestones
+  </a>
+  , which have a higher extraction rate. In this example, the
+  <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+   Miner Mk.1
+  </a>
+  extracts 30
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min from the
+  <a href="/wiki/Resource_Node" title="Resource Node">
+   Resource Node
+  </a>
+  below it.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Smelter">
+   Smelter
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  smelts ore into ingots. In the above example, 1
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  is consumed to produce 1
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingot
+  </a>
+  . The smelting of one ore takes 2 seconds.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Constructor">
+   Constructor
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  processes the input into useful parts. In the above example, 3
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  are consumed to craft 2
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  .
+ </p>
+ <h4>
+  <span class="mw-headline" id="Per-cycle_and_per-minute_rates">
+   Per-cycle and per-minute rates
+  </span>
+ </h4>
+ <p>
+  Each building shows two rates:
+  <i>
+   per crafting cycle
+  </i>
+  and
+  <i>
+   per minute
+  </i>
+  . The
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  in the above example has the following rates:
+ </p>
+ <p>
+  <i>
+   Per-cycle
+  </i>
+  values are shown in bold text. The cycle duration is shown in the middle of the UI, under a timer icon.
+ </p>
+ <ul>
+  <li>
+   3 Iron Ingots are consumed per cycle
+  </li>
+  <li>
+   2 Iron Plates are produced per cycle
+  </li>
+  <li>
+   Crafting cycle duration is 6 seconds
+  </li>
+ </ul>
+ <p>
+  Therefore, each Iron Plate takes 1.5 Ingots to craft (3 Ingots make 2 Plates).
+ </p>
+ <p>
+  These per-cycle values are useful for determing item costs. However, in automated setups, it is easier to use
+  <i>
+   per-minute
+  </i>
+  values instead, shown in smaller, orange numbers below the bold text.
+ </p>
+ <ul>
+  <li>
+   30 Iron Ingots are consumed per minute
+  </li>
+  <li>
+   20 Iron Plates are produced per minute
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Conveyor_Belt">
+   Conveyor Belt
+  </span>
+ </h3>
+ <p>
+  <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+   Conveyor Belts
+  </a>
+  automatically transport items from one building to the next, removing the need for manual labor to move items between machines. Belts have a maximum item/min flow rate depending on the belt's mark. If a higher item flow rate is required, consider using
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt#Marks" title="Conveyor Belt">
+   higher marks of Conveyor Belts
+  </a>
+  , or constructing multiple parallel belts. Else, the entire production line will slow down due to insufficient item flow.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Storage_Container">
+   Storage Container
+  </span>
+ </h3>
+ <p>
+  The
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Storage Container
+  </a>
+  in the above example is optional. Its purpose is to store and buffer produced items so that the machines before it can run smoothly. Most production buildings can only store up to one
+  <a class="mw-redirect" href="/wiki/Stack" title="Stack">
+   stack
+  </a>
+  of items in its output slot, and once it is full, the machine stops.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Overclocking">
+   Overclocking
+  </span>
+ </h3>
+ <p>
+  The production speed of machines can be altered with
+  <a class="mw-redirect" href="/wiki/Overclocking" title="Overclocking">
+   overclocking
+  </a>
+  , which will be discussed in the section below.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Splitting_and_merging">
+   Splitting and merging
+  </span>
+ </h2>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Splitting_and_merging.png">
+    <img class="thumbimage" data-file-height="848" data-file-width="1600" decoding="async" height="170" loading="lazy" src="/images/thumb/Splitting_and_merging.png/320px-Splitting_and_merging.png?4feb72" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Splitting_and_merging.png" title="Enlarge">
+     </a>
+    </div>
+    <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+     Splitters
+    </a>
+    and
+    <a class="mw-redirect" href="/wiki/Merger" title="Merger">
+     Mergers
+    </a>
+    may be required to achieve 100% efficiency in some setup, such as for the
+    <a class="mw-redirect" href="/wiki/Copper" title="Copper">
+     Copper
+    </a>
+    chain. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <p>
+  Production chains rarely work in a 1:1 crafting ratio; the example shown in the previous section is a special case. If there is a mismatch in the buildings' ratio, the entire chain is slowed down proportionally to the slowest element in the chain. This reduces the efficiency and should be avoided.
+ </p>
+ <p>
+  The term 'Efficiency' is used to describe the uptime of a machine, usually denoted in percentage (%).  Efficiency is indicated in the lower right of each machine's UI.
+ </p>
+ <p>
+  To achieve 100% efficiency, the input rate should be greater or equal to the consumption rate. If more items/min are required, build more machines and use
+  <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+   Mergers
+  </a>
+  to bring these items onto a single belt. If there are too many items/min are being input, consider using
+  <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+   Splitters
+  </a>
+  to send items into multiple machines.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Miner_2">
+   Miner
+  </span>
+ </h3>
+ <p>
+  A
+  <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+   Miner Mk.1
+  </a>
+  on a normal
+  <a class="mw-redirect" href="/wiki/Copper" title="Copper">
+   Copper
+  </a>
+  <a class="mw-redirect" href="/wiki/Node" title="Node">
+   node
+  </a>
+  extracts 60
+  <a href="/wiki/Copper_Ore" title="Copper Ore">
+   Copper Ore
+  </a>
+  /min.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Smelter_2">
+   Smelter
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  consumes 30
+  <a href="/wiki/Copper_Ore" title="Copper Ore">
+   Copper Ore
+  </a>
+  /min. To consume the 60 Ore/min produced by the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  , build two
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelters
+  </a>
+  and use a
+  <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+   Splitter
+  </a>
+  to split the
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Conveyor Belt
+  </a>
+  two ways (
+  <code>
+   60 / 30 = 2 )
+  </code>
+ </p>
+ <p>
+  If only one
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  is built, the
+  <a href="/wiki/Copper_Ore" title="Copper Ore">
+   Copper Ore
+  </a>
+  produced by the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  will not be consumed fast enough, and they will backlog into the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  and causing it to run at only 50% of the time. This is equivalent to 50% efficiency.
+ </p>
+ <p>
+  Each
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  produces 30
+  <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+   Copper Ingots
+  </a>
+  /min.
+ </p>
+ <h3>
+  <span id="Constructor_.28Wire.29">
+  </span>
+  <span class="mw-headline" id="Constructor_(Wire)">
+   Constructor (Wire)
+  </span>
+ </h3>
+ <p>
+  Each
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  consumes 15
+  <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+   Copper Ingots
+  </a>
+  /min. Similarly, split each
+  <a href="/wiki/Copper_Ingot" title="Copper Ingot">
+   Copper Ingot
+  </a>
+  belt two ways, which can supply up to four
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  .
+  <br/>
+  <code>
+   30 / 15 = 2
+  </code>
+  (each Smelter output belt split into two)
+  <br/>
+  <code>
+   2 x 2 = 4
+  </code>
+  (two Smelters support four Constructors)
+ </p>
+ <p>
+  Each Constructor produces 30
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  /min.
+ </p>
+ <h3>
+  <span id="Constructor_.28Cable.29">
+  </span>
+  <span class="mw-headline" id="Constructor_(Cable)">
+   Constructor (Cable)
+  </span>
+ </h3>
+ <p>
+  Each
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  consumes 60
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  /min. Two
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  are required to supply one
+  <a href="/wiki/Cable" title="Cable">
+   Cable
+  </a>
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  . Combine the output of two Constructors using a
+  <a class="mw-redirect" href="/wiki/Merger" title="Merger">
+   Merger
+  </a>
+  .
+  <br/>
+  <code>
+   30 * 2 = 60
+  </code>
+ </p>
+ <p>
+  If only one
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  is connected to a
+  <a href="/wiki/Cable" title="Cable">
+   Cable
+  </a>
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  , the latter will only run 50% of the time due to insufficient input rate. This is equivalent to 50% efficiency.
+ </p>
+ <p>
+  Each Constructor produces 30
+  <a href="/wiki/Cable" title="Cable">
+   Cable
+  </a>
+  /min.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Conveyor_Belt_2">
+   Conveyor Belt
+  </span>
+ </h3>
+ <p>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.1" title="Conveyor Belt Mk.1">
+   Conveyor Belt Mk.1
+  </a>
+  can only transport 60 items/min. In the above example, the belt carrying
+  <a href="/wiki/Copper_Ore" title="Copper Ore">
+   Copper Ores
+  </a>
+  after the Miner, and the belts transporting
+  <a href="/wiki/Wire" title="Wire">
+   Wires
+  </a>
+  after the
+  <a class="mw-redirect" href="/wiki/Merger" title="Merger">
+   Mergers
+  </a>
+  are operating at their maximum capacity.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Storage_Container_2">
+   Storage Container
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Storage Container
+  </a>
+  is used to store stacks of items. Avoid mixing items in
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Storage Containers
+  </a>
+  , as they have an output that can be used to further automate your production line and mixed items can cause your production to jam. A
+  <a class="mw-redirect" href="/wiki/Merger" title="Merger">
+   Merger
+  </a>
+  is used to merge two
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  belts into one before the
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Container
+  </a>
+  to eliminate the need for two
+  <a href="/wiki/Wire" title="Wire">
+   Wire
+  </a>
+  <a href="/wiki/Storage_Container" title="Storage Container">
+   Containers
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Overclocking_and_Flow_Rate">
+   Overclocking and Flow Rate
+  </span>
+ </h2>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Overclocked_miner_manifold.png">
+    <img class="thumbimage" data-file-height="588" data-file-width="1100" decoding="async" height="171" loading="lazy" src="/images/thumb/Overclocked_miner_manifold.png/320px-Overclocked_miner_manifold.png?2ea200" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Overclocked_miner_manifold.png" title="Enlarge">
+     </a>
+    </div>
+    An
+    <a class="mw-redirect" href="/wiki/Overclock" title="Overclock">
+     overclocked
+    </a>
+    <a href="/wiki/Miner" title="Miner">
+     Miner
+    </a>
+    extracts ores faster, and thus capable to supply more
+    <a href="/wiki/Smelter" title="Smelter">
+     Smelters
+    </a>
+    . (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Overclocked_Miner_UI.png">
+    <img class="thumbimage" data-file-height="189" data-file-width="816" decoding="async" height="74" loading="lazy" src="/images/thumb/Overclocked_Miner_UI.png/320px-Overclocked_Miner_UI.png?a11d1c" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Overclocked_Miner_UI.png" title="Enlarge">
+     </a>
+    </div>
+    The overclocking section in a building's UI. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <div style="margin-top: 5px;">
+  <div style="margin-left: 30px;">
+   <i>
+    Main article:
+   </i>
+   <a class="mw-redirect" href="/wiki/Clock_Speed" title="Clock Speed">
+    Clock Speed
+   </a>
+  </div>
+ </div>
+ <p>
+  As the number of
+  <a href="/wiki/Resource_Node" title="Resource Node">
+   Resource Nodes
+  </a>
+  in the
+  <a href="/wiki/World" title="World">
+   world
+  </a>
+  is finite, there is a hard limit on the total extraction rate. To maximize the potential of a Resource Node,
+  <a href="/wiki/Miner" title="Miner">
+   Miners
+  </a>
+  can be
+  <a class="mw-redirect" href="/wiki/Overclock" title="Overclock">
+   Overclocked
+  </a>
+  . The overclocking ability can be
+  <a href="/wiki/MAM#Power_Slugs" title="MAM">
+   researched
+  </a>
+  in
+  <a href="/wiki/MAM" title="MAM">
+   MAM
+  </a>
+  via
+  <a href="/wiki/Power_Slug" title="Power Slug">
+   Power Slugs
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="mw-headline" id="Miner_3">
+   Miner
+  </span>
+ </h3>
+ <p>
+  The
+  <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+   Miner Mk.1
+  </a>
+  on a normal
+  <a class="mw-redirect" href="/wiki/Iron" title="Iron">
+   Iron
+  </a>
+  node in the above example is overclocked to 250% (x 2.5 speed), hence it extracts 150
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min (
+  <code>
+   60 x 2.5 = 150)
+  </code>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Smelter_3">
+   Smelter
+  </span>
+ </h3>
+ <p>
+  Each
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  consumes 30
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min to yield 30
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingot
+  </a>
+  /min. Five Smelters should be built to fully utilize the extracted Ore. (
+  <code>
+   150 / 30 = 5)
+  </code>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Conveyor_Belt_3">
+   Conveyor Belt
+  </span>
+ </h3>
+ <div style="margin-top: 5px;">
+  <div style="margin-left: 30px;">
+   <i>
+    Main article:
+   </i>
+   <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+    Conveyor Belt
+   </a>
+  </div>
+ </div>
+ <p>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.1" title="Conveyor Belt Mk.1">
+   Conveyor Belt Mk.1
+  </a>
+  is not fast enough (60 items/min) to pull out all the ore extracted by the
+  <a class="mw-redirect" href="/wiki/Overclock" title="Overclock">
+   overclocked
+  </a>
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  (150 items/min), thus higher marks of the belt are required. Else, the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  will only run at 40% Efficiency and not at its overclocked potential.
+ </p>
+ <p>
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.3" title="Conveyor Belt Mk.3">
+   Conveyor Belt Mk.3
+  </a>
+  (270 items/min) can handle the 150 items/min flow rate and should be built right after the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  .
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.2" title="Conveyor Belt Mk.2">
+   Conveyor Belt Mk.2
+  </a>
+  (120 items/min) and
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Conveyor Belt Mk.1
+  </a>
+  (60 items/min) are then used as items split off the
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Conveyor Belt Mk.3
+  </a>
+  line. Alternatively, all belts can be built with
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt" title="Conveyor Belt">
+   Conveyor Belt Mk.3
+  </a>
+  , if there are sufficient materials to do so.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Manifold">
+   Manifold
+  </span>
+ </h3>
+ <p>
+  <a class="mw-redirect" href="/wiki/Splitter" title="Splitter">
+   Splitters
+  </a>
+  are organised in a
+  <a href="/wiki/Manifold" title="Manifold">
+   manifold
+  </a>
+  , where each split sends items off the main belt onto belts into the
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  . The main belt will begin sending items 50/50 down the first split off line, and as the
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  backfills the split off line will only consume the 30
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min (as consumed by the
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  ). The last
+  <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+   Splitter
+  </a>
+  at the far left is optional; it is built for future expansions, when
+  <a href="/wiki/Miner" title="Miner">
+   higher marks of Miner
+  </a>
+  are unlocked.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Fractions_and_decimals">
+   Fractions and decimals
+  </span>
+ </h2>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Fractional_building_ratio.png">
+    <img class="thumbimage" data-file-height="900" data-file-width="1200" decoding="async" height="240" loading="lazy" src="/images/thumb/Fractional_building_ratio.png/320px-Fractional_building_ratio.png?6cf78e" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Fractional_building_ratio.png" title="Enlarge">
+     </a>
+    </div>
+    A normal,
+    <a href="/wiki/Limestone" title="Limestone">
+     Limestone
+    </a>
+    Miner can support more than 1, but less than two Constructors. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <p>
+  There are many occasions where the building ratio doesn't end up as whole numbers. The
+  <a href="/wiki/Limestone" title="Limestone">
+   Limestone
+  </a>
+  -&gt;
+  <a href="/wiki/Concrete" title="Concrete">
+   Concrete
+  </a>
+  setup is the first production chain that contains a fractional ratio:
+  <br/>
+  <code>
+   60 / 45 = 1.333 or 1+1/3
+  </code>
+  <br/>
+  The
+  <a href="/wiki/Limestone" title="Limestone">
+   Limestone
+  </a>
+  produced by a normal
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  can support one and a third
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  .
+ </p>
+ <p>
+  Below are approaches to solve this issue:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Build_more_machines">
+   Build more machines
+  </span>
+ </h3>
+ <p>
+  Exceeding requirements continues to work without issue. Building two constructors will give both approximately 33% idle time (aka 67% Efficiency). In general, any decimal building ratio can be rounded up to the next integer, for example:
+  <br/>
+  <code>
+   60 / 45 = 1.333 -&gt; 2
+  </code>
+  <br/>
+  <br/>
+  <code>
+   400 / 30 = 13.33 -&gt; 14
+  </code>
+  <br/>
+  <br/>
+  <code>
+   100 / 110 = 0.909 -&gt; 1
+  </code>
+ </p>
+ <p>
+  If both Constructors are not underclocked they will just run and stop intermittently, but continue to convert 60
+  <a href="/wiki/Limestone" title="Limestone">
+   Limestone
+  </a>
+  /min to 20
+  <a href="/wiki/Concrete" title="Concrete">
+   Concretes
+  </a>
+  /min.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Overclocking_and_Underclocking">
+   Overclocking and Underclocking
+  </span>
+ </h3>
+ <p>
+  Once overclocking is
+  <a href="/wiki/Hard_Drive" title="Hard Drive">
+   researched
+  </a>
+  via
+  <a href="/wiki/Power_Slug" title="Power Slug">
+   Power Slugs
+  </a>
+  in the
+  <a href="/wiki/MAM" title="MAM">
+   MAM
+  </a>
+  , overclocking and underclocking become available.
+  <a href="/wiki/Power_Shard" title="Power Shard">
+   Power Shards
+  </a>
+  are a limited resource, and take most benefit in raw resource production.
+ </p>
+ <p>
+  The below show ways to utilise
+  <a href="/wiki/Clock_speed" title="Clock speed">
+   Clock Speed
+  </a>
+  to reach maximum efficiency:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Overclock_the_Miner">
+   Overclock the Miner
+  </span>
+ </h3>
+ <p>
+  Overclocking the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  to 150% or 225% will make the ratio an integer.
+  <br/>
+  <code>
+   45 x 2 = 90
+  </code>
+  <br/>
+  <code>
+   90 / 60 = 1.5
+  </code>
+  (150% overclock, one
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  to two
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  )
+  <br/>
+  <br/>
+  <code>
+   45 x 3 = 135
+  </code>
+  <br/>
+  <code>
+   135 / 60 = 2.25
+  </code>
+  (225% overclock, one
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  to three
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  )
+ </p>
+ <h3>
+  <span class="mw-headline" id="Overclock_the_Constructor">
+   Overclock the Constructor
+  </span>
+ </h3>
+ <p>
+  Build one
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  and overclock it to 134%, and all
+  <a href="/wiki/Limestone" title="Limestone">
+   Limestone
+  </a>
+  will be consumed.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Underclock_the_last_machine">
+   Underclock the last machine
+  </span>
+ </h3>
+ <p>
+  <a class="mw-redirect" href="/wiki/Underclock" title="Underclock">
+   Underclocking
+  </a>
+  the second
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructor
+  </a>
+  by either
+ </p>
+ <ul>
+  <li>
+   Dragging the slider to 34% (Underclocking to 33% loses the additional 0.33% processing speed required)
+  </li>
+  <li>
+   Clicking the
+   <a href="/wiki/Clock_speed" title="Clock speed">
+    Clock Speed
+   </a>
+   value (Yellow under label) and typing "33.3334"%
+  </li>
+  <li>
+   Clicking the Target Production Rate value (Yellow under label) and typing "15 / 3" (Input fields can handle equations)
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Underclock_all_machines">
+   Underclock all machines
+  </span>
+ </h3>
+ <p>
+  Underclock both
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  to 67% has the benefit of improved
+  <a href="/wiki/Power" title="Power">
+   power
+  </a>
+  saving compared to the previous method. You can examine the power consumption of each underclocked building and add them up.
+  <br/>
+  <code>
+   1.3333 / 2 = 0.6666 = 67%
+  </code>
+ </p>
+ <h2>
+  <span class="mw-headline" id="Complex_production_line">
+   Complex production line
+  </span>
+ </h2>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Inefficient_RIP_production.png">
+    <img class="thumbimage" data-file-height="1040" data-file-width="1680" decoding="async" height="198" loading="lazy" src="/images/thumb/Inefficient_RIP_production.png/320px-Inefficient_RIP_production.png?fdf7b4" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Inefficient_RIP_production.png" title="Enlarge">
+     </a>
+    </div>
+    A working Reinforced Iron Plate production with incorrect building ratios. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <p>
+  An example
+  <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+   Reinforced Iron Plate
+  </a>
+  production line consists of multiple ingredients. In the above image, the buildings are 1:1 showing each stage of the production line with lower efficiency due to incorrect building ratio. Below is an analysis with a walkthrough to correct ratios:
+ </p>
+ <h3>
+  <span class="mw-headline" id="Miner_4">
+   Miner
+  </span>
+ </h3>
+ <p>
+  <a class="mw-redirect" href="/wiki/Miner_Mk.1" title="Miner Mk.1">
+   Miner Mk.1
+  </a>
+  on a pure Iron node extracts 120
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min.
+  <a class="mw-redirect" href="/wiki/Purity" title="Purity">
+   Pure nodes
+  </a>
+  are quite common in
+  <a class="mw-redirect" href="/wiki/Northern_Forest" title="Northern Forest">
+   Northern Forest
+  </a>
+  and yield double rate. The
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.1" title="Conveyor Belt Mk.1">
+   Conveyor Belt Mk.1
+  </a>
+  after it is not fast enough and should be replaced with
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.2" title="Conveyor Belt Mk.2">
+   Conveyor Belt Mk.2
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="mw-headline" id="Smelter_4">
+   Smelter
+  </span>
+ </h3>
+ <p>
+  A
+  <a href="/wiki/Smelter" title="Smelter">
+   Smelter
+  </a>
+  consumes 30
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min and produces 30
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min. Therefore the
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  can support four Smelters.
+  <br/>
+  <code>
+   120 / 30 = 4
+  </code>
+ </p>
+ <h3>
+  <span class="mw-headline" id="Dividing_Resources">
+   Dividing Resources
+  </span>
+ </h3>
+ <p>
+  Iron Ingots are divided among
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  and
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  , in an unknown ratio. The top-down method is an effective means to determine how to divide resources: start from the end product, then work backward to its raw ingredients.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Reinforced_Iron_Plate">
+   Reinforced Iron Plate
+  </span>
+ </h4>
+ <p>
+  The
+  <a href="/wiki/Assembler" title="Assembler">
+   Assembler
+  </a>
+  crafting
+  <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+   Reinforced Iron Plates
+  </a>
+  , needs 30
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  /min and 60
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screws
+  </a>
+  /min. If either of the ingredients faces a shortage, the entire chain will be slowed down.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Iron_Plate">
+   Iron Plate
+  </span>
+ </h4>
+ <p>
+  Each
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plate
+  </a>
+  requires 1.5
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  to craft (as described above). Therefore 30
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  /min requires 45
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min.
+  <br/>
+  <code>
+   30 * 1.5 = 45
+  </code>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Screw">
+   Screw
+  </span>
+ </h4>
+ <p>
+  Each
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rod
+  </a>
+  can be crafted into 4
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screws
+  </a>
+  . Therefore 60
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screws
+  </a>
+  /min requires 15
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  /min.
+  <br/>
+  <code>
+   60 / 4 = 15
+  </code>
+ </p>
+ <h4>
+  <span class="mw-headline" id="Iron_Rod">
+   Iron Rod
+  </span>
+ </h4>
+ <p>
+  Each
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rod
+  </a>
+  requires 1
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingot
+  </a>
+  . Therefore 15
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  /min requires 15
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Math_it_out">
+   Math it out
+  </span>
+ </h4>
+ <p>
+  To produce 5
+  <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+   Reinforced Iron Plates
+  </a>
+  /min, the
+  <a href="/wiki/Assembler" title="Assembler">
+   Assembler
+  </a>
+  requires, 45
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min to produce
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  , and 15
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min to produce
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  , for a total consumption of 60
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min.
+  <br/>
+  <code>
+   45 + 15 = 60
+  </code>
+ </p>
+ <p>
+  By dividing these numbers, the ratio can be simplified to 3:1. Three quarters of the
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingot
+  </a>
+  production is dedicated to
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  , and one quarter dedicated to
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  .
+  <br/>
+  <code>
+   45 : 15 == 3 : 1
+  </code>
+  (divide both by 15)
+ </p>
+ <p>
+  The
+  <a href="/wiki/Miner" title="Miner">
+   Miner
+  </a>
+  above has the potential to produce 120
+  <a href="/wiki/Iron_Ore" title="Iron Ore">
+   Iron Ore
+  </a>
+  /min, which can be crafted into 120
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min. This can support up to two
+  <a href="/wiki/Assembler" title="Assembler">
+   Assemblers
+  </a>
+  simultaneously.
+  <br/>
+  <code>
+   120 / 60 = 2
+  </code>
+ </p>
+ <p>
+  After finding the ratio, work from the bottom-up reversing the calculation process, then multiply the setup by 2.
+ </p>
+ <h3>
+  <span id="Constructor_.28Iron_Plate.29">
+  </span>
+  <span class="mw-headline" id="Constructor_(Iron_Plate)">
+   Constructor (Iron Plate)
+  </span>
+ </h3>
+ <p>
+  <code>
+   45 x 2 = 90
+  </code>
+  <br/>
+  90
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min craft into 60
+  <a href="/wiki/Iron_Plate" title="Iron Plate">
+   Iron Plates
+  </a>
+  /min, requiring three
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  .
+  <br/>
+  <code>
+   90 / 30 = 3
+  </code>
+ </p>
+ <h3>
+  <span id="Constructor_.28Iron_Rod.29">
+  </span>
+  <span class="mw-headline" id="Constructor_(Iron_Rod)">
+   Constructor (Iron Rod)
+  </span>
+ </h3>
+ <p>
+  <code>
+   15 x 2 = 30
+  </code>
+  <br/>
+  30
+  <a href="/wiki/Iron_Ingot" title="Iron Ingot">
+   Iron Ingots
+  </a>
+  /min craft into 30
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  /min, requiring two
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  .
+  <br/>
+  <code>
+   30 / 15 = 2
+  </code>
+ </p>
+ <h3>
+  <span id="Constructor_.28Screw.29">
+  </span>
+  <span class="mw-headline" id="Constructor_(Screw)">
+   Constructor (Screw)
+  </span>
+ </h3>
+ <p>
+  <code>
+   60 x 2 = 120
+  </code>
+  <br/>
+  30
+  <a href="/wiki/Iron_Rod" title="Iron Rod">
+   Iron Rods
+  </a>
+  /min craft into 120
+  <a class="mw-redirect" href="/wiki/Screw" title="Screw">
+   Screws
+  </a>
+  /min, requiring three
+  <a href="/wiki/Constructor" title="Constructor">
+   Constructors
+  </a>
+  .
+  <br/>
+  <code>
+   120 / 40 = 3
+  </code>
+ </p>
+ <h3>
+  <span id="Assembler_.28Reinforced_Iron_Plate.29">
+  </span>
+  <span class="mw-headline" id="Assembler_(Reinforced_Iron_Plate)">
+   Assembler (Reinforced Iron Plate)
+  </span>
+ </h3>
+ <p>
+  Two
+  <a href="/wiki/Assembler" title="Assembler">
+   Assemblers
+  </a>
+  are required to craft the
+  <a href="/wiki/Reinforced_Iron_Plate" title="Reinforced Iron Plate">
+   Reinforced Iron Plate
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="mw-headline" id="Conveyor_Belt_4">
+   Conveyor Belt
+  </span>
+ </h3>
+ <p>
+  <a href="/wiki/Conveyor_Splitter" title="Conveyor Splitter">
+   Splitters
+  </a>
+  and
+  <a href="/wiki/Conveyor_Merger" title="Conveyor Merger">
+   Mergers
+  </a>
+  distribute items as required. Identify belts carrying more than 60 items/min, and construct them with
+  <a class="mw-redirect" href="/wiki/Conveyor_Belt_Mk.2" title="Conveyor Belt Mk.2">
+   Conveyor Belt Mk.2
+  </a>
+  or above.
+ </p>
+ <div class="thumb tnone">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Efficient_RIP_production.png">
+    <img class="thumbimage" data-file-height="877" data-file-width="1184" decoding="async" height="237" loading="lazy" src="/images/thumb/Efficient_RIP_production.png/320px-Efficient_RIP_production.png?c02f9b" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Efficient_RIP_production.png" title="Enlarge">
+     </a>
+    </div>
+    An efficient Reinforced Iron Plate production with correct building ratios.
+    <a href="/wiki/Foundations" title="Foundations">
+     Foundations
+    </a>
+    are used for easier alignment. (Click to enlarge)
+   </div>
+  </div>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Online_tools">
+   Online tools
+  </span>
+ </h2>
+ <p>
+  <a href="/wiki/Online_tools" title="Online tools">
+   Online tools
+  </a>
+  can be used to great extent to lay out the production lines of any item using desired
+  <a class="mw-redirect" href="/wiki/Alternate_recipes" title="Alternate recipes">
+   alternate recipes
+  </a>
+  .
+ </p>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251013224001
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.135 seconds
+Real time usage: 0.211 seconds
+Preprocessor visited node count: 730/1000000
+Revision size: 15836/4194304 bytes
+Post‐expand include size: 27088/4194304 bytes
+Template argument size: 155/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.010/15.000 seconds
+Lua memory usage: 811864/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   58.476      1 -total
+ 68.57%   40.098      2 Template:Navbox
+ 67.33%   39.371      1 Template:PioneerNav
+ 16.20%    9.471      1 Template:Tocright
+  8.43%    4.927      2 Template:Main
+  6.43%    3.759      1 Template:Key
+  4.29%    2.508      2 Template:Hatnote
+  4.13%    2.413     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:3196-0!canonical and timestamp 20251013224001 and revision id 58270. Rendering was triggered because: page_view
+ -->
+</div>

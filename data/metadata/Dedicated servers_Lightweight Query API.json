@@ -1,0 +1,17 @@
+{
+  "title": "Dedicated servers/Lightweight Query API",
+  "pageid": 8070,
+  "categories": [],
+  "sections": [
+    "Introduction and Flow",
+    "Protocol",
+    "Poll Server State",
+    "Server State",
+    "Server State Enum",
+    "Server Flags Bits",
+    "Server Sub States",
+    "Flow",
+    "API Availability"
+  ],
+  "url": "https://satisfactory.wiki.gg/wiki/Dedicated_servers/Lightweight_Query_API"
+}

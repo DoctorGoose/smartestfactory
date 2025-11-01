@@ -1,0 +1,7355 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <p>
+  <b>
+   Save files
+  </b>
+  are files that contain data about a given game session. They use the
+  <code>
+   .sav
+  </code>
+  file extension.
+ </p>
+ <div class="table-of-contents--right" style="clear:right;">
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Save_file_location">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Save file location
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-2">
+       <a href="#Automatic_backup">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Automatic backup
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#Save_editing">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Save editing
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-4">
+       <a href="#Cloud_sync">
+        <span class="tocnumber">
+         1.3
+        </span>
+        <span class="toctext">
+         Cloud sync
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-5">
+     <a href="#Save_file_format">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Save file format
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-6">
+       <a href="#Basic_data_types">
+        <span class="tocnumber">
+         2.1
+        </span>
+        <span class="toctext">
+         Basic data types
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-7">
+         <a href="#Byte">
+          <span class="tocnumber">
+           2.1.1
+          </span>
+          <span class="toctext">
+           Byte
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-8">
+         <a href="#Int">
+          <span class="tocnumber">
+           2.1.2
+          </span>
+          <span class="toctext">
+           Int
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-9">
+         <a href="#Uint32">
+          <span class="tocnumber">
+           2.1.3
+          </span>
+          <span class="toctext">
+           Uint32
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-10">
+         <a href="#Long">
+          <span class="tocnumber">
+           2.1.4
+          </span>
+          <span class="toctext">
+           Long
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-11">
+         <a href="#Uint64">
+          <span class="tocnumber">
+           2.1.5
+          </span>
+          <span class="toctext">
+           Uint64
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-12">
+         <a href="#Float">
+          <span class="tocnumber">
+           2.1.6
+          </span>
+          <span class="toctext">
+           Float
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-13">
+         <a href="#Double">
+          <span class="tocnumber">
+           2.1.7
+          </span>
+          <span class="toctext">
+           Double
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-14">
+         <a href="#String">
+          <span class="tocnumber">
+           2.1.8
+          </span>
+          <span class="toctext">
+           String
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-15">
+       <a href="#Composite_data_types">
+        <span class="tocnumber">
+         2.2
+        </span>
+        <span class="toctext">
+         Composite data types
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-16">
+         <a href="#SaveFileHeader">
+          <span class="tocnumber">
+           2.2.1
+          </span>
+          <span class="toctext">
+           SaveFileHeader
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-17">
+         <a href="#CompressedSaveFileBody">
+          <span class="tocnumber">
+           2.2.2
+          </span>
+          <span class="toctext">
+           CompressedSaveFileBody
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-18">
+         <a href="#SaveFileBody">
+          <span class="tocnumber">
+           2.2.3
+          </span>
+          <span class="toctext">
+           SaveFileBody
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-19">
+         <a href="#Level-Grouping_Grid">
+          <span class="tocnumber">
+           2.2.4
+          </span>
+          <span class="toctext">
+           Level-Grouping Grid
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-20">
+         <a href="#Level">
+          <span class="tocnumber">
+           2.2.5
+          </span>
+          <span class="toctext">
+           Level
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-21">
+         <a href="#ObjectHeader">
+          <span class="tocnumber">
+           2.2.6
+          </span>
+          <span class="toctext">
+           ObjectHeader
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-22">
+         <a href="#ActorHeader">
+          <span class="tocnumber">
+           2.2.7
+          </span>
+          <span class="toctext">
+           ActorHeader
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-23">
+         <a href="#ComponentHeader">
+          <span class="tocnumber">
+           2.2.8
+          </span>
+          <span class="toctext">
+           ComponentHeader
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-24">
+         <a href="#LevelObject">
+          <span class="tocnumber">
+           2.2.9
+          </span>
+          <span class="toctext">
+           LevelObject
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-25">
+         <a href="#ActorObject">
+          <span class="tocnumber">
+           2.2.10
+          </span>
+          <span class="toctext">
+           ActorObject
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-26">
+         <a href="#ComponentObject">
+          <span class="tocnumber">
+           2.2.11
+          </span>
+          <span class="toctext">
+           ComponentObject
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-27">
+         <a href="#ObjectReference">
+          <span class="tocnumber">
+           2.2.12
+          </span>
+          <span class="toctext">
+           ObjectReference
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-28">
+         <a href="#Properties">
+          <span class="tocnumber">
+           2.2.13
+          </span>
+          <span class="toctext">
+           Properties
+          </span>
+         </a>
+         <ul>
+          <li class="toclevel-4 tocsection-29">
+           <a href="#PropertyList">
+            <span class="tocnumber">
+             2.2.13.1
+            </span>
+            <span class="toctext">
+             PropertyList
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-30">
+           <a href="#ArrayProperty">
+            <span class="tocnumber">
+             2.2.13.2
+            </span>
+            <span class="toctext">
+             ArrayProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-31">
+           <a href="#BoolProperty">
+            <span class="tocnumber">
+             2.2.13.3
+            </span>
+            <span class="toctext">
+             BoolProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-32">
+           <a href="#ByteProperty">
+            <span class="tocnumber">
+             2.2.13.4
+            </span>
+            <span class="toctext">
+             ByteProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-33">
+           <a href="#EnumProperty">
+            <span class="tocnumber">
+             2.2.13.5
+            </span>
+            <span class="toctext">
+             EnumProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-34">
+           <a href="#FloatProperty">
+            <span class="tocnumber">
+             2.2.13.6
+            </span>
+            <span class="toctext">
+             FloatProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-35">
+           <a href="#DoubleProperty">
+            <span class="tocnumber">
+             2.2.13.7
+            </span>
+            <span class="toctext">
+             DoubleProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-36">
+           <a href="#IntProperty">
+            <span class="tocnumber">
+             2.2.13.8
+            </span>
+            <span class="toctext">
+             IntProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-37">
+           <a href="#Int8Property">
+            <span class="tocnumber">
+             2.2.13.9
+            </span>
+            <span class="toctext">
+             Int8Property
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-38">
+           <a href="#UInt32Property">
+            <span class="tocnumber">
+             2.2.13.10
+            </span>
+            <span class="toctext">
+             UInt32Property
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-39">
+           <a href="#Int64Property">
+            <span class="tocnumber">
+             2.2.13.11
+            </span>
+            <span class="toctext">
+             Int64Property
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-40">
+           <a href="#MapProperty">
+            <span class="tocnumber">
+             2.2.13.12
+            </span>
+            <span class="toctext">
+             MapProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-41">
+           <a href="#NameProperty">
+            <span class="tocnumber">
+             2.2.13.13
+            </span>
+            <span class="toctext">
+             NameProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-42">
+           <a href="#ObjectProperty">
+            <span class="tocnumber">
+             2.2.13.14
+            </span>
+            <span class="toctext">
+             ObjectProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-43">
+           <a href="#SoftObjectProperty">
+            <span class="tocnumber">
+             2.2.13.15
+            </span>
+            <span class="toctext">
+             SoftObjectProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-44">
+           <a href="#SetProperty">
+            <span class="tocnumber">
+             2.2.13.16
+            </span>
+            <span class="toctext">
+             SetProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-45">
+           <a href="#StrProperty">
+            <span class="tocnumber">
+             2.2.13.17
+            </span>
+            <span class="toctext">
+             StrProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-46">
+           <a href="#StructProperty">
+            <span class="tocnumber">
+             2.2.13.18
+            </span>
+            <span class="toctext">
+             StructProperty
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-47">
+           <a href="#TextProperty">
+            <span class="tocnumber">
+             2.2.13.19
+            </span>
+            <span class="toctext">
+             TextProperty
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="toclevel-3 tocsection-48">
+         <a href="#TypedData">
+          <span class="tocnumber">
+           2.2.14
+          </span>
+          <span class="toctext">
+           TypedData
+          </span>
+         </a>
+         <ul>
+          <li class="toclevel-4 tocsection-49">
+           <a href="#Box">
+            <span class="tocnumber">
+             2.2.14.1
+            </span>
+            <span class="toctext">
+             Box
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-50">
+           <a href="#FluidBox">
+            <span class="tocnumber">
+             2.2.14.2
+            </span>
+            <span class="toctext">
+             FluidBox
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-51">
+           <a href="#InventoryItem">
+            <span class="tocnumber">
+             2.2.14.3
+            </span>
+            <span class="toctext">
+             InventoryItem
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-52">
+           <a href="#LinearColor">
+            <span class="tocnumber">
+             2.2.14.4
+            </span>
+            <span class="toctext">
+             LinearColor
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-53">
+           <a href="#Quat">
+            <span class="tocnumber">
+             2.2.14.5
+            </span>
+            <span class="toctext">
+             Quat
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-54">
+           <a href="#RailroadTrackPosition">
+            <span class="tocnumber">
+             2.2.14.6
+            </span>
+            <span class="toctext">
+             RailroadTrackPosition
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-55">
+           <a href="#Vector">
+            <span class="tocnumber">
+             2.2.14.7
+            </span>
+            <span class="toctext">
+             Vector
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-56">
+           <a href="#DateTime">
+            <span class="tocnumber">
+             2.2.14.8
+            </span>
+            <span class="toctext">
+             DateTime
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4 tocsection-57">
+           <a href="#ClientIdentityInfo">
+            <span class="tocnumber">
+             2.2.14.9
+            </span>
+            <span class="toctext">
+             ClientIdentityInfo
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="toclevel-3 tocsection-58">
+         <a href="#Trailing_Bytes">
+          <span class="tocnumber">
+           2.2.15
+          </span>
+          <span class="toctext">
+           Trailing Bytes
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-59">
+       <a href="#Libraries_and_implementations">
+        <span class="tocnumber">
+         2.3
+        </span>
+        <span class="toctext">
+         Libraries and implementations
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-60">
+     <a href="#Dedicated_Server_settings_file">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       Dedicated Server settings file
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-61">
+     <a href="#History">
+      <span class="tocnumber">
+       4
+      </span>
+      <span class="toctext">
+       History
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-62">
+     <a href="#References">
+      <span class="tocnumber">
+       5
+      </span>
+      <span class="toctext">
+       References
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <h2>
+  <span class="mw-headline" id="Save_file_location">
+   Save file location
+  </span>
+ </h2>
+ <p>
+  Both Steam and Epic Games use the same path:
+ </p>
+ <ul>
+  <li>
+   Windows
+   <ul>
+    <li>
+     <code>
+      %LOCALAPPDATA%\FactoryGame\Saved\SaveGames\{YOUR ID}
+     </code>
+    </li>
+    <li>
+     <code>
+      C:\Users\&lt;your Windows username&gt;\AppData\Local\FactoryGame\Saved\SaveGames\{YOUR ID}
+     </code>
+     <ul>
+      <li>
+       If you cannot find your Steam save folder (such as due to purchasing the game on Steam after previously owning on Epic), first start a new game with Steam, then save the new game. You should now be able to see your Steam save folder besides Epic. The Steam ID is usually shorter than the Epic ID. The folder location is stated above.
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Linux
+   <ul>
+    <li>
+     Using Steam Play (one of these locations):
+     <ul>
+      <li>
+       <code>
+        ~/.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/Local Settings/Application Data/FactoryGame/Saved/SaveGames/{YOUR STEAM ID}
+       </code>
+      </li>
+      <li>
+       <code>
+        ~/.steam/steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/Local Settings/Application Data/FactoryGame/Saved/SaveGames/{YOUR STEAM ID}
+       </code>
+      </li>
+     </ul>
+    </li>
+    <li>
+     Steam:
+     <code>
+      ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/{YOUR STEAM ID}
+     </code>
+    </li>
+    <li>
+     Steam (installation on another drive than your home dir):
+     <code>
+      {YOUR DRIVE}/SteamLibrary/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/{YOUR STEAM ID}
+     </code>
+    </li>
+    <li>
+     Using Steam Deck:
+     <ul>
+      <li>
+       <code>
+        /home/deck/.steam/root/steamapps/compatdata/526870/pfx/dosdevices/c:/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/{YOUR STEAM ID}
+       </code>
+      </li>
+      <li>
+       <b>
+        ⭑ NOTE:
+       </b>
+       Steam Deck saved games are within a
+       <i>
+        hidden
+       </i>
+       folder, and you must first
+       <b>
+        show hidden files
+       </b>
+       before you can view the folder via the Steam Deck File Explorer.
+       <sup class="reference" id="cite_ref-yt-zqYgPf4u2yc_1-0">
+        <a href="#cite_note-yt-zqYgPf4u2yc-1">
+         <span class="cite-bracket">
+          [
+         </span>
+         1
+         <span class="cite-bracket">
+          ]
+         </span>
+        </a>
+       </sup>
+       Files are contained in a
+       <i>
+        compacted data folder
+       </i>
+       with name of
+       <b>
+        526870
+       </b>
+       .
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Unraid, docker
+   <ul>
+    <li>
+     ich777/steamcmd:satisfactory:
+     <code>
+      /mnt/user/appdata/satisfactory/.config/Epic/FactoryGame/Saved/SaveGames/{YOUR ID}
+     </code>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Automatic_backup">
+   Automatic backup
+  </span>
+ </h3>
+ <p>
+  When a save file is saved by overwriting another, the game creates a backup of the previous save file. This doesn't happen when an autosave occurs, unless you manually overwrite it.
+ </p>
+ <p>
+  Both Steam and Epic Games use the same path:
+ </p>
+ <ul>
+  <li>
+   Windows
+   <ul>
+    <li>
+     <code>
+      %LOCALAPPDATA%\FactoryGame\Saved\SaveGames\SaveGames_backup
+     </code>
+    </li>
+    <li>
+     <code>
+      C:\Users\&lt;your Windows username&gt;\AppData\Local\FactoryGame\Saved\SaveGames\SaveGames_backup
+     </code>
+     <ul>
+      <li>
+       If you cannot find your steam save folder (probably because you have owned the game in Epic and just bought the Steam copy recently), first start a new game with Steam, then save the new game. You should now be able to see your steam save folder beside epic. The steam ID is usually shorter than the Epic ID. The folder location is stated above.
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Linux
+   <ul>
+    <li>
+     Using Steam Play:
+     <code>
+      ~/.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/Local Settings/Application Data/FactoryGame/Saved/SaveGames/SaveGames_backup
+     </code>
+    </li>
+    <li>
+     Steam:
+     <code>
+      ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/SaveGames_backup
+     </code>
+    </li>
+    <li>
+     Steam (installation on another drive than your home dir):
+     <code>
+      {YOUR DRIVE}/SteamLibrary/steamapps/compatdata/526870/pfx/drive_c/users/steamuser/AppData/Local/FactoryGame/Saved/SaveGames/SaveGames_backup
+     </code>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Unraid, Docker
+   <ul>
+    <li>
+     ich777/steamcmd:satisfactory:
+     <code>
+      /mnt/user/appdata/satisfactory/.config/Epic/FactoryGame/Saved/SaveGames_backup
+     </code>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Save_editing">
+   Save editing
+  </span>
+ </h3>
+ <p>
+  Save files can be edited using
+  <a href="/wiki/Online_tools" title="Online tools">
+   online tools
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="mw-headline" id="Cloud_sync">
+   Cloud sync
+  </span>
+ </h3>
+ <div class="thumb tright">
+  <div class="thumbinner" style="width:322px;">
+   <a class="image" href="/wiki/File:Steam_Cloud_Conflict_Dialog.png">
+    <img class="thumbimage" data-file-height="446" data-file-width="525" decoding="async" height="272" loading="lazy" src="/images/thumb/Steam_Cloud_Conflict_Dialog.png/320px-Steam_Cloud_Conflict_Dialog.png?5a618d" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify">
+     <a class="internal" href="/wiki/File:Steam_Cloud_Conflict_Dialog.png" title="Enlarge">
+     </a>
+    </div>
+    Example of a sync conflict dialog on Steam
+   </div>
+  </div>
+ </div>
+ <p>
+  If playing on Epic Games or Steam and Cloud Sync is enabled, a notification may sometimes appear when the player:
+ </p>
+ <ul>
+  <li>
+   Switches the game version between experimental and stable
+  </li>
+  <li>
+   Copies over the save game across different platforms
+  </li>
+  <li>
+   Continues a game at different machine
+  </li>
+ </ul>
+ <p>
+  And you will be prompted to either upload your save file to the cloud or download the save file from the cloud to your PC.
+ </p>
+ <p>
+  Unless you are playing across multiple PC, always choose
+  <b>
+   upload your save file to the cloud
+  </b>
+  to avoid losing your progress. And always back up your saves!
+ </p>
+ <h2>
+  <span class="mw-headline" id="Save_file_format">
+   Save file format
+  </span>
+ </h2>
+ <p>
+  A save file has a header and a body. The body of the file is compressed in chunks.
+ </p>
+ <p>
+  As of
+  <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+   Patch 1.0.0.3
+  </a>
+  (Build 368883, released on September 25, 2024), the produced save file header has version 13, the save version is 46 and the editor object version is 40. For these versions, this format description should be correct, but may not be complete: It is possible that not all potential structures were present in the analyzed save files.
+ </p>
+ <p>
+  As of
+  <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+   Patch 1.1.1.1
+  </a>
+  (Build 418783, released on June 18, 2025), the produced save file header has version 14, which inserted a new string into the structure for the save name. The SaveFileHeader description below should be correct for this version, but the SaveFileBody has not been analyzed beyond
+  <a href="/wiki/Patch_1.0.0.3" title="Patch 1.0.0.3">
+   Patch 1.0.0.3
+  </a>
+  as described above.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Basic_data_types">
+   Basic data types
+  </span>
+ </h3>
+ <p>
+  There are nine basic types that are used to compose more elaborated structures in the save files:
+ </p>
+ <h4>
+  <span class="mw-headline" id="Byte">
+   Byte
+  </span>
+ </h4>
+ <p>
+  A single 8-bit byte that represents a signed integer between -128 and 127.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Int">
+   Int
+  </span>
+ </h4>
+ <p>
+  Four consecutive bytes in
+  <a class="extiw" href="https://en.wikipedia.org/wiki/Endianness" title="wikipedia:Endianness">
+   little-endian order
+  </a>
+  that represent a signed integer between -2,147,483,648 and 2,147,483,647.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Uint32">
+   Uint32
+  </span>
+ </h4>
+ <p>
+  Four consecutive bytes in
+  <a class="extiw" href="https://en.wikipedia.org/wiki/Endianness" title="wikipedia:Endianness">
+   little-endian order
+  </a>
+  that represent an unsigned integer between 0 and 4,294,967,295.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Long">
+   Long
+  </span>
+ </h4>
+ <p>
+  Eight consecutive bytes in little-endian order that represent a signed integer between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Uint64">
+   Uint64
+  </span>
+ </h4>
+ <p>
+  Eight consecutive bytes in little-endian order that represent an unsigned integer between 0 and 18,446,744,073,709,551,615.
+ </p>
+ <h4>
+  <span class="mw-headline" id="Float">
+   Float
+  </span>
+ </h4>
+ <p>
+  Four consecutive bytes in little-endian order that represent a signed floating-point number with single precision, according to the
+  <a class="extiw" href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format#IEEE_754_standard:_binary32" title="wikipedia:Single-precision floating-point format">
+   binary32 format of IEEE 754
+  </a>
+  .
+ </p>
+ <h4>
+  <span class="mw-headline" id="Double">
+   Double
+  </span>
+ </h4>
+ <p>
+  Eight consecutive bytes in little-endian order that represent a signed floating-point number with double precision, according to the
+  <a class="extiw" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" title="wikipedia:Double-precision floating-point format">
+   binary64 format of IEEE 754
+  </a>
+  .
+ </p>
+ <h4>
+  <span class="mw-headline" id="String">
+   String
+  </span>
+ </h4>
+ <p>
+  A variable-length byte sequence of UTF-encoded characters, null-terminated:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     number of bytes
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     4
+    </td>
+    <td>
+     string length in characters, including null-termination bytes
+    </td>
+    <td>
+     22
+    </td>
+    <td>
+     as an Int, see above
+    </td>
+   </tr>
+   <tr>
+    <td>
+     variable
+    </td>
+    <td>
+     the encoded characters
+    </td>
+    <td>
+     "Hello
+     <a href="/wiki/World" title="World">
+      Massage-2(A-B)b
+     </a>
+     "
+    </td>
+    <td>
+     without the quotation marks
+    </td>
+   </tr>
+   <tr>
+    <td>
+     1 or 2
+    </td>
+    <td>
+     null-termination
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     one byte if UTF-8, two bytes if UTF-16
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  A length of zero represents the empty string and occupies just these four bytes. A positive length means that the characters are encoded in UTF-8.  A negative length means that the characters are encoded in UTF-16 little-endian, without a byte-order mark. In this case, the given negative length has to be multiplied by minus two to get the number of bytes the rest of the string occupies (including the two bytes for null-termination).
+ </p>
+ <h3>
+  <span class="mw-headline" id="Composite_data_types">
+   Composite data types
+  </span>
+ </h3>
+ <p>
+  Using the basic data types defined above, a save file has two top-level structures: a SaveFileHeader and a SaveFileBody. These are composed of different intermediate data types themselves.
+ </p>
+ <p>
+  These composite data types are documented below. A data type is a list of ordered fields, each field is a row in the table of the data type. So, for example: The SaveFileHeader begins with an Int (four bytes) that represents the save header version. This is followed by another Int (the next four bytes) that represents the save version and so on.
+ </p>
+ <h4>
+  <span class="mw-headline" id="SaveFileHeader">
+   SaveFileHeader
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save header version
+    </td>
+    <td>
+     14
+    </td>
+    <td>
+     for a version list see the header FGSaveManagerInterface.h in the
+     <a href="/wiki/Community_resources" title="Community resources">
+      Community resources
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save version
+    </td>
+    <td>
+     52
+    </td>
+    <td>
+     for a version list see the header SaveCustomVersion.h in the
+     <a href="/wiki/Community_resources" title="Community resources">
+      Community resources
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     build version
+    </td>
+    <td>
+     418,783
+    </td>
+    <td>
+     this is
+     <a href="/wiki/Patch_1.1.1.1" title="Patch 1.1.1.1">
+      Patch 1.1.1.1
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     save name
+    </td>
+    <td>
+     "only one way to find out_autosave_0"
+    </td>
+    <td>
+     the original name of the save file without the extension (only used by consoles)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     map name
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     map options
+    </td>
+    <td>
+     "?startloc=Rocky Desert?sessionName=only one way to find out?Visibility=SV_Private"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     session name
+    </td>
+    <td>
+     "
+     <a class="external text" href="https://www.youtube.com/playlist?list=PLrBjj4brdIRwRkGTLKqH5hlS_mlMYn_J0" rel="nofollow">
+      only one way to find out
+     </a>
+     "
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     played seconds
+    </td>
+    <td>
+     941,514
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     save timestamp as
+     <a class="external text" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ticks" rel="nofollow">
+      Ticks
+     </a>
+    </td>
+    <td>
+     637,894,867,432,920,000
+    </td>
+    <td>
+     this is 2022-05-30 05:52:23 UTC
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     flags
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     <ul>
+      <li>
+       bit 0 - visibility (this is "private" visibility, 1 would be "friends only")
+      </li>
+      <li>
+       bit 1 - always 0
+      </li>
+     </ul>
+     <ul>
+      <li>
+       bit 2 - always 0
+      </li>
+     </ul>
+     <ul>
+      <li>
+       bit 3 - unknown
+      </li>
+      <li>
+       bit 4 - unknown
+      </li>
+      <li>
+       bit 5 - unknown
+      </li>
+      <li>
+       bit 6 - unknown
+      </li>
+      <li>
+       bit 7 - unknown
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     editor object version
+    </td>
+    <td>
+     40
+    </td>
+    <td>
+     depends on the
+     <a class="external text" href="https://docs.unrealengine.com/4.26/en-US/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/VersioningAssetsAndPackages/" rel="nofollow">
+      unreal engine
+     </a>
+     version used
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     mod metadata
+    </td>
+    <td>
+     ""
+    </td>
+    <td>
+     empty if no mods where used
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     mod flags
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     zero if no mods where used
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     save identifier
+    </td>
+    <td>
+     _tYytyulUk6z2Ah42xvScg
+    </td>
+    <td>
+     a unique identifier (
+     <a class="extiw" href="https://en.wikipedia.org/wiki/Universally_unique_identifier" title="wikipedia:Universally unique identifier">
+      GUID
+     </a>
+     ) for this save, for analytics purposes
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     is partitioned world
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     always 1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     creative mode enabled
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     always 1 (unrelated to
+     <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+      Advanced Game Settings
+     </a>
+     )
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     16-byte checksum
+    </td>
+    <td>
+    </td>
+    <td>
+     an MD5 hash of all data after the header (save game editors should leave this property unmodified)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     cheat flag
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     0 or 1
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="CompressedSaveFileBody">
+   CompressedSaveFileBody
+  </span>
+ </h4>
+ <p>
+  Directly after the save file header, the save file body begins with a list of
+  <a class="extiw" href="https://en.wikipedia.org/wiki/Zlib" title="wikipedia:Zlib">
+   zlib-compressed
+  </a>
+  chunks. Each compressed chunk has this format:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     unreal engine package signature
+    </td>
+    <td>
+     2,653,586,369
+    </td>
+    <td>
+     always the
+     <a class="extiw" href="https://en.wikipedia.org/wiki/List_of_file_signatures" title="wikipedia:List of file signatures">
+      magic number
+     </a>
+     "9E2A83C1" in hex (not really an Int as defined above, more like a four byte unsigned integer)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     0x22222222
+    </td>
+    <td>
+     always 0x22222222
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     maximum chunk size
+    </td>
+    <td>
+     131,072
+    </td>
+    <td>
+     in number of bytes, always 128 * 1,024
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     0x03000000
+    </td>
+    <td>
+     always 0x03000000
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     compressed size
+    </td>
+    <td>
+     3,814
+    </td>
+    <td>
+     in number of bytes
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     uncompressed size
+    </td>
+    <td>
+     131,072
+    </td>
+    <td>
+     in number of bytes
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     compressed size
+    </td>
+    <td>
+     3,814
+    </td>
+    <td>
+     this is a repeat of the above data
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     uncompressed size
+    </td>
+    <td>
+     131,072
+    </td>
+    <td>
+     this is a repeat of the above data
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     compressed bytes of the chunk
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     number of bytes: see "compressed size" above
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="SaveFileBody">
+   SaveFileBody
+  </span>
+ </h4>
+ <p>
+  The save file body is the concatenation of the uncompressed chunks. The body mainly consists of a list of
+  <a class="external text" href="https://docs.unrealengine.com/4.26/en-US/Basics/Levels/LevelsWindow/" rel="nofollow">
+   sublevels and the persistent level
+  </a>
+  .
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     uncompressed size
+    </td>
+    <td>
+     90,103,391
+    </td>
+    <td>
+     in number of bytes, for the whole body except this size field itself
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     6
+    </td>
+    <td>
+     always 6
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+    </td>
+    <td>
+     "None"
+    </td>
+    <td>
+     always "None"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     always 1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+    </td>
+    <td>
+     "None"
+    </td>
+    <td>
+     always "None"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     5 level-grouping grids
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     sublevel count
+    </td>
+    <td>
+     107
+    </td>
+    <td>
+     the number of sublevels that follow - does not include the persistent level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     levels
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     sublevels and the persistent level.  There is one more level than the sublevel count above, the last entry being the persistent level. For the format of one Level, see below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     reference list count
+    </td>
+    <td>
+     6
+    </td>
+    <td>
+     the number of object references to follow
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     reference list
+    </td>
+    <td>
+    </td>
+    <td>
+     a list of object references of type ObjectReference.  Seems to always be references to Mercer Sphere instances.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="Level-Grouping_Grid">
+   Level-Grouping Grid
+  </span>
+ </h4>
+ <p>
+  Five groups of level lists.
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     grid name
+    </td>
+    <td>
+     "MainGrid"
+    </td>
+    <td>
+     "MainGrid", "LandscapeGrid", "ExplorationGrid", "FoliageGrid", "HLOD0_256m_1023m"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     level count
+    </td>
+    <td>
+    </td>
+    <td>
+     the number of string/integer pairs
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     level info
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a String and a Uint32 per level
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="Level">
+   Level
+  </span>
+ </h4>
+ <p>
+  Each level has a list of game objects (actors and components), preceded by a list of headers for these objects.
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     sublevel name
+    </td>
+    <td>
+     "Level /Game/FactoryGame/Map/GameLevel01/Cave_X3_Y4_DesertCanyon_1_01.Cave_X3_Y4_DesertCanyon_1_01:PersistentLevel"
+    </td>
+    <td>
+     the name of the sublevel; if this is the persistent level, the field is absent
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     object header and collectables size
+    </td>
+    <td>
+     21,499,825
+    </td>
+    <td>
+     in number of bytes, including the count Uint32s
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     object header count
+    </td>
+    <td>
+     86,644
+    </td>
+    <td>
+     the number of headers that follow
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     object headers
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     for the format of one ObjectHeader, see below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     extra level names count
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     the number of strings that follow; present only if this is the persistent level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     extra level names
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+     present only if this is the persistent level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     collectables count
+    </td>
+    <td>
+     223
+    </td>
+    <td>
+     the number of collectable objects that follow (e.g.
+     <a href="/wiki/Power_Slug" title="Power Slug">
+      Power Slugs
+     </a>
+     )
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     collectables
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of object references, for the format of one such ObjectReference, see below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint64
+    </td>
+    <td>
+     objects size
+    </td>
+    <td>
+     92,259
+    </td>
+    <td>
+     in number of bytes, for all game objects in that level (actors and components), including the count Uint32
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     object count
+    </td>
+    <td>
+     504
+    </td>
+    <td>
+     should be the same as the number of object headers above
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     objects
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     the additional data for each of the object headers above. for the format of each entry, see LevelObject below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save version
+    </td>
+    <td>
+     52
+    </td>
+    <td>
+     similar to the save version in SaveFileHeader; if this is the persistent level, the field is absent
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     second extra level names count
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     the number of strings that follow; present only if this is the persistent level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     second extra level names
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+     present only if this is the persistent level
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     second collectables count
+    </td>
+    <td>
+     223
+    </td>
+    <td>
+     the number of collectables in the second list that follows. can be igonred, since the collectables should be exactly the same as above
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     second collectables
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of object references, for the format of one such ObjectReference, see below. can also be ignored
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ObjectHeader">
+   ObjectHeader
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     header type
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     this is a header for an actor object, 0 would be a component header
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     the bytes of the header
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     either an ActorHeader or a ComponentHeader, see below
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ActorHeader">
+   ActorHeader
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type path
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C"
+    </td>
+    <td>
+     the type of actor, described in a hierarchical path
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     root object
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     instance name
+    </td>
+    <td>
+     "Persistent_Level:PersistentLevel.Build_ConstructorMk1_C_2147169479"
+    </td>
+    <td>
+     the name of this single actor object
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     unknown
+    </td>
+    <td>
+     2621448
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     rotation x
+    </td>
+    <td>
+     -0.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     rotation y
+    </td>
+    <td>
+     0.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     rotation z
+    </td>
+    <td>
+     -0.99999994
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     rotation w
+    </td>
+    <td>
+     3.5762787E-7
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     position x
+    </td>
+    <td>
+     -165,200.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     position y
+    </td>
+    <td>
+     -33,599.996
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     position z
+    </td>
+    <td>
+     -450.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     scale x
+    </td>
+    <td>
+     1.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     scale y
+    </td>
+    <td>
+     1.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     scale z
+    </td>
+    <td>
+     1.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     need transform?
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     seems to be more like a boolean flag, semantics unclear
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     was placed in level?
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to be more like a boolean flag, semantics unclear
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ComponentHeader">
+   ComponentHeader
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type path
+    </td>
+    <td>
+     "/Script/FactoryGame.FGPowerCircuit"
+    </td>
+    <td>
+     the type of component, described in a hierarchical path
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     root object
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     instance name
+    </td>
+    <td>
+     "Persistent_Level:PersistentLevel.CircuitSubsystem.FGPowerCircuit_2147177256"
+    </td>
+    <td>
+     the name of this single component object
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     unknown
+    </td>
+    <td>
+     0x002C0008
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     parent actor name
+    </td>
+    <td>
+     "Persistent_Level:PersistentLevel.CircuitSubsystem"
+    </td>
+    <td>
+     a reference to the instance name of an actor
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="LevelObject">
+   LevelObject
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     save version
+    </td>
+    <td>
+     46
+    </td>
+    <td>
+     similar to the save version in SaveFileHeader, but can contain older values for saves played during older game releases
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     flag
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     0 or 1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     the bytes of the object
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     either an ActorObject or ComponentObject, depending on the corresponding header type the object belongs to
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ActorObject">
+   ActorObject
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size
+    </td>
+    <td>
+     2,333
+    </td>
+    <td>
+     the number of bytes this ActorObject has, including trailing bytes
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     parent object reference
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     ObjectReference
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     component count
+    </td>
+    <td>
+     8
+    </td>
+    <td>
+     the number of components this actor has (e.g. a Constructor has an input inventory)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     components
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of object references, for the format of one such ObjectReference, see below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     properties
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of properties, see PropertyList below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     trailing bytes
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     some actors have trailing bytes that contain additional information. for interpreting this data, see TrailingBytes
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ComponentObject">
+   ComponentObject
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     size
+    </td>
+    <td>
+     194,584
+    </td>
+    <td>
+     the number of bytes this ComponentObject has, including trailing bytes. Some components only have their header information, so this size could be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     properties
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of properties, see PropertyList below
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     trailing bytes
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     some components have trailing bytes that contain additional information or are just padding zeros. for interpreting this data, see TrailingBytes or
+     <a class="external text" href="https://github.com/AnthorNet/SC-InteractiveMap/blob/ea5217e58ccd92de31e350d86816e7f093178804/src/SaveParser/Read.js#L469" rel="nofollow">
+      existing save file parsers like SCIM
+     </a>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="ObjectReference">
+   ObjectReference
+  </span>
+ </h4>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     level name
+    </td>
+    <td>
+     "Persistent_Level"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     path name
+    </td>
+    <td>
+     "Persistent_Level:PersistentLevel.Build_WorkBench_C_2146781450.FGFactoryLegs"
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="Properties">
+   Properties
+  </span>
+ </h4>
+ <p>
+  Properties contain very different types of information. Every property has a name, which has the basic data type String.
+ </p>
+ <h5>
+  <span class="mw-headline" id="PropertyList">
+   PropertyList
+  </span>
+ </h5>
+ <p>
+  Zero, one or multiple concatenated properties form a PropertyList. A "name" field with the string value "None" indicates the immediate end of property list (with no other property fields following).
+ </p>
+ <p>
+  The overall structure of one item in a PropertyList is as follows:
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mBerryIndex"
+    </td>
+    <td>
+     If "None", then indicates the end of the property list
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "IntProperty"
+    </td>
+    <td>
+     Only present if name was not "None".
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Only present if name was not "None". Indicates the size of the type-specific "payload", which starts after the pad byte; however, more type-specific headers may precede the pad byte first.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     additional headers
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     Only present if name was not "None". Type-specific headers. Size and layout depends on the type name.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint8
+    </td>
+    <td>
+     pad byte
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     Only present if name was not "None". Always zero.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     payload
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     Only present if name was not "None". Size is indicated in "payload size". Layout depends on the type name.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The sections below describe the type-specific parts of a property.
+ </p>
+ <h5>
+  <span class="mw-headline" id="ArrayProperty">
+   ArrayProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSpawnData"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "ArrayProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     112
+    </td>
+    <td>
+     the number of bytes this property has, starting after the first padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type
+    </td>
+    <td>
+     "ObjectProperty"
+    </td>
+    <td>
+     the type of the elements in this array
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     <a class="extiw" href="https://en.wikipedia.org/wiki/Data_structure_alignment" title="wikipedia:Data structure alignment">
+      padding
+     </a>
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always zero, as all padding should be
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     length
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     the number of elements in this array
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     array elements
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of values, according to the stated element type and number of elements. although the types are named like the other "...Property" structures here, most are actually simpler:
+     <ul>
+      <li>
+       "ByteProperty": a single Byte per element
+      </li>
+      <li>
+       "EnumProperty" or "StrProperty": a single String per element
+      </li>
+      <li>
+       "InterfaceProperty" or "ObjectProperty": two Strings per element, "level name" and "path name"
+      </li>
+      <li>
+       "IntProperty": a single Int per element
+      </li>
+      <li>
+       "Int64Property": a single Long per element
+      </li>
+      <li>
+       "FloatProperty": a single Float per element
+      </li>
+      <li>
+       "SoftObjectProperty": an ObjectReference and a Uint32 per element
+      </li>
+     </ul>
+     <ul>
+      <li>
+       "StructProperty": same layout as a "Property", except the payload repeats for "length" times. The property header has the same name and type as the ArrayProperty name and type ("StructProperty"). For example:
+      </li>
+     </ul>
+     <table class="wikitable">
+      <tbody>
+       <tr>
+        <th>
+         basic data type
+        </th>
+        <th>
+         description
+        </th>
+        <th>
+         example
+        </th>
+        <th>
+         notes
+        </th>
+       </tr>
+       <tr>
+        <td>
+         String
+        </td>
+        <td>
+         name
+        </td>
+        <td>
+         "mStops"
+        </td>
+        <td>
+         always matches the ArrayProperty name
+        </td>
+       </tr>
+       <tr>
+        <td>
+         String
+        </td>
+        <td>
+         type name
+        </td>
+        <td>
+         "StructProperty"
+        </td>
+        <td>
+         seems to always be "StructProperty"
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         payload size
+        </td>
+        <td>
+         1234
+        </td>
+        <td>
+         the combined size of all values in the array, starting after the "UUID" and the one byte padding below
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         padding
+        </td>
+        <td>
+         0
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         String
+        </td>
+        <td>
+         element type
+        </td>
+        <td>
+         "TimeTableStop"
+        </td>
+        <td>
+         the type of elements in the payload of these StructProperty array elements
+         <p>
+          "LinearColor", "Vector", "SpawnData", "BlueprintCategoryRecord", "BlueprintSubCategoryRecord", "DroneTripInformation", "FactoryCustomizationColorSlot", "FeetOffset", "FGCachedConnectedWire", "FGDroneFuelRuntimeData", "GCheckmarkUnlockData", "GlobalColorPreset", "HardDriveData", "HighlightedMarkerPair", "Hotbar", "InventoryStack", "ItemAmount", "MapMarker", "MessageData", "MiniGameResult", "PhaseCost", "PrefabIconElementSaveData", "PrefabTextElementSaveData", "ProjectAssemblyLaunchSequenceValue", "ResearchData", "ResearchTime", "ResourceSinkHistory", "ScannableObjectData", "ScannableResourcePair", "SchematicCost", "ShoppingListBlueprintEntry", "ShoppingListClassEntry", "ShoppingListRecipeEntry", "SplinePointData", "SplitterSortRule", "SubCategoryMaterialDefault", "TimeTableStop", "WireInstance"
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         UUID
+        </td>
+        <td>
+         0
+        </td>
+        <td rowspan="4">
+         In v0.8 and later, these four Uint32s are always zeros like in a padding
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         UUID
+        </td>
+        <td>
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         UUID
+        </td>
+        <td>
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         UUID
+        </td>
+        <td>
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Byte
+        </td>
+        <td>
+         padding
+        </td>
+        <td>
+         0
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         N/A
+        </td>
+        <td>
+         typed data
+        </td>
+        <td>
+         N/A
+        </td>
+        <td>
+         the list of elements with the actual payload of the property, see "TypedData" below for one such element
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="BoolProperty">
+   BoolProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSpawnedDebris"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "BoolProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0 for BoolProperty
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     the boolean value
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     0 or 1.  zero is considered "false", everything else is "true"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="ByteProperty">
+   ByteProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mLastAutoSaveId"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "ByteProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     17
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type
+    </td>
+    <td>
+     "EGamePhase"
+    </td>
+    <td>
+     semantics unclear, why is it not just a byte?
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte or String
+    </td>
+    <td>
+     the byte value
+    </td>
+    <td>
+     "EGP_LateGame"
+    </td>
+    <td>
+     the actual value of this property. if type is "None", then its just a Byte, otherwise a String
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="EnumProperty">
+   EnumProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mDestructibleActorState"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "EnumProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     34
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type
+    </td>
+    <td>
+     "EIntroTutorialSteps"
+    </td>
+    <td>
+     semantics unclear
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     the enum value
+    </td>
+    <td>
+     "EIntroTutorialSteps::ITS_DONE"
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="FloatProperty">
+   FloatProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mCurrentHealth"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "FloatProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     the float value
+    </td>
+    <td>
+     0.37677494
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="DoubleProperty">
+   DoubleProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "DoubleProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     8
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     the double value
+    </td>
+    <td>
+     0.37677494
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="IntProperty">
+   IntProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mResourcesLeft"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "IntProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Int
+    </td>
+    <td>
+     the int value
+    </td>
+    <td>
+     10
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="Int8Property">
+   Int8Property
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSelectedPoleVersion"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "Int8Property'
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     the int8 value
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="UInt32Property">
+   UInt32Property
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSavedFoliageGridSize"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "UInt32Property"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     the uint32 value
+    </td>
+    <td>
+     2,830,424,080
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="Int64Property">
+   Int64Property
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "TotalDismantled"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "Int64Property"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     8
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Long
+    </td>
+    <td>
+     the long value
+    </td>
+    <td>
+     2,830,424,080
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="MapProperty">
+   MapProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSaveData"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "MapProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     370
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     key type
+    </td>
+    <td>
+     "ObjectProperty"
+    </td>
+    <td>
+     the type the keys of this map have
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     value type
+    </td>
+    <td>
+     "IntProperty"
+    </td>
+    <td>
+     the type the values of this map have
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     mode type
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     semantics unclear, seems to be always 0, but does not seem to be a simple padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     number of elements
+    </td>
+    <td>
+     4
+    </td>
+    <td>
+     the number of key-value pairs in this map
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     map elements
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of key-value pairs, according to the stated types and number of pairs. although the types are named like the other "...Property" structures here, they are actually simpler:
+     <ul>
+      <li>
+       the key types seem to always be one of these:
+       <ul>
+        <li>
+         "ObjectProperty": a single ObjectReference per key-value pair
+        </li>
+        <li>
+         "IntProperty": a single Int per key-value pair
+        </li>
+        <li>
+         "StructProperty": 3 Int's per key-value pair
+        </li>
+       </ul>
+      </li>
+      <li>
+       the value types seem to always be one of these:
+       <ul>
+        <li>
+         "ByteProperty": a single Byte per key-value pair
+        </li>
+        <li>
+         "IntProperty": a single Int per key-value pair
+        </li>
+        <li>
+         "Int64Property": a single Int64 per key-value pair
+        </li>
+        <li>
+         "StructProperty": a list of properties per key-value pair, see "PropertyList" above for one of this list
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="NameProperty">
+   NameProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mStartingPointTagName"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "NameProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     17
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     the string value
+    </td>
+    <td>
+     "Rocky Desert"
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="ObjectProperty">
+   ObjectProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mBuildableSubsystem"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "ObjectProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     104
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ObjectReference
+    </td>
+    <td>
+     level/path
+    </td>
+    <td>
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="SoftObjectProperty">
+   SoftObjectProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "SoftObjectProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     104
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ObjectReference
+    </td>
+    <td>
+     level/path
+    </td>
+    <td>
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="SetProperty">
+   SetProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mLootedDropPods"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "SetProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     5,240
+    </td>
+    <td>
+     the number of bytes this property has, starting after the first padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type
+    </td>
+    <td>
+     "StructProperty"
+    </td>
+    <td>
+     the type of the elements in this set, either "UInt32Property" or "StructProperty"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     length
+    </td>
+    <td>
+     436
+    </td>
+    <td>
+     the number of elements in this set
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     set elements
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     a list of values, according to the stated element type and number of elements. e.g. for the "mRemovalLocations" property of "/Script/FactoryGame.FGFoliageRemoval", each removal location element is of type "StructProperty". The actual location element is simpler than the StructProperty described below, since a location is just x/y/z, each of basic data type Float.
+     <ul>
+      <li>
+       "UInt32Property": a single Uint32 per element
+      </li>
+      <li>
+       "StructProperty": 2 Uint64s per element
+      </li>
+      <li>
+       "ObjectProperty": a single ObjectReference
+      </li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="StrProperty">
+   StrProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mSaveSessionName"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "StrProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     9
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     the string value
+    </td>
+    <td>
+     "Name"
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="StructProperty">
+   StructProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mFluidBox"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "StructProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     387
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type
+    </td>
+    <td>
+     "TrainDockingRuleSet"
+    </td>
+    <td>
+     the type of structure this property's payload represents: , "BlueprintRecord", "BoomBoxPlayerState", "DroneDockingStateInfo", "DroneTripInformation", "FGPlayerPortalData", "FGPortalCachedFactoryTickData", "FactoryCustomizationColorSlot", "FactoryCustomizationData", "InventoryStack", "LightSourceControlData", "MapMarker", "PersistentGlobalIconId", "PlayerCustomizationData", "PlayerRules", "ResearchData", "ShoppingListSettings", "TimerHandle", "TopLevelAssetPath", "TrainDockingRuleSet", "TrainSimulationData", "Transform", "Vector_NetQuantize"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Long
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Long
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     typed data
+    </td>
+    <td>
+     N/A
+    </td>
+    <td>
+     the actual payload of the property, see "TypedData" below for "InventoryItem", "LinearColor", "Vector", "Quat", "Box", "FluidBox", "RailroadTrackPosition", "DateTime", "ClientIdentityInfo";
+     <p>
+      all other types represent a PropertyList
+     </p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="TextProperty">
+   TextProperty
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     name
+    </td>
+    <td>
+     "mBlueprintName"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     type name
+    </td>
+    <td>
+     "NameProperty"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     payload size
+    </td>
+    <td>
+     34
+    </td>
+    <td>
+     the number of bytes this property has, starting after the padding
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     index
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     seems to always be zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     flags
+    </td>
+    <td>
+     18
+    </td>
+    <td>
+     semantics unclear
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     history type
+    </td>
+    <td>
+     -1
+    </td>
+    <td>
+     semantics unclear, seems to be always -1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     is text culture invariant?
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     semantics unclear, seems to be always 1 (as a boolean, this would be "true", sincei it is not zero)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     the text value
+    </td>
+    <td>
+     "my fancy train station"
+    </td>
+    <td>
+     the actual value of this property
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="TypedData">
+   TypedData
+  </span>
+ </h4>
+ <p>
+  As the payload of a ArrayProperty's StructProperty, several custom types can occur. Note that the actual type is stated beforehand as a String, with a gap of 17 bytes to this structure.
+ </p>
+ <h5>
+  <span class="mw-headline" id="Box">
+   Box
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     min x
+    </td>
+    <td>
+     -269,069.38
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     min y
+    </td>
+    <td>
+     -309,234.5
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     min z
+    </td>
+    <td>
+     -27,460.76
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     max x
+    </td>
+    <td>
+     318,316.0
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     max y
+    </td>
+    <td>
+     303,073.75
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     max z
+    </td>
+    <td>
+     29,100.76
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Byte
+    </td>
+    <td>
+     is valid?
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     0 or 1. semantics unclear
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="FluidBox">
+   FluidBox
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     the float value of this FluidBox
+    </td>
+    <td>
+     6.3548093
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="InventoryItem">
+   InventoryItem
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     item name
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     item has properties flag
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     0 or 1
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     padding
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     present only when "item has properties flag" is non-zero; always 0
+    </td>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+     item type
+    </td>
+    <td>
+     "/Game/FactoryGame/Resource/Equipment/NailGun/Desc_RebarGunProjectile.Desc_RebarGunProjectile_C"
+    </td>
+    <td>
+     present only when "item has properties flag" is non-zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     property size
+    </td>
+    <td>
+     the number of bytes of the following properties
+    </td>
+    <td>
+     present only when "item has properties flag" is non-zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     PropertyList
+    </td>
+    <td>
+     properties
+    </td>
+    <td>
+    </td>
+    <td>
+     present only when "item has properties flag" is non-zero
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="LinearColor">
+   LinearColor
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     r
+    </td>
+    <td>
+     0.783538
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     g
+    </td>
+    <td>
+     0.291771
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     b
+    </td>
+    <td>
+     0.057805
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     a
+    </td>
+    <td>
+     1.0
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="Quat">
+   Quat
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     x
+    </td>
+    <td>
+     0.42907318
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     y
+    </td>
+    <td>
+     -0.13565472
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     z
+    </td>
+    <td>
+     -0.23136456
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     w
+    </td>
+    <td>
+     0.8625337
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="RailroadTrackPosition">
+   RailroadTrackPosition
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ObjectReference
+    </td>
+    <td>
+     object reference
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     offset
+    </td>
+    <td>
+     93.29132
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Float
+    </td>
+    <td>
+     forward
+    </td>
+    <td>
+     1.0
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="Vector">
+   Vector
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     x
+    </td>
+    <td>
+     2.1905906
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     y
+    </td>
+    <td>
+     2.1905906
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Double
+    </td>
+    <td>
+     z
+    </td>
+    <td>
+     2.1905909
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Note: Unlike "Vector", "Vector_NetQuantize" is serialized as a regular property list.
+ </p>
+ <h5>
+  <span class="mw-headline" id="DateTime">
+   DateTime
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Int64
+    </td>
+    <td>
+     date time
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h5>
+  <span class="mw-headline" id="ClientIdentityInfo">
+   ClientIdentityInfo
+  </span>
+ </h5>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     basic data type
+    </th>
+    <th>
+     description
+    </th>
+    <th>
+     example
+    </th>
+    <th>
+     notes
+    </th>
+   </tr>
+   <tr>
+    <td>
+     String
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+     UUID
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Uint32
+    </td>
+    <td>
+     identity count
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     the number of identities to follow
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N/A
+    </td>
+    <td>
+     identity
+    </td>
+    <td>
+    </td>
+    <td>
+     <table class="wikitable">
+      <caption>
+      </caption>
+      <tbody>
+       <tr>
+        <th>
+         basic data type
+        </th>
+        <th>
+         description
+        </th>
+        <th>
+         example
+        </th>
+        <th>
+         notes
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Byte
+        </td>
+        <td>
+        </td>
+        <td>
+         6
+        </td>
+        <td>
+         1=Epic. 6=Steam.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Uint32
+        </td>
+        <td>
+         identity data size
+        </td>
+        <td>
+         8
+        </td>
+        <td>
+         the number of bytes of the following data
+        </td>
+       </tr>
+       <tr>
+        <td>
+         N/A
+        </td>
+        <td>
+         identity data
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <span class="mw-headline" id="Trailing_Bytes">
+   Trailing Bytes
+  </span>
+ </h4>
+ <p>
+  Trailing bytes can be present after an ActorObject or ComponentObject.  The format of the trailing bytes is specific to the game object.
+ </p>
+ <p>
+  Note: Saves created by Satisfactory Calculator's Interactive Map have trailing bytes for additional objects not shown in this table.  This table includes only those objects given trailing bytes by Satifactory game itself.  The additional SCIM bytes are always a single zero Uint32.
+ </p>
+ <table class="wikitable">
+  <tbody>
+   <tr>
+    <th>
+     object type
+    </th>
+    <th>
+     object name
+    </th>
+    <th>
+     trailing bytes format
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk1/Build_ConveyorBeltMk1.Build_ConveyorBeltMk1_C"
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk2/Build_ConveyorBeltMk2.Build_ConveyorBeltMk2_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk3/Build_ConveyorBeltMk3.Build_ConveyorBeltMk3_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk4/Build_ConveyorBeltMk4.Build_ConveyorBeltMk4_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk5/Build_ConveyorBeltMk5.Build_ConveyorBeltMk5_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk6/Build_ConveyorBeltMk6.Build_ConveyorBeltMk6_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk1/Build_ConveyorLiftMk1.Build_ConveyorLiftMk1_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk2/Build_ConveyorLiftMk2.Build_ConveyorLiftMk2_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk3/Build_ConveyorLiftMk3.Build_ConveyorLiftMk3_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk4/Build_ConveyorLiftMk4.Build_ConveyorLiftMk4_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk5/Build_ConveyorLiftMk5.Build_ConveyorLiftMk5_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Factory/ConveyorLiftMk6/Build_ConveyorLiftMk6.Build_ConveyorLiftMk6_C"
+     </p>
+    </td>
+    <td>
+     Uint32 count
+     <p>
+      For each element:
+     </p>
+     <ul>
+      <li>
+       Uint32 length
+      </li>
+      <li>
+       String name
+      </li>
+      <li>
+       String always empty
+      </li>
+      <li>
+       String always empty
+      </li>
+      <li>
+       Float position
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/-Shared/Blueprint/BP_GameMode.BP_GameMode_C"
+     <p>
+      "/Game/FactoryGame/-Shared/Blueprint/BP_GameState.BP_GameState_C"
+     </p>
+    </td>
+    <td>
+     Uint32 count
+     <p>
+      For each element: ObjectReference
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Character/Player/BP_PlayerState.BP_PlayerState_C"
+    </td>
+    <td>
+     Byte: Formatting, either 3 or 241
+     <p>
+      If the initial byte is 3, no more trailing data
+If the initial byte is 241:
+     </p>
+     <ul>
+      <li>
+       Byte: 1=Epic, 6=Steam
+      </li>
+      <li>
+       Uint32: number of bytes remaining
+      </li>
+      <li>
+       Bytes of length specified
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Factory/DroneStation/BP_DroneTransport.BP_DroneTransport_C"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/-Shared/Blueprint/BP_CircuitSubsystem.BP_CircuitSubsystem_C"
+    </td>
+    <td>
+     Uint32 count
+     <p>
+      For each element:
+     </p>
+     <ul>
+      <li>
+       Uint32
+      </li>
+      <li>
+       ObjectReference
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Factory/PowerLine/Build_PowerLine.Build_PowerLine_C"
+     <p>
+      "/Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Build_XmassLightsLine.Build_XmassLightsLine_C"
+     </p>
+    </td>
+    <td>
+     2 ObjectReferences
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/BP_Locomotive.BP_Locomotive_C"
+     <p>
+      "/Game/FactoryGame/Buildable/Vehicle/Train/Wagon/BP_FreightWagon.BP_FreightWagon_C"
+     </p>
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/Testa_BP_WB.Testa_BP_WB_C"
+     <p>
+      "/Game/FactoryGame/Buildable/Vehicle/Explorer/BP_Explorer.BP_Explorer_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Vehicle/Golfcart/BP_Golfcart.BP_Golfcart_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Vehicle/Tractor/BP_Tractor.BP_Tractor_C"
+     </p>
+     <p>
+      "/Game/FactoryGame/Buildable/Vehicle/Truck/BP_Truck.BP_Truck_C"
+     </p>
+    </td>
+    <td>
+     Uint32 count
+     <p>
+      For each element:
+     </p>
+     <ul>
+      <li>
+       Uint32
+      </li>
+      <li>
+       105 Bytes
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Script/FactoryGame.FGItemPickup_Spawnable"
+    </td>
+    <td>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Script/FactoryGame.FGLightweightBuildableSubsystem"
+    </td>
+    <td>
+     <ul>
+      <li>
+       Uint32
+      </li>
+      <li>
+       Uint32 count
+      </li>
+     </ul>
+     <ul>
+      <li>
+       For each element:
+       <ul>
+        <li>
+         Uint32 always 0
+        </li>
+        <li>
+         String
+        </li>
+        <li>
+         Uint32 count
+        </li>
+        <li>
+         For each element:
+         <ul>
+          <li>
+           4 Doubles rotation quaternion
+          </li>
+          <li>
+           3 Doubles position
+          </li>
+          <li>
+           3 Doubles scale (always 1.0)
+          </li>
+          <li>
+           Uint32 always 0
+          </li>
+          <li>
+           String: swatch
+          </li>
+          <li>
+           3 Uint32 always 0
+          </li>
+          <li>
+           String: pattern description number
+          </li>
+          <li>
+           2 Uint32 always 0
+          </li>
+          <li>
+           4 Floats primary color
+          </li>
+          <li>
+           4 Floats secondary color
+          </li>
+          <li>
+           Uint32 always 0
+          </li>
+          <li>
+           Uint32 data size of unknown data
+          </li>
+          <li>
+           N/A Unknown data of specified size
+          </li>
+          <li>
+           Uint32: Seen values 0 thru 4
+          </li>
+          <li>
+           Byte always 0
+          </li>
+          <li>
+           String recipe
+          </li>
+          <li>
+           ObjectReference blueprint proxy
+          </li>
+          <li>
+           Uint32 always 0
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ActorObject
+    </td>
+    <td>
+     "/Script/FactoryGame.FGConveyorChainActor"
+     <p>
+      "/Script/FactoryGame.FGConveyorChainActor_RepSizeNoCull"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGConveyorChainActor_RepSizeMedium"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGConveyorChainActor_RepSizeLarge"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGConveyorChainActor_RepSizeHuge"
+     </p>
+    </td>
+    <td>
+     ObjectReference starting belt (the same reference as the first belt in the list below)
+     <p>
+      ObjectReference ending belt (the same reference as the last belt in the list below)
+     </p>
+     <p>
+      Uint32 number of belts in chain
+     </p>
+     <p>
+      For each belt:
+     </p>
+     <ul>
+      <li>
+       ObjectReference conveyor chain actor (the same reference for each belt)
+      </li>
+      <li>
+       ObjectReference belt
+      </li>
+      <li>
+       Uint32 number of elements
+      </li>
+      <li>
+       For each element:
+       <ul>
+        <li>
+         9 Uint64s in 3 groups of 3
+        </li>
+       </ul>
+      </li>
+      <li>
+       3 Uint32s
+      </li>
+      <li>
+       2 Ints
+      </li>
+      <li>
+       Uint32 belt index
+      </li>
+     </ul>
+     <p>
+      Uint32
+     </p>
+     <p>
+      3 Ints
+     </p>
+     <p>
+      Uint32 number of items
+     </p>
+     <p>
+      For each item:
+     </p>
+     <ul>
+      <li>
+       Uint32 always 0
+      </li>
+      <li>
+       String item
+      </li>
+      <li>
+       Uint32 always 0
+      </li>
+      <li>
+       Uint32
+      </li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ComponentObject
+    </td>
+    <td>
+     "/Script/FactoryGame.FGDroneMovementComponent"
+     <p>
+      "/Script/FactoryGame.FGFactoryConnectionComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGFactoryLegsComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGHealthComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGInventoryComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGInventoryComponentEquipment"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGInventoryComponentTrash"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGPipeConnectionComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGPipeConnectionComponentHyper"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGPipeConnectionFactory"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGPowerConnectionComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGPowerInfoComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGRailroadTrackConnectionComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGShoppingListComponent"
+     </p>
+     <p>
+      "/Script/FactoryGame.FGTrainPlatformConnection"
+     </p>
+    </td>
+    <td>
+     Uint32 always 0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>
+  <span class="mw-headline" id="Libraries_and_implementations">
+   Libraries and implementations
+  </span>
+ </h3>
+ <p>
+  For manipulating save and blueprint files, instead of writing a parser/writer from scratch, you can use the following community implementations:
+ </p>
+ <table class="wikitable">
+  <caption>
+   Save file format community implementations
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Name
+    </th>
+    <th>
+     Language
+    </th>
+    <th>
+     URL
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Satisfactory Interactive Map
+    </td>
+    <td>
+     JavaScript
+    </td>
+    <td>
+     <a class="external free" href="https://github.com/AnthorNet/SC-InteractiveMap/blob/dev/src/SaveParser/Read.js" rel="nofollow">
+      https://github.com/AnthorNet/SC-InteractiveMap/blob/dev/src/SaveParser/Read.js
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     SatisfactorySaveNet
+    </td>
+    <td>
+     C#
+    </td>
+    <td>
+     <a class="external free" href="https://github.com/R3dByt3/SatisfactorySaveNet/" rel="nofollow">
+      https://github.com/R3dByt3/SatisfactorySaveNet/
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     satisfactory-3d-map
+    </td>
+    <td>
+     C++ / Python
+    </td>
+    <td>
+     <a class="external free" href="https://github.com/moritz-h/satisfactory-3d-map" rel="nofollow">
+      https://github.com/moritz-h/satisfactory-3d-map
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     satisfactory.save
+    </td>
+    <td>
+     D
+    </td>
+    <td>
+     <a class="external free" href="https://gitlab.com/cybershadow/satisfactory-save-files/" rel="nofollow">
+      https://gitlab.com/cybershadow/satisfactory-save-files/
+     </a>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="Dedicated_Server_settings_file">
+   Dedicated Server settings file
+  </span>
+ </h2>
+ <div style="margin-left: 30px;">
+  <i>
+   See:
+  </i>
+  <a href="/wiki/Dedicated_servers#Server_File_Locations" title="Dedicated servers">
+   Dedicated_servers#Server_File_Locations
+  </a>
+ </div>
+ <p>
+  <br/>
+  This file is also an Unreal Engine save file.
+ </p>
+ <p>
+  Using the in-game Server Manager UI is currently the only supported method for modifying this file. Settings may also be changed through the
+  <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+   HTTPS API
+  </a>
+  .
+ </p>
+ <table class="wikitable">
+  <caption style="text-align:left">
+   <code>
+    ServerSettings.PORT.sav
+   </code>
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Property
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     ServerName
+    </td>
+    <td>
+     Just a friendly name for this server. Can be used in UI dialogs to identify the server
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AutoLoadSessionName
+    </td>
+    <td>
+     If set, the most recent save from this session will be automatically loaded on server startup
+    </td>
+   </tr>
+   <tr>
+    <td>
+     AdminPassword
+    </td>
+    <td>
+     Admin password set on the server. Used to access administration based functions of the Server API
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ClientPassword
+    </td>
+    <td>
+     Client password set on the server. Required to join the game in the first place.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ServerSecret
+    </td>
+    <td>
+     Server secret encoded as hex nibble string. Used to hash the data used for the tokens and generate the fingerprint
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CertificateData
+    </td>
+    <td>
+     Generated certificate data that should be re-used across server restarts
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  <span class="mw-headline" id="History">
+   History
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Patch_1.1.1.2" title="Patch 1.1.1.2">
+    Patch 1.1.1.2
+   </a>
+   : Fix for a Crash on specific saves that had faulty
+   <a href="/wiki/Blueprint" title="Blueprint">
+    Blueprints
+   </a>
+   using auto connected
+   <a href="/wiki/Conveyor_Belts" title="Conveyor Belts">
+    Conveyor Belts
+   </a>
+   during a previous update during experimental
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.1.0.2" title="Patch 1.1.0.2">
+    Patch 1.1.0.2
+   </a>
+   : Fixed crash when loading a save caused by
+   <a href="/wiki/Railroad_Switch_Control" title="Railroad Switch Control">
+    Railway Switches
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.1.0" title="Patch 1.0.1.0">
+    Patch 1.0.1.0
+   </a>
+   : Fixed a Crash when there is a Failure to open Save game and
+   <a href="/wiki/Blueprint" title="Blueprint">
+    blueprint
+   </a>
+   files for reading
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.6" title="Patch 1.0.0.6">
+    Patch 1.0.0.6
+   </a>
+   : Fixed so that items don’t respawn when loading save files created in
+   <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+    1.0.0.4
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0.0.4" title="Patch 1.0.0.4">
+    Patch 1.0.0.4
+   </a>
+   <ul>
+    <li>
+     Fix for some buildable's disappearing in very old saves (Around
+     <a class="mw-redirect" href="/wiki/Update_2" title="Update 2">
+      Update 2
+     </a>
+     )
+     <ul>
+      <li>
+       This fix is not retroactive, this means if you have overwritten a save with missing buildings after playing the 1.0 version, those buildings will remain missing.
+       <br/>
+       This only prevents buildables disappearing on old saves that are loaded/re-saved from this patch onwards. We’re sorry for the inconvenience, this was a very complicated issue.
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_1.0" title="Patch 1.0">
+    Patch 1.0
+   </a>
+   : Saving and Autosaving should now take considerably less time than ever before. This should make it so the autosaving happening is a lot less disruptive and will be especially noticeable in big factories!
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.1.1" title="Patch 0.8.1.1">
+    Patch 0.8.1.1
+   </a>
+   : Potential fix for a Crash related to save session
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.8.0.0" title="Patch 0.8.0.0">
+    Patch 0.8.0.0
+   </a>
+   : Optimized the
+   <a class="mw-redirect" href="/wiki/Save_file" title="Save file">
+    save
+   </a>
+   system to decrease saving time on larger saves by roughly 80-90%
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.11" title="Patch 0.6.0.11">
+    Patch 0.6.0.11
+   </a>
+   : Potentially fixed crash when saving/autosaving introduced in
+   <a href="/wiki/Patch_0.6.0.10" title="Patch 0.6.0.10">
+    CL 198647
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.5" title="Patch 0.6.0.5">
+    Patch 0.6.0.5
+   </a>
+   <ul>
+    <li>
+     Fixed not being able to save without typing a name for the session first (Name will be auto set to “SessionName_Timestamp” if the name field is blank)
+    </li>
+    <li>
+     Fixed Delete Save button not working properly
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.4" title="Patch 0.6.0.4">
+    Patch 0.6.0.4
+   </a>
+   : Fixed a bug where “Invalid Session ID” could be displayed in the name of saves when trying to save a new session without typing a new save name
+  </li>
+  <li>
+   <a href="/wiki/Patch_0.6.0.0" title="Patch 0.6.0.0">
+    Patch 0.6.0.0
+   </a>
+   : Implemented Sublevel Saving
+  </li>
+ </ul>
+ <h2>
+  <span class="mw-headline" id="References">
+   References
+  </span>
+ </h2>
+ <div class="mw-references-wrap">
+  <ol class="references">
+   <li id="cite_note-yt-zqYgPf4u2yc-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-yt-zqYgPf4u2yc_1-0">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://www.youtube.com/watch?v=zqYgPf4u2yc" rel="nofollow">
+      YouTube - How to find save game files on Steam Deck (2025)
+     </a>
+    </span>
+   </li>
+  </ol>
+ </div>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a class="mw-selflink selflink">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Configuration_files" title="Dedicated servers/Configuration files">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251011185036
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.093 seconds
+Real time usage: 0.221 seconds
+Preprocessor visited node count: 477/1000000
+Revision size: 45704/4194304 bytes
+Post‐expand include size: 26797/4194304 bytes
+Template argument size: 176/4194304 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 577/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.005/15.000 seconds
+Lua memory usage: 811822/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   58.126      1 -total
+ 55.55%   32.287      1 Template:PioneerNav
+ 52.93%   30.769      2 Template:Navbox
+ 19.55%   11.362      1 Template:Tocright
+ 12.78%    7.429      1 Template:See_also
+  6.21%    3.610      1 Template:Reflist
+  4.67%    2.717      1 Template:Hatnote
+  4.24%    2.465     76 Template:*
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:1768-0!canonical and timestamp 20251011185036 and revision id 59167. Rendering was triggered because: RefreshLinksJob
+ -->
+</div>

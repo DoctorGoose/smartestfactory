@@ -1,0 +1,282 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="doc" style="clear: both;">
+  <div class="doc-header">
+   <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   <span style="font-weight: bold; font-size: 125%;">
+    Template Documentation
+   </span>
+   <div style="float: right;">
+    <span class="mw-editsection-like plainlinks">
+     [
+     <a href="/wiki/Template:Infobox_building/doc" title="Template:Infobox building/doc">
+      view
+     </a>
+     ] [
+     <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_building/doc?action=edit">
+      edit
+     </a>
+     ] [
+     <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_building/doc?action=history">
+      history
+     </a>
+     ] [
+     <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_building?action=purge">
+      purge
+     </a>
+     ]
+    </span>
+   </div>
+  </div>
+  <div class="table-of-contents--right" style="clear:right;">
+   <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+    <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+    <div class="toctitle" dir="ltr" lang="en">
+     <h2 id="mw-toc-heading">
+      Contents
+     </h2>
+     <span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox">
+      </label>
+     </span>
+    </div>
+    <ul>
+     <li class="toclevel-1">
+      <a href="#Parameters">
+       <span class="tocnumber">
+        1
+       </span>
+       <span class="toctext">
+        Parameters
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <table class="plainlinks ambox ambox-gray" style="">
+   <tbody>
+    <tr>
+     <td class="ambox-image">
+      <a class="image" href="/wiki/File:Lua.svg">
+       <img alt="" data-file-height="937" data-file-width="937" decoding="async" height="32" loading="lazy" src="https://commons.wiki.gg/images/Lua.svg?74e3ac" width="32"/>
+      </a>
+     </td>
+     <td class="ambox-text">
+      This template uses
+      <a class="extiw" href="https://en.wikipedia.org/wiki/Lua_(programming_language)" title="wikipedia:Lua (programming language)">
+       Lua
+      </a>
+      :
+      <ul>
+       <li>
+        <a href="/wiki/Module:RenderInfobox" title="Module:RenderInfobox">
+         Module:RenderInfobox
+        </a>
+       </li>
+      </ul>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   Infobox building is an automatically generated infobox that sources its data from Docs.json. Its item counterpart is
+   <code>
+    {{
+    <a href="/wiki/Template:Infobox_item" title="Template:Infobox item">
+     Infobox item
+    </a>
+    }}
+   </code>
+   .
+  </p>
+  <h2>
+   <span class="mw-headline" id="Parameters">
+    Parameters
+   </span>
+  </h2>
+  <p>
+   The
+   <code>
+    className
+   </code>
+   argument is the only mandatory argument. A number of vehicle and size-related parameters can also be supplied, as they cannot be acquired from Docs.json.
+  </p>
+  <table class="wikitable">
+   <tbody>
+    <tr>
+     <th>
+      Parameter
+     </th>
+     <th>
+      Usage
+     </th>
+    </tr>
+    <tr>
+     <td>
+      <b>
+       className
+      </b>
+     </td>
+     <td>
+      <b>
+       className of the building (mandatory)
+      </b>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      overclockable
+     </td>
+     <td>
+      Whether the building is overclockable (boolean)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inventorySize
+     </td>
+     <td>
+      Inventory size (in slots or m
+      <sup>
+       3
+      </sup>
+      )
+     </td>
+    </tr>
+    <tr>
+     <td>
+      beltInputs
+     </td>
+     <td>
+      Conveyor inputs
+     </td>
+    </tr>
+    <tr>
+     <td>
+      beltOutputs
+     </td>
+     <td>
+      Conveyor outputs
+     </td>
+    </tr>
+    <tr>
+     <td>
+      pipeInputs
+     </td>
+     <td>
+      Pipeline inputs
+     </td>
+    </tr>
+    <tr>
+     <td>
+      pipeOutputs
+     </td>
+     <td>
+      Pipeline outputs
+     </td>
+    </tr>
+    <tr>
+     <td>
+      maxSpeed
+     </td>
+     <td>
+      Maximum speed (measured)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      time0_50
+     </td>
+     <td>
+      Time to reach 50 km/h (measured)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_width
+     </td>
+     <td>
+      Width
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_height
+     </td>
+     <td>
+      Height
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_length
+     </td>
+     <td>
+      Length
+     </td>
+    </tr>
+    <tr>
+     <td>
+      size_note
+     </td>
+     <td>
+      Additional note, such as stacking behavior
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:Infobox_building/doc" title="Template:Infobox building/doc">
+    Template:Infobox building/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_building/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Infobox_building/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251026164842
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.047 seconds
+Real time usage: 0.097 seconds
+Preprocessor visited node count: 197/1000000
+Revision size: 149/4194304 bytes
+Post‐expand include size: 10629/4194304 bytes
+Template argument size: 292/4194304 bytes
+Highest expansion depth: 11/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   69.375      1 Template:Documentation
+100.00%   69.375      1 -total
+ 61.12%   42.399      1 Template:Infobox_building/doc
+ 21.38%   14.835      1 Template:Lua
+ 19.52%   13.544      1 Template:Tl
+ 11.90%    8.258      2 Template:Transclude
+  4.27%    2.964      1 Template:Documentation_subpage
+  3.74%    2.597      1 Template:Doc/end
+  3.49%    2.421      1 Template:Ambox
+  3.35%    2.325      1 Template:Tocright
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:6378-0!canonical and timestamp 20251026164842 and revision id 45735. Rendering was triggered because: page_view
+ -->
+</div>

@@ -1,0 +1,1138 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="table-of-contents--right" style="clear:right;">
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1 tocsection-1">
+     <a href="#Overview">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Overview
+      </span>
+     </a>
+    </li>
+    <li class="toclevel-1 tocsection-2">
+     <a href="#Configuration_Editing">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Configuration Editing
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2 tocsection-3">
+       <a href="#Default_and_Configurable_Port_Ranges">
+        <span class="tocnumber">
+         2.1
+        </span>
+        <span class="toctext">
+         Default and Configurable Port Ranges
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-4">
+       <a href="#Disabling_Server_Crash_Reporting">
+        <span class="tocnumber">
+         2.2
+        </span>
+        <span class="toctext">
+         Disabling Server Crash Reporting
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-5">
+       <a href="#Client_disconnected_for_Timeout">
+        <span class="tocnumber">
+         2.3
+        </span>
+        <span class="toctext">
+         Client disconnected for Timeout
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-6">
+       <a href="#Number_of_Kept_Autosaves">
+        <span class="tocnumber">
+         2.4
+        </span>
+        <span class="toctext">
+         Number of Kept Autosaves
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-7">
+       <a href="#Increasing_Player_Count">
+        <span class="tocnumber">
+         2.5
+        </span>
+        <span class="toctext">
+         Increasing Player Count
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3 tocsection-8">
+         <a href="#In_Server_Configuration">
+          <span class="tocnumber">
+           2.5.1
+          </span>
+          <span class="toctext">
+           In Server Configuration
+          </span>
+         </a>
+        </li>
+        <li class="toclevel-3 tocsection-9">
+         <a href="#Or_as_a_Startup_Parameter">
+          <span class="tocnumber">
+           2.5.2
+          </span>
+          <span class="toctext">
+           Or as a Startup Parameter
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2 tocsection-10">
+       <a href="#Autosave_Interval">
+        <span class="tocnumber">
+         2.6
+        </span>
+        <span class="toctext">
+         Autosave Interval
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-11">
+       <a href="#Server_tick_rate">
+        <span class="tocnumber">
+         2.7
+        </span>
+        <span class="toctext">
+         Server tick rate
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-12">
+       <a href="#Seasonal_events">
+        <span class="tocnumber">
+         2.8
+        </span>
+        <span class="toctext">
+         Seasonal events
+        </span>
+       </a>
+      </li>
+      <li class="toclevel-2 tocsection-13">
+       <a href="#UObject_Limit_Increase">
+        <span class="tocnumber">
+         2.9
+        </span>
+        <span class="toctext">
+         UObject Limit Increase
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1 tocsection-14">
+     <a href="#See_also">
+      <span class="tocnumber">
+       3
+      </span>
+      <span class="toctext">
+       See also
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <p>
+  This page details configuration files used by
+  <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+   dedicated servers
+  </a>
+  .
+ </p>
+ <h2>
+  <span class="mw-headline" id="Overview">
+   Overview
+  </span>
+ </h2>
+ <p>
+  Satisfactory uses Unreal Engine, which stores many of its vital settings and configurations in various "ini" (short for "initialization") files. These files are located in a directory relative to the server's base installation folder, as noted below:
+ </p>
+ <table class="wikitable">
+  <caption style="text-align:left">
+   Configuration files location
+  </caption>
+  <tbody>
+   <tr>
+    <th>
+     Platform
+    </th>
+    <th>
+     Path
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Linux
+    </td>
+    <td>
+     <code>
+      &lt;installation_directory&gt;/FactoryGame/Saved/Config/LinuxServer/
+     </code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Windows
+    </td>
+    <td>
+     <code>
+      &lt;installation_directory&gt;\FactoryGame\Saved\Config\WindowsServer\
+     </code>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  While the basic server settings may be edited via the in-game options menus, there are many, many more settings that may be changed by manually editing the appropriate ini files.
+ </p>
+ <h2>
+  <span class="mw-headline" id="Configuration_Editing">
+   Configuration Editing
+  </span>
+ </h2>
+ <p>
+  Server ini files may not be saved/generated until the server is closed gracefully for the first time, e.g, by using the console 'quit' command, or sending
+  <code>
+   SIGINT
+  </code>
+  to the process.
+ </p>
+ <p>
+  <b>
+   Always make ini edit changes with the game server shut down. The ini files are written to on graceful shutdown, and you may find your changes overwritten otherwise.
+   <sup class="reference" id="cite_ref-1">
+    <a href="#cite_note-1">
+     <span class="cite-bracket">
+      [
+     </span>
+     1
+     <span class="cite-bracket">
+      ]
+     </span>
+    </a>
+   </sup>
+  </b>
+  <br/>
+ </p>
+ <p>
+  <b>
+   Be aware that any changes to ini files may be overwritten when a new update or patch is released, possibly necessitating a re-edit. Also, do not set the ini files to be "read-only" after you modify them as this can cause issues with future patches.
+  </b>
+  <br/>
+ </p>
+ <p>
+  If you are unable to locate any of the listed ini files, you will need to start the server at least once first. See
+  <a href="/wiki/Dedicated_servers#Claiming_the_Server_and_Starting_a_Game" title="Dedicated servers">
+   Dedicated_servers#Claiming_the_Server_and_Starting_a_Game
+  </a>
+  .
+ </p>
+ <p>
+  <b>
+   If a section to be added already exists in the file, append or overwrite its contents to the section. If a section is not present or the file does not exist, create the section or file.
+  </b>
+ </p>
+ <p>
+  Below are a few configuration settings that the community has discovered.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Default_and_Configurable_Port_Ranges">
+   Default and Configurable Port Ranges
+  </span>
+ </h3>
+ <p>
+  <a href="/wiki/Patch_1.1.1.0#Default_and_Configurable_Port_Ranges" title="Patch 1.1.1.0">
+   Version 1.1
+  </a>
+  added the following settings in Engine.ini control port allocation:
+ </p>
+ <p>
+  <code>
+   Engine.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/ReliableMessaging.ReliableMessagingTCPFactory]</span>
+<span class="na">PortRangeBegin</span><span class="o">=</span><span class="s">8888</span>
+<span class="na">PortRangeLength</span><span class="o">=</span><span class="s">512</span>
+<span class="na">ExternalPortRangeBegin</span><span class="o">=</span><span class="s">-1</span>
+</pre>
+ </div>
+ <ul>
+  <li>
+   The server will attempt to bind within PortRangeBegin + PortRangeLength range.
+  </li>
+  <li>
+   By default, the server starts at port 8888 and tries up to 512 ports until it finds an available one.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Disabling_Server_Crash_Reporting">
+   Disabling Server Crash Reporting
+  </span>
+ </h3>
+ <p>
+  When running on Linux, the server uploads crash reports by default. The developers can then use these crash reports to help pinpoint issues for future patches.
+  <br/>
+  <br/>
+  <code>
+   Engine.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[CrashReportClient]</span>
+<span class="na">bImplicitSend</span><span class="o">=</span><span class="s">False</span>
+</pre>
+ </div>
+ <h3>
+  <span class="mw-headline" id="Client_disconnected_for_Timeout">
+   Client disconnected for Timeout
+  </span>
+ </h3>
+ <p>
+  Client systems with older hardware or slower connections may need a higher connection timeout limit than the default 30 seconds.
+  <br/>
+  <br/>
+  <code>
+   Engine.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/OnlineSubsystemUtils.IpNetDriver]</span>
+<span class="na">InitialConnectTimeout</span><span class="o">=</span><span class="s">XX.0</span>
+<span class="na">ConnectionTimeout</span><span class="o">=</span><span class="s">XX.0</span>
+</pre>
+ </div>
+ <p>
+  <i>
+   XX
+  </i>
+  is the number of seconds for the connection timeout counter to use.
+ </p>
+ <ul>
+  <li>
+   <i>
+    InitialConnectTimeout
+   </i>
+   = Number of seconds to wait for a new network connection to be established before destroying the connection.
+  </li>
+  <li>
+   <i>
+    ConnectionTimeout
+   </i>
+   = Number of seconds to wait before considering an established connection timed out.
+  </li>
+ </ul>
+ <h3>
+  <span class="mw-headline" id="Number_of_Kept_Autosaves">
+   Number of Kept Autosaves
+  </span>
+ </h3>
+ <p>
+  Currently, the server defaults to three autosaves that are rotated (when the server creates a new autosave, the oldest is deleted and the others are moved down the list. Currently these are:
+ </p>
+ <ul>
+  <li>
+   SessionName_autosave_0.sav
+  </li>
+  <li>
+   SessionName_autosave_1.sav
+  </li>
+  <li>
+   SessionName_autosave_2.sav
+  </li>
+ </ul>
+ <p>
+  To override the default, replace
+  <i>
+   XX
+  </i>
+  with the number of autosaves the server should rotate through.
+  <br/>
+  <br/>
+  <code>
+   Engine.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/FactoryGame.FGSaveSession]</span>
+<span class="na">mNumRotatingAutosaves</span><span class="o">=</span><span class="s">XX</span>
+</pre>
+ </div>
+ <h3>
+  <span class="mw-headline" id="Increasing_Player_Count">
+   Increasing Player Count
+  </span>
+ </h3>
+ <p>
+  Up to 127 players are theoretically possible, but not practically.
+ </p>
+ <p>
+  <b>
+   Before changing the following setting, note that the server is tuned to be most performant with the default player cap of four. Increasing this limit may have negative effects on server stability, performance, and resource usage.
+  </b>
+ </p>
+ <h4>
+  <span class="mw-headline" id="In_Server_Configuration">
+   In Server Configuration
+  </span>
+ </h4>
+ <p>
+  Set
+  <code>
+   MaxPlayers
+  </code>
+  to the desired player cap for the server:
+  <br/>
+  <br/>
+  <code>
+   Game.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/Engine.GameSession]</span>
+<span class="na">MaxPlayers</span><span class="o">=</span><span class="s">8</span>
+</pre>
+ </div>
+ <h4>
+  <span class="mw-headline" id="Or_as_a_Startup_Parameter">
+   Or as a Startup Parameter
+  </span>
+ </h4>
+ <p>
+  Add
+  <code>
+   -ini:Game:[/Script/Engine.GameSession]:MaxPlayers=8
+  </code>
+  as a parameter to the server startup script.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Autosave_Interval">
+   Autosave Interval
+  </span>
+ </h3>
+ <p>
+  Currently the server defaults to saving the game every 300 seconds (5 minutes). Keep in mind that shorter times mean that while the server will save the game more often, it also means a drop in server performance while the server is saving. To override the default, do the following:
+ </p>
+ <ol>
+  <li>
+   Start the game client and click on Server Manager
+  </li>
+  <li>
+   Select the server to modify and authenticate if required
+  </li>
+  <li>
+   Click on the Console tab
+  </li>
+  <li>
+   Enter in the command
+   <code>
+    FG.AutosaveInterval
+    <i>
+     xxx
+    </i>
+   </code>
+   , replacing
+   <i>
+    xxx
+   </i>
+   with the number of seconds between saves.
+  </li>
+ </ol>
+ <h3>
+  <span class="mw-headline" id="Server_tick_rate">
+   Server tick rate
+  </span>
+ </h3>
+ <p>
+  There are three sections of modifications to make. Replace
+  <i>
+   XX
+  </i>
+  with the desired number of ticks per second (default: 30):
+  <br/>
+  <br/>
+  <code>
+   Engine.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/OnlineSubsystemUtils.IpNetDriver]</span>
+<span class="na">NetServerMaxTickRate</span><span class="o">=</span><span class="s">xx</span>
+<span class="na">LanServerMaxTickRate</span><span class="o">=</span><span class="s">xx</span>
+
+<span class="k">[/Script/SocketSubsystemEpic.EpicNetDriver]</span>
+<span class="na">NetServerMaxTickRate</span><span class="o">=</span><span class="s">xx</span>
+<span class="na">LanServerMaxTickRate</span><span class="o">=</span><span class="s">xx</span>
+
+<span class="k">[/Script/Engine.Engine]</span>
+<span class="na">NetClientTicksPerSecond</span><span class="o">=</span><span class="s">xx</span>
+</pre>
+ </div>
+ <p>
+  Note that this is an upper limit (up-to), and the server will only reach the specified tickrate if hardware allows. Also note that if undesirable side effects are observed, lower the tick rate and retest before further troubleshooting.
+ </p>
+ <p>
+  Note that the game's default tick rate is good for most scenarios. Increasing it will
+  <i>
+   not
+  </i>
+  help with lags - if the hardware can't hit the default 30, increasing it won't help.
+ </p>
+ <h3>
+  <span class="mw-headline" id="Seasonal_events">
+   Seasonal events
+  </span>
+ </h3>
+ <p>
+  Seasonal events, such as
+  <a href="/wiki/FICSMAS" title="FICSMAS">
+   FICSMAS
+  </a>
+  , can be disabled (0) or enabled (1). Note that the line will disappear after the server is restarted, but will take effect regardless.
+  <br/>
+  <br/>
+  <code>
+   GameUserSettings.ini
+  </code>
+ </p>
+ <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr mw-highlight-copy" dir="ltr">
+  <pre><span></span><span class="k">[/Script/FactoryGame.FGGameUserSettings]</span>
+<span class="na">FG.DisableSeasonalEvents 0</span>
+</pre>
+ </div>
+ <h3>
+  <span class="mw-headline" id="UObject_Limit_Increase">
+   UObject Limit Increase
+  </span>
+ </h3>
+ <div style="margin-top: 5px;">
+  <div style="margin-left: 30px;">
+   <i>
+    Main article:
+   </i>
+   <a href="/wiki/Unreal_Engine#UObject_Limit_Increase" title="Unreal Engine">
+    Unreal Engine &gt; UObject Limit Increase
+   </a>
+  </div>
+ </div>
+ <p>
+  <br/>
+ </p>
+ <h2>
+  <span class="mw-headline" id="See_also">
+   See also
+  </span>
+ </h2>
+ <ul>
+  <li>
+   <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+    Dedicated Servers - Main Page
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+    Dedicated Servers - Running as a Service
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+    Dedicated Servers - Automatic Updates
+   </a>
+  </li>
+  <li>
+   <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+    Dedicated Servers -  HTTPS API
+   </a>
+  </li>
+ </ul>
+ <div aria-labelledby="Satisfactory_game_mechanics" class="navbox" role="navigation">
+  <table class="nowraplinks mw-collapsible expanded navbox-inner">
+   <tbody>
+    <tr>
+     <th class="navbox-title" colspan="2" scope="col">
+      <div class="navbar plainlinks hlist navbar-mini">
+       <ul>
+        <li class="nv-view">
+         <a href="/wiki/Template:PioneerNav" title="Template:PioneerNav">
+          <abbr title="View this template">
+           v
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-edit">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">
+          <abbr title="Edit this template">
+           e
+          </abbr>
+         </a>
+        </li>
+        <li class="nv-hist">
+         <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">
+          <abbr title="History of this template">
+           h
+          </abbr>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbox-title-text" id="Satisfactory_game_mechanics">
+       <a href="/wiki/Satisfactory" title="Satisfactory">
+        Satisfactory
+       </a>
+       game mechanics
+      </div>
+     </th>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Player abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Codex" title="Codex">
+        Codex
+       </a>
+       •
+       <a href="/wiki/Resource_Scanner" title="Resource Scanner">
+        Resource Scanner
+       </a>
+       •
+       <a href="/wiki/Build_Gun" title="Build Gun">
+        Build Gun
+       </a>
+       •
+       <a href="/wiki/Inventory" title="Inventory">
+        Inventory
+       </a>
+       •
+       <a href="/wiki/Health" title="Health">
+        Health
+       </a>
+       •
+       <a href="/wiki/Combat" title="Combat">
+        Combat
+       </a>
+       •
+       <a href="/wiki/Movement" title="Movement">
+        Movement
+       </a>
+       •
+       <a href="/wiki/Flashlight" title="Flashlight">
+        Flashlight
+       </a>
+       •
+       <a href="/wiki/HUD" title="HUD">
+        HUD
+       </a>
+       •
+       <a href="/wiki/Crate" title="Crate">
+        Crate
+       </a>
+       •
+       <a href="/wiki/To-Do_List" title="To-Do List">
+        To-Do List
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Unlockable abilities
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Recipes" title="Recipes">
+        Recipes
+       </a>
+       •
+       <a href="/wiki/Power" title="Power">
+        Power
+       </a>
+       •
+       <a href="/wiki/Clock_speed" title="Clock speed">
+        Overclocking/Underclocking
+       </a>
+       •
+       <a href="/wiki/Production_amplifier" title="Production amplifier">
+        Production amplifier
+       </a>
+       •
+       <a href="/wiki/Customizer" title="Customizer">
+        Customizer
+       </a>
+       •
+       <a href="/wiki/Map" title="Map">
+        Map
+       </a>
+       •
+       <a href="/wiki/Productivity_Display" title="Productivity Display">
+        Productivity Display
+       </a>
+       •
+       <a href="/wiki/Head_lift" title="Head lift">
+        Head lift
+       </a>
+       •
+       <a class="mw-redirect" href="/wiki/Blueprints" title="Blueprints">
+        Blueprints
+       </a>
+       •
+       <a href="/wiki/Category:Fuels" title="Category:Fuels">
+        Fuels
+       </a>
+       •
+       <a href="/wiki/FICSIT_Productive_Packer_Deluxe" title="FICSIT Productive Packer Deluxe">
+        FICSIT Productive Packer Deluxe
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Progression
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Story" title="Story">
+        Story
+       </a>
+       •
+       <a href="/wiki/Drop-pod" title="Drop-pod">
+        Drop-pod
+       </a>
+       •
+       <a href="/wiki/Onboarding" title="Onboarding">
+        Onboarding (In-game tutorial)
+       </a>
+       •
+       <a href="/wiki/Milestones" title="Milestones">
+        Milestones
+       </a>
+       •
+       <a href="/wiki/MAM" title="MAM">
+        MAM
+       </a>
+       •
+       <a href="/wiki/Hard_Drive#Alternate_recipes" title="Hard Drive">
+        Alternate recipes
+       </a>
+       •
+       <a href="/wiki/Space_Elevator" title="Space Elevator">
+        Space Elevator
+       </a>
+       •
+       <a href="/wiki/AWESOME_Sink" title="AWESOME Sink">
+        AWESOME Sink
+       </a>
+       •
+       <a href="/wiki/AWESOME_Shop" title="AWESOME Shop">
+        AWESOME Shop
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Seasonal events
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/April_Fools%27_Day" title="April Fools' Day">
+        April Fools' Day
+       </a>
+       •
+       <a href="/wiki/Anniversary" title="Anniversary">
+        Anniversary
+       </a>
+       •
+       <a href="/wiki/FICSMAS" title="FICSMAS">
+        FICSMAS
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Environment
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/World" title="World">
+        World
+       </a>
+       •
+       <a href="/wiki/Resource_Node" title="Resource Node">
+        Resource Node
+       </a>
+       •
+       <a href="/wiki/Resource_Well" title="Resource Well">
+        Resource Well
+       </a>
+       •
+       <a href="/wiki/Resource_renewability" title="Resource renewability">
+        Resource renewability
+       </a>
+       •
+       <a href="/wiki/Crash_Site" title="Crash Site">
+        Crash Site
+       </a>
+       •
+       <a href="/wiki/Radiation" title="Radiation">
+        Radiation
+       </a>
+       •
+       <a href="/wiki/Poison_Gas" title="Poison Gas">
+        Poison Gas
+       </a>
+       •
+       <a href="/wiki/Cracked_boulder" title="Cracked boulder">
+        Cracked boulder
+       </a>
+       •
+       <a href="/wiki/Cave" title="Cave">
+        Cave
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Gameplay
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <a href="/wiki/Controls" title="Controls">
+        Controls
+       </a>
+       •
+       <a href="/wiki/Settings" title="Settings">
+        Settings
+       </a>
+       •
+       <a href="/wiki/Future_content" title="Future content">
+        Future content
+       </a>
+       •
+       <a href="/wiki/Old_unreleased_content" title="Old unreleased content">
+        Old unreleased content
+       </a>
+       •
+       <a href="/wiki/Online_tools" title="Online tools">
+        Online tools
+       </a>
+       •
+       <a href="/wiki/Community_resources" title="Community resources">
+        Community resources
+       </a>
+       •
+       <a href="/wiki/Advanced_Game_Settings" title="Advanced Game Settings">
+        Advanced Game Settings
+       </a>
+       •
+       <a href="/wiki/Acronyms" title="Acronyms">
+        Acronyms
+       </a>
+       •
+       <a href="/wiki/Achievements" title="Achievements">
+        Achievements
+       </a>
+       •
+       <a href="/wiki/Easter_eggs" title="Easter eggs">
+        Easter eggs
+       </a>
+       •
+       <a href="/wiki/Game_menus" title="Game menus">
+        Game menus
+       </a>
+       •
+       <a href="/wiki/Indicator_Light" title="Indicator Light">
+        Indicator Light
+       </a>
+       •
+       <a href="/wiki/Multiplayer" title="Multiplayer">
+        Multiplayer
+       </a>
+       •
+       <a href="/wiki/Music" title="Music">
+        Music
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Technical
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-odd">
+      <div>
+       <a href="/wiki/Console_release" title="Console release">
+        Console release
+       </a>
+       •
+       <a href="/wiki/Debug_console" title="Debug console">
+        Debug console
+       </a>
+       •
+       <a href="/wiki/Launch_arguments" title="Launch arguments">
+        Launch arguments
+       </a>
+       •
+       <a href="/wiki/Save_files" title="Save files">
+        Save files
+       </a>
+       •
+       <a href="/wiki/System_requirements" title="System requirements">
+        System requirements
+       </a>
+       •
+       <a href="/wiki/Units" title="Units">
+        Units
+       </a>
+       •
+       <a href="/wiki/Unreal_Engine" title="Unreal Engine">
+        Unreal Engine
+       </a>
+      </div>
+     </td>
+    </tr>
+    <tr class="navbox-spacer">
+    </tr>
+    <tr>
+     <th class="navbox-group" scope="row" style="width: 10em;">
+      Guides and tutorials
+     </th>
+     <td class="navbox-list-with-group navbox-list navbox-even">
+      <div>
+       <div aria-label="Navbox" class="navbox" role="navigation">
+        <table class="nowraplinks navbox-inner">
+         <tbody>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Basics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Tutorial:How_to_play" title="Tutorial:How to play">
+              Walkthrough/How to play
+             </a>
+             •
+             <a href="/wiki/Tutorial:New_Pioneer_Guide" title="Tutorial:New Pioneer Guide">
+              New Pioneer Guide
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line" title="Tutorial:Production line">
+              Production line basics
+             </a>
+             •
+             <a href="/wiki/Tutorial:Production_line_design_tips" title="Tutorial:Production line design tips">
+              Advanced production line tips
+             </a>
+             •
+             <a href="/wiki/Tutorial:Picking_an_alternate_recipe" title="Tutorial:Picking an alternate recipe">
+              Picking an alternate recipe
+             </a>
+             •
+             <a href="/wiki/Tutorial:Independency" title="Tutorial:Independency">
+              Independency
+             </a>
+             •
+             <a href="/wiki/Tutorial:Setting_up_Aluminum_Ingot_production" title="Tutorial:Setting up Aluminum Ingot production">
+              Aluminum Ingot production
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Logistics
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Manifold" title="Manifold">
+              Manifold
+             </a>
+             •
+             <a href="/wiki/Balancer" title="Balancer">
+              Balancer
+             </a>
+             •
+             <a href="/wiki/Pipeline_manifold" title="Pipeline manifold">
+              Pipeline manifold
+             </a>
+             •
+             <a href="/wiki/Tutorial:Prime_splitter_arrays" title="Tutorial:Prime splitter arrays">
+              Prime Splitter Arrays
+             </a>
+             •
+             <a href="/wiki/Tutorial:Trains" title="Tutorial:Trains">
+              Trains
+             </a>
+             •
+             <a href="/wiki/Tutorial:Train_throughput" title="Tutorial:Train throughput">
+              Train throughput
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Dedicated servers
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-odd">
+            <div>
+             <a href="/wiki/Dedicated_servers" title="Dedicated servers">
+              Dedicated servers
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Running_as_a_Service" title="Dedicated servers/Running as a Service">
+              Running as a Service
+             </a>
+             •
+             <a class="mw-selflink selflink">
+              Configuration files
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Automatic_updates" title="Dedicated servers/Automatic updates">
+              Automatic updates
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/HTTPS_API" title="Dedicated servers/HTTPS API">
+              HTTPS API
+             </a>
+             •
+             <a href="/wiki/Dedicated_servers/Lightweight_Query_API" title="Dedicated servers/Lightweight Query API">
+              Lightweight Query API
+             </a>
+            </div>
+           </td>
+          </tr>
+          <tr class="navbox-spacer">
+          </tr>
+          <tr>
+           <th class="navbox-group" scope="row" style="width: 10em;">
+            Other
+           </th>
+           <td class="navbox-list-with-group navbox-list navbox-even">
+            <div>
+             <a href="/wiki/Tutorial:Hypertube_cannon" title="Tutorial:Hypertube cannon">
+              Hypertube cannon
+             </a>
+             •
+             <a href="/wiki/Tutorial:Hypertube_brake" title="Tutorial:Hypertube brake">
+              Hypertube brake
+             </a>
+             •
+             <a href="/wiki/Tutorial:Controller_setup" title="Tutorial:Controller setup">
+              Steam Deck &amp; Controller setup
+             </a>
+             •
+             <a href="/wiki/Tutorial:Extracting_UI_icons" title="Tutorial:Extracting UI icons">
+              Extracting UI icons
+             </a>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="mw-references-wrap">
+  <ol class="references">
+   <li id="cite_note-1">
+    <span class="mw-cite-backlink">
+     <a href="#cite_ref-1">
+      ↑
+     </a>
+    </span>
+    <span class="reference-text">
+     <a class="external text" href="https://discord.com/channels/370472939054956546/902621736602861588/1291444132111454341" rel="nofollow">
+      I followed the wiki guide but when I rebooted the server it reverted my changes to engine.ini
+     </a>
+    </span>
+   </li>
+  </ol>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251008194140
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.106 seconds
+Real time usage: 0.212 seconds
+Preprocessor visited node count: 353/1000000
+Revision size: 7191/4194304 bytes
+Post‐expand include size: 26999/4194304 bytes
+Template argument size: 328/4194304 bytes
+Highest expansion depth: 11/100
+Expensive parser function count: 7/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3137/10000000 bytes
+ExtLoops count: 0/5000
+Lua time usage: 0.009/15.000 seconds
+Lua memory usage: 812607/52428800 bytes
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.514      1 -total
+ 76.58%   35.621      2 Template:Navbox
+ 75.76%   35.237      1 Template:PioneerNav
+  9.36%    4.354      1 Template:MainSub
+  5.22%    2.430     76 Template:*
+  4.16%    1.934      1 Template:Hatnote
+  3.93%    1.828      1 Template:Tocright
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4382-0!canonical and timestamp 20251008194140 and revision id 59906. Rendering was triggered because: page_view
+ -->
+</div>

@@ -1,0 +1,429 @@
+<div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+ <div class="documentation">
+  <div class="documentation-header">
+   <a class="image" href="/wiki/File:Template-info.svg">
+    <img alt="Template-info.svg" data-file-height="60" data-file-width="117" decoding="async" height="26" loading="lazy" src="https://commons.wiki.gg/images/Template-info.svg?990371" style="vertical-align: bottom" width="50"/>
+   </a>
+   <span style="font-weight: bold; font-size: 125%;">
+    Documentation
+   </span>
+   <div class="plainlinks" style="float: right; margin-left: 5px">
+    [
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Key?action=purge">
+     purge
+    </a>
+    ]
+   </div>
+  </div>
+  <p>
+   When used, this template displays game controls, supporting both keyboard keys and controller buttons.
+  </p>
+  <ul>
+   <li>
+    Images used by this template are hosted at
+    <a class="external free" href="https://commons.wiki.gg/">
+     https://commons.wiki.gg/
+    </a>
+    .
+   </li>
+   <li>
+    This template's display is styled using the
+    <code>
+     .keysDark
+    </code>
+    and
+    <code>
+     .keysLight
+    </code>
+    classes located in
+    <a href="/wiki/MediaWiki:Common.css" title="MediaWiki:Common.css">
+     MediaWiki:Common.css
+    </a>
+    .
+   </li>
+  </ul>
+  <div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+   <input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+   <div class="toctitle" dir="ltr" lang="en">
+    <h2 id="mw-toc-heading">
+     Contents
+    </h2>
+    <span class="toctogglespan">
+     <label class="toctogglelabel" for="toctogglecheckbox">
+     </label>
+    </span>
+   </div>
+   <ul>
+    <li class="toclevel-1">
+     <a href="#Usage">
+      <span class="tocnumber">
+       1
+      </span>
+      <span class="toctext">
+       Usage
+      </span>
+     </a>
+     <ul>
+      <li class="toclevel-2">
+       <a href="#Keyboard">
+        <span class="tocnumber">
+         1.1
+        </span>
+        <span class="toctext">
+         Keyboard
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3">
+         <a href="#Example">
+          <span class="tocnumber">
+           1.1.1
+          </span>
+          <span class="toctext">
+           Example
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toclevel-2">
+       <a href="#Consoles_and_controllers">
+        <span class="tocnumber">
+         1.2
+        </span>
+        <span class="toctext">
+         Consoles and controllers
+        </span>
+       </a>
+       <ul>
+        <li class="toclevel-3">
+         <a href="#Example_2">
+          <span class="tocnumber">
+           1.2.1
+          </span>
+          <span class="toctext">
+           Example
+          </span>
+         </a>
+         <ul>
+          <li class="toclevel-4">
+           <a href="#Without_Size">
+            <span class="tocnumber">
+             1.2.1.1
+            </span>
+            <span class="toctext">
+             Without Size
+            </span>
+           </a>
+          </li>
+          <li class="toclevel-4">
+           <a href="#With_Size">
+            <span class="tocnumber">
+             1.2.1.2
+            </span>
+            <span class="toctext">
+             With Size
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toclevel-1">
+     <a href="#Changing_the_default_color">
+      <span class="tocnumber">
+       2
+      </span>
+      <span class="toctext">
+       Changing the default color
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   <span class="mw-headline" id="Usage">
+    Usage
+   </span>
+  </h2>
+  <ul>
+   <li>
+    <b>
+     Note:
+    </b>
+    For a summary of possible console, key, and button values, see
+    <a href="/wiki/Template:Key/library" title="Template:Key/library">
+     Template:Key/library
+    </a>
+    .
+   </li>
+  </ul>
+  <h3>
+   <span class="mw-headline" id="Keyboard">
+    Keyboard
+   </span>
+  </h3>
+  <p>
+   If using the template for keyboard keys, there is only one required input. For mouse usage, see the
+   <a href="#Consoles_and_controllers">
+    #Consoles and controllers
+   </a>
+   , using "mouse" as the console.
+  </p>
+  <p>
+   <b>
+    <code>
+     {{key |
+     <i>
+      button
+     </i>
+     }}
+    </code>
+   </b>
+  </p>
+  <ul>
+   <li>
+    <code>
+     button
+    </code>
+    is the keyboard key to be pressed. Some key inputs, such as Shift or Tab will automatically add symbols or other formatting. Any other inputs will be output as they are with the first letter capitalized.
+   </li>
+   <li>
+    <i>
+     Optional
+    </i>
+    : there is an additional parameter,
+    <code>
+     keyboardvariant
+    </code>
+    which determines whether the key is dark text on a light key (default) or the inverse. This will likely never be used, and if a wiki would prefer light on dark, it should be changed as the default.
+   </li>
+  </ul>
+  <h4>
+   <span class="mw-headline" id="Example">
+    Example
+   </span>
+  </h4>
+  <pre>Press {{Key|Shift}} and {{Key|F}} at the same time.</pre>
+  <p>
+   produces:
+   <br/>
+   Press
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      ⇧ Shift
+     </kbd>
+    </a>
+   </span>
+   and
+   <span class="key">
+    <a href="/wiki/Controls" title="Controls">
+     <kbd class="keysDark">
+      F
+     </kbd>
+    </a>
+   </span>
+   at the same time.
+  </p>
+  <h3>
+   <span class="mw-headline" id="Consoles_and_controllers">
+    Consoles and controllers
+   </span>
+  </h3>
+  <p>
+   <b>
+    <code>
+     {{key |
+     <i>
+      console
+     </i>
+     |
+     <i>
+      button
+     </i>
+     | size =
+     <i>
+      optional size
+     </i>
+     }}
+    </code>
+   </b>
+  </p>
+  <ul>
+   <li>
+    <code>
+     console
+    </code>
+    is the console the key belongs to. The parameter is
+    <b>
+     not
+    </b>
+    case-sensitive and supports many possible consoles. See
+    <a href="/wiki/Template:Key/library" title="Template:Key/library">
+     Template:Key/library
+    </a>
+    for possible values.
+   </li>
+   <li>
+    <code>
+     button
+    </code>
+    is the button to be pressed, such as "A" or "Right Trigger". While the template tries to be intuitive such that the correct input for a button is whatever you think it is, if your attempt at a button isn't working, see
+    <a href="/wiki/Template:Key/library" title="Template:Key/library">
+     Template:Key/library
+    </a>
+    for possible values.
+   </li>
+   <li>
+    The
+    <code>
+     size
+    </code>
+    parameter is optional, and sizes the button image. If this parameter is not entered, the default image size is 20px.
+   </li>
+  </ul>
+  <h4>
+   <span class="mw-headline" id="Example_2">
+    Example
+   </span>
+  </h4>
+  <h5>
+   <span class="mw-headline" id="Without_Size">
+    Without Size
+   </span>
+  </h5>
+  <pre>Press {{Key|Xbox|RT}} to open your inventory wheel and select the item with {{Key|Xbox|A}}</pre>
+  <p>
+   produces:
+   <br/>
+   Press
+   <a class="image" href="/wiki/File:XboxOne_RT.png" title="RT">
+    <img alt="RT" data-file-height="100" data-file-width="100" decoding="async" height="28" loading="lazy" src="https://commons.wiki.gg/images/thumb/XboxOne_RT.png/28px-XboxOne_RT.png?2b9b14" width="28"/>
+   </a>
+   to open your inventory wheel and select the item with
+   <a class="image" href="/wiki/File:XboxOne_A.png" title="A">
+    <img alt="A" data-file-height="100" data-file-width="100" decoding="async" height="28" loading="lazy" src="https://commons.wiki.gg/images/thumb/XboxOne_A.png/28px-XboxOne_A.png?cc8a46" width="28"/>
+   </a>
+  </p>
+  <h5>
+   <span class="mw-headline" id="With_Size">
+    With Size
+   </span>
+  </h5>
+  <pre>Press {{Key|Xbox|RT|size=48px}} to open your inventory wheel and select the item with {{Key|Xbox|A|size=48px}}</pre>
+  <p>
+   produces:
+   <br/>
+   Press
+   <a class="image" href="/wiki/File:XboxOne_RT.png" title="RT">
+    <img alt="RT" data-file-height="100" data-file-width="100" decoding="async" height="48" loading="lazy" src="https://commons.wiki.gg/images/thumb/XboxOne_RT.png/48px-XboxOne_RT.png?2b9b14" width="48"/>
+   </a>
+   to open your inventory wheel and select the item with
+   <a class="image" href="/wiki/File:XboxOne_A.png" title="A">
+    <img alt="A" data-file-height="100" data-file-width="100" decoding="async" height="48" loading="lazy" src="https://commons.wiki.gg/images/thumb/XboxOne_A.png/48px-XboxOne_A.png?cc8a46" width="48"/>
+   </a>
+  </p>
+  <h2>
+   <span class="mw-headline" id="Changing_the_default_color">
+    Changing the default color
+   </span>
+  </h2>
+  <p>
+   The default color for the keyboard and mouse is suitable for dark-skinned wikis. To change the default settings so it fits for a light-skinned wiki, without having to use
+   <code>
+    keyboardvariant = light
+   </code>
+   each time, you can search for and change these sections in the template:
+  </p>
+  <p>
+   <br/>
+   Search for:
+   <code>
+    |#default = _White_Mouse_
+   </code>
+   <br/>
+   ...and change it to:
+   <code>
+    |#default = _Black_Mouse_
+   </code>
+  </p>
+  <p>
+   <br/>
+  </p>
+  Search for:
+  <code>
+   &lt;kbd class="{{#switch: {{lc:{{{keyboardvariant}}}}} |dark=keysDark|light=keysLight|
+   <div style="color: #00ff00;">
+    keysDark
+   </div>
+   }}"&gt;
+  </code>
+  <br/>
+  <p>
+   ...and change
+   <i>
+    keysDark
+   </i>
+   at the end of the line to
+   <code>
+    <i>
+     keysLight
+    </i>
+   </code>
+   .
+  </p>
+ </div>
+ <div style="margin: 0 auto; background-color: rgba(0,0,0,0.1); border: 2px solid #BDCAC3; border-radius: 1em; padding: 1em;">
+  <p class="plainlinks" style="margin: 0">
+   The above documentation is transcluded from
+   <a href="/wiki/Template:Key/doc" title="Template:Key/doc">
+    Template:Key/doc
+   </a>
+   .
+   <small>
+    (
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Key/doc?action=edit">
+     edit
+    </a>
+    |
+    <a class="text" href="https://satisfactory.wiki.gg/wiki/Template:Key/doc?action=history">
+     history
+    </a>
+    )
+   </small>
+  </p>
+ </div>
+ <!-- 
+NewPP limit report
+Cached time: 20251024172048
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.029 seconds
+Real time usage: 0.043 seconds
+Preprocessor visited node count: 703/1000000
+Revision size: 2361/4194304 bytes
+Post‐expand include size: 10855/4194304 bytes
+Template argument size: 50/4194304 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 378/10000000 bytes
+ExtLoops count: 0/5000
+-->
+ <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   18.486      1 Template:Doc
+100.00%   18.486      1 -total
+ 85.23%   15.756      1 Template:Key/doc
+ 27.60%    5.103      6 Template:Key
+ 15.85%    2.931      1 Template:Doc/start
+ 14.90%    2.754      1 Template:Doc/end
+-->
+ <!-- Saved in parser cache with key satisfactory_en:pcache:idhash:4450-0!canonical and timestamp 20251024172048 and revision id 59169. Rendering was triggered because: page_view
+ -->
+</div>
