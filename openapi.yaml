@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: SmartestFactory RAG API
+  description: Retrieve relevant document chunks for contextual reasoning.
+  version: 1.0.0
+servers:
+  - url: https://smartestfactory.onrender.com
+paths:
+  /retrieve:
+    post:
+      summary: Retrieve top-k relevant document chunks
+      operationId: retrieveContext
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: The question or search query
+                k:
+                  type: integer
+                  description: Number of results to return
+                  default: 5
+      responses:
+        "200":
+          description: Successful retrieval
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  retrieved_docs:
+                    type: array
+                    items:
+                      type: string
+                  context:
+                    type: string
